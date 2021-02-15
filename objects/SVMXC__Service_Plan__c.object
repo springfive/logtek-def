@@ -14,14 +14,4 @@
             <valueSetName>Company</valueSetName>
         </valueSet>
     </fields>
-    <listViews>
-        <fullName>SVMXC__All_Service_Plans</fullName>
-        <columns>NAME</columns>
-        <columns>SVMXC__Active__c</columns>
-        <columns>SVMXC__Description__c</columns>
-        <columns>SVMXC__List_Price__c</columns>
-        <filterScope>Everything</filterScope>
-        <label>All Service Plans</label>
-        <language>en_US</language>
-    </listViews>
 </CustomObject>

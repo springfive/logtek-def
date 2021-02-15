@@ -14,15 +14,6 @@
             <valueSetName>Company</valueSetName>
         </valueSet>
     </fields>
-    <listViews>
-        <fullName>All</fullName>
-        <columns>NAME</columns>
-        <columns>SVMXC__Service_Group__c</columns>
-        <columns>SVMXC__City__c</columns>
-        <columns>SVMXC__State__c</columns>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
     <recordTypes>
         <fullName>Equipment</fullName>
         <active>true</active>
