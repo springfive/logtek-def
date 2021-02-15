@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>GB_Clarkson</fullName>
+        <default>false</default>
+        <label>GB_Clarkson</label>
+    </customValue>
+    <customValue>
+        <fullName>IT_DEF</fullName>
+        <default>false</default>
+        <label>IT_DEF</label>
+    </customValue>
+    <customValue>
+        <fullName>BE_DEF</fullName>
+        <default>false</default>
+        <label>BE_DEF</label>
+    </customValue>
+    <customValue>
+        <fullName>BE_VLV</fullName>
+        <default>false</default>
+        <label>BE_VLV</label>
+    </customValue>
+    <masterLabel>Company</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
