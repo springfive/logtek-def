@@ -506,13 +506,19 @@
         <name>Dashboard</name>
     </types>
     <types>
-        <members>SVMXC__ServiceMaxDocuments/BAFELogo</members>
-        <members>SVMXC__ServiceMaxDocuments/ClarksonFooter</members>
-        <members>SVMXC__ServiceMaxDocuments/ClarksonLogo</members>
-        <members>SVMXC__ServiceMaxDocuments/DEFItalylogo</members>
-        <members>SVMXC__ServiceMaxDocuments/FIALogo</members>
-        <members>SVMXC__ServiceMaxDocuments/ItalyFooterPage</members>
+        <members>SVMXC__ServiceMaxDocuments/BAFELogo.jpg</members>
+        <members>SVMXC__ServiceMaxDocuments/ClarksonFooter.png</members>
+        <members>SVMXC__ServiceMaxDocuments/ClarksonLogo.png</members>
+        <members>SVMXC__ServiceMaxDocuments/Company_Logo.png</members>
+        <members>SVMXC__ServiceMaxDocuments/DEFItalylogo.png</members>
+        <members>SVMXC__ServiceMaxDocuments/DEF_Italia_Logo_Mail_Signature.png</members>
+        <members>SVMXC__ServiceMaxDocuments/FIALogo.jpg</members>
+        <members>SVMXC__ServiceMaxDocuments/ItalyFooterPage.png</members>
         <name>Document</name>
+    </types>
+    <types>
+        <members>SVMXC__ServiceMaxDocuments</members>
+        <name>DocumentFolder</name>
     </types>
     <types>
         <members>unfiled$public/DEF_IT_Assigned_Technician_Template</members>
