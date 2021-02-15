@@ -1,5 +1,0 @@
-Dear {!Account.OwnerFirstName}
-
-The following Update Suggestion has been added to the {!Account.Name} Account:
-
-"{!Account.Update_Suggestion__c}".
