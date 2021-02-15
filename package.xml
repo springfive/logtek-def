@@ -51,10 +51,6 @@
         <name>CompactLayout</name>
     </types>
     <types>
-        <members>Fire360_Logotype</members>
-        <name>ContentAsset</name>
-    </types>
-    <types>
         <members>Account.Alert__c</members>
         <members>Account.Italy_Navision_Ref_Number__c</members>
         <members>Account.Status__c</members>
