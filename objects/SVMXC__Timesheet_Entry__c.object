@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>DurationInHour__c</fullName>
+        <description>Duration in hours.</description>
+        <externalId>false</externalId>
+        <formula>(SVMXC__End_Time__c - SVMXC__Start_Time__c)*24</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Duration in hours.</inlineHelpText>
+        <label>Duration (h)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Holiday__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__Timesheet_Day__r.SVMXC__IsHoliday__c</formula>
+        <label>Is Holiday</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>WO_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(NOT(ISBLANK(SVMXC__Work_Detail__c)),
+
+TEXT(SVMXC__Activity__c) &amp;
+&apos; - &apos; &amp;	
+TEXT(SVMXC__SM_Type__c) &amp;
+&apos; - &apos; &amp;
+SVMXC__Work_Detail__r.SVMXC__Service_Order__r.SVMXC__Site__r.Name + &quot; &quot; + &apos;(&apos; &amp; SVMXC__Work_Detail__r.SVMXC__Service_Order__r.SVMXC__Site__r.SVMXC__City__c &amp; &apos;)&apos;, 
+			
+TEXT(SVMXC__Activity__c)&amp; 
+&apos; - &apos; &amp;	
+TEXT(SVMXC__SM_Type__c))
+/*SVMXC__Work_Detail__r.SVMXC__Service_Order__r.SVMXC__Site__r.SVMXC__City__c &amp;
+&apos; - &apos; &amp;
+TEXT(SVMXC__Activity__c) &amp;
+&apos; - &apos; &amp;
+TEXT(SVMXC__SM_Type__c) &amp;
+&apos; - &apos; &amp;
+SVMXC__Work_Detail__r.SVMXC__Service_Order__r.SVMXC__Site__r.Name
+&amp; &apos;-&apos; 
+&amp; SVMXC__Work_Detail__r.SVMXC__Service_Order__r.SVMXC__Company__r.Name*/</formula>
+        <label>WO Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>
