@@ -19,7 +19,6 @@
         <members>DEF_WO_RestAPICallTest</members>
         <members>DEF_WO_RestAPICallV2</members>
         <members>DEF_WO_RestAPICallV2Test</members>
-        <members>DEF_WO_SendEmailToContacts</members>
         <members>DEF_WO_SirSender</members>
         <members>DEF_WO_SirSenderTest</members>
         <members>DEF_WO_SirSender_Helper</members>
