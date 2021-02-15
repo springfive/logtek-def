@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>DM0001</fullName>
+        <default>false</default>
+        <label>Unable to identify/locate the device due to lack of documentation</label>
+    </customValue>
+    <customValue>
+        <fullName>DM0010</fullName>
+        <default>false</default>
+        <label>Unable to identify/locate the device due to access difficulties</label>
+    </customValue>
+    <customValue>
+        <fullName>DM0020</fullName>
+        <default>false</default>
+        <label>Position of devices at high alttitude</label>
+    </customValue>
+    <customValue>
+        <fullName>DM0000</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <masterLabel>Difficulties met</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
