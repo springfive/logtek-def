@@ -837,17 +837,6 @@
         <name>ValidationRule</name>
     </types>
     <types>
-        <members>Account.Notify_Account_owner_when_an_Update_Suggestion_is_added</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Notify_Customer_On_Rescheduling</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Reminder_to_Customer_about_Appointment</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Send_Email_to_Planner_on_High_Priority_WO</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Assigned_Technician</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Customer_Confirmed</members>
-        <members>SVMXC__Timesheet__c.Timesheet_Approved_Email_Alert</members>
-        <members>SVMXC__Timesheet__c.Timesheet_Rejection_Email_Alert</members>
-        <name>WorkflowAlert</name>
-    </types>
-    <types>
         <members>SVMXC__Service_Contract__c.Activate_The_Contract</members>
         <members>SVMXC__Service_Contract__c.DEF_WW_Active_Checkbox_to_False</members>
         <members>SVMXC__Service_Contract__c.DEF_WW_Set_The_Active_Checkbox_To_True</members>
