@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <assignments>
+        <name>Set_Owner_On_Daily_Summary</name>
+        <label>Set Owner On Daily Summary</label>
+        <locationX>745</locationX>
+        <locationY>599</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Timesheet.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Timesheet_Id</name>
+        <label>Timesheet Id</label>
+        <locationX>745</locationX>
+        <locationY>359</locationY>
+        <assignmentItems>
+            <assignToReference>TimesheetId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SVMXC__Timesheet__r.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Timesheet</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Bypass_Flow</name>
+        <label>Check Bypass Flow</label>
+        <locationX>584</locationX>
+        <locationY>286</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Bypass_Flow_Not_true</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.DEF_CS_BypassComponents__c.Bypass_Flows__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Timesheet_Id</targetReference>
+            </connector>
+            <label>Bypass Flow Not true</label>
+        </rules>
+    </decisions>
+    <interviewLabel>DEF_WW_Assign Timesheet Daily Summary Owner {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DEF_WW_Update Timesheet Daily Summary Owner</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Timesheet</name>
+        <label>Get Timesheet</label>
+        <locationX>745</locationX>
+        <locationY>479</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_Owner_On_Daily_Summary</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>TimesheetId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SVMXC__Timesheet__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>OwnerId</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>458</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Check_Bypass_Flow</targetReference>
+        </connector>
+        <object>SVMXC__Timesheet_Day_Entry__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>TimesheetId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
