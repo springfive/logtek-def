@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Jail</fullName>
+        <default>false</default>
+        <label>Jail</label>
+    </customValue>
+    <customValue>
+        <fullName>Nuclear Plant</fullName>
+        <default>false</default>
+        <label>Nuclear Plant</label>
+    </customValue>
+    <customValue>
+        <fullName>Special Access 001</fullName>
+        <default>false</default>
+        <label>Special Access 001</label>
+    </customValue>
+    <masterLabel>Accreditation</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
