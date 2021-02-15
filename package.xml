@@ -836,33 +836,5 @@
         <members>SVMXC__Service_Order_Line__c.DEF_WD_StartDate_and_EndDate_Validation</members>
         <name>ValidationRule</name>
     </types>
-    <types>
-        <members>SVMXC__Service_Contract__c.Activate_The_Contract</members>
-        <members>SVMXC__Service_Contract__c.DEF_WW_Active_Checkbox_to_False</members>
-        <members>SVMXC__Service_Contract__c.DEF_WW_Set_The_Active_Checkbox_To_True</members>
-        <members>SVMXC__Service_Contract__c.DEF_WW_Update_ContractAccount_Name</members>
-        <members>SVMXC__Service_Order__c.DEF_UK_Set_WO_to_Customer_Confirmed</members>
-        <members>SVMXC__Service_Order__c.DEF_WW_Set_Status_to_Customer_Confirmed</members>
-        <members>SVMXC__Service_Order__c.SVMX_PS_Set_WO_to_Assigned</members>
-        <members>SVMXC__Timesheet__c.Update_Approved</members>
-        <members>SVMXC__Timesheet__c.Update_Rejected</members>
-        <name>WorkflowFieldUpdate</name>
-    </types>
-    <types>
-        <members>SVMXC__Installed_Product__c.SVMX_PS - Set Installed Product ID %28Serial - Product%29</members>
-        <members>SVMXC__Service_Contract__c.Activate Contract Status</members>
-        <members>SVMXC__Service_Contract__c.DEF_WW_Set Active Checkbox to False</members>
-        <members>SVMXC__Service_Contract__c.DEF_WW_Set Active Checkbox to True</members>
-        <members>SVMXC__Service_Contract__c.DEF_WW_Update Account Name</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer Of Appointment Confirmation</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Notify Planner on High Priority WO</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Reminder Email to Customer</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Set WO to Customer Confirmed</members>
-        <members>SVMXC__Service_Order__c.DEF_UK_Set WO to Customer Confirmed</members>
-        <members>SVMXC__Service_Order__c.DEF_WW_Set WO to Customer Confirmed</members>
-        <members>SVMXC__Service_Order__c.SVMX_PS - Set WO to Assigned</members>
-        <name>WorkflowRule</name>
-    </types>
     <version>50.0</version>
 </Package>
