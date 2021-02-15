@@ -55,10 +55,6 @@
         <name>ContentAsset</name>
     </types>
     <types>
-        <members>DEF_FS</members>
-        <name>CustomApplication</name>
-    </types>
-    <types>
         <members>Account.Alert__c</members>
         <members>Account.Italy_Navision_Ref_Number__c</members>
         <members>Account.Status__c</members>
