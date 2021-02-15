@@ -506,6 +506,17 @@
         <name>Dashboard</name>
     </types>
     <types>
+        <members>SVMXC__ServiceMaxDocuments/BAFELogo</members>
+        <members>SVMXC__ServiceMaxDocuments/ClarksonFooter</members>
+        <members>SVMXC__ServiceMaxDocuments/ClarksonLogo</members>
+        <members>SVMXC__ServiceMaxDocuments/Company_Logo</members>
+        <members>SVMXC__ServiceMaxDocuments/DEFItalylogo</members>
+        <members>SVMXC__ServiceMaxDocuments/DEF_Italia_Logo_Mail_Signature</members>
+        <members>SVMXC__ServiceMaxDocuments/FIALogo</members>
+        <members>SVMXC__ServiceMaxDocuments/ItalyFooterPage</members>
+        <name>Document</name>
+    </types>
+    <types>
         <members>unfiled$public/DEF_IT_Assigned_Technician_Template</members>
         <members>unfiled$public/DEF_IT_Customer_Confirmed_Template</members>
         <members>unfiled$public/DEF_IT_High_Priority_WO_Template</members>
