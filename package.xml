@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DEF_API_WO_RequestCallBack</members>
@@ -19,7 +19,6 @@
         <members>DEF_WO_RestAPICallTest</members>
         <members>DEF_WO_RestAPICallV2</members>
         <members>DEF_WO_RestAPICallV2Test</members>
-        <members>DEF_WO_SendEmailToContacts</members>
         <members>DEF_WO_SirSender</members>
         <members>DEF_WO_SirSenderTest</members>
         <members>DEF_WO_SirSender_Helper</members>
@@ -232,6 +231,7 @@
         <members>SVMXC__Service_Order__c.Customer_Contact_4__c</members>
         <members>SVMXC__Service_Order__c.DBin_Ref_Number__c</members>
         <members>SVMXC__Service_Order__c.DEF_Company__c</members>
+        <members>SVMXC__Service_Order__c.DEF_Company__c</members>
         <members>SVMXC__Service_Order__c.DesignationYear__c</members>
         <members>SVMXC__Service_Order__c.Designation__c</members>
         <members>SVMXC__Service_Order__c.Disable_Picture_After_Job__c</members>
@@ -286,6 +286,7 @@
         <members>SVMXC__Service_Order__c.Return_of_Service_Date_Time__c</members>
         <members>SVMXC__Service_Order__c.Revisit_Comment__c</members>
         <members>SVMXC__Service_Order__c.RootCause__c</members>
+        <members>SVMXC__Service_Order__c.RootCause__c</members>
         <members>SVMXC__Service_Order__c.Root_Cause_Text__c</members>
         <members>SVMXC__Service_Order__c.SL_InstallationType__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Country__c</members>
@@ -328,6 +329,7 @@
         <members>SVMXC__Service_Order__c.Total_Travel__c</members>
         <members>SVMXC__Service_Order__c.Total_duration_Regular_Labor__c</members>
         <members>SVMXC__Service_Order__c.VisitNumber__c</members>
+        <members>SVMXC__Service_Order__c.WoDetails__c</members>
         <members>SVMXC__Service_Order__c.WoDetails__c</members>
         <members>SVMXC__Service_Order__c.Work_Performed_Picklist__c</members>
         <members>SVMXC__Service_Order__c.internal_comments__c</members>
@@ -548,6 +550,7 @@
         <members>DEF_WW_Work_Order_record_page</members>
         <members>Included_Service_Record_Page</members>
         <members>Location_Contact_Relationship_Record_Page</members>
+        <members>PM_Plan_Template_Record_Page</members>
         <members>PM_Plan_Template_Record_Page</members>
         <members>Preventive_Maintenance_Coverage_Record_Page</members>
         <members>SLA_Terms_Record_Page</members>
