@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>DEF_Letterhead</letterhead>
+    <name>DEF_IT_High Priority WO Template</name>
+    <style>formalLetter</style>
+    <subject>High Priority WO is Available</subject>
+    <textOnly>Dear {!User.Name} WO Number {!SVMXC__Service_Order__c.Name} is a high priority, Please assign a technician at the earliest.
+
+Thanks</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

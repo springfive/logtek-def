@@ -1,2 +1,0 @@
-# logtek-def
-mn
