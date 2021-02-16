@@ -147,4 +147,15 @@ Based on the Start Date of the PM plan.</inlineHelpText>
             </valueSetDefinition>
         </valueSet>
     </fields>
+    <listViews>
+        <fullName>SVMXC__All_Preventive_Plans</fullName>
+        <columns>NAME</columns>
+        <columns>SVMXC__Account__c</columns>
+        <columns>SVMXC__Service_Contract__c</columns>
+        <columns>SVMXC__Start_Date__c</columns>
+        <columns>SVMXC__End_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Preventive Plans</label>
+        <language>en_US</language>
+    </listViews>
 </CustomObject>

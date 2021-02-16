@@ -19,7 +19,6 @@
         <members>DEF_WO_RestAPICallTest</members>
         <members>DEF_WO_RestAPICallV2</members>
         <members>DEF_WO_RestAPICallV2Test</members>
-        <members>DEF_WO_SendEmailToContacts</members>
         <members>DEF_WO_SirSender</members>
         <members>DEF_WO_SirSenderTest</members>
         <members>DEF_WO_SirSender_Helper</members>
@@ -641,6 +640,79 @@
         <name>Letterhead</name>
     </types>
     <types>
+        <members>Account.AllAccounts</members>
+        <members>Account.MyAccounts</members>
+        <members>Account.NewThisWeek</members>
+        <members>Contact.AllContacts</members>
+        <members>Contract.AllActivatedContracts</members>
+        <members>Contract.AllContracts</members>
+        <members>Contract.AllDraftContracts</members>
+        <members>Contract.AllInApprovalContracts</members>
+        <members>Contract.MyActivatedContracts</members>
+        <members>Contract.MyDraftContracts</members>
+        <members>Contract.MyInApprovalContracts</members>
+        <members>Field_Feedback__c.All</members>
+        <members>Field_Feedback__c.Open_Service_Opportunities</members>
+        <members>Field_Feedback__c.Open_Technical_Observations</members>
+        <members>Field_Feedback__c.Open_Technical_Opportunities</members>
+        <members>IssueRisk__c.All</members>
+        <members>IssueRisk__c.All_open_Issues_Risks</members>
+        <members>IssueRisk__c.My_Issues_Risks</members>
+        <members>Issue__c.All</members>
+        <members>Lead.AllOpenLeads</members>
+        <members>Lead.MyUnreadLeads</members>
+        <members>Lead.TodaysLeads</members>
+        <members>Locations_Equipment__c.All</members>
+        <members>Opportunity.AllOpportunities</members>
+        <members>Opportunity.ClosingNextMonth</members>
+        <members>Opportunity.ClosingThisMonth</members>
+        <members>Opportunity.Default_Opportunity_Pipeline</members>
+        <members>Opportunity.MyOpportunities</members>
+        <members>Opportunity.NewThisWeek</members>
+        <members>Opportunity.Won</members>
+        <members>Order.AllActivatedOrders</members>
+        <members>Order.AllDraftOrders</members>
+        <members>Order.AllOrders</members>
+        <members>SVMXC__Activity_Master__c.SVMXC__All_Activities</members>
+        <members>SVMXC__Code_Snippet__c.AllCodeSnippets</members>
+        <members>SVMXC__Config_Change_Detail__c.SVMXC__All</members>
+        <members>SVMXC__Installed_Product__c.SVMXC__All_Installed_Products</members>
+        <members>SVMXC__PM_Plan_Template__c.SVMXC__All_PM_Plan_Templates</members>
+        <members>SVMXC__PM_Plan__c.SVMXC__All_Preventive_Plans</members>
+        <members>SVMXC__Parts_Request__c.SVMXC__All_Parts_Requests</members>
+        <members>SVMXC__Quote__c.SVMXC__All_Service_Quotes</members>
+        <members>SVMXC__RMA_Shipment_Order__c.SVMXC__All_RMA</members>
+        <members>SVMXC__RMA_Shipment_Order__c.SVMXC__All_Shipments</members>
+        <members>SVMXC__SM_SB_Queue_Outbound__c.All</members>
+        <members>SVMXC__SM_SB_Queue_Outbound__c.SVMXC__Recent_Outbound_Queue_All</members>
+        <members>SVMXC__SM_SB_Queue_Outbound__c.SVMXC__Recent_Outbound_Queue_Failures</members>
+        <members>SVMXC__Service_Contract__c.Active_Service_Contract_lines</members>
+        <members>SVMXC__Service_Contract__c.All_Service_Contracts</members>
+        <members>SVMXC__Service_Contract__c.Contracts_to_be_set_up</members>
+        <members>SVMXC__Service_Contract__c.SVMXC__Active_Service_Contracts</members>
+        <members>SVMXC__Service_Group_Members__c.All</members>
+        <members>SVMXC__Service_Group__c.SVMXC__All_Service_Teams</members>
+        <members>SVMXC__Service_Order__c.All_WO_To_be_validated</members>
+        <members>SVMXC__Service_Order__c.Callout_WO_Paused_SLA</members>
+        <members>SVMXC__Service_Order__c.Callouts_To_be_scheduled</members>
+        <members>SVMXC__Service_Order__c.SVMXC__All_Work_Orders</members>
+        <members>SVMXC__Service_Order__c.SVMX_PS_All_Awaiting_Customer_Orders</members>
+        <members>SVMXC__Service_Order__c.WO_due_next_month</members>
+        <members>SVMXC__Service_Plan__c.SVMXC__All_Service_Plans</members>
+        <members>SVMXC__Service_Pricebook_Entry__c.SVMXC__All_Service_Pricebook_Entry</members>
+        <members>SVMXC__Service_Pricebook__c.SVMXC__All_Service_Pricebook</members>
+        <members>SVMXC__Service_Request__c.All_service_requests</members>
+        <members>SVMXC__Service_Request__c.Service_requests_in_progress</members>
+        <members>SVMXC__Service_Request__c.Service_requests_to_be_processed</members>
+        <members>SVMXC__Service_Template__c.SVMXC__All_Warranty_Terms</members>
+        <members>SVMXC__Service__c.SVMXC__All_Available_Services</members>
+        <members>SVMXC__Site__c.SVMXC__All_Locations</members>
+        <members>SVMXC__Task_Template__c.SVMXC__All_Work_Templates</members>
+        <members>SVMXC__Territory__c.GB_Default_Territory</members>
+        <members>SVMXC__Territory__c.IT_Default_Territory</members>
+        <name>ListView</name>
+    </types>
+    <types>
         <members>DEF_WW_Callout_Work_Order_Path</members>
         <members>DEF_WW_Contract_Line_Status</members>
         <members>DEF_WW_Contract_Status</members>
@@ -753,6 +825,45 @@
         <members>SVMXC__Service_Contract__c.DEF_WW_Make_Contract_As_ReadOnly</members>
         <members>SVMXC__Service_Order_Line__c.DEF_WD_StartDate_and_EndDate_Validation</members>
         <name>ValidationRule</name>
+    </types>
+    <types>
+        <members>Account.Notify_Account_owner_when_an_Update_Suggestion_is_added</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify_Customer_On_Rescheduling</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Reminder_to_Customer_about_Appointment</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Send_Email_to_Planner_on_High_Priority_WO</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Assigned_Technician</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Customer_Confirmed</members>
+        <members>SVMXC__Timesheet__c.Timesheet_Approved_Email_Alert</members>
+        <members>SVMXC__Timesheet__c.Timesheet_Rejection_Email_Alert</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Contract__c.Activate_The_Contract</members>
+        <members>SVMXC__Service_Contract__c.DEF_WW_Active_Checkbox_to_False</members>
+        <members>SVMXC__Service_Contract__c.DEF_WW_Set_The_Active_Checkbox_To_True</members>
+        <members>SVMXC__Service_Contract__c.DEF_WW_Update_ContractAccount_Name</members>
+        <members>SVMXC__Service_Order__c.DEF_UK_Set_WO_to_Customer_Confirmed</members>
+        <members>SVMXC__Service_Order__c.DEF_WW_Set_Status_to_Customer_Confirmed</members>
+        <members>SVMXC__Service_Order__c.SVMX_PS_Set_WO_to_Assigned</members>
+        <members>SVMXC__Timesheet__c.Update_Approved</members>
+        <members>SVMXC__Timesheet__c.Update_Rejected</members>
+        <name>WorkflowFieldUpdate</name>
+    </types>
+    <types>
+        <members>SVMXC__Installed_Product__c.SVMX_PS - Set Installed Product ID %28Serial - Product%29</members>
+        <members>SVMXC__Service_Contract__c.Activate Contract Status</members>
+        <members>SVMXC__Service_Contract__c.DEF_WW_Set Active Checkbox to False</members>
+        <members>SVMXC__Service_Contract__c.DEF_WW_Set Active Checkbox to True</members>
+        <members>SVMXC__Service_Contract__c.DEF_WW_Update Account Name</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer Of Appointment Confirmation</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify Planner on High Priority WO</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Reminder Email to Customer</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Set WO to Customer Confirmed</members>
+        <members>SVMXC__Service_Order__c.DEF_UK_Set WO to Customer Confirmed</members>
+        <members>SVMXC__Service_Order__c.DEF_WW_Set WO to Customer Confirmed</members>
+        <members>SVMXC__Service_Order__c.SVMX_PS - Set WO to Assigned</members>
+        <name>WorkflowRule</name>
     </types>
     <version>50.0</version>
 </Package>
