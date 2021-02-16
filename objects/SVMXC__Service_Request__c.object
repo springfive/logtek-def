@@ -244,4 +244,52 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <listViews>
+        <fullName>All_service_requests</fullName>
+        <columns>NAME</columns>
+        <columns>SVMXC__Account__c</columns>
+        <columns>Contract__c</columns>
+        <columns>SVMXC__Status__c</columns>
+        <columns>SVMXC__Subject__c</columns>
+        <columns>SLA_Terms__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>SVMXC__Closed_On__c</columns>
+        <columns>Closure_Comment__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All service requests</label>
+    </listViews>
+    <listViews>
+        <fullName>Service_requests_in_progress</fullName>
+        <columns>NAME</columns>
+        <columns>SVMXC__Account__c</columns>
+        <columns>Contract__c</columns>
+        <columns>SVMXC__Subject__c</columns>
+        <columns>SVMXC__Problem_Description__c</columns>
+        <columns>SLA_Terms__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SVMXC__Status__c</field>
+            <operation>equals</operation>
+            <value>Open_Converted</value>
+        </filters>
+        <label>Service requests in progress</label>
+    </listViews>
+    <listViews>
+        <fullName>Service_requests_to_be_processed</fullName>
+        <columns>NAME</columns>
+        <columns>SVMXC__Account__c</columns>
+        <columns>Contract__c</columns>
+        <columns>SVMXC__Subject__c</columns>
+        <columns>SVMXC__Problem_Description__c</columns>
+        <columns>SLA_Terms__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SVMXC__Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>Service requests to be processed</label>
+    </listViews>
 </CustomObject>

@@ -223,6 +223,24 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <listViews>
+        <fullName>SVMXC__All_Installed_Products</fullName>
+        <columns>SVMXC__Site__c</columns>
+        <columns>NAME</columns>
+        <columns>SVMXC__Product_Name__c</columns>
+        <columns>SVMXC__Parent__c</columns>
+        <columns>SVMXC__Serial_Lot_Number__c</columns>
+        <columns>SVMXC__Company__c</columns>
+        <columns>SVMXC__Contact__c</columns>
+        <columns>SVMXC__Date_Shipped__c</columns>
+        <columns>SVMXC__Date_Installed__c</columns>
+        <columns>SVMXC__Status__c</columns>
+        <columns>SVMXC__Street__c</columns>
+        <columns>SVMXC__Country__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Installed Products</label>
+        <language>en_US</language>
+    </listViews>
     <recordTypes>
         <fullName>Bucket</fullName>
         <active>true</active>
