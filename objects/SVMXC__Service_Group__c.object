@@ -14,4 +14,18 @@
             <valueSetName>Company</valueSetName>
         </valueSet>
     </fields>
+    <listViews>
+        <fullName>SVMXC__All_Service_Teams</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>SVMXC__Email__c</columns>
+        <columns>SVMXC__Phone__c</columns>
+        <columns>SVMXC__City__c</columns>
+        <columns>SVMXC__State__c</columns>
+        <columns>SVMXC__Country__c</columns>
+        <columns>SVMXC__Zip__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Service Teams</label>
+        <language>en_US</language>
+    </listViews>
 </CustomObject>
