@@ -371,7 +371,7 @@
     </types>
     <types>
         <members>DEF_Contract_Validation_Profile</members>
-        <members>DEF_IP_Serviced_ID</members>
+       <!-- <members>DEF_IP_Serviced_ID</members>-->
         <members>DEF_WO_Interface_Command</members>
         <members>DEF_WO_Interface_Command_PM</members>
         <members>DEF_WO_Interface_Pass</members>
