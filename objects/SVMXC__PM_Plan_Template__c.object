@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>DEF_Company__c</fullName>
+        <externalId>false</externalId>
+        <label>DEF_Company</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Company</valueSetName>
+        </valueSet>
+    </fields>
+    <listViews>
+        <fullName>SVMXC__All_PM_Plan_Templates</fullName>
+        <columns>NAME</columns>
+        <columns>SVMXC__Coverage_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All PM Plan Templates</label>
+        <language>en_US</language>
+    </listViews>
+</CustomObject>

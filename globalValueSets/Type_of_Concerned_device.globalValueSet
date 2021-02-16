@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Batteries</fullName>
+        <default>false</default>
+        <label>Batteries</label>
+    </customValue>
+    <customValue>
+        <fullName>Internal power supply</fullName>
+        <default>false</default>
+        <label>Internal power supply</label>
+    </customValue>
+    <customValue>
+        <fullName>External power supply</fullName>
+        <default>false</default>
+        <label>External power supply</label>
+    </customValue>
+    <customValue>
+        <fullName>Motherboard</fullName>
+        <default>false</default>
+        <label>Motherboard</label>
+    </customValue>
+    <customValue>
+        <fullName>Loop Card</fullName>
+        <default>false</default>
+        <label>Loop Card</label>
+    </customValue>
+    <customValue>
+        <fullName>Relay Card</fullName>
+        <default>false</default>
+        <label>Relay Card</label>
+    </customValue>
+    <customValue>
+        <fullName>Network Card</fullName>
+        <default>false</default>
+        <label>Network Card</label>
+    </customValue>
+    <customValue>
+        <fullName>Other card</fullName>
+        <default>false</default>
+        <label>Other card</label>
+    </customValue>
+    <customValue>
+        <fullName>Detector</fullName>
+        <default>false</default>
+        <label>Detector</label>
+    </customValue>
+    <customValue>
+        <fullName>Detector clogging</fullName>
+        <default>false</default>
+        <label>Detector clogging</label>
+    </customValue>
+    <customValue>
+        <fullName>Base contact</fullName>
+        <default>false</default>
+        <label>Base contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Manual Trigger</fullName>
+        <default>false</default>
+        <label>Manual Trigger</label>
+    </customValue>
+    <customValue>
+        <fullName>I/O info module</fullName>
+        <default>false</default>
+        <label>I/O info module</label>
+    </customValue>
+    <customValue>
+        <fullName>Front End</fullName>
+        <default>false</default>
+        <label>Front End</label>
+    </customValue>
+    <customValue>
+        <fullName>Printer</fullName>
+        <default>false</default>
+        <label>Printer</label>
+    </customValue>
+    <customValue>
+        <fullName>Intermediate radio organ</fullName>
+        <default>false</default>
+        <label>Intermediate radio organ</label>
+    </customValue>
+    <customValue>
+        <fullName>Sign Panel</fullName>
+        <default>false</default>
+        <label>Sign Panel</label>
+    </customValue>
+    <customValue>
+        <fullName>Alarm system</fullName>
+        <default>false</default>
+        <label>Alarm system</label>
+    </customValue>
+    <customValue>
+        <fullName>Voice Alarm System (VOICE ALARM)</fullName>
+        <default>false</default>
+        <label>Voice Alarm System (VOICE ALARM)</label>
+    </customValue>
+    <customValue>
+        <fullName>Smoke/heat evacuation system</fullName>
+        <default>false</default>
+        <label>Smoke/heat evacuation system</label>
+    </customValue>
+    <customValue>
+        <fullName>Teletransmitter</fullName>
+        <default>false</default>
+        <label>Teletransmitter</label>
+    </customValue>
+    <customValue>
+        <fullName>IP converter</fullName>
+        <default>false</default>
+        <label>IP converter</label>
+    </customValue>
+    <customValue>
+        <fullName>Short circuit cable</fullName>
+        <default>false</default>
+        <label>Short circuit cable</label>
+    </customValue>
+    <customValue>
+        <fullName>Cable Break</fullName>
+        <default>false</default>
+        <label>Cable Break</label>
+    </customValue>
+    <customValue>
+        <fullName>Connection problem</fullName>
+        <default>false</default>
+        <label>Connection problem</label>
+    </customValue>
+    <customValue>
+        <fullName>Programming error</fullName>
+        <default>false</default>
+        <label>Programming error</label>
+    </customValue>
+    <customValue>
+        <fullName>User manipulation error</fullName>
+        <default>false</default>
+        <label>User manipulation error</label>
+    </customValue>
+    <customValue>
+        <fullName>Software</fullName>
+        <default>false</default>
+        <label>Software</label>
+    </customValue>
+    <customValue>
+        <fullName>Extinguishing system button</fullName>
+        <default>false</default>
+        <label>Extinguishing system button</label>
+    </customValue>
+    <customValue>
+        <fullName>Extinguishing system trigger</fullName>
+        <default>false</default>
+        <label>Extinguishing system trigger</label>
+    </customValue>
+    <customValue>
+        <fullName>Aspirating smoke detection</fullName>
+        <default>false</default>
+        <label>Aspirating smoke detection</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Type of Concerned device</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
