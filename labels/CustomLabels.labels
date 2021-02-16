@@ -56,13 +56,13 @@
         <shortDescription>DEF_WO_Interface_User</shortDescription>
         <value>UserSmax</value>
     </labels>
-    <labels>
+   <!-- <labels>
         <fullName>DEF_WO_MaintenanceRecordTypeId</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>DEF_WO_MaintenanceRecordTypeId</shortDescription>
         <value>0122X000000OdcgQAC</value>
-    </labels>
+    </labels>-->
     <labels>
         <fullName>DEF_WW_Actions</fullName>
         <categories>Lightning Record Page Translations</categories>
