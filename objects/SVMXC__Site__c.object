@@ -1347,6 +1347,21 @@ If set, the territory matching rules will be overwritten and the location associ
         <type>Number</type>
         <unique>false</unique>
     </fields>
+    <listViews>
+        <fullName>SVMXC__All_Locations</fullName>
+        <columns>NAME</columns>
+        <columns>SVMXC__Account__c</columns>
+        <columns>SVMXC__Street__c</columns>
+        <columns>SVMXC__City__c</columns>
+        <columns>SVMXC__State__c</columns>
+        <columns>SVMXC__Zip__c</columns>
+        <columns>SVMXC__Country__c</columns>
+        <columns>SVMXC__Latitude__c</columns>
+        <columns>SVMXC__Longitude__c</columns>
+        <columns>SVMXC__Stocking_Location__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Locations</label>
+    </listViews>
     <recordTypes>
         <fullName>SVMXC__Standard_Location</fullName>
         <active>true</active>

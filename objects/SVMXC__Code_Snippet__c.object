@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <listViews>
+        <fullName>AllCodeSnippets</fullName>
+        <columns>NAME</columns>
+        <columns>SVMXC__SnippetId__c</columns>
+        <columns>SVMXC__Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

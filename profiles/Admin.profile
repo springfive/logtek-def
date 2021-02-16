@@ -73,10 +73,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>DEF_WO_SendEmailToContacts</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>DEF_WO_SirSender</apexClass>
         <enabled>true</enabled>
     </classAccesses>
