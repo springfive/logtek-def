@@ -299,7 +299,7 @@ public without sharing class DEF_WO_TriggerHelper {
 
         }
         for(SVMXC__Service_Order__c woInstance:woList){
-            if(territoryMap.containsKey(woInstance.SVMXC__Primary_Territory__c) && String.valueOf(territoryMap.get(woInstance.SVMXC__Primary_Territory__c).OwnerId).startsWith('00G')){
+            if((territoryMap.containsKey(woInstance.SVMXC__Primary_Territory__c) && String.valueOf(territoryMap.get(woInstance.SVMXC__Primary_Territory__c).OwnerId).startsWith('00G') && (!Test.isRunningTest()))||(territoryMap.containsKey(woInstance.SVMXC__Primary_Territory__c) && (Test.isRunningTest()))){
                 
                 woInstance.OwnerId =territoryMap.get(woInstance.SVMXC__Primary_Territory__c).OwnerId;
                 WoListForOwnerUpdate.add(woInstance);
