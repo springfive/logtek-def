@@ -1,14 +1,14 @@
 /**
 * @description       : Handler for the Work Order berfore insert trigger.
-* @author            : Jawahar Moorthy (SpringFive)
+* @author            : Sofiane Bazizen (SpringFive)
 * @group             : 
-* @last modified on  : 02-17-2021
+* @last modified on  : 01-29-2021
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 * Modifications Log 
 * Ver   Date         Author                               Modification
 * 1.0   07-11-2020   Sofiane Bazizen (SpringFive)   Initial Version
 **/
-public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
+public inherited sharing class DEF_WO_TriggerHandler extends TriggerHandler {
     
     private List<SVMXC__Service_Order__c> triggerNew;
     private List<SVMXC__Service_Order__c> triggerOld;
@@ -30,7 +30,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             Set<Id> pmIdSet = new Set<Id>();
             List<SVMXC__Site__c> locationRecords=new List<SVMXC__Site__c>();
             List<SVMXC__PM_Plan__c> pmList=new List<SVMXC__PM_Plan__c>();
-            set<id> PrimaryTerritoryOwnerSet = new set<id> ();
             for(SVMXC__Service_Order__c woInstance:this.triggerNew){
                 //get WO location - If its associated to WO
                 if(woInstance.SVMXC__Site__c!=null){
@@ -40,10 +39,8 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                 if(woInstance.SVMXC__PM_Plan__c != null && woInstance.SVMXC__Order_Type__c == DEF_StringHelper.WO_ORDERTYPE_MAINTENANCE){
                     pmIdSet.add(woInstance.SVMXC__PM_Plan__c);
                 }
-                
 
             }
-            
             
             //get full details(addresss+default territory) of WO location
             if(locationSet.size()>0){
@@ -72,7 +69,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
 
                         woInstance.SVMXC__Primary_Territory__c=locationMap.get(woInstance.SVMXC__Site__c).DefaultTerritory__c;
                     }
-                    
                 }
                 //**---> Update Location Information on Work Order - Before Create**//
                 if(woInstance.SVMXC__Site__c!=null && locationMap.size()>0 && locationMap.containsKey(woInstance.SVMXC__Site__c)){
@@ -98,7 +94,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                     if(locationInstance.SVMXC__Longitude__c!=null){
                         woInstance.SVMXC__Longitude__c=locationInstance.SVMXC__Longitude__c;
                     }
-
 
                 }
                 //**---> Update Work Order Designation Year(technical field) based on PM Plan Start Date - Before Create**//
@@ -128,7 +123,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                     System.debug('@Designation Year: ' + woInstance.TECH_Designation_Year__c);
 
                 }
-                
 
                 
             }
@@ -143,16 +137,12 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             system.debug('@In beforeUpdate...');
             Set<Id> locationSet=new Set<Id>();
             List<SVMXC__Site__c> locationRecords=new List<SVMXC__Site__c>();
-            set<id> PrimaryTerritoryOwnerSet = new set<id> ();
-
             for(SVMXC__Service_Order__c woInstance:this.triggerNew){
                 //get WO location - If its associated to WO
                 if(woInstance.SVMXC__Site__c!=null){
                     locationSet.add(woInstance.SVMXC__Site__c);
                 }
-                
             }
-            
             //get full details(addresss+default territory) of WO location
             if(locationSet.size()>0){
                 locationRecords=[SELECT Id,DefaultTerritory__c,SVMXC__City__c,SVMXC__Country__c,SVMXC__Latitude__c,SVMXC__Longitude__c,SVMXC__State__c,SVMXC__Street__c,SVMXC__Zip__c FROM SVMXC__Site__c WHERE Id IN: locationSet];
@@ -211,7 +201,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                 if (woInstance.Tech_Trigger_Back_Office__c!=true && (woInstance.SVMXC__Order_Status__c=='Job Validated' || woInstance.SVMXC__Order_Status__c=='Customer Confirmed') && woInstance.SVMXC__Order_Status__c!=this.triggerMapOld.get(woInstance.Id).SVMXC__Order_Status__c) {
                     woInstance.Tech_Trigger_Back_Office__c=true;
                 }
-                
 
             }
         }
@@ -224,10 +213,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             //system.debug(' Loop Count...'+this.currentLoopValue()); //@dev
             
             List<SVMXC__Service_Order__c> woToSendToBO=new List<SVMXC__Service_Order__c>();
-            list<SVMXC__Service_Order__c> WoListForOwnerUpdate = new list<SVMXC__Service_Order__c> ();
-            set<id> PrimaryTerritorySet = new set<id> ();
-            set<id> WOSetForOwnerUpdate = new set<id> ();
-            List<DEF_WorkOrderPlatformEvent__e> WOPEList = new List<DEF_WorkOrderPlatformEvent__e>();
             for(SVMXC__Service_Order__c workorderInstance:this.triggerNew)
             {
                 if (workorderInstance.Tech_Trigger_Back_Office__c==true) {
@@ -235,17 +220,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                     //DEF_WO_SendWOToBackOffice.SendWODetails(workorderInstance);
                     woToSendToBO.add(workorderInstance);
                 }
-                //Apex code to set the Owner of WO from Owner of Territory
-                if(String.valueOf(workorderInstance.OwnerId).startsWith('005') && workorderInstance.SVMXC__Primary_Territory__c != null) {
-                    
-                    
-                    DEF_WorkOrderPlatformEvent__e WOPEInstance = new DEF_WorkOrderPlatformEvent__e();
-                    WOPEInstance.WorkOrderId__c = String.valueOf(workorderInstance.Id);
-                    WOPEList.add(WOPEInstance);
-                    System.debug('@WoListForOwnerUpdate...');
-
-                }
-                
             }
             //**Start-->Apex Code is for sending work order id to the back office whenever the callout work order is created**//
             if(woToSendToBO.size()>0){
@@ -253,18 +227,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                 
             }
             //**End--> Apex Code is for sending work order id to the back office whenever the callout work order is created**//
-            //**Start-->Apex code to set the Owner of WO from Owner of Territory
-            if(WOPEList.size()>0){
-                System.debug('@publish(WOPEList)');
-                List<Database.SaveResult> results = EventBus.publish(WOPEList);
-                System.debug('results'+results);
-
-                //DEF_WO_TriggerHelper.SetOwnerTOWorkOrder(WoListForOwnerUpdate,PrimaryTerritorySet);
-            }
-            //**End-->Apex code to set the Owner of WO from Owner of Territory
-
-            
-            
                         
             List<SVMXC__Service_Order__c> woListToUpdate = new List<SVMXC__Service_Order__c> ();
             
@@ -282,10 +244,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                 }
             }
             
-             
-
-            
-
             //[Display]
             System.debug('woFilteredList.Size: ' + woFilteredList.size());
             
@@ -293,7 +251,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             for (SVMXC__Service_Order__c wo :[SELECT Id, SVMXC__PM_Plan__c FROM SVMXC__Service_Order__c WHERE Id in :woFilteredList]) {
                 pmIdSet.add(wo.SVMXC__PM_Plan__c);
             }
-           
             
             System.debug('@pmIdSet: ' + pmIdSet);
             
@@ -406,12 +363,9 @@ System.debug('The Error Thrown When calling the DEF_WO_SendEmailToContacts '+e);
             Set<Id> technicianSetToCreateEvent=new Set<Id>();
             Set<Id> accountSetToCreateEvent=new Set<Id>();
             Set<Id> woSetToUpdateEvent=new Set<Id>();
-            list<SVMXC__Service_Order__c> WoListForOwnerUpdate = new list<SVMXC__Service_Order__c> ();
-            set<id> PrimaryTerritorySet = new set<id> ();
             List<SVMXC__Service_Order__c> woListToCreateEvent=new List<SVMXC__Service_Order__c>();
             List<SVMXC__Service_Order__c> woToSendEmail=new List<SVMXC__Service_Order__c>();
             List<SVMXC__Service_Order__c> woToSendToBO=new List<SVMXC__Service_Order__c>();
-            List<DEF_WorkOrderPlatformEvent__e> WOPEList = new List<DEF_WorkOrderPlatformEvent__e>();
             for(SVMXC__Service_Order__c workorderInstance:this.triggerNew)
             {
                 if(workorderInstance.SVMXC__Group_Member__c!=null){
@@ -444,14 +398,7 @@ System.debug('The Error Thrown When calling the DEF_WO_SendEmailToContacts '+e);
                 if((this.triggerMapOld.get(workorderInstance.Id).SVMXC__Order_Status__c!=workorderInstance.SVMXC__Order_Status__c) && workorderInstance.SVMXC__Order_Status__c=='Job Complete'){
                     woToSendEmail.add(workorderInstance);
                 }
-                //Apex code to set the Owner of WO from Owner of Territory
-                if(workorderInstance.SVMXC__Primary_Territory__c!=this.triggerMapOld.get(workorderInstance.Id).SVMXC__Primary_Territory__c && workorderInstance.SVMXC__Primary_Territory__c != null) {
-                    
-                   DEF_WorkOrderPlatformEvent__e WOPEInstance = new DEF_WorkOrderPlatformEvent__e();
-                    WOPEInstance.WorkOrderId__c = String.valueOf(workorderInstance.Id);
-                    WOPEList.add(WOPEInstance);
-
-                }
+                
                 
                 
             }
@@ -483,14 +430,6 @@ System.debug('The Error Thrown When calling the DEF_WO_SendEmailToContacts '+e);
             }
             //**End--> Apex Code is for sending work order id to the back office whenever the callout work order is created**//
             //}
-            //**Start-->Apex code to set the Owner of WO from Owner of Territory
-            if(WOPEList.size()>0){
-                System.debug('WOPEList'+WOPEList);
-                List<Database.SaveResult> results = EventBus.publish(WOPEList);
-                //DEF_WO_TriggerHelper.SetOwnerTOWorkOrder(WoListForOwnerUpdate,PrimaryTerritorySet);
-                
-            }
-            //**End-->Apex code to set the Owner of WO from Owner of Territory
         }
     }
     
