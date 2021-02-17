@@ -307,7 +307,6 @@ public without sharing class DEF_WO_TriggerHelper {
 
             }
             
-            
         }
         System.debug('WoListForOwnerUpdate'+WoListForOwnerUpdate);
         return WoListForOwnerUpdate;
