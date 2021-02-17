@@ -17,16 +17,16 @@ public class DEF_WO_PE_TriggerTest {
     SVMXC__Territory__c territory=new SVMXC__Territory__c();
     territory.Name='Test Territory';
     //territory.OwnerId=gr.id;
-    //insert territory;
+    insert territory;
 
     SVMXC__Service_Order__c workOrder=new SVMXC__Service_Order__c();
     workOrder.SVMXC__Primary_Territory__c=territory.Id;
-    //insert workOrder;
+    insert workOrder;
 
     DEF_WorkOrderPlatformEvent__e platformEvent=new DEF_WorkOrderPlatformEvent__e();
     platformEvent.WorkOrderId__c= String.valueOf(workOrder.id);
     Test.startTest();
-    //EventBus.publish(platformEvent);
+    EventBus.publish(platformEvent);
     Test.stopTest();
 
     }
