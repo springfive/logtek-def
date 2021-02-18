@@ -33,6 +33,7 @@
     </types>
     <types>
         <members>Contact.DEF_Contact_Matching_Rule</members>
+        <members>Contact.Standard_Contact_Match_Rule_v1_1</members>
         <name>MatchingRule</name>
     </types>
     <version>50.0</version>

@@ -1,29 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MatchingRules xmlns="http://soap.sforce.com/2006/04/metadata">
-    <matchingRules>
-        <fullName>DEF_Contact_Matching_Rule</fullName>
-        <booleanFilter>(1 AND 2) AND (3 OR 4)</booleanFilter>
-        <label>DEF Contact Matching Rule</label>
-        <matchingRuleItems>
-            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
-            <fieldName>FirstName</fieldName>
-            <matchingMethod>FirstName</matchingMethod>
-        </matchingRuleItems>
-        <matchingRuleItems>
-            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
-            <fieldName>LastName</fieldName>
-            <matchingMethod>LastName</matchingMethod>
-        </matchingRuleItems>
-        <matchingRuleItems>
-            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
-            <fieldName>Email</fieldName>
-            <matchingMethod>Exact</matchingMethod>
-        </matchingRuleItems>
-        <matchingRuleItems>
-            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
-            <fieldName>Phone</fieldName>
-            <matchingMethod>Exact</matchingMethod>
-        </matchingRuleItems>
-        <ruleStatus>Active</ruleStatus>
-    </matchingRules>
-</MatchingRules>
+<MatchingRules xmlns="http://soap.sforce.com/2006/04/metadata"/>
+
