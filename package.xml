@@ -19,10 +19,6 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Contact.TEMP_DupRuleCt</members>
-        <name>DuplicateRule</name>
-    </types>
-    <types>
         <members>DEF_WW_Create_New_Contact_and_Add_as_Entitled_Contact</members>
         <name>Flow</name>
     </types>
@@ -30,11 +26,6 @@
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</members>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Line Layout</members>
         <name>Layout</name>
-    </types>
-    <types>
-        <members>Contact.DEF_Contact_Matching_Rule</members>
-        <members>Contact.Standard_Contact_Match_Rule_v1_1</members>
-        <name>MatchingRule</name>
     </types>
     <version>50.0</version>
 </Package>
