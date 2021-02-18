@@ -124,11 +124,14 @@
     <recordCreates>
         <name>Create_New_Contact</name>
         <label>Create New Contact</label>
-        <locationX>1496</locationX>
-        <locationY>39</locationY>
+        <locationX>1372</locationX>
+        <locationY>311</locationY>
         <connector>
             <targetReference>Get_New_ContactId</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Warning_Message</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>AccountId</field>
             <value>
@@ -450,7 +453,7 @@
             <targetReference>Get_Account_ID</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>AccountId</name>
         <dataType>String</dataType>
