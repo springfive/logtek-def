@@ -23,10 +23,6 @@
         <name>Flow</name>
     </types>
     <types>
-        <members>DEF_WW_Create_New_Contact_and_Add_as_Entitled_Contact</members>
-        <name>FlowDefinition</name>
-    </types>
-    <types>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</members>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Line Layout</members>
         <name>Layout</name>
