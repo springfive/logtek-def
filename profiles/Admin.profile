@@ -57,6 +57,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>DEF_WO_PE_TriggerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>DEF_WO_RestAPICall</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -194,6 +198,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>DEF_RunTrigger__mdt.Count__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1840,6 +1849,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>Assigned_Tools_Technician__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>DEF_WorkOrderPlatformEvent__e</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
