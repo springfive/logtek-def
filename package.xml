@@ -4,5 +4,10 @@
         <members>SVMXC__Product_Stock__c.External_ID__c</members>
         <name>CustomField</name>
     </types>
+    <types>
+        <members>Admin</members>
+        <members>DEF Integration</members>
+        <name>Profile</name>
+    </types>
     <version>50.0</version>
 </Package>
