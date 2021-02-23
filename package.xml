@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-        <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</members>
-        <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Line Layout</members>
-        <name>Layout</name>
-    </types>
+    
     <version>50.0</version>
 </Package>
