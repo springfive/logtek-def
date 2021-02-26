@@ -305,18 +305,6 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>Root_Cause_Old__c</fullName>
-        <externalId>false</externalId>
-        <label>Root Cause</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>RootCause</valueSetName>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>Root_Cause__c</fullName>
         <externalId>false</externalId>
         <label>Root Cause</label>
