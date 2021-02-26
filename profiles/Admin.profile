@@ -1932,7 +1932,7 @@
         <recordType>SVMXC__Site__c.SVMXC__Standard_Location</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
-    <tabVisibilities>
+   <!-- <tabVisibilities>
         <tab>Assigned_Tools_Technician__c</tab>
         <visible>DefaultOn</visible>
     </tabVisibilities>
@@ -2039,6 +2039,6 @@
     <tabVisibilities>
         <tab>Service_Board</tab>
         <visible>DefaultOn</visible>
-    </tabVisibilities>
+    </tabVisibilities>-->
     <userLicense>Salesforce</userLicense>
 </Profile>
