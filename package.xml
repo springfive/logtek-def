@@ -3,6 +3,7 @@
     <types>
         <members>Field_Feedback__c.ContractHeader__c</members>
         <members>Field_Feedback__c.Status__c</members>
+        <members>SVMXC__PM_Plan__c.Note_to_Planner__c</members>
         <name>CustomField</name>
     </types>
     <types>
