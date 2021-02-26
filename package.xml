@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-  <types>
+    <types>
+        <members>Field_Feedback__c.ContractHeader__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
         <members>DEF_WW_Field_Feedback_Record_Page</members>
         <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>DEF_FS_Contract_Admin_PS</members>
+        <members>DEF_FS_Manager_PS</members>
+        <members>DEF_FS_Planner_PS</members>
+        <members>DEF_FS_Tech_PS</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>DEF Integration</members>
+        <name>Profile</name>
     </types>
     <version>50.0</version>
 </Package>
