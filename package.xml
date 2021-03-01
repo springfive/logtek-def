@@ -6,10 +6,17 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Planned_Parts__c.PM_Schedule_Definition__c</members>
+        <members>Planned_Parts__c.Part__c</members>
+        <members>Planned_Parts__c.Required_Quantity__c</members>
         <members>SVMXC__Product_Stock__c.External_ID__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>Planned_Parts__c</members>
+        <name>CustomObject</name>
     </types>
     <types>
         <members>DEF_FS_Contract_Admin_PS</members>
