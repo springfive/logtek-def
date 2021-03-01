@@ -547,6 +547,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Issue__c.Type_Of_Concerned_Device_OLD__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Issue__c.Type_of_Concerned_device__c</field>
         <readable>true</readable>
     </fieldPermissions>
