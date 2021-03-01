@@ -7,6 +7,8 @@
     </types>
     <types>
         <members>SVMXC__Product_Stock__c.External_ID__c</members>
+        <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
+        <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <name>CustomField</name>
     </types>
     <types>
