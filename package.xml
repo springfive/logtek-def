@@ -85,6 +85,7 @@
         <members>Field_Feedback__c.Urgent_Remedial_Recommended__c</members>
         <members>Field_Feedback__c.Variation__c</members>
         <members>Field_Feedback__c.Work_Order__c</members>
+        <members>Field_Feedback__c.Status__c</members>
         <members>Issue__c.Root_Cause__c</members>
         <members>Issue__c.Root_Cause_text__c</members>
         <members>Issue__c.Symptoms__c</members>
@@ -525,6 +526,7 @@
         <name>FieldSet</name>
     </types>
     <types>
+      
         <members>Available_Service_Record_Page</members>
         <members>Covered_Product_Record_Page</members>
         <members>DEF_FS_UtilityBar</members>
@@ -564,6 +566,7 @@
         <members>Territory_Record_Page</members>
         <members>Timesheet_Daily_Summary_Record_Page</members>
         <members>Timesheet_Record_Page</members>
+        <members>DEF_WW_Field_Feedback_Record_Page</members>
         <name>FlexiPage</name>
     </types>
     <types>
