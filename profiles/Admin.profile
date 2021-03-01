@@ -902,6 +902,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order_Line__c.Product_Stock__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order_Line__c.Product_Type__c</field>
         <readable>true</readable>
@@ -944,6 +949,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order_Line__c.Technician_User__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
