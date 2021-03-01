@@ -7,7 +7,16 @@
     </types>
     <types>
         <members>SVMXC__Product_Stock__c.External_ID__c</members>
+        <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
+        <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>DEF_FS_Contract_Admin_PS</members>
+        <members>DEF_FS_Manager_PS</members>
+        <members>DEF_FS_Planner_PS</members>
+        <members>DEF_FS_Tech_PS</members>
+        <name>PermissionSet</name>
     </types>
     <types>
         <members>Admin</members>
