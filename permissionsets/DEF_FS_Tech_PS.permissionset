@@ -3102,11 +3102,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>SVMXC__Installed_Product__c.Description__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>SVMXC__Installed_Product__c.Fire_alarm_Monitored__c</field>
         <readable>true</readable>
     </fieldPermissions>
