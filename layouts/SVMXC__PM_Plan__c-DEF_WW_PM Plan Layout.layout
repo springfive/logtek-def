@@ -39,6 +39,10 @@
                 <behavior>Required</behavior>
                 <field>DEF_Company__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Note_to_Planner__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -108,8 +112,6 @@
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>CREATED_DATE</fields>
         <fields>CREATEDBY_USER</fields>
@@ -117,8 +119,6 @@
         <relatedList>SVMXC__PM_Coverage__c.SVMXC__PM_Plan__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>SVMXC__Frequency__c</fields>
         <fields>SVMXC__Frequency_Unit__c</fields>
@@ -129,8 +129,6 @@
         <relatedList>SVMXC__PM_Schedule_Definition__c.SVMXC__PM_Plan__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>WO_Duration__c</fields>
         <fields>SVMX_PS_Work_Order_Purpose__c</fields>
@@ -143,8 +141,6 @@
         <relatedList>RelatedEntityHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>WoDetails__c</fields>
         <fields>SVMXC__SM_Estimated_Duration__c</fields>
