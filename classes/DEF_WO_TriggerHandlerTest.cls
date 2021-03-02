@@ -101,6 +101,7 @@ public with sharing class DEF_WO_TriggerHandlerTest {
         insert serviceTeam;
         SVMXC__Service_Group_Members__c equipment=new SVMXC__Service_Group_Members__c();
         equipment.Name='Equipment 1';
+        equipment.RecordTypeId=String.valueOf(Schema.SObjectType.SVMXC__Service_Group_Members__c.getRecordTypeInfosByName().get('Equipment').getRecordTypeId());
         equipment.SVMXC__Service_Group__c=serviceTeam.Id;
         insert equipment;
         eqRequired1.Location__c=location.Id;
@@ -108,6 +109,8 @@ public with sharing class DEF_WO_TriggerHandlerTest {
         insert eqRequired1;
         SVMXC__Service_Group_Members__c equipment2=new SVMXC__Service_Group_Members__c();
         equipment2.Name='Equipment 2';
+        equipment2.RecordTypeId=String.valueOf(Schema.SObjectType.SVMXC__Service_Group_Members__c.getRecordTypeInfosByName().get('Equipment').getRecordTypeId());
+
         equipment2.SVMXC__Service_Group__c=serviceTeam.Id;
         insert equipment2;
         eqRequired2.Location__c=location.Id;
