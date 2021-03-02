@@ -15,5 +15,17 @@
         <members>SVMXC__Service_Order__c-DEF_WW_Preventive Maintenance Work Order Layout</members>
         <name>Layout</name>
     </types>
+    <types>
+        <members>DEF_FS_Contract_Admin_PS</members>
+        <members>DEF_FS_Manager_PS</members>
+        <members>DEF_FS_Planner_PS</members>
+        <members>DEF_FS_Tech_PS</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>DEF Integration</members>
+        <name>Profile</name>
+    </types>
     <version>50.0</version>
 </Package>
