@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DEF_WO_TriggerHandler</members>
@@ -7,7 +7,13 @@
     </types>
     <types>
         <members>Locations_Equipment__c.Equipment__c</members>
+        <members>SVMXC__Service_Order__c.Is_First_Time_Fixed__c</members>
+        <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>DEF_WW_Dasboards/tlZIWGodJRzOzyMyKRvvtEJnZORuGU</members>
+        <name>Dashboard</name>
     </types>
     <types>
         <members>SVMXC__PM_Plan__c-DEF_WW_PM Plan Layout</members>
@@ -26,6 +32,12 @@
         <members>Admin</members>
         <members>DEF Integration</members>
         <name>Profile</name>
+    </types>
+    <types>
+        <members>DEF_WW_RampupKPIs/DEF_WW_First_Time_Fix_X7x</members>
+        <members>DEF_WW_RampupKPIs/DEF_WW_Hours_declared_on_site_1xt</members>
+        <members>DEF_WW_Reports/DEF_WW_Planned_Time_vs_Actual_Time_KUW</members>
+        <name>Report</name>
     </types>
     <version>50.0</version>
 </Package>
