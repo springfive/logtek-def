@@ -6,9 +6,7 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>Field_Feedback__c.Contract_Header__c</members>
         <members>Locations_Equipment__c.Equipment__c</members>
-        <members>SVMXC__Service_Order__c.Contract_Header__c</members>
         <name>CustomField</name>
     </types>
     <types>
