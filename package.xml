@@ -3,6 +3,9 @@
     <types>
         <members>DEF_SC_RestAPICall</members>
         <members>DEF_SC_RestAPICallTest</members>
+        <members>DEF_WO_TriggerHandler</members>
+        <members>DEF_WO_TriggerHandlerTest</members>
+        <members>DEF_WO_TriggerHelper</members>
         <name>ApexClass</name>
     </types>
     <types>

@@ -191,6 +191,30 @@ public with sharing class DEF_WO_TriggerHandlerTest {
         Test.stopTest();
 
     }
+    @isTest
+    static void afterInsert_CreateWDFromPlannedParts() {
+        //Preparing Test Data
+        SVMXC__PM_Plan__c pmPlan = new SVMXC__PM_Plan__c();
+        pmPlan.Name='Test Plan';
+        insert pmPlan;
+        SVMXC__PM_Schedule_Definition__c scDef = new SVMXC__PM_Schedule_Definition__c();
+        scDef.SVMXC__PM_Plan__c=pmPlan.Id;
+        insert scDef;
+        Product2 product=new Product2();
+        product.Name='product 1';
+        insert product;
+        Planned_Parts__c plannedPart = new Planned_Parts__c();
+        plannedPart.Part__c=product.Id;
+        plannedPart.PM_Schedule_Definition__c=scDef.Id;
+        insert plannedPart;
+        SVMXC__Service_Order__c workorder = new SVMXC__Service_Order__c();
+        workorder.PM_Schedule_Definition__c=scDef.Id;
+        workorder.SVMXC__Order_Type__c='Maintenance';
+        Test.startTest();
+        insert workorder;
+        Test.stopTest();
+
+    }
 
     @isTest
     static void afterUpdate_CreateEventFromMobile() {
