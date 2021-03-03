@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <enableEnhancedLookup>false</enableEnhancedLookup>
-    <fields>
-        <fullName>Contract_Header__c</fullName>
-        <externalId>false</externalId>
-        <formula>SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__r.Name</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Contract Header</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
+    
 </CustomObject>
