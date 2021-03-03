@@ -221,16 +221,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Field_Feedback__c.ContractHeader__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Field_Feedback__c.Contract_Header__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Field_Feedback__c.Corrective_Action_Recommended__c</field>
         <readable>true</readable>
@@ -1023,11 +1013,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Contact_Phone_SF__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Contract_Header__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

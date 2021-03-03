@@ -6,10 +6,12 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>Field_Feedback__c.Contract_Header__c</members>
         <members>Locations_Equipment__c.Equipment__c</members>
-        <members>SVMXC__Service_Order__c.Contract_Header__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.SVMXC__SM_Service_Board_Fields</members>
+        <name>FieldSet</name>
     </types>
     <types>
         <members>SVMXC__PM_Plan__c-DEF_WW_PM Plan Layout</members>
