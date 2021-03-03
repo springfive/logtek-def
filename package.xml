@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DEF_WO_TriggerHandler</members>
@@ -8,10 +8,6 @@
     <types>
         <members>Locations_Equipment__c.Equipment__c</members>
         <name>CustomField</name>
-    </types>
-    <types>
-        <members>SVMXC__Service_Order__c.SVMXC__SM_Service_Board_Fields</members>
-        <name>FieldSet</name>
     </types>
     <types>
         <members>SVMXC__PM_Plan__c-DEF_WW_PM Plan Layout</members>
