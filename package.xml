@@ -34,7 +34,9 @@
         <name>FlexiPage</name>
     </types>
     <types>
+        <members>Planned_Parts__c-DEF_WW_Planned Parts Layout</members>
         <members>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</members>
+        <members>SVMXC__Service_Order__c-DEF_WW_Preventive Maintenance Work Order Layout</members>
         <name>Layout</name>
     </types>
     <types>
