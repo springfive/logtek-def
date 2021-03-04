@@ -112,6 +112,13 @@
                     <elementReference>emptyDate</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Intervention_End_Date_and_Time__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>emptyDate</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Update_WO_Completed_Date_Time</targetReference>
             </connector>
