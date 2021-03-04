@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-   
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <fields>
+        <fullName>Is_First_Time_Fixed__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( AND(OR(TEXT(SVMXC__Order_Status__c)==&quot;Job Validated&quot;,
+											TEXT(SVMXC__Order_Status__c) ==&quot;Closed&quot;),
+								TEXT(Return_Visit_Required__c) &lt;&gt; &quot;Yes&quot;,
+								SVMX_PS_Parent_Work_Order__c == NULL),
+			True,
+			False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Fixed First Time</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Scheduled_Duration_in_hours__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__SM_Scheduled_Duration__c / 60</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Scheduled Duration (in hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
 </CustomObject>
