@@ -3,12 +3,18 @@
     <types>
         <members>DEF_SC_RestAPICall</members>
         <members>DEF_SC_RestAPICallTest</members>
+        <members>DEF_WO_PE_TriggerTest</members>
         <members>DEF_WO_TriggerHandler</members>
         <members>DEF_WO_TriggerHandlerTest</members>
         <members>DEF_WO_TriggerHelper</members>
         <name>ApexClass</name>
     </types>
     <types>
+        <members>DEF_WO_PE_Trigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</members>
         <members>Planned_Parts__c.PM_Schedule_Definition__c</members>
         <members>Planned_Parts__c.Part__c</members>
         <members>Planned_Parts__c.Required_Quantity__c</members>
@@ -19,6 +25,7 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>DEF_WorkOrderPlatformEvent__e</members>
         <members>Planned_Parts__c</members>
         <name>CustomObject</name>
     </types>
