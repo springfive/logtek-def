@@ -6,8 +6,11 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Field_Feedback__c.Contract_HeaderLink__c</members>
         <members>Locations_Equipment__c.Equipment__c</members>
+        <members>SVMXC__PM_Plan__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.Is_First_Time_Fixed__c</members>
+        <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
         <name>CustomField</name>
     </types>
@@ -16,10 +19,15 @@
         <name>Dashboard</name>
     </types>
     <types>
+        <members>SVMXC__Service_Order__c.SVMXC__SM_Service_Board_Fields</members>
+        <name>FieldSet</name>
+    </types>
+    <types>
         <members>DEF_WW_Work_Order_Update_First_assigned_date_time_completed_date_time</members>
         <name>Flow</name>
     </types>
     <types>
+        <members>Field_Feedback__c-DEF_WW_Field Feedback Layout</members>
         <members>SVMXC__PM_Plan__c-DEF_WW_PM Plan Layout</members>
         <members>SVMXC__Service_Order__c-DEF_WW_Callout Work Order Layout</members>
         <members>SVMXC__Service_Order__c-DEF_WW_Preventive Maintenance Work Order Layout</members>
