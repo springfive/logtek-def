@@ -14,6 +14,7 @@
         <name>ApexTrigger</name>
     </types>
     <types>
+        <members>DEF_ServiceContract_Integration__e.RecordId__c</members>
         <members>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</members>
         <members>Planned_Parts__c.PM_Schedule_Definition__c</members>
         <members>Planned_Parts__c.Part__c</members>
@@ -25,6 +26,7 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>DEF_ServiceContract_Integration__e</members>
         <members>DEF_WorkOrderPlatformEvent__e</members>
         <members>Planned_Parts__c</members>
         <name>CustomObject</name>
@@ -32,6 +34,10 @@
     <types>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
         <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>DEF_WW_SC_Trigger_Platform_Event</members>
+        <name>Flow</name>
     </types>
     <types>
         <members>Planned_Parts__c-DEF_WW_Planned Parts Layout</members>
