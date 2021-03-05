@@ -3,7 +3,7 @@
     <fields>
         <fullName>Contract_HeaderLink__c</fullName>
         <externalId>false</externalId>
-        <formula>HYPERLINK(&apos;/lightning/r/SVMXC__Service_Contract__c/&apos;+CASESAFEID(Service_Maintenance_Contract__r.SVMX_PS_Parent_Contract__c)+&apos;/view&apos;,Service_Maintenance_Contract__r.SVMX_PS_Parent_Contract__r.Name)</formula>
+        <formula>HYPERLINK(&apos;/lightning/r/SVMXC__Service_Contract__c/&apos;+CASESAFEID(Work_Order__r.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__r.Id)+&apos;/view&apos;,Work_Order__r.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__r.Name)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Contract Header</label>
         <required>false</required>
