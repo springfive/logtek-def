@@ -18,9 +18,9 @@
         <fullName>Technician_Van_Stock__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>Technician Van Stock</label>
+        <label>Stock Location</label>
         <referenceTo>SVMXC__Site__c</referenceTo>
-        <relationshipLabel>Work Details (Technician Van Stock)</relationshipLabel>
+        <relationshipLabel>Work Details (Stock Location)</relationshipLabel>
         <relationshipName>Work_Details</relationshipName>
         <required>false</required>
         <trackHistory>false</trackHistory>
