@@ -36,6 +36,16 @@
         <field>SVMXC__Service_Order__c.Tech_Total_Labor__c</field>
     </columns>
     <description>Hours declared on site by month</description>
+    <filter>
+        <criteriaItems>
+            <column>SVMXC__Service_Order__c.SVMXC__Order_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Job In Progress,Job Complete,Job Validated,Closed</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Month</dateGranularity>

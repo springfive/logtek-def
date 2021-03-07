@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 12-14-2020
+ * @last modified on  : 03-01-2021
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  * Modifications Log 
  * Ver   Date         Author                               Modification
@@ -85,6 +85,70 @@ public with sharing class DEF_WO_TriggerHandlerTest {
         insert workOrderInstance;
         Test.stopTest();
     }
+
+    @isTest
+    static void beforeInsert_SetNoteToPlanner() {
+        //Create Equipment Required
+        Locations_Equipment__c eqRequired1=new Locations_Equipment__c();
+        Locations_Equipment__c eqRequired2=new Locations_Equipment__c();
+        SVMXC__Site__c location=DEF_TestDataFactory.CreateLocation('TestLocation');
+        insert location;
+        
+        //Create Equipment Required 1
+       
+        SVMXC__Service_Group__c serviceTeam= new SVMXC__Service_Group__c();
+        serviceTeam.Name='Team A';
+        insert serviceTeam;
+        SVMXC__Service_Group_Members__c equipment=new SVMXC__Service_Group_Members__c();
+        equipment.Name='Equipment 1';
+        equipment.RecordTypeId=String.valueOf(Schema.SObjectType.SVMXC__Service_Group_Members__c.getRecordTypeInfosByName().get('Equipment').getRecordTypeId());
+        equipment.SVMXC__Service_Group__c=serviceTeam.Id;
+        insert equipment;
+        eqRequired1.Location__c=location.Id;
+        eqRequired1.Equipment__c=equipment.Id;
+        insert eqRequired1;
+        SVMXC__Service_Group_Members__c equipment2=new SVMXC__Service_Group_Members__c();
+        equipment2.Name='Equipment 2';
+        equipment2.RecordTypeId=String.valueOf(Schema.SObjectType.SVMXC__Service_Group_Members__c.getRecordTypeInfosByName().get('Equipment').getRecordTypeId());
+
+        equipment2.SVMXC__Service_Group__c=serviceTeam.Id;
+        insert equipment2;
+        eqRequired2.Location__c=location.Id;
+        eqRequired2.Equipment__c=equipment2.Id;
+        insert eqRequired2;
+        
+        //create Pm plan 
+        SVMXC__PM_Plan__c pmPlan=new SVMXC__PM_Plan__c();
+        pmPlan.Note_to_Planner__c='test note';
+        insert pmPlan;
+        
+        SVMXC__PM_Plan__c pmPlan2=new SVMXC__PM_Plan__c();
+        //pmPlan2.Note_to_Planner__c='test note';
+        insert pmPlan2;
+        List<SVMXC__Service_Order__c> woList=new List<SVMXC__Service_Order__c>();
+        
+        SVMXC__Service_Order__c workOrder=new SVMXC__Service_Order__c();
+    	workOrder.SVMXC__Site__c=location.Id;
+        workOrder.SVMXC__PM_Plan__c=pmPlan.Id;
+        workOrder.SVMXC__Order_Type__c='Maintenance';
+        woList.add(workOrder);
+        
+        SVMXC__Service_Order__c workOrder2=new SVMXC__Service_Order__c();
+    	workOrder2.SVMXC__Site__c=location.Id;
+        workOrder2.SVMXC__PM_Plan__c=pmPlan2.Id;
+        workOrder2.SVMXC__Order_Type__c='Maintenance';
+        woList.add(workOrder2);
+        
+        
+        
+        
+        Test.startTest();
+        insert woList;
+        Test.stopTest();
+
+
+    }
+    
 
     @isTest
     static void beforeUpdate_SetWoTerritory() {
