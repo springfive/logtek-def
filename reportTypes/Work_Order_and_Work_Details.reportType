@@ -202,6 +202,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>SVMX_PS_Work_Order_Type__c</field>
+            <table>SVMXC__Service_Order__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>SVMX_PS_Checklist_Completed__c</field>
             <table>SVMXC__Service_Order__c</table>
         </columns>

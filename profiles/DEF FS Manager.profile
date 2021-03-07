@@ -57,6 +57,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>DEF_WO_PE_TriggerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>DEF_WO_RestAPICall</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -198,6 +202,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Field_Feedback__c.Account__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -210,6 +219,11 @@
         <editable>true</editable>
         <field>Field_Feedback__c.Contact_Field_Feedback__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Field_Feedback__c.Contract_HeaderLink__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -469,6 +483,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__PM_Plan__c.DesignationYear__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__PM_Plan__c.Note_to_Planner__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1227,6 +1246,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Note_to_Planner__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Number_Of_Days_Spent__c</field>
         <readable>true</readable>
@@ -1409,6 +1433,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.SVMX_PS_Subject__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
