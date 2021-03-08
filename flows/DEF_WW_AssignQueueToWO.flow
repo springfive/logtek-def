@@ -454,7 +454,7 @@
         <object>SVMXC__Service_Order__c</object>
     </recordUpdates>
     <startElementReference>isChangedDecision4_myRule_3_SVMXC_Primary_Territory_c</startElementReference>
-    <status>Active</status>
+    <status>Obsolete</status>
     <variables>
         <name>myVariable_current</name>
         <dataType>SObject</dataType>

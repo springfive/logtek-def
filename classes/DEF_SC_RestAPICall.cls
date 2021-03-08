@@ -1,12 +1,12 @@
 /**
-* @description       : 
-* @author            : ChangeMeIn@UserSettingsUnder.SFDoc
-* @group             : 
-* @last modified on  : 12-11-2020
-* @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
-* Modifications Log 
-* Ver   Date         Author                               Modification
-* 1.0   09-24-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+ * @description       : 
+ * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+ * @group             : 
+ * @last modified on  : 12-11-2020
+ * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+ * Modifications Log 
+ * Ver   Date         Author                               Modification
+ * 1.0   09-24-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
 **/
 @RestResource(urlMapping='/v2/servicecontract/*')
 global class DEF_SC_RestAPICall {
@@ -122,7 +122,6 @@ global class DEF_SC_RestAPICall {
                 headerInstance.Installation_Discipline__c=header.InstallationDiscipline;
             }
             
-            
             headerContractList.add(headerInstance);
         }
         return headerContractList;
@@ -136,11 +135,11 @@ global class DEF_SC_RestAPICall {
         
         //Set to collect the ids of installed product 
         Set<Id> ipIdSet = new Set<Id>();
-        for(contractLineWrapper wrapInstance:lineContractList){
-            if(!String.isBlank(wrapInstance.Installation)){
-                ipIdSet.add(wrapInstance.Installation);
+            for(contractLineWrapper wrapInstance:lineContractList){
+                if(!String.isBlank(wrapInstance.Installation)){
+                    ipIdSet.add(wrapInstance.Installation);
+                }
             }
-        }
         
         //Map that will have IP Id as key and Top-level as value
         Map<Id,String> ipToplevelMap = new Map<Id,String>();
@@ -150,7 +149,7 @@ global class DEF_SC_RestAPICall {
                 ipToplevelMap.put(ip.Id,ip.SVMXC__Top_Level__c);
             }
         }
-        
+    
         for(contractLineWrapper contractLineInstance:lineContractList)
         {
             if(externalToIdMap.containsKey(String.valueOf(contractLineInstance.BOParentContractId)))
@@ -159,14 +158,14 @@ global class DEF_SC_RestAPICall {
                 cl.Name=contractLineInstance.Name;
                 
                 if(ipToplevelMap.containsKey(contractLineInstance.Installation)){
-                    cl.Top_Level__c = ipToplevelMap.get(contractLineInstance.Installation);
+                   cl.Top_Level__c = ipToplevelMap.get(contractLineInstance.Installation);
                 }
                 
                 if(!String.isBlank(contractLineInstance.contractLineId)){
                     cl.Id=contractLineInstance.contractLineId;
-                    
+
                 }
-                
+               
                 cl.SVMX_PS_External_ID__c=contractLineInstance.BOContractLineId;
                 if(externalToIdMap.containsKey(contractLineInstance.BOParentContractId)){
                     cl.SVMX_PS_Parent_Contract__c=externalToIdMap.get(contractLineInstance.BOParentContractId);
@@ -191,14 +190,13 @@ global class DEF_SC_RestAPICall {
                 }
                 //***Add Dependent Fields of location in Contract Line***/
                 if(!String.isBlank(contractLineInstance.Location)){
-                    
                     if(locationMap.containsKey(contractLineInstance.Location)){
                         SVMXC__Site__c siteInstance=locationMap.get(contractLineInstance.Location);
                         cl.Accreditation__c=siteInstance.Accreditation__c;
                         cl.Preferred_Technician__c=siteInstance.SVMX_PS_Preferred_Technician__c ;
                         cl.SVMXC__Business_Hours__c=siteInstance.SVMXC__Preferred_Business_Hours__c;
-                        
-                        
+
+
                     }
                 }
                 if(lineRecordTypeId!=null)
@@ -211,22 +209,22 @@ global class DEF_SC_RestAPICall {
                 if(extIdToSC.containsKey(contractLineInstance.BOParentContractId)){
                     if(extIdToSC.get(contractLineInstance.BOParentContractId).SVMXC__Company__c!=null){
                         cl.SVMXC__Company__c=extIdToSC.get(contractLineInstance.BOParentContractId).SVMXC__Company__c;
-                        
+
                     }
                     if(extIdToSC.get(contractLineInstance.BOParentContractId).DEF_Company__c!=null){
                         cl.DEF_Company__c=extIdToSC.get(contractLineInstance.BOParentContractId).DEF_Company__c;
-                        
+
                     }
-                    
+                   
                 }
                 
                 contractLineValidatedList.add(cl);
             }
         }
         return contractLineValidatedList;
-        
+
     }
-    
+   
     
     public static List<contractLineWrapper> getLineContractWrapper(List<contractHeaderWrapper> serviceContracts){
         List<contractLineWrapper> lineContractList=new List<contractLineWrapper>();
@@ -271,17 +269,17 @@ global class DEF_SC_RestAPICall {
                 extIdToSC.put(headerContractList[k].SVMX_PS_External_ID__c,headerContractList[k]);
             }
         }
+
         
-        
-        
+
         //Converting Wrapper contract line list into Sobject List those have created header contract
         List<SVMXC__Service_Contract__c> contractLineValidatedList=new List<SVMXC__Service_Contract__c>();
         //Get The Location details using SOQL Query and Create a Map of Location Id-> Sobject Record Location
         List<SVMXC__Site__c> locationList=[SELECT Accreditation__c,Id,Name,SVMXC__Preferred_Business_Hours__c,SVMX_PS_Preferred_Technician__c FROM SVMXC__Site__c];
         Map<Id,SVMXC__Site__c> locationMap=new Map<Id,SVMXC__Site__c>(locationList);
-        
+
         contractLineValidatedList=getContractLineFromWrapper(lineContractList,'Create',externalToIdMap,locationMap,extIdToSC);
-        
+         
         
         //DML Insert of contract lines
         Database.SaveResult[] lineResultList = Database.insert(contractLineValidatedList, false);
@@ -289,7 +287,7 @@ global class DEF_SC_RestAPICall {
         
         List<SVMXC__Service_Contract__c> headerContractToDelete=new List<SVMXC__Service_Contract__c>();
         Set<String> headerContractToDeleteSet=new Set<String>();
-        
+       
         //converting line result into response and create map between header id and line records
         Map<Id,List<ResponseContractLineWrapper>> parentToLineMap=new Map<Id,List<ResponseContractLineWrapper>>();
         List<ResponseContractLineWrapper> lineResultWrapperList=new List<ResponseContractLineWrapper>();
@@ -339,7 +337,6 @@ global class DEF_SC_RestAPICall {
             }
             contractResponseList.add(res);
         }
-        
         //Rollback On Error
         List<SVMXC__Service_Contract__c> contractLineToDelete=new List<SVMXC__Service_Contract__c>();
         if(headerContractToDeleteSet.size()>0){
@@ -350,13 +347,13 @@ global class DEF_SC_RestAPICall {
         if(contractLineToDelete.size()>0){
             headerContractToDelete.addAll(contractLineToDelete);
         }
-        
+       
         if(headerContractToDelete.size()>0){
             delete headerContractToDelete;
         }
-        
-        
-        
+
+
+
         
         
         return contractResponseList;
@@ -393,7 +390,6 @@ global class DEF_SC_RestAPICall {
         //Get The Location details using SOQL Query and Create a Map of Location Id-> Sobject Record Location
         List<SVMXC__Site__c> locationList=[SELECT Accreditation__c,Id,Name,SVMXC__Preferred_Business_Hours__c,SVMX_PS_Preferred_Technician__c FROM SVMXC__Site__c];
         Map<Id,SVMXC__Site__c> locationMap=new Map<Id,SVMXC__Site__c>(locationList);
-        
         Map<String,SVMXC__Service_Contract__c> extIdToSC=new Map<String,SVMXC__Service_Contract__c>();
         for (Integer k=0;k<headerResultList.size();k++) {
             if (headerResultList[k].isSuccess()) {
@@ -401,12 +397,12 @@ global class DEF_SC_RestAPICall {
                 extIdToSC.put(headerContractList[k].SVMX_PS_External_ID__c,headerContractList[k]);
             }
         }
-        
-        
+
+
         //Converting Wrapper contract line list into Sobject List those have created header contract
         List<SVMXC__Service_Contract__c> contractLineValidatedList=new List<SVMXC__Service_Contract__c>();
         contractLineValidatedList=getContractLineFromWrapper(lineContractList,'Update',externalToIdMap,locationMap,extIdToSC);
-        
+              
         
         //DML Insert of contract lines
         Database.upsertResult[] lineResultList = Database.upsert(contractLineValidatedList, false);
@@ -420,7 +416,6 @@ global class DEF_SC_RestAPICall {
             ResponseContractLineWrapper lineInstance=new ResponseContractLineWrapper();
             if(lineResultList[k].isSuccess())
             {
-                
                 lineInstance.contractLineId=lineResultList[k].getId();
                 lineInstance.BOContractLineId=contractLineValidatedList[k].SVMX_PS_External_ID__c;
                 lineInstance.contractLineName=contractLineValidatedList[k].Name;
@@ -553,4 +548,9 @@ global class DEF_SC_RestAPICall {
         
     }
     
+    return contractResponseList;
+        
+    }
+    
+
 }

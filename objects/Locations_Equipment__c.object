@@ -160,9 +160,9 @@
         <lookupFilter>
             <active>true</active>
             <filterItems>
-                <field>SVMXC__Service_Group_Members__c.RecordType.Id</field>
+                <field>SVMXC__Service_Group_Members__c.RecordType.DeveloperName</field>
                 <operation>equals</operation>
-                <value>0121q0000000SjcAAE</value>
+                <value>Equipment</value>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>

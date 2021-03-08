@@ -13,6 +13,7 @@
         <locationY>200</locationY>
         <actionName>SVMXSB__SB_ProcessBuilderHelper</actionName>
         <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -153,6 +154,7 @@
         <locationY>200</locationY>
         <actionName>SVMXSB__SB_ProcessBuilderHelper</actionName>
         <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
