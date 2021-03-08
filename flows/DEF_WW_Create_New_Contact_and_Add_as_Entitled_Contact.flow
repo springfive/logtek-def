@@ -124,14 +124,11 @@
     <recordCreates>
         <name>Create_New_Contact</name>
         <label>Create New Contact</label>
-        <locationX>1364</locationX>
-        <locationY>316</locationY>
+        <locationX>1496</locationX>
+        <locationY>39</locationY>
         <connector>
             <targetReference>Get_New_ContactId</targetReference>
         </connector>
-        <faultConnector>
-            <targetReference>Warning_Message</targetReference>
-        </faultConnector>
         <inputAssignments>
             <field>AccountId</field>
             <value>
@@ -234,7 +231,14 @@
         <connector>
             <targetReference>Contact_Exist</targetReference>
         </connector>
-        <filterLogic>(1 AND 2) AND (3 OR 4)</filterLogic>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Email</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Contact_Email</elementReference>
+            </value>
+        </filters>
         <filters>
             <field>FirstName</field>
             <operator>EqualTo</operator>
@@ -247,20 +251,6 @@
             <operator>EqualTo</operator>
             <value>
                 <elementReference>Last_Name</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Email</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>Contact_Email</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Phone</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>Contact_Phone</elementReference>
             </value>
         </filters>
         <object>Contact</object>

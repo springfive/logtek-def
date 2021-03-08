@@ -95,60 +95,13 @@
                 <componentName>runtime_sales_activities:activityPanel</componentName>
             </componentInstance>
         </itemInstances>
-        <name>Facet-5c4ca5a9-99e8-4593-a990-20e9aa72866a</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentName>forceChatter:recordFeedContainer</componentName>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-a2d67115-81a0-4f3b-b512-e4e30ff05b5b</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>active</name>
-                    <value>true</value>
+                    <name>maxheight</name>
+                    <value>medium</value>
                 </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-5c4ca5a9-99e8-4593-a990-20e9aa72866a</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>title</name>
-                    <value>Standard.Tab.activity</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tab</componentName>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-a2d67115-81a0-4f3b-b512-e4e30ff05b5b</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>title</name>
-                    <value>Standard.Tab.collaborate</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tab</componentName>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-e0122850-5b8e-483c-a1c2-8387d3b30b85</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>tabs</name>
-                    <value>Facet-e0122850-5b8e-483c-a1c2-8387d3b30b85</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tabset</componentName>
+                <componentName>SVMXC:SFM_Wizard</componentName>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

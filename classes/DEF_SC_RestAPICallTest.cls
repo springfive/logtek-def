@@ -1,37 +1,37 @@
 /**
- * @description       : 
- * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
- * @group             : 
- * @last modified on  : 12-15-2020
- * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
- * Modifications Log 
- * Ver   Date         Author                               Modification
- * 1.0   10-08-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+* @description       : 
+* @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+* @group             : 
+* @last modified on  : 12-15-2020
+* @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+* Modifications Log 
+* Ver   Date         Author                               Modification
+* 1.0   10-08-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
 **/
 @isTest
 public class DEF_SC_RestAPICallTest {
     /*
-    public static String getUUID()
-    {
-        Blob b = Crypto.GenerateAESKey(128);
-        String h = EncodingUtil.ConvertTohex(b);
-        String guid = h.SubString(0,8)+ '-' + h.SubString(8,12) + '-' + h.SubString(12,16) + '-' + h.SubString(16,20) + '-' + h.substring(20);
-        system.debug(guid);
-        return guid;
-    }
-    */
+public static String getUUID()
+{
+Blob b = Crypto.GenerateAESKey(128);
+String h = EncodingUtil.ConvertTohex(b);
+String guid = h.SubString(0,8)+ '-' + h.SubString(8,12) + '-' + h.SubString(12,16) + '-' + h.SubString(16,20) + '-' + h.substring(20);
+system.debug(guid);
+return guid;
+}
+*/
     static testMethod void testPost() {
         Profile p = [SELECT Id FROM Profile WHERE Name='DEF Integration']; 
         User u = new User(Alias = 'intet', Email='test.user@testorg.com', 
-            EmailEncodingKey='UTF-8',FirstName='Test',LastName='User', LanguageLocaleKey='en_US', 
-            LocaleSidKey='en_US', ProfileId = p.Id, 
-            TimeZoneSidKey='Europe/Paris', UserName='test.user@def-fs.com');
-
+                          EmailEncodingKey='UTF-8',FirstName='Test',LastName='User', LanguageLocaleKey='en_US', 
+                          LocaleSidKey='en_US', ProfileId = p.Id, 
+                          TimeZoneSidKey='Europe/Paris', UserName='test.user@def-fs.com');
+        
         System.runAs(u) {
             // The following code runs as user 'u' 
             System.debug('Current User: ' + UserInfo.getUserName());
             System.debug('Current Profile: ' + UserInfo.getProfileId()); 
-        
+            
             //Preparing Test Data
             List<DEF_SC_RestAPICall.contractHeaderWrapper> headerList=new List<DEF_SC_RestAPICall.contractHeaderWrapper>();
             Account acc=DEF_TestDataFactory.CreateAccount('TestAccount');
@@ -71,6 +71,7 @@ public class DEF_SC_RestAPICallTest {
             contractLineInstance1.BOParentContractId=headerInstance1.BOContractId;
             contractLineInstance1.Location=location.Id;
             contractLineInstance1.InstallationDiscipline='ID0001';
+            
             DEF_SC_RestAPICall.contractLineWrapper contractLineInstance2=new DEF_SC_RestAPICall.contractLineWrapper();
             contractLineInstance2.Name='ContractLine';
             contractLineInstance2.StartDate=Datetime.now().format('MM/dd/yyyy');
@@ -83,8 +84,8 @@ public class DEF_SC_RestAPICallTest {
             contractLineInstance2.InstallationDiscipline='ID0001';
             contractLineList.add(contractLineInstance1);
             contractLineList.add(contractLineInstance2);
-
-
+            
+            
             //assign Contract Line to header
             headerInstance1.ContractLines=contractLineList;
             //add header to header list
@@ -131,6 +132,7 @@ public class DEF_SC_RestAPICallTest {
             headerInstance2.ContractLines=contractLineList2;
             headerList.add(headerInstance2);
             
+            
             //List<DEF_TestDataFactory.contractHeaderWrapper> headerList=DEF_TestDataFactory.CreateServiceContractWrapperForInsert();
             RestRequest contractRequest = new RestRequest();
             String baseUrl = URL.getSalesforceBaseUrl().toExternalForm();
@@ -145,13 +147,14 @@ public class DEF_SC_RestAPICallTest {
         }
         
     }
+    
     static testMethod void testPatch() {
         Profile p = [SELECT Id FROM Profile WHERE Name='DEF Integration']; 
         User u = new User(Alias = 'intet', Email='test.user@testorg.com', 
-            EmailEncodingKey='UTF-8',FirstName='Test',LastName='User', LanguageLocaleKey='en_US', 
-            LocaleSidKey='en_US', ProfileId = p.Id, 
-            TimeZoneSidKey='Europe/Paris', UserName='test.user@def-fs.com');
-
+                          EmailEncodingKey='UTF-8',FirstName='Test',LastName='User', LanguageLocaleKey='en_US', 
+                          LocaleSidKey='en_US', ProfileId = p.Id, 
+                          TimeZoneSidKey='Europe/Paris', UserName='test.user@def-fs.com');
+        
         System.runAs(u) {
             // The following code runs as user 'u' 
             System.debug('Current User: ' + UserInfo.getUserName());
@@ -206,6 +209,7 @@ public class DEF_SC_RestAPICallTest {
             contractLineInstance1.Location=location.Id;
             contractLineInstance1.InstallationDiscipline='ID0001';
             contractLineInstance1.BOParentContractId=headerInstance1.BOContractId;
+            
             DEF_SC_RestAPICall.contractLineWrapper contractLineInstance2=new DEF_SC_RestAPICall.contractLineWrapper();
             contractLineInstance2.contractLineId=testContractLine2.Id;
             contractLineInstance2.Name='ContractLine2';
@@ -229,7 +233,7 @@ public class DEF_SC_RestAPICallTest {
             contractLineInstance3.Location=location.Id;
             contractLineInstance3.InstallationDiscipline='ID0001';
             contractLineInstance3.BOParentContractId=headerInstance1.BOContractId;
-        
+            
             List<DEF_SC_RestAPICall.contractLineWrapper> contractLineList=new List<DEF_SC_RestAPICall.contractLineWrapper>();
             contractLineList.add(contractLineInstance1);
             contractLineList.add(contractLineInstance2);

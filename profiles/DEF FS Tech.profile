@@ -197,11 +197,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Field_Feedback__c.Account__c</field>
         <readable>true</readable>
@@ -215,11 +210,6 @@
         <editable>true</editable>
         <field>Field_Feedback__c.Contact_Field_Feedback__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Field_Feedback__c.Contract_HeaderLink__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -333,12 +323,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Issue__c.OLD_Symptoms__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Issue__c.Root_Cause_Old__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Issue__c.Root_Cause__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Issue__c.Root_Cause_text__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Issue__c.Symptoms_Old__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -359,6 +364,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Issue__c.Technician_notes__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Issue__c.Type_Of_Concerned_Device_OLD__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -479,11 +489,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__PM_Plan__c.DesignationYear__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__PM_Plan__c.Note_to_Planner__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1242,11 +1247,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Note_to_Planner__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Number_Of_Days_Spent__c</field>
         <readable>true</readable>
@@ -1429,11 +1429,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.SVMX_PS_Subject__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

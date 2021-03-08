@@ -2,7 +2,7 @@
 * @description       : Handler for the Work Order berfore insert trigger.
 * @author            : Jawahar Moorthy (SpringFive)
 * @group             : 
-* @last modified on  : 02-26-2021
+* @last modified on  : 02-23-2021
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 * Modifications Log 
 * Ver   Date         Author                               Modification
@@ -31,12 +31,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             List<SVMXC__Site__c> locationRecords=new List<SVMXC__Site__c>();
             List<SVMXC__PM_Plan__c> pmList=new List<SVMXC__PM_Plan__c>();
             set<id> PrimaryTerritoryOwnerSet = new set<id> ();
-            List<SVMXC__Service_Order__c> woListToSetNoteToPlanner = new List<SVMXC__Service_Order__c>();
-            List<Locations_Equipment__c> LocationEQList = new List<Locations_Equipment__c>();
-            
-            //Set<Id> LocationSetforEQ = new Set<Id>();
-            //Set<Id> PmPlanSet = new Set<Id>();
-
             for(SVMXC__Service_Order__c woInstance:this.triggerNew){
                 //get WO location - If its associated to WO
                 if(woInstance.SVMXC__Site__c!=null){
@@ -46,14 +40,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                 if(woInstance.SVMXC__PM_Plan__c != null && woInstance.SVMXC__Order_Type__c == DEF_StringHelper.WO_ORDERTYPE_MAINTENANCE){
                     pmIdSet.add(woInstance.SVMXC__PM_Plan__c);
                 }
-                /*if((woInstance.SVMXC__Order_Type__c=='Maintenance' && woInstance.SVMXC__PM_Plan__c!=null) || woInstance.SVMXC__Site__c!=null){
-                    if(woInstance.SVMXC__Site__c!=null)
-                        LocationSetforEQ.add(woInstance.SVMXC__Site__c);
-                    if(woInstance.SVMXC__PM_Plan__c!=null)    
-                        PmPlanSet.add(woInstance.SVMXC__PM_Plan__c);
-
-
-                }*/
                 
 
             }
@@ -62,32 +48,7 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             //get full details(addresss+default territory) of WO location
             if(locationSet.size()>0){
                 locationRecords=[SELECT Id,DefaultTerritory__c,SVMXC__City__c,SVMXC__Country__c,SVMXC__Latitude__c,SVMXC__Longitude__c,SVMXC__State__c,SVMXC__Street__c,SVMXC__Zip__c FROM SVMXC__Site__c WHERE Id IN: locationSet];
-                LocationEQList=[SELECT Id,Equipment__c,Equipment__r.Name,Location__c FROM Locations_Equipment__c WHERE Location__c IN :locationSet];
             }
-            Map<id,String> locEqMap = new Map<id,String>();
-
-
-            //Map for appending the equipments required into a single string from Location
-            for(Locations_Equipment__c LocEqInstance:LocationEQList){
-                if(locEqMap.containsKey(LocEqInstance.Location__c)){
-                    if(LocEqInstance.Equipment__r.Name!=null){
-                        
-                        locEqMap.put(LocEqInstance.Location__c,locEqMap.get(LocEqInstance.Location__c)+','+LocEqInstance.Equipment__r.Name);
-                    }
-    
-    
-                }
-                else{
-                    if(LocEqInstance.Equipment__r.Name!=null){
-                        locEqMap.put(LocEqInstance.Location__c,'List of Equipment Required:'+'\n'+LocEqInstance.Equipment__r.Name);
-
-                    }
-                }
-    
-            }
-            System.debug(locEqMap);
-            
-            
             Map<Id,SVMXC__Site__c> locationMap=new Map<Id,SVMXC__Site__c>();
             if(locationRecords.size()>0)
             {
@@ -96,20 +57,13 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
 
             //Retrieving field values of the WO parent PM plan (that are not retrieved in the trigger context).
             if(pmIdSet.size()>0){
-                pmList=[SELECT Id, SVMXC__Start_Date__c, PmStartOfYear__c,Note_to_Planner__c FROM SVMXC__PM_Plan__c WHERE Id In :pmIdSet];
+                pmList=[SELECT Id, SVMXC__Start_Date__c, PmStartOfYear__c FROM SVMXC__PM_Plan__c WHERE Id In :pmIdSet];
 
             }
             Map<Id, SVMXC__PM_Plan__c> pmPlans=new Map<Id, SVMXC__PM_Plan__c>();
             if(pmList.size()>0){
                 pmPlans = new Map<Id, SVMXC__PM_Plan__c> (pmList);
             }
-            /*list<SVMXC__PM_Plan__c> PmPlanrecords = new list<SVMXC__PM_Plan__c>();
-            map<ID,SVMXC__PM_Plan__c> PmPlanNoteToPlanner = new map<ID,SVMXC__PM_Plan__c>();
-            if(PmPlanSet.size()>0){
-                //PmPlanrecords =[SELECT Note_to_Planner__c,Id FROM SVMXC__PM_Plan__c WHERE id IN : PmPlanSet];
-                PmPlanNoteToPlanner = new map<ID,SVMXC__PM_Plan__c>(PmPlanrecords);
-
-            }*/
             
             for(SVMXC__Service_Order__c woInstance:this.triggerNew){
                 //**---> Set WorkOrder Default Territory based on the location**//
@@ -175,36 +129,9 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
 
                 }
                 
-                //Set note to planner from the PM plan and equipments required from Location and add it to Note to Planner in WO
-                String noteToPlanner='';
 
-                if(pmPlans.containsKey(woInstance.SVMXC__PM_Plan__c)){
-                    if(pmPlans.get(woInstance.SVMXC__PM_Plan__c).Note_to_Planner__c != null){
-                        noteToPlanner=pmPlans.get(woInstance.SVMXC__PM_Plan__c).Note_to_Planner__c;
-
-                    }
-
-                }
-                if(locEqMap.containskey(woInstance.SVMXC__Site__c)){
-                    if(String.isBlank(noteToPlanner)){
-                        noteToPlanner=locEqMap.get(woInstance.SVMXC__Site__c);
-                    }
-                    else{
-                        noteToPlanner=noteToPlanner+'\n'+locEqMap.get(woInstance.SVMXC__Site__c);
-
-                    }
-
-                }
-
-                if(String.isNotBlank(noteToPlanner)){
-                    woInstance.Note_to_Planner__c=noteToPlanner;
-
-                }
-                
                 
             }
-            
-            
             
 
         }

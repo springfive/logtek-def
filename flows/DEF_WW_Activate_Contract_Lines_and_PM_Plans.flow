@@ -19,7 +19,6 @@
         <locationY>200</locationY>
         <actionName>DEF_WW_Bypass_ProcessBuilder</actionName>
         <actionType>flow</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
     </actionCalls>
     <apiVersion>50.0</apiVersion>
     <decisions>
