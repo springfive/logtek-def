@@ -401,6 +401,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Field_Feedback__c.Contract_HeaderLink__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Field_Feedback__c.Corrective_Action_Recommended__c</field>
         <readable>true</readable>
@@ -512,16 +517,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Issue__c.OLD_Symptoms__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.Root_Cause_Old__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Issue__c.Root_Cause__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -529,11 +524,6 @@
         <editable>true</editable>
         <field>Issue__c.Root_Cause_text__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.Symptoms_Old__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -557,18 +547,13 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Issue__c.Type_Of_Concerned_Device_OLD__c</field>
+        <field>Issue__c.Work_Performed__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Issue__c.Type_of_Concerned_device__c</field>
         <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Issue__c.Work_Performed__c</field>
-        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -931,19 +916,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__PM_Plan__c.DesignationYear__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__PM_Plan__c.PM_Delta_Start_of_Year__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__PM_Plan__c.PmStartOfYear__c</field>
-        <readable>false</readable>
+        <editable>true</editable>
+        <field>SVMXC__PM_Plan__c.Note_to_Planner__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -3103,7 +3078,12 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Non_Compliances_Reported_To_Responsible__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+         <field>SVMXC__Service_Order__c.Note_to_Planner__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -4536,6 +4516,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</field>
+		<readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.SymptomsRootCause__c</field>
         <readable>true</readable>
@@ -5767,4 +5752,12 @@
         <tab>standard-report</tab>
         <visibility>Visible</visibility>
     </tabSettings>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RunFlow</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>TransferAnyEntity</name>
+    </userPermissions>
 </PermissionSet>

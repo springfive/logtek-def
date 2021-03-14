@@ -27,6 +27,13 @@
                 <elementReference>CompletedDateTime</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Intervention_End_Date_and_Time__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CompletedDateTime</elementReference>
+            </value>
+        </assignmentItems>
     </assignments>
     <decisions>
         <name>Check_Bypass_Flow</name>
@@ -100,6 +107,13 @@
             </conditions>
             <conditions>
                 <leftValueReference>$Record.SVMXC__Completed_Date_Time__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>emptyDate</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Intervention_End_Date_and_Time__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>emptyDate</elementReference>

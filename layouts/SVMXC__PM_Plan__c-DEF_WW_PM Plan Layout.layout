@@ -39,6 +39,10 @@
                 <behavior>Required</behavior>
                 <field>DEF_Company__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Note_to_Planner__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

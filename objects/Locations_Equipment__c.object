@@ -160,9 +160,9 @@
         <lookupFilter>
             <active>true</active>
             <filterItems>
-                <field>SVMXC__Service_Group_Members__c.RecordType.Id</field>
+                <field>SVMXC__Service_Group_Members__c.RecordType.DeveloperName</field>
                 <operation>equals</operation>
-                <value>0121q0000000SjcAAE</value>
+                <value>Equipment</value>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>
@@ -175,26 +175,8 @@
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
-    <fields>
-        <fullName>Location__c</fullName>
-        <externalId>false</externalId>
-        <label>Location</label>
-        <referenceTo>SVMXC__Site__c</referenceTo>
-        <relationshipLabel>Equipments Required</relationshipLabel>
-        <relationshipName>Locations_Equipments</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
-    </fields>
     <gender>Masculine</gender>
     <label>Locations Equipment</label>
-    <listViews>
-        <fullName>All</fullName>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
     <nameField>
         <displayFormat>EQ-{0000000}</displayFormat>
         <label>Locations Equipment Name</label>

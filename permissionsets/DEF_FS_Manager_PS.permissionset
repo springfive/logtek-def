@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldPermissions>
         <editable>false</editable>
@@ -457,6 +457,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Field_Feedback__c.Contract_HeaderLink__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Field_Feedback__c.Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -553,11 +558,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Issue__c.Technician_notes__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.Type_Of_Concerned_Device_OLD__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -938,6 +938,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__PM_Plan__c.DEF_NumberOfWorkOrder__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__PM_Plan__c.Note_to_Planner__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3332,6 +3337,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Note_to_Planner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Order__c.Number_Of_Days_Spent__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4766,6 +4776,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.SymptomsRootCause__c</field>
         <readable>true</readable>
@@ -5935,4 +5950,12 @@
         <tab>standard-Contact</tab>
         <visibility>Visible</visibility>
     </tabSettings>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RunFlow</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>TransferAnyEntity</name>
+    </userPermissions>
 </PermissionSet>
