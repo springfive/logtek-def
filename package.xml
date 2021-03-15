@@ -23,7 +23,7 @@
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <members>SVMXC__Service_Order__c.PM_Schedule_Definition__c</members>
-	<members>Field_Feedback__c.Contract_HeaderLink__c</members>
+	    <members>Field_Feedback__c.Contract_HeaderLink__c</members>
         <members>Locations_Equipment__c.Equipment__c</members>
         <members>SVMXC__PM_Plan__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.Is_First_Time_Fixed__c</members>
@@ -31,8 +31,9 @@
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
         <name>CustomField</name>
     </types>
-    <!--<types>
-        <members>DEF_WW_Dasboards/tlZIWGodJRzOzyMyKRvvtEJnZORuGU</members>
+    <types>
+        <!--<members>DEF_WW_Dasboards/tlZIWGodJRzOzyMyKRvvtEJnZORuGU</members>-->
+        <members>DEF_WW_RampupKPIs/GUQZkXNMcPlkBNVWmRVsHAtWHTnadx</members>
         <name>Dashboard</name>
     </types>-->
     <types>
@@ -76,6 +77,7 @@
         <members>DEF_WW_RampupKPIs/DEF_WW_First_Time_Fix_X7x</members>
         <members>DEF_WW_RampupKPIs/DEF_WW_Hours_declared_on_site_1xt</members>
         <members>DEF_WW_Reports/DEF_WW_Planned_Time_vs_Actual_Time_KUW</members>
+        <members>DEF_WW_RampupKPIs/DEF_WW_Work_Orders_validated_without_labor_rkI</members>
         <name>Report</name>
     </types>
     <version>50.0</version>
