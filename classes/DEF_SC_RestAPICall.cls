@@ -298,10 +298,14 @@ global class DEF_SC_RestAPICall {
             }
             else {
                 lineInstance.errorDetails=lineResultList[k].getErrors()[0].getMessage()+' :: Due to this Error, The header and its related contracts will be deleted';
-                SVMXC__Service_Contract__c contractInstance=new SVMXC__Service_Contract__c();
+                /*SVMXC__Service_Contract__c contractInstance=new SVMXC__Service_Contract__c();
                 contractInstance.Id=contractLineValidatedList[k].SVMX_PS_Parent_Contract__c;
-                headerContractToDelete.add(contractInstance);
-                headerContractToDeleteSet.add(contractInstance.Id);
+                headerContractToDelete.add(contractInstance);*/
+                headerContractToDeleteSet.add(contractLineValidatedList[k].SVMX_PS_Parent_Contract__c);
+                //[Comments]
+                System.debug('@lineInstance: ' + lineInstance);
+                System.debug('@error: ' + lineInstance.errorDetails);
+                System.debug('@headerContractToDeleteSet: ' + headerContractToDeleteSet);
             }
             lineResultWrapperList.add(lineInstance);
             if(parentToLineMap.containsKey(contractLineValidatedList[k].SVMX_PS_Parent_Contract__c))
@@ -333,11 +337,19 @@ global class DEF_SC_RestAPICall {
             }
             contractResponseList.add(res);
         }
-
+		
+        System.debug('@headerContractToDelete: ' + JSON.serializePretty(headerContractToDelete));
         //Rollback On Error
         List<SVMXC__Service_Contract__c> contractLineToDelete=new List<SVMXC__Service_Contract__c>();
         if(headerContractToDeleteSet.size()>0){
+            for(String headerId:headerContractToDeleteSet){
+                SVMXC__Service_Contract__c headerInstance=new SVMXC__Service_Contract__c();
+                headerInstance.Id=headerId;
+                headerContractToDelete.add(headerInstance);
+            }
             contractLineToDelete=[SELECT Id FROM SVMXC__Service_Contract__c WHERE SVMX_PS_Parent_Contract__c IN: headerContractToDeleteSet];
+            //[Comments]
+            System.debug('@contractLineToDelete: ' + JSON.serializePretty(contractLineToDelete));
         }
         
         
@@ -345,13 +357,15 @@ global class DEF_SC_RestAPICall {
             headerContractToDelete.addAll(contractLineToDelete);
         }
        
-        if(headerContractToDelete.size()>0){
+        if(headerContractToDelete.size()>0){   
+            //[Comments]
+            
+            System.debug('@headerContractToDelete: ' + JSON.serializePretty(headerContractToDelete));
             delete headerContractToDelete;
         }
 
 
 
-        
         
         return contractResponseList;
         
