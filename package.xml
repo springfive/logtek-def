@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-   
+    <types>
+        <members>DEF_SC_RestAPICall</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>DEF_WW_RampupKPIs/GUQZkXNMcPlkBNVWmRVsHAtWHTnadx</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
+        <members>DEF_WW_RampupKPIs/DEF_WW_Work_Orders_validated_without_labor_rkI</members>
+        <members>DEF_WW_Reports/DEF_WW_Planned_Time_vs_Actual_Time_KUW</members>
+        <name>Report</name>
+    </types>
     <version>50.0</version>
 </Package>
