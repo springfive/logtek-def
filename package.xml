@@ -802,6 +802,7 @@
         <members>DEF_WW_RampupKPIs/DEF_WW_Work_Order_Validation_AhH</members>
         <members>DEF_WW_RampupKPIs/DEF_WW_Work_Order_and_Parts_GEC</members>
         <members>DEF_WW_RampupKPIs/DEF_WW_Work_Order_without_ERP_Reference_ExA</members>
+        <members>DEF_WW_RampupKPIs/DEF_WW_Work_Orders_validated_without_labor_rkI</members>
         <members>DEF_WW_Reports/DEF_WW_Callout_Work_Order_Requests_Pm7</members>
         <members>DEF_WW_Reports/DEF_WW_First_Time_Fix_n6n</members>
         <members>DEF_WW_Reports/DEF_WW_Global_SLA_Report_9x9</members>
