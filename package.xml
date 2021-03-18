@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</members>
+        <members>SVMXC__Service_Plan__c-DEF_WW_Service Plan Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>All_Modify</members>
+        <name>PermissionSet</name>
+    </types>
+    <version>50.0</version>
+</Package>
