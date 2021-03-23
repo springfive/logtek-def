@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
         <members>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</members>
         <members>SVMXC__Service_Plan__c-DEF_WW_Service Plan Layout</members>
         <name>Layout</name>
     </types>
     <types>
         <members>All_Modify</members>
+        <members>DEF_FS_Tech_PS</members>
         <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>DEF Integration</members>
+        <name>Profile</name>
     </types>
     <version>50.0</version>
 </Package>
