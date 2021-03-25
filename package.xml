@@ -5,6 +5,7 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>Account-DEF_WW_Account Layout</members>
         <members>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</members>
         <members>SVMXC__Service_Plan__c-DEF_WW_Service Plan Layout</members>
         <name>Layout</name>
