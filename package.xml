@@ -16,29 +16,20 @@
     <types>
         <members>DEF_ServiceContract_Integration__e.RecordId__c</members>
         <members>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</members>
+        <members>Field_Feedback__c.Contract_HeaderLink__c</members>
+        <members>Locations_Equipment__c.Equipment__c</members>
         <members>Planned_Parts__c.PM_Schedule_Definition__c</members>
         <members>Planned_Parts__c.Part__c</members>
         <members>Planned_Parts__c.Required_Quantity__c</members>
+        <members>SVMXC__PM_Plan__c.Note_to_Planner__c</members>
         <members>SVMXC__Product_Stock__c.External_ID__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
-        <members>SVMXC__Service_Order__c.PM_Schedule_Definition__c</members>
-	<members>Field_Feedback__c.Contract_HeaderLink__c</members>
-        <members>Locations_Equipment__c.Equipment__c</members>
-        <members>SVMXC__PM_Plan__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.Is_First_Time_Fixed__c</members>
         <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
+        <members>SVMXC__Service_Order__c.PM_Schedule_Definition__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
         <name>CustomField</name>
-    </types>
-    <types>
-        <!--<members>DEF_WW_Dasboards/tlZIWGodJRzOzyMyKRvvtEJnZORuGU</members>-->
-        <members>DEF_WW_RampupKPIs/GUQZkXNMcPlkBNVWmRVsHAtWHTnadx</members>
-        <name>Dashboard</name>
-    </types>
-    <types>
-        <members>SVMXC__Service_Order__c.SVMXC__SM_Service_Board_Fields</members>
-        <name>FieldSet</name>
     </types>
     <types>
         <members>DEF_ServiceContract_Integration__e</members>
@@ -47,13 +38,25 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>DEF_WW_RampupKPIs/GUQZkXNMcPlkBNVWmRVsHAtWHTnadx</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.SVMXC__SM_Service_Board_Fields</members>
+        <name>FieldSet</name>
+    </types>
+    <types>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
         <name>FlexiPage</name>
     </types>
     <types>
         <members>DEF_WW_SC_Trigger_Platform_Event</members>
-	<members>DEF_WW_Work_Order_Update_First_assigned_date_time_completed_date_time</members>
+        <members>DEF_WW_Work_Order_Update_First_assigned_date_time_completed_date_time</members>
         <name>Flow</name>
+    </types>
+    <types>
+        <members>Installation_Discipline</members>
+        <name>GlobalValueSet</name>
     </types>
     <types>
         <members>Planned_Parts__c-DEF_WW_Planned Parts Layout</members>
@@ -76,8 +79,8 @@
     <types>
         <members>DEF_WW_RampupKPIs/DEF_WW_First_Time_Fix_X7x</members>
         <members>DEF_WW_RampupKPIs/DEF_WW_Hours_declared_on_site_1xt</members>
-        <members>DEF_WW_Reports/DEF_WW_Planned_Time_vs_Actual_Time_KUW</members>
         <members>DEF_WW_RampupKPIs/DEF_WW_Work_Orders_validated_without_labor_rkI</members>
+        <members>DEF_WW_Reports/DEF_WW_Planned_Time_vs_Actual_Time_KUW</members>
         <name>Report</name>
     </types>
     <version>50.0</version>

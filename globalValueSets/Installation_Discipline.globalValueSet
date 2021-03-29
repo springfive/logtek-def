@@ -6,44 +6,214 @@
         <label>Fire Detection</label>
     </customValue>
     <customValue>
-        <fullName>ID0010</fullName>
-        <default>false</default>
-        <label>Voice alarm system</label>
-    </customValue>
-    <customValue>
-        <fullName>ID0020</fullName>
-        <default>false</default>
-        <label>Extinguishing inert gas</label>
-    </customValue>
-    <customValue>
         <fullName>ID0030</fullName>
-        <default>false</default>
-        <label>Extinguishing F-GAS</label>
-    </customValue>
-    <customValue>
-        <fullName>ID0040</fullName>
-        <default>false</default>
-        <label>Extinguishing FOAM</label>
-    </customValue>
-    <customValue>
-        <fullName>ID0050</fullName>
-        <default>false</default>
-        <label>Extinguishing sprinkler</label>
-    </customValue>
-    <customValue>
-        <fullName>ID0060</fullName>
         <default>false</default>
         <label>CCTV</label>
     </customValue>
     <customValue>
+        <fullName>ID0010</fullName>
+        <default>false</default>
+        <label>Access control</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0020</fullName>
+        <default>false</default>
+        <label>AOV Systems</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0040</fullName>
+        <default>false</default>
+        <label>Disabled Refuge Alarm</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0050</fullName>
+        <default>false</default>
+        <label>Door Retaining Magnets</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0060</fullName>
+        <default>false</default>
+        <label>Dry Risers</label>
+    </customValue>
+    <customValue>
         <fullName>ID0070</fullName>
         <default>false</default>
-        <label>Intrusion</label>
+        <label>Emergency Call System</label>
     </customValue>
     <customValue>
         <fullName>ID0080</fullName>
         <default>false</default>
-        <label>Access control</label>
+        <label>Emergency Lighting</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0090</fullName>
+        <default>false</default>
+        <label>Fire Alarm System</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0100</fullName>
+        <default>false</default>
+        <label>Fire Dampers</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0110</fullName>
+        <default>false</default>
+        <label>Fire Risk Assessment</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0120</fullName>
+        <default>false</default>
+        <label>Fire Safety Check</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0130</fullName>
+        <default>false</default>
+        <label>Gas suppression (Electrical &amp; Mechanical)</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0140</fullName>
+        <default>false</default>
+        <label>HSSD</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0150</fullName>
+        <default>false</default>
+        <label>Hydrants</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0160</fullName>
+        <default>false</default>
+        <label>Intruder Alarm</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0170</fullName>
+        <default>false</default>
+        <label>Kitchen suppression</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0180</fullName>
+        <default>false</default>
+        <label>Linear Heat Detection - Sprinkler Alarm</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0190</fullName>
+        <default>false</default>
+        <label>Mains smoke detector</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0200</fullName>
+        <default>false</default>
+        <label>Nursecall System</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0210</fullName>
+        <default>false</default>
+        <label>PAT Testing</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0220</fullName>
+        <default>false</default>
+        <label>Portable extinguishers</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0230</fullName>
+        <default>false</default>
+        <label>Public Voice Alarm</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0240</fullName>
+        <default>false</default>
+        <label>Rapid Intervention Team</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0250</fullName>
+        <default>false</default>
+        <label>Remote Monitoring</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0260</fullName>
+        <default>false</default>
+        <label>Roller Shutters</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0270</fullName>
+        <default>false</default>
+        <label>Room Integrity Test</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0280</fullName>
+        <default>false</default>
+        <label>Smoke Curtain</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0290</fullName>
+        <default>false</default>
+        <label>Sprinkler</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0300</fullName>
+        <default>false</default>
+        <label>Water Detection</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0310</fullName>
+        <default>false</default>
+        <label>Water Mist Electrical &amp; mechanical</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0320</fullName>
+        <default>false</default>
+        <label>Wet Risers</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0330</fullName>
+        <default>false</default>
+        <label>Fire Door</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0340</fullName>
+        <default>false</default>
+        <label>Hand Bell</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0350</fullName>
+        <default>false</default>
+        <label>Kitchen Duct Cleaning</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0360</fullName>
+        <default>false</default>
+        <label>PA/VA</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0021</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Extinguishing inert gas</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0031</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Extinguishing F-GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0071</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Intrusion</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0051</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Extinguishing sprinkler</label>
+    </customValue>
+    <customValue>
+        <fullName>ID0041</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Extinguishing FOAM</label>
     </customValue>
     <description>Discipline of the Installation</description>
     <masterLabel>Installation Discipline</masterLabel>
