@@ -29,6 +29,7 @@
         <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.PM_Schedule_Definition__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
+        <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -62,6 +63,9 @@
         <members>Planned_Parts__c-DEF_WW_Planned Parts Layout</members>
         <members>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</members>
         <members>SVMXC__Service_Order__c-DEF_WW_Preventive Maintenance Work Order Layout</members>
+        <members>Account-DEF_WW_Account Layout</members>
+        <members>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</members>
+        <members>SVMXC__Service_Plan__c-DEF_WW_Service Plan Layout</members>
         <name>Layout</name>
     </types>
     <types>
@@ -69,11 +73,13 @@
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
         <members>DEF_FS_Tech_PS</members>
+        <members>All_Modify</members>
         <name>PermissionSet</name>
     </types>
     <types>
         <members>Admin</members>
         <members>DEF Integration</members>
+        <members>DEF_WW_Support</members>
         <name>Profile</name>
     </types>
     <types>

@@ -323,6 +323,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Field_Feedback__c.Tech_Non_Compliance_Count__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Issue__c.Difficulties_Met__c</field>
         <readable>true</readable>
     </fieldPermissions>

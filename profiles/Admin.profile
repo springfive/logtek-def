@@ -122,11 +122,6 @@
     </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Field_Feedback__c.Contract_HeaderLink__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__PM_Plan__c.Note_to_Planner__c</field>
 		<readable>true</readable>
@@ -324,6 +319,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Field_Feedback__c.Work_Order__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Field_Feedback__c.Contract_HeaderLink__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Field_Feedback__c.Tech_Non_Compliance_Count__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
