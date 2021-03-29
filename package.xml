@@ -18,6 +18,7 @@
     <types>
         <members>Admin</members>
         <members>DEF Integration</members>
+        <members>DEF_WW_Support</members>
         <name>Profile</name>
     </types>
     <version>50.0</version>
