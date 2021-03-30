@@ -18,6 +18,7 @@
         <members>All_Modify</members>
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Tech_PS</members>
+        <members>DEF_IT_Sub_Contractor</members>
         <name>PermissionSet</name>
     </types>
     <types>
