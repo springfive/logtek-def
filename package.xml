@@ -36,16 +36,5 @@
         <members>IT_DEF_Sub_Contractors</members>
         <name>Role</name>
     </types>
-    <types>
-        <members>Account.Account_IT_to_Sub_Contractors</members>
-        <members>SVMXC__Installed_Product__c.Installed_Products_IT_to_Sub_Contractors</members>
-        <members>SVMXC__Service_Contract__c.Service_Contract_to_Sub_Contractors</members>
-        <members>SVMXC__Site__c.Location_IT_to_Sub_Contractors</members>
-        <name>SharingCriteriaRule</name>
-    </types>
-    <types>
-        <members>SVMXC__Service_Order__c.Work_Order_IT_to_Sub_Contractors</members>
-        <name>SharingOwnerRule</name>
-    </types>
     <version>50.0</version>
 </Package>
