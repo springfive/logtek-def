@@ -87,6 +87,7 @@
         <members>Field_Feedback__c.Urgent_Remedial_Recommended__c</members>
         <members>Field_Feedback__c.Variation__c</members>
         <members>Field_Feedback__c.Work_Order__c</members>
+        <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
         <members>Issue__c.Root_Cause__c</members>
         <members>Issue__c.Root_Cause_text__c</members>
         <members>Issue__c.Symptoms__c</members>
@@ -736,6 +737,7 @@
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
         <members>DEF_FS_Tech_PS</members>
+        <members>All_Modify</members>
         <name>PermissionSet</name>
     </types>
     <types>
@@ -746,6 +748,7 @@
         <members>DEF FS Tech</members>
         <members>DEF IT Hybrid</members>
         <members>DEF Integration</members>
+        <members>DEF_WW_Support</members>
         <name>Profile</name>
     </types>
     <types>
