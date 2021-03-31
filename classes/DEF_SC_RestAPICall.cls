@@ -49,6 +49,8 @@ global class DEF_SC_RestAPICall {
     global class IncludedServicesWrapper {
         global String IncludedServiceId;
         global String ServiceType;
+        global String contractId;
+        global String contractLineId;
     }
     
     global class ResponseContractWrapper{
@@ -497,10 +499,10 @@ global class DEF_SC_RestAPICall {
                                                                  WHERE SVMX_PS_Parent_Contract__c =: recordId];
             if(!headercontractList.isEmpty()){
                 //List of Included Service:
-                List<SVMXC__Service_Contract_Services__c> incserviceList= [SELECT Id, SVMXC__Service__r.Name,SVMXC__Service_Contract__c 
+                List<SVMXC__Service_Contract_Services__c> incserviceList= [SELECT Id, SVMXC__Service__r.Name,SVMXC__Service_Contract__c,SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c 
                                                                            FROM SVMXC__Service_Contract_Services__c
                                                                            WHERE SVMXC__Service_Contract__c IN : contractLineList];
-                
+               
                 //Create Map where key--> ContractLineId and value--> list<IncludedServicesWrapper>:
                 Map<Id,List<IncludedServicesWrapper>> lineServiceWrapperMap = new Map<Id,List<IncludedServicesWrapper>>();
                 for(SVMXC__Service_Contract_Services__c serObj : incserviceList){
@@ -508,6 +510,8 @@ global class DEF_SC_RestAPICall {
                     IncludedServicesWrapper incWrapper = new IncludedServicesWrapper();
                     incWrapper.IncludedServiceId = serObj.Id;
                     incWrapper.ServiceType = serObj.SVMXC__Service__r.Name;
+                    incWrapper.contractId = serObj.SVMXC__Service_Contract__c;
+                    incWrapper.contractLineId = serObj.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c;
                     serviceWrapperList.add(incWrapper);
                     if(lineServiceWrapperMap.containsKey(serObj.SVMXC__Service_Contract__c)){
                         lineServiceWrapperMap.get(serObj.SVMXC__Service_Contract__c).addAll(serviceWrapperList);
@@ -537,10 +541,12 @@ global class DEF_SC_RestAPICall {
                         headerLineWrapperMap.put(lineObj.SVMX_PS_Parent_Contract__c,lineWrapperList);
                     }
                 }
-                
+
+				//Set Header values:                
                 for(SVMXC__Service_Contract__c headerInstance : headercontractList){
                     List<contractHeaderWrapper> headerWrapperList = new List<contractHeaderWrapper>();
                     contractHeaderWrapper headerWrapperObj = new contractHeaderWrapper();
+                    //headerWrapperObj.contractId = headerInstance.Id;
                     headerWrapperObj.Name = headerInstance.Name;
                     headerWrapperObj.AccountId = headerInstance.SVMXC__Company__c;
                     headerWrapperObj.IsEvergreen = String.valueof(headerInstance.Is_Evergreen__c);
