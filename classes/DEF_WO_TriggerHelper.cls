@@ -367,6 +367,40 @@ public without sharing class DEF_WO_TriggerHelper {
         Insert WdList;
 
     }
+    /*
+    public static void UpdateEventSubject(List<SVMXC__Service_Order__c> woListForEventUpdate){
+        List<Event> eventToUpdate=new List<Event>();
+        eventToUpdate=[SELECT Id,Subject,WhatId FROM Event WHERE WhatId IN: woListForEventUpdate];
+        Map<Id,SVMXC__Service_Order__c> woMap=new Map<Id,SVMXC__Service_Order__c>(woListForEventUpdate);
+        List<Event> newEventList=new List<Event>();
+        if(eventToUpdate.size()>0){
+            for(Event eventInstance:eventToUpdate){
+               SVMXC__Service_Order__c woInstance=woMap.get(eventInstance.WhatId);
+               if((woInstance.Confirmation_Request_Status__c=='Request Sent' && woInstance.Customer_Confirmed__c==true) || woInstance.Customer_Confirmed__c==true){
+                   if(eventInstance.Subject.substring(0,1)=='✅' || eventInstance.Subject.substring(0,1)=='❓'){
+                        eventInstance.Subject='✅'+eventInstance.Subject.substring(1,eventInstance.Subject.length()-1);
+                   }
+                   else{
+                        eventInstance.Subject='✅'+eventInstance.Subject;
+                   }
+               }
+               else if(woInstance.Confirmation_Request_Status__c=='Request Sent' && woInstance.Customer_Confirmed__c==false){
+                if(eventInstance.Subject.substring(0,1)=='✅' || eventInstance.Subject.substring(0,1)=='❓'){
+                    eventInstance.Subject='❓'+eventInstance.Subject.substring(1,eventInstance.Subject.length()-1);
+                }
+                else{
+                    eventInstance.Subject='❓'+eventInstance.Subject;
+                }
+
+               }
+               
+               newEventList.add(eventInstance);
+            }
+            update newEventList;
+
+        }
+
+    }*/
 
 
 

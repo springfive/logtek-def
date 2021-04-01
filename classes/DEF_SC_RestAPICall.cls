@@ -51,6 +51,7 @@ global class DEF_SC_RestAPICall {
         global String ServiceType;
         global String contractId;
         global String contractLineId;
+        global String Company{get;set;}
     }
     
     global class ResponseContractWrapper{
@@ -499,7 +500,8 @@ global class DEF_SC_RestAPICall {
                                                                  WHERE SVMX_PS_Parent_Contract__c =: recordId];
             if(!headercontractList.isEmpty()){
                 //List of Included Service:
-                List<SVMXC__Service_Contract_Services__c> incserviceList= [SELECT Id, SVMXC__Service__r.Name,SVMXC__Service_Contract__c,SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c 
+                List<SVMXC__Service_Contract_Services__c> incserviceList= [SELECT Id, SVMXC__Service__r.Name,SVMXC__Service_Contract__c,SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c,
+                                                                           SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__r.DEF_Company__c
                                                                            FROM SVMXC__Service_Contract_Services__c
                                                                            WHERE SVMXC__Service_Contract__c IN : contractLineList];
                
@@ -512,6 +514,7 @@ global class DEF_SC_RestAPICall {
                     incWrapper.ServiceType = serObj.SVMXC__Service__r.Name;
                     incWrapper.contractId = serObj.SVMXC__Service_Contract__c;
                     incWrapper.contractLineId = serObj.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c;
+                    incWrapper.Company = serObj.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__r.DEF_Company__c;
                     serviceWrapperList.add(incWrapper);
                     if(lineServiceWrapperMap.containsKey(serObj.SVMXC__Service_Contract__c)){
                         lineServiceWrapperMap.get(serObj.SVMXC__Service_Contract__c).addAll(serviceWrapperList);

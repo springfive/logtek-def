@@ -2,7 +2,7 @@
 * @description       : Handler for the Work Order berfore insert trigger.
 * @author            : Jawahar Moorthy (SpringFive)
 * @group             : 
-* @last modified on  : 02-26-2021
+* @last modified on  : 04-01-2021
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 * Modifications Log 
 * Ver   Date         Author                               Modification
@@ -444,51 +444,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
         if(DEF_WW_Utils_PAD_Methodology.canTrigger('DEF_WO_AU')){
             System.debug('@On After Update ...');
 
-            //**Start-->Apex Code is for sending work order id to the back office whenever the callout work order is created**//
-            /*
-try {
-for(SVMXC__Service_Order__c workorderInstance:this.triggerNew)
-{
-if(this.triggerMapOld.containsKey(workorderInstance.Id)){
-if(this.triggerMapOld.get(workorderInstance.Id).Tech_Trigger_Back_Office__c!=workorderInstance.Tech_Trigger_Back_Office__c){
-if (workorderInstance.Tech_Trigger_Back_Office__c==true) {
-//Apex Code is for sending work order id to the back office whenever the callout work order is created
-DEF_WO_SendWOToBackOffice.SendWODetails(workorderInstance);
-}
-}
-}
-}
-} catch (Exception e) {
-System.debug('The Error Thrown When calling the DEF_WO_SendWOToBackOffice '+e);
-
-}
-*/
-            //**End--> Apex Code is for sending work order id to the back office whenever the callout work order is created**//
-            
-            //**Start-->Apex Code to Send Email with attachement (SIR) when the work Order status is Job Complete and has Email field**//
-            /*
-try {
-List<SVMXC__Service_Order__c> woToSendEmail=new List<SVMXC__Service_Order__c>();
-for(SVMXC__Service_Order__c workorderInstance:this.triggerNew){
-if(this.triggerMapOld.containsKey(workorderInstance.Id)){
-if((this.triggerMapOld.get(workorderInstance.Id).SVMXC__Order_Status__c!=workorderInstance.SVMXC__Order_Status__c) && workorderInstance.SVMXC__Order_Status__c=='Job Complete' && workorderInstance.Contact_Email_SF__c!=null){
-woToSendEmail.add(workorderInstance);
-}
-}
-
-}
-//send filtered Work Orders to class DEF_WO_SendEmailToContacts
-if(woToSendEmail.size()>0){
-DEF_WO_SendEmailToContacts.SendEmailToContacts(woToSendEmail);
-
-}
-
-} catch (Exception e) {
-System.debug('The Error Thrown When calling the DEF_WO_SendEmailToContacts '+e);
-
-}
-*/
-            //**End--> Apex Code to Send Email with attachement (SIR) when the work Order status is Job Complete and has Email field**//
             Set<Id> technicianSetToCreateEvent=new Set<Id>();
             Set<Id> accountSetToCreateEvent=new Set<Id>();
             Set<Id> woSetToUpdateEvent=new Set<Id>();
@@ -498,6 +453,8 @@ System.debug('The Error Thrown When calling the DEF_WO_SendEmailToContacts '+e);
             List<SVMXC__Service_Order__c> woToSendEmail=new List<SVMXC__Service_Order__c>();
             List<SVMXC__Service_Order__c> woToSendToBO=new List<SVMXC__Service_Order__c>();
             List<DEF_WorkOrderPlatformEvent__e> WOPEList = new List<DEF_WorkOrderPlatformEvent__e>();
+            //List<SVMXC__Service_Order__c> woToUpdateEvent=new List<SVMXC__Service_Order__c>();
+            //Map<Id,SVMXC__Service_Order__c> woToUpdateEventMap=new Map<Id,SVMXC__Service_Order__c>();
             for(SVMXC__Service_Order__c workorderInstance:this.triggerNew)
             {
                 if(workorderInstance.SVMXC__Group_Member__c!=null){
@@ -538,10 +495,26 @@ System.debug('The Error Thrown When calling the DEF_WO_SendEmailToContacts '+e);
                     WOPEList.add(WOPEInstance);
 
                 }
+                //Check whether Confirmation request status or Customer Confirmed checkbox is changed
+                /*
+                if((workorderInstance.Confirmation_Request_Status__c != this.triggerMapOld.get(workorderInstance.Id).Confirmation_Request_Status__c) || (workorderInstance.Customer_Confirmed__c != this.triggerMapOld.get(workorderInstance.Id).Customer_Confirmed__c)){
+                    woToUpdateEvent.add(workorderInstance);
+
+
+                }
+                */
                 
                 
             }
+            //**Start-->Code to Update Event with new Subject **/
+            /*
+            if(woToUpdateEvent.size()>0){
+                DEF_WO_TriggerHelper.UpdateEventSubject(woToUpdateEvent);
+
+            }
+            */
             
+            //**End-->Code to Update Event with new Subject **/
             
             //**Start--> Code for Create Event for Work Order Whenever The CreateEventFromMobile Is set to True **//
             if(woListToCreateEvent.size()>0){

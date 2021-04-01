@@ -15,6 +15,15 @@
     </types>
     <types>
         <members>Account.BE_DEF_Navision_Ref_Num__c</members>
+        <members>DEF_QuoteCreateSMAX2NAV__e.Back_Office_Ref_Number__c</members>
+        <members>DEF_QuoteCreateSMAX2NAV__e.Description__c</members>
+        <members>DEF_QuoteCreateSMAX2NAV__e.FieldFeedback__c</members>
+        <members>DEF_QuoteCreateSMAX2NAV__e.Name__c</members>
+        <members>DEF_QuoteCreateSMAX2NAV__e.SVMXC_Account__c</members>
+        <members>DEF_QuoteCreateSMAX2NAV__e.SVMXC_Contact__c</members>
+        <members>DEF_QuoteCreateSMAX2NAV__e.SVMXC_Service_Order__c</members>
+        <members>DEF_QuoteCreateSMAX2NAV__e.SVMXC_Status__c</members>
+        <members>DEF_QuoteCreateSMAX2NAV__e.ServiceRequest__c</members>
         <members>DEF_ServiceContract_Integration__e.RecordId__c</members>
         <members>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</members>
         <members>Field_Feedback__c.Contract_HeaderLink__c</members>
@@ -27,6 +36,10 @@
         <members>SVMXC__Installed_Product__c.Description__c</members>
         <members>SVMXC__PM_Plan__c.Note_to_Planner__c</members>
         <members>SVMXC__Product_Stock__c.External_ID__c</members>
+        <members>SVMXC__Quote__c.Back_Office_Ref_Number__c</members>
+        <members>SVMXC__Quote__c.Description__c</members>
+        <members>SVMXC__Quote__c.FieldFeedback__c</members>
+        <members>SVMXC__Quote__c.ServiceRequest__c</members>
         <members>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Number__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
@@ -49,6 +62,7 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>DEF_QuoteCreateSMAX2NAV__e</members>
         <members>DEF_ServiceContract_Integration__e</members>
         <members>DEF_WorkOrderPlatformEvent__e</members>
         <members>Planned_Parts__c</members>
@@ -68,8 +82,13 @@
     </types>
     <types>
         <members>DEF_WW_SC_Trigger_Platform_Event</members>
+        <members>DEF_WW_ServiceQuote_Trigger_Platform_Event</members>
         <members>DEF_WW_Work_Order_Update_First_assigned_date_time_completed_date_time</members>
         <name>Flow</name>
+    </types>
+    <types>
+        <members>DEF_WW_ServiceQuote_Trigger_Platform_Event</members>
+        <name>FlowDefinition</name>
     </types>
     <types>
         <members>Installation_Discipline</members>
