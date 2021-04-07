@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>DEF_IT_Sub_Contractors_Chatter</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
         <members>DEF_SC_RestAPICall</members>
         <members>DEF_SC_RestAPICallTest</members>
         <members>DEF_WO_PE_TriggerTest</members>
@@ -78,6 +82,8 @@
     </types>
     <types>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
+        <members>Chatter_UtilityBar</members>
+        <members>DEF_IT_Sub_Contractors_Home_Page</members>
         <name>FlexiPage</name>
     </types>
     <types>
@@ -117,6 +123,7 @@
         <members>DEF BE Hybrid</members>
         <members>DEF FS Planner</members>
         <members>DEF Integration</members>
+        <members>DEF_IT_Sub_Contractors</members>
         <members>DEF_WW_Support</members>
         <name>Profile</name>
     </types>
@@ -126,6 +133,10 @@
         <members>DEF_WW_RampupKPIs/DEF_WW_Work_Orders_validated_without_labor_rkI</members>
         <members>DEF_WW_Reports/DEF_WW_Planned_Time_vs_Actual_Time_KUW</members>
         <name>Report</name>
+    </types>
+    <types>
+        <members>IT_DEF_Sub_Contractors</members>
+        <name>Role</name>
     </types>
     <version>50.0</version>
 </Package>
