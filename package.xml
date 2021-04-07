@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>DEF_IT_Sub_Contractors_Chatter</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
         <members>DEF_API_WO_RequestCallBack</members>
         <members>DEF_MockHttpResponseGenerator</members>
         <members>DEF_PM_WorkOrderBatch</members>
@@ -572,6 +576,8 @@
         <members>Territory_Record_Page</members>
         <members>Timesheet_Daily_Summary_Record_Page</members>
         <members>Timesheet_Record_Page</members>
+        <members>Chatter_UtilityBar</members>
+        <members>DEF_IT_Sub_Contractors_Home_Page</members>
         <name>FlexiPage</name>
     </types>
     <types>
@@ -738,6 +744,7 @@
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
         <members>DEF_FS_Tech_PS</members>
+        <members>DEF_IT_Sub_Contractor</members>
         <name>PermissionSet</name>
     </types>
     <types>
@@ -748,8 +755,13 @@
         <members>DEF FS Tech</members>
         <members>DEF IT Hybrid</members>
         <members>DEF Integration</members>
+        <members>DEF_IT_Sub_Contractors</members>
         <members>DEF_WW_Support</members>
         <name>Profile</name>
+    </types>
+    <types>
+        <members>IT_DEF_Sub_Contractors</members>
+        <name>Role</name>
     </types>
     <types>
         <members>GB_Default</members>
