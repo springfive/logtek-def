@@ -76,10 +76,10 @@
         <members>DEF_WW_RampupKPIs/GUQZkXNMcPlkBNVWmRVsHAtWHTnadx</members>
         <name>Dashboard</name>
     </types>
-    <types>
+    <!--<types>
         <members>SVMXC__Service_Order__c.SVMXC__SM_Service_Board_Fields</members>
         <name>FieldSet</name>
-    </types>
+    </types>-->
     <types>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
         <members>Chatter_UtilityBar</members>
