@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>DEF_WW_Issue_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>DEF_WW_Issue_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Issue_compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Issue_compact_Layout</fullName>
+        <fields>Associated_Work_Order__c</fields>
+        <fields>Issue_Location__c</fields>
+        <fields>Issue_Solved__c</fields>
+        <fields>LastModifiedById</fields>
+        <label>Issue compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Associated_Work_Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Associated Work Order</label>
+        <referenceTo>SVMXC__Service_Order__c</referenceTo>
+        <relationshipLabel>Issues</relationshipLabel>
+        <relationshipName>Issues</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Difficulties_Met__c</fullName>
+        <externalId>false</externalId>
+        <label>Difficulties Met</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Unable to identify/locate the device due to lack of documentation</fullName>
+                    <default>false</default>
+                    <label>Unable to identify/locate the device due to lack of documentation</label>
+                </value>
+                <value>
+                    <fullName>Unable to identify/locate the device due to access difficulties</fullName>
+                    <default>false</default>
+                    <label>Unable to identify/locate the device due to access difficulties</label>
+                </value>
+                <value>
+                    <fullName>Position of devices at high alttitude</fullName>
+                    <default>false</default>
+                    <label>Position of devices at high alttitude</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Issue_ID__c</fullName>
+        <displayFormat>IS-{0000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Issue ID</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Issue_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Issue Location</label>
+        <referenceTo>SVMXC__Site__c</referenceTo>
+        <relationshipLabel>Issues</relationshipLabel>
+        <relationshipName>Issues</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Issue_Solved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Issue Solved</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Log_verification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Log verification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OLD_Symptoms__c</fullName>
+        <externalId>false</externalId>
+        <label>OLD_Symptoms</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Work</fullName>
+                    <default>false</default>
+                    <label>Work</label>
+                </value>
+                <value>
+                    <fullName>Water infiltration</fullName>
+                    <default>false</default>
+                    <label>Water infiltration</label>
+                </value>
+                <value>
+                    <fullName>Thunderstorm</fullName>
+                    <default>false</default>
+                    <label>Thunderstorm</label>
+                </value>
+                <value>
+                    <fullName>Electrical surge</fullName>
+                    <default>false</default>
+                    <label>Electrical surge</label>
+                </value>
+                <value>
+                    <fullName>Unintentional damage</fullName>
+                    <default>false</default>
+                    <label>Unintentional damage</label>
+                </value>
+                <value>
+                    <fullName>Vandalism</fullName>
+                    <default>false</default>
+                    <label>Vandalism</label>
+                </value>
+                <value>
+                    <fullName>Polluted environment</fullName>
+                    <default>false</default>
+                    <label>Polluted environment</label>
+                </value>
+                <value>
+                    <fullName>Wear-off</fullName>
+                    <default>false</default>
+                    <label>Wear-off</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Root_Cause_Old__c</fullName>
+        <externalId>false</externalId>
+        <label>Root Cause</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>RootCause</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Root_Cause__c</fullName>
+        <externalId>false</externalId>
+        <label>Root Cause</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>DEF_RootCause</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Root_Cause_text__c</fullName>
+        <externalId>false</externalId>
+        <label>Root Cause</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Symptoms_Old__c</fullName>
+        <externalId>false</externalId>
+        <label>Symptoms</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Type_of_Concerned_device</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Symptoms__c</fullName>
+        <externalId>false</externalId>
+        <label>Symptoms</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Symptoms</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Symptoms_rootCause__c</fullName>
+        <description>Italy: field using Root Cause global value set</description>
+        <externalId>false</externalId>
+        <label>Symptoms</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>DEF_RootCause</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Tech_Count__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Tech_Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Technician_notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Technician notes</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_Of_Concerned_Device_OLD__c</fullName>
+        <externalId>false</externalId>
+        <label>Type Of Concerned Device_OLD</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Internal supply</fullName>
+                    <default>false</default>
+                    <label>Internal supply</label>
+                </value>
+                <value>
+                    <fullName>External power supply</fullName>
+                    <default>false</default>
+                    <label>External power supply</label>
+                </value>
+                <value>
+                    <fullName>Motherboard</fullName>
+                    <default>false</default>
+                    <label>Motherboard</label>
+                </value>
+                <value>
+                    <fullName>Loop board</fullName>
+                    <default>false</default>
+                    <label>Loop board</label>
+                </value>
+                <value>
+                    <fullName>Relay board</fullName>
+                    <default>false</default>
+                    <label>Relay board</label>
+                </value>
+                <value>
+                    <fullName>Network card</fullName>
+                    <default>false</default>
+                    <label>Network card</label>
+                </value>
+                <value>
+                    <fullName>Other card</fullName>
+                    <default>false</default>
+                    <label>Other card</label>
+                </value>
+                <value>
+                    <fullName>Detector</fullName>
+                    <default>false</default>
+                    <label>Detector</label>
+                </value>
+                <value>
+                    <fullName>Fouling detector</fullName>
+                    <default>false</default>
+                    <label>Fouling detector</label>
+                </value>
+                <value>
+                    <fullName>Base contacts</fullName>
+                    <default>false</default>
+                    <label>Base contacts</label>
+                </value>
+                <value>
+                    <fullName>Manual button</fullName>
+                    <default>false</default>
+                    <label>Manual button</label>
+                </value>
+                <value>
+                    <fullName>I / O info module</fullName>
+                    <default>false</default>
+                    <label>I / O info module</label>
+                </value>
+                <value>
+                    <fullName>Front panel</fullName>
+                    <default>false</default>
+                    <label>Front panel</label>
+                </value>
+                <value>
+                    <fullName>Printer</fullName>
+                    <default>false</default>
+                    <label>Printer</label>
+                </value>
+                <value>
+                    <fullName>Radio transpoder</fullName>
+                    <default>false</default>
+                    <label>Radio transpoder</label>
+                </value>
+                <value>
+                    <fullName>Panels O / A</fullName>
+                    <default>false</default>
+                    <label>Panels O / A</label>
+                </value>
+                <value>
+                    <fullName>Siren</fullName>
+                    <default>false</default>
+                    <label>Siren</label>
+                </value>
+                <value>
+                    <fullName>EVAC system</fullName>
+                    <default>false</default>
+                    <label>EVAC system</label>
+                </value>
+                <value>
+                    <fullName>EFC</fullName>
+                    <default>false</default>
+                    <label>EFC</label>
+                </value>
+                <value>
+                    <fullName>Combiner</fullName>
+                    <default>false</default>
+                    <label>Combiner</label>
+                </value>
+                <value>
+                    <fullName>IP converter</fullName>
+                    <default>false</default>
+                    <label>IP converter</label>
+                </value>
+                <value>
+                    <fullName>Short circuit loop</fullName>
+                    <default>false</default>
+                    <label>Short circuit loop</label>
+                </value>
+                <value>
+                    <fullName>Loop opening</fullName>
+                    <default>false</default>
+                    <label>Loop opening</label>
+                </value>
+                <value>
+                    <fullName>Connection problem</fullName>
+                    <default>false</default>
+                    <label>Connection problem</label>
+                </value>
+                <value>
+                    <fullName>Programming error</fullName>
+                    <default>false</default>
+                    <label>Programming error</label>
+                </value>
+                <value>
+                    <fullName>User management error</fullName>
+                    <default>false</default>
+                    <label>User management error</label>
+                </value>
+                <value>
+                    <fullName>Software</fullName>
+                    <default>false</default>
+                    <label>Software</label>
+                </value>
+                <value>
+                    <fullName>Extinguishing system cylinders</fullName>
+                    <default>false</default>
+                    <label>Extinguishing system cylinders</label>
+                </value>
+                <value>
+                    <fullName>Extinguishing system control</fullName>
+                    <default>false</default>
+                    <label>Extinguishing system control</label>
+                </value>
+                <value>
+                    <fullName>Suction System</fullName>
+                    <default>false</default>
+                    <label>Suction System</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Various</fullName>
+                    <default>false</default>
+                    <label>Various</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type_of_Concerned_device__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Concerned device</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Type_of_Concerned_device</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Work_Performed__c</fullName>
+        <externalId>false</externalId>
+        <label>Work Performed</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Device replacement</fullName>
+                    <default>false</default>
+                    <label>Device replacement</label>
+                </value>
+                <value>
+                    <fullName>Re-connection</fullName>
+                    <default>false</default>
+                    <label>Re-connection</label>
+                </value>
+                <value>
+                    <fullName>Re-programming</fullName>
+                    <default>false</default>
+                    <label>Re-programming</label>
+                </value>
+                <value>
+                    <fullName>Software update</fullName>
+                    <default>false</default>
+                    <label>Software update</label>
+                </value>
+                <value>
+                    <fullName>Handling/Manipulation</fullName>
+                    <default>false</default>
+                    <label>Handling/Manipulation</label>
+                </value>
+                <value>
+                    <fullName>Training</fullName>
+                    <default>false</default>
+                    <label>Training</label>
+                </value>
+                <value>
+                    <fullName>Test</fullName>
+                    <default>false</default>
+                    <label>Test</label>
+                </value>
+                <value>
+                    <fullName>Line check with multimeter</fullName>
+                    <default>false</default>
+                    <label>Line check with multimeter</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Issue</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Log_verification__c</columns>
+        <columns>Type_Of_Concerned_Device_OLD__c</columns>
+        <columns>OLD_Symptoms__c</columns>
+        <columns>Root_Cause__c</columns>
+        <columns>Work_Performed__c</columns>
+        <columns>Issue_Solved__c</columns>
+        <columns>Difficulties_Met__c</columns>
+        <columns>Technician_notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>Iss-{0000}</displayFormat>
+        <label>Issue Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Issues</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>
