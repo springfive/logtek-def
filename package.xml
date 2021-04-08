@@ -3,6 +3,7 @@
     <types>
         <members>SVMXC__Service_Order__c.Copy_Of_Permit_To_Work_Attached__c</members>
         <members>SVMXC__Service_Request__c.Customer_Reference__c</members>
+        <members>SVMXC__Service_Request__c.DEF_Company__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -22,6 +23,15 @@
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
         <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>DEF Integration</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>SVMXC__PM_Plan_Template__c.PM_Plan_TEMPLATE_To_GB</members>
+        <name>SharingCriteriaRule</name>
     </types>
     <version>50.0</version>
 </Package>
