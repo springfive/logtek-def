@@ -63,6 +63,16 @@
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
         <members>SVMXC__Site__c.BE_DEF_Navision_Ref_Num__c</members>
+        <members>ServiceProject__c.Account__c</members>
+        <members>ServiceProject__c.Contact__c</members>
+        <members>ServiceProject__c.DEF_Company__c</members>
+        <members>ServiceProject__c.Description__c</members>
+        <members>ServiceProject__c.End_Date__c</members>
+        <members>ServiceProject__c.Location__c</members>
+        <members>ServiceProject__c.PreferredTechnician__c</members>
+        <members>ServiceProject__c.Project_Manager__c</members>
+        <members>ServiceProject__c.Start_Date__c</members>
+        <members>ServiceProject__c.Status__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -71,6 +81,7 @@
         <members>DEF_WorkOrderPlatformEvent__e</members>
         <members>Planned_Parts__c</members>
         <members>SVMXC__Service_Request__c</members>
+        <members>ServiceProject__c</members>
         <name>CustomObject</name>
     </types>
     <types>
