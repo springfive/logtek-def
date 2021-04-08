@@ -6,6 +6,14 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>SVMXC__Service_Request__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>DEF_WW_Service_Request_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
         <members>SVMXC__Service_Order__c.WO_due_next_month</members>
         <name>ListView</name>
     </types>
