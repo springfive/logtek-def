@@ -31,6 +31,7 @@
         <members>DEF_ServiceContract_Integration__e.RecordId__c</members>
         <members>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</members>
         <members>Field_Feedback__c.Contract_HeaderLink__c</members>
+        <members>Field_Feedback__c.ServiceProject__c</members>
         <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
         <members>Locations_Equipment__c.Equipment__c</members>
         <members>Planned_Parts__c.PM_Schedule_Definition__c</members>
@@ -85,6 +86,10 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>ServiceProject__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>DEF_WW_RampupKPIs/GUQZkXNMcPlkBNVWmRVsHAtWHTnadx</members>
         <name>Dashboard</name>
     </types>
@@ -92,6 +97,7 @@
         <members>Chatter_UtilityBar</members>
         <members>DEF_IT_Sub_Contractors_Home_Page</members>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
+        <members>DEF_WW_Service_Project_Page</members>
         <name>FlexiPage</name>
     </types>
     <types>
@@ -134,6 +140,10 @@
         <members>DEF_IT_Sub_Contractors</members>
         <members>DEF_WW_Support</members>
         <name>Profile</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.New_Works</members>
+        <name>RecordType</name>
     </types>
     <types>
         <members>DEF_WW_RampupKPIs/DEF_WW_First_Time_Fix_X7x</members>
