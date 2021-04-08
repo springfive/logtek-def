@@ -4,6 +4,7 @@
         <members>SVMXC__Service_Order__c.Copy_Of_Permit_To_Work_Attached__c</members>
         <members>SVMXC__Service_Request__c.Customer_Reference__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
+        <members>SVMXC__Site__c.Note_to_Planner__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -13,6 +14,10 @@
     <types>
         <members>DEF_WW_Service_Request_Record_Page</members>
         <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>SVMXC__Site__c-DEF_WW_Site Layout</members>
+        <name>Layout</name>
     </types>
     <types>
         <members>SVMXC__Service_Order__c.WO_due_next_month</members>
