@@ -13602,6 +13602,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Confirmation_Request_Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.Contact_Email_SF__c</field>
         <readable>true</readable>
     </fieldPermissions>

@@ -13361,6 +13361,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Back_Office_Country__c</field>
         <readable>true</readable>
@@ -13394,6 +13399,11 @@
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Client_Level__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Confirmation_Request_Status__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -13536,6 +13546,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Is_First_Time_Fixed__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Is_Follow_up_WO__c</field>
         <readable>true</readable>
@@ -13619,6 +13634,11 @@
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Overtime_Duration__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.PM_Schedule_Definition__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -15014,6 +15034,11 @@
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.SVMX_PS_Zinc_Hotline_Message__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
