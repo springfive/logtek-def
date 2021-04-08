@@ -26,4 +26,42 @@
             </valueSetDefinition>
         </valueSet>
     </fields>
+    <listViews>
+        <fullName>WO_due_next_month</fullName>
+        <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>SVMXC__Service_Contract__c</columns>
+        <columns>SVMXC__Site__c</columns>
+        <columns>SVMXC__Component__c</columns>
+        <columns>SVMXC__Preferred_Start_Time__c</columns>
+        <columns>SVMXC__Preferred_Technician__c</columns>
+        <columns>SVMXC__Order_Status__c</columns>
+        <columns>SVMXC__Zip__c</columns>
+        <columns>SVMXC__City__c</columns>
+        <columns>WoDetails__c</columns>
+        <columns>SVMX_PS_Subject__c</columns>
+        <columns>Alert__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SVMXC__Preferred_Start_Time__c</field>
+            <operation>lessOrEqual</operation>
+            <value>NEXT_MONTH</value>
+        </filters>
+        <filters>
+            <field>SVMXC__Order_Status__c</field>
+            <operation>equals</operation>
+            <value>New,Unschedule</value>
+        </filters>
+        <filters>
+            <field>SVMXC__Preferred_Start_Time__c</field>
+            <operation>lessThan</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>SVMXC__Order_Type__c</field>
+            <operation>equals</operation>
+            <value>Maintenance</value>
+        </filters>
+        <label>PM WO - To be scheduled (due next month)</label>
+    </listViews>
 </CustomObject>
