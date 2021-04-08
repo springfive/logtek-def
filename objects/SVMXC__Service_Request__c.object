@@ -720,15 +720,6 @@
         <label>All service requests</label>
     </listViews>
     <listViews>
-        <fullName>GB_Group_Service_Request</fullName>
-        <filterScope>Queue</filterScope>
-        <label>GB_Group</label>
-        <queue>GB_Group</queue>
-        <sharedTo>
-            <allInternalUsers></allInternalUsers>
-        </sharedTo>
-    </listViews>
-    <listViews>
         <fullName>Service_requests_in_progress</fullName>
         <columns>NAME</columns>
         <columns>SVMXC__Account__c</columns>
