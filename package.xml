@@ -33,6 +33,7 @@
         <members>Field_Feedback__c.Contract_HeaderLink__c</members>
         <members>Field_Feedback__c.ServiceProject__c</members>
         <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
+        <members>Issue__c.ServiceProject__c</members>
         <members>Locations_Equipment__c.Equipment__c</members>
         <members>Planned_Parts__c.PM_Schedule_Definition__c</members>
         <members>Planned_Parts__c.Part__c</members>
@@ -159,6 +160,7 @@
     </types>
     <types>
         <members>SVMXC__Service_Order__c.New_Works</members>
+        <members>SVMXC__Service_Order__c.SmallWorks_PTX</members>
         <name>RecordType</name>
     </types>
     <types>
