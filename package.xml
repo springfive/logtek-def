@@ -16,6 +16,7 @@
         <name>FlexiPage</name>
     </types>
     <types>
+        <members>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</members>
         <members>SVMXC__Site__c-DEF_WW_Site Layout</members>
         <name>Layout</name>
     </types>
