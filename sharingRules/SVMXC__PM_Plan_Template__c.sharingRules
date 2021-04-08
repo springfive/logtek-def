@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>PM_Plan_TEMPLATE_To_GB</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Only gives access to the UK PM plan templates.</description>
+        <label>PM Plan TEMPLATE To GB</label>
+        <sharedTo>
+            <roleAndSubordinates>GB_DEF_Manager_Planner</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>DEF_Company__c</field>
+            <operation>equals</operation>
+            <value>GB_Clarkson</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

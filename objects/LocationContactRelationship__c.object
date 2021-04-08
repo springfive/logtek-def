@@ -128,71 +128,73 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>DEF_WW_Field_Feedback_Record_Page</content>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>DEF_WW_Field_Feedback_Record_Page</content>
         <formFactor>Small</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>LCR_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>LCR_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Location__c</fields>
+        <fields>Contact__c</fields>
+        <label>LCR Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableFeeds>true</enableFeeds>
+    <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>false</enableReports>
-    <enableSearch>true</enableSearch>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
-        <fullName>Contract_HeaderLink__c</fullName>
+        <fullName>Contact__c</fullName>
         <externalId>false</externalId>
-        <formula>HYPERLINK(&apos;/lightning/r/SVMXC__Service_Contract__c/&apos;+CASESAFEID(Work_Order__r.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__r.Id)+&apos;/view&apos;,Work_Order__r.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__r.Name)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Contract Header</label>
-        <required>false</required>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Related Locations</relationshipLabel>
+        <relationshipName>LCR_Contact_Relationships</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>Tech_Non_Compliance_Count__c</fullName>
-        <defaultValue>0</defaultValue>
+        <fullName>Location__c</fullName>
         <externalId>false</externalId>
-        <label>Tech Non Compliance Count</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackFeedHistory>false</trackFeedHistory>
+        <label>Location</label>
+        <referenceTo>SVMXC__Site__c</referenceTo>
+        <relationshipLabel>Related Contacts</relationshipLabel>
+        <relationshipName>LCR_Location_Relationships</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
-    <gender>Masculine</gender>
-    <label>Field Feedback</label>
+    <gender>Feminine</gender>
+    <label>Location Contact Relationship</label>
     <nameField>
-        <displayFormat>FF-{0000000}</displayFormat>
-        <label>Field Feedback ID</label>
-        <trackFeedHistory>false</trackFeedHistory>
+        <displayFormat>LCR-{0000}</displayFormat>
+        <label>Location Contact Relationship Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Field Feedbacks</pluralLabel>
+    <pluralLabel>Location Contact Relationships</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

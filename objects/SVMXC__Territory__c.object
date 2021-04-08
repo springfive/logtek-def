@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <listViews>
+        <fullName>GB_Default_Territory</fullName>
+        <filterScope>Queue</filterScope>
+        <label>GB_Default</label>
+        <queue>GB_Default</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>IT_Default_Territory</fullName>
+        <filterScope>Queue</filterScope>
+        <label>IT_Default</label>
+        <queue>IT_Default</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+</CustomObject>
