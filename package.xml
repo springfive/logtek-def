@@ -36,6 +36,7 @@
     </types>
     <types>
         <members>Admin</members>
+        <members>DEF - AD - Interface</members>
         <members>DEF Integration</members>
         <name>Profile</name>
     </types>
