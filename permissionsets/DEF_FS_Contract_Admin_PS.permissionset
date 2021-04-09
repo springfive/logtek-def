@@ -462,6 +462,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Field_Feedback__c.ServiceProject__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Field_Feedback__c.Service_Maintenance_Contract__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -473,6 +478,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Field_Feedback__c.Tech_Count__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Field_Feedback__c.Tech_Non_Compliance_Count__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -563,6 +573,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Issue__c.Technician_notes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Issue__c.Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3117,6 +3132,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Confirmation_Request_Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.Contact_Email_SF__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4687,6 +4707,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Service_Project_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.Service_Request_Created_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4841,7 +4866,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>SVMXC__Service_Order__c.Work_Performed_Picklist__c</field>
         <readable>true</readable>
     </fieldPermissions>

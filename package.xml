@@ -31,7 +31,9 @@
         <members>DEF_ServiceContract_Integration__e.RecordId__c</members>
         <members>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</members>
         <members>Field_Feedback__c.Contract_HeaderLink__c</members>
+        <members>Field_Feedback__c.ServiceProject__c</members>
         <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
+        <members>Issue__c.ServiceProject__c</members>
         <members>Locations_Equipment__c.Equipment__c</members>
         <members>Planned_Parts__c.PM_Schedule_Definition__c</members>
         <members>Planned_Parts__c.Part__c</members>
@@ -48,8 +50,10 @@
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <members>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Number__c</members>
+        <members>SVMXC__Service_Order__c.Confirmation_Request_Status__c</members>
         <members>SVMXC__Service_Order__c.Contact_Email_SF__c</members>
         <members>SVMXC__Service_Order__c.Contact_Phone_SF__c</members>
+        <members>SVMXC__Service_Order__c.Designation__c</members>
         <members>SVMXC__Service_Order__c.Field_Comments__c</members>
         <members>SVMXC__Service_Order__c.How_was_the_service__c</members>
         <members>SVMXC__Service_Order__c.Intervention_End_Date_and_Time__c</members>
@@ -63,6 +67,16 @@
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
         <members>SVMXC__Site__c.BE_DEF_Navision_Ref_Num__c</members>
+        <members>ServiceProject__c.Account__c</members>
+        <members>ServiceProject__c.Contact__c</members>
+        <members>ServiceProject__c.DEF_Company__c</members>
+        <members>ServiceProject__c.Description__c</members>
+        <members>ServiceProject__c.End_Date__c</members>
+        <members>ServiceProject__c.Location__c</members>
+        <members>ServiceProject__c.PreferredTechnician__c</members>
+        <members>ServiceProject__c.Project_Manager__c</members>
+        <members>ServiceProject__c.Start_Date__c</members>
+        <members>ServiceProject__c.Status__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -71,16 +85,26 @@
         <members>DEF_WorkOrderPlatformEvent__e</members>
         <members>Planned_Parts__c</members>
         <members>SVMXC__Service_Request__c</members>
+        <members>ServiceProject__c</members>
         <name>CustomObject</name>
+    </types>
+    <types>
+        <members>ServiceProject__c</members>
+        <name>CustomTab</name>
     </types>
     <types>
         <members>DEF_WW_RampupKPIs/GUQZkXNMcPlkBNVWmRVsHAtWHTnadx</members>
         <name>Dashboard</name>
     </types>
     <types>
+        <members>SVMXC__Service_Order__c.SVMXC__SM_Service_Board_Fields</members>
+        <name>FieldSet</name>
+    </types>
+    <types>
         <members>Chatter_UtilityBar</members>
         <members>DEF_IT_Sub_Contractors_Home_Page</members>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
+        <members>DEF_WW_Service_Project_Page</members>
         <name>FlexiPage</name>
     </types>
     <types>
@@ -102,9 +126,19 @@
         <members>Planned_Parts__c-DEF_WW_Planned Parts Layout</members>
         <members>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</members>
         <members>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</members>
+        <members>SVMXC__Service_Order__c-DEF_WW_Callout Work Order Layout</members>
+        <members>SVMXC__Service_Order__c-DEF_WW_New Works Layout</members>
         <members>SVMXC__Service_Order__c-DEF_WW_Preventive Maintenance Work Order Layout</members>
+        <members>SVMXC__Service_Order__c-DEF_WW_SmallWorks_PTX Work Order Layout</members>
         <members>SVMXC__Service_Plan__c-DEF_WW_Service Plan Layout</members>
         <name>Layout</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.Callout_WO_To_be_confirmed</members>
+        <members>SVMXC__Service_Order__c.Callout_WO_To_confirm_this_week</members>
+        <members>SVMXC__Service_Order__c.Maintenance_WO_To_be_confirmed</members>
+        <members>SVMXC__Service_Order__c.Maintenance_WO_To_confirm_this_week</members>
+        <name>ListView</name>
     </types>
     <types>
         <members>All_Modify</members>
@@ -125,6 +159,11 @@
         <name>Profile</name>
     </types>
     <types>
+        <members>SVMXC__Service_Order__c.New_Works</members>
+        <members>SVMXC__Service_Order__c.SmallWorks_PTX</members>
+        <name>RecordType</name>
+    </types>
+    <types>
         <members>DEF_WW_RampupKPIs/DEF_WW_First_Time_Fix_X7x</members>
         <members>DEF_WW_RampupKPIs/DEF_WW_Hours_declared_on_site_1xt</members>
         <members>DEF_WW_RampupKPIs/DEF_WW_Work_Orders_validated_without_labor_rkI</members>
@@ -134,6 +173,10 @@
     <types>
         <members>IT_DEF_Sub_Contractors</members>
         <name>Role</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician</members>
+        <name>WorkflowRule</name>
     </types>
     <version>50.0</version>
 </Package>
