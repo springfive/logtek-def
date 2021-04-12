@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>DEF_WO_TriggerHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Copy_Of_Permit_To_Work_Attached__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Owner_Full_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -166,6 +175,12 @@
         <field>SVMXC__Site__c.Note_to_Planner__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <layoutAssignments>
+        <layout>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SVMXC__Site__c-DEF_WW_Site Layout</layout>
+    </layoutAssignments>
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
         <startAddress>0.0.0.0</startAddress>

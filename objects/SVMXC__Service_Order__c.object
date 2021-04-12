@@ -29,9 +29,7 @@
     <fields>
         <fullName>Owner_Full_Name__c</fullName>
         <externalId>false</externalId>
-        <formula>/*Owner:User.FirstName +&quot; &quot;+ Owner:User.LastName*/
-
- IF(Owner:Queue.Id=NULL,Owner:User.FirstName +&quot; &quot;+ Owner:User.LastName,
+        <formula>IF(Owner:Queue.Id=NULL,Owner:User.FirstName +&quot; &quot;+ Owner:User.LastName,
 			 Owner:Queue.QueueName)</formula>
         <label>Owner Full Name</label>
         <required>false</required>
