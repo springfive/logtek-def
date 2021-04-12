@@ -2,40 +2,6 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fields>
-        <fullName>BE_DEF_Navision_Ref_Number__c</fullName>
-        <externalId>false</externalId>
-        <label>BE DEF Navision Ref Number</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>TextArea</type>
-    </fields>
-    <fields>
-        <fullName>Confirmation_Request_Status__c</fullName>
-        <externalId>false</externalId>
-        <label>Confirmation Request Status</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Request Not Sent</fullName>
-                    <default>false</default>
-                    <label>Request Not Sent</label>
-                </value>
-                <value>
-                    <fullName>Request Sent</fullName>
-                    <default>false</default>
-                    <label>Request Sent 📧❓</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>Contact_Email_SF__c</fullName>
         <externalId>false</externalId>
         <formula>SVMXC__Contact__r.Email</formula>
@@ -58,39 +24,51 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Copy_Of_Permit_To_Work_Attached__c</fullName>
+        <externalId>false</externalId>
+        <label>Permit To Work Completed ?</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Designation__c</fullName>
         <externalId>false</externalId>
-        <formula>/*Confirmation request*/
-IF(ISPICKVAL (Confirmation_Request_Status__c, &quot;Request Sent&quot;)&amp;&amp; NOT(ISPICKVAL(SVMXC__Order_Status__c, &quot;Customer Confirmed&quot;)) ,&quot;❓&quot;&amp;&quot; | &quot;,&quot;&quot;)
-
-/*Customer confirmed*/
-&amp;
-IF( ISPICKVAL (SVMXC__Order_Status__c, &quot;Customer Confirmed&quot;), 
-&quot;✅&quot;&amp;&quot; | &quot;,&quot;&quot;)
-
-/*Order Type*/
-&amp;
-IF(ISPICKVAL( SVMXC__Order_Type__c, &quot;Maintenance&quot;),
-			&quot;🛠️ &quot;,
-			IF(ISPICKVAL(SVMXC__Order_Type__c, &quot;Outcalls&quot;), 
-		    	&quot;☎️ &quot;,
-					  IF(ISPICKVAL(SVMXC__Order_Type__c, &quot;New Works&quot;), 
-		    	&quot;📐 &quot;,&quot;🔧&quot;)))
+        <formula>/*Order Type*/
+IF( ISPICKVAL( SVMXC__Order_Type__c, &quot;Maintenance&quot;), 
+&quot;🛠️&quot;,&quot;☎️&quot;)
 
 /*Installation discipline*/
-&amp;
-IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0001&quot;),&quot;| &quot;&amp;&quot;🔥&quot;,
-IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0010&quot;),&quot;| &quot;&amp;&quot;📢&quot;,
-IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0060&quot;),&quot;| &quot;&amp;&quot;💻&quot;,
-IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0070&quot;),&quot;| &quot;&amp;&quot;🔒&quot;,
-IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0080&quot;),&quot;| &quot;&amp;&quot;🛑&quot;,
-IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0020&quot;),&quot;| &quot;&amp;&quot;🧯🌀&quot;,
-IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0030&quot;),&quot;| &quot;&amp;&quot;🧯❄️&quot;,
-IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0040&quot;),&quot;| &quot;&amp;&quot;🧯💨&quot;,
-IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp;&quot;🧯💦&quot;,&quot;&quot;)))))))))
+&amp;&quot; |&quot;&amp;
+IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0001&quot;), &quot;🔥&quot;,
+IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0010&quot;), &quot;📢&quot;,
+IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0060&quot;), &quot;💻&quot;,
+IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0070&quot;), &quot;🔒&quot;,
+IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0080&quot;),&quot;🛑&quot;,
+IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0020&quot;),&quot;🧯🌀&quot;,
+IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0030&quot;),&quot;🧯❄️&quot;,
+IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0040&quot;),&quot;🧯💨&quot;,
+IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;), &quot;🧯💦&quot;,&quot;&quot;)))))))))
 
 	/*Location*/
-	&amp;&quot;| &quot;&amp;
+	&amp;&quot; |&quot;&amp;
 	SVMXC__Site__r.Name</formula>
         <label>Designation</label>
         <required>false</required>
@@ -105,6 +83,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <inlineHelpText>Technician&apos;s Comments/Observations when first arriving on site</inlineHelpText>
         <label>Field Comments</label>
         <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
@@ -115,6 +94,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <externalId>false</externalId>
         <label>How was the service?</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -155,6 +135,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <externalId>false</externalId>
         <label>Intervention End Date and Time</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -164,6 +145,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <externalId>false</externalId>
         <label>Intervention Start Date and Time</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -188,37 +170,29 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <externalId>false</externalId>
         <label>Note to Planner</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>PM_Schedule_Definition__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
+        <fullName>Owner_Full_Name__c</fullName>
         <externalId>false</externalId>
-        <label>PM Schedule Definition</label>
-        <referenceTo>SVMXC__PM_Schedule_Definition__c</referenceTo>
-        <relationshipLabel>Work Orders</relationshipLabel>
-        <relationshipName>Work_Orders</relationshipName>
+        <formula>IF(Owner:Queue.Id=NULL,Owner:User.FirstName +&quot; &quot;+ Owner:User.LastName,
+			 Owner:Queue.QueueName)</formula>
+        <label>Owner Full Name</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Quote_Description__c</fullName>
-        <externalId>false</externalId>
-        <label>Quote Description</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>TextArea</type>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Return_Visit_Required__c</fullName>
         <externalId>false</externalId>
         <label>Return Visit Required ?</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -244,6 +218,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <externalId>false</externalId>
         <label>Revisit Comment</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
@@ -256,6 +231,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <inlineHelpText>Symptom that was noted before the failure.</inlineHelpText>
         <label>Symptom</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -290,6 +266,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <externalId>false</externalId>
         <label>Revisit Reason</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -384,21 +361,6 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Symptom__c</fullName>
-        <description>Symptom noticed on the Installation.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Symptom noticed on the Installation.</inlineHelpText>
-        <label>Symptom</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>Symptoms</valueSetName>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>Tech_MainFsrInitials__c</fullName>
         <externalId>false</externalId>
         <formula>Left(SVMXC__Group_Member__r.Name,1)&amp; Mid(SVMXC__Group_Member__r.Name,Find(&quot; &quot;,SVMXC__Group_Member__r.Name)+1,1)</formula>
@@ -410,23 +372,43 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <unique>false</unique>
     </fields>
     <listViews>
-        <fullName>PTX_Work_Orders</fullName>
+        <fullName>WO_due_next_month</fullName>
+        <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
         <columns>NAME</columns>
-        <columns>SVMXC__Order_Type__c</columns>
-        <columns>SVMXC__Order_Status__c</columns>
-        <columns>SVMXC__Company__c</columns>
+        <columns>SVMXC__Service_Contract__c</columns>
         <columns>SVMXC__Site__c</columns>
         <columns>SVMXC__Component__c</columns>
-        <columns>SVMXC__Group_Member__c</columns>
-        <columns>SVMXC__Scheduled_Date_Time__c</columns>
+        <columns>SVMXC__Preferred_Start_Time__c</columns>
+        <columns>Owner_Full_Name__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>SVMXC__Preferred_Technician__c</columns>
+        <columns>SVMXC__Order_Status__c</columns>
+        <columns>SVMXC__Zip__c</columns>
         <columns>SVMXC__City__c</columns>
-        <columns>SVMXC__Priority__c</columns>
+        <columns>WoDetails__c</columns>
+        <columns>Alert__c</columns>
+        <columns>SVMX_PS_Subject__c</columns>
         <filterScope>Everything</filterScope>
+        <filters>
+            <field>SVMXC__Preferred_Start_Time__c</field>
+            <operation>lessOrEqual</operation>
+            <value>NEXT_MONTH</value>
+        </filters>
+        <filters>
+            <field>SVMXC__Order_Status__c</field>
+            <operation>equals</operation>
+            <value>New,Unschedule</value>
+        </filters>
+        <filters>
+            <field>SVMXC__Preferred_Start_Time__c</field>
+            <operation>lessThan</operation>
+            <value>TODAY</value>
+        </filters>
         <filters>
             <field>SVMXC__Order_Type__c</field>
             <operation>equals</operation>
-            <value>Small Works (PTX)</value>
+            <value>Maintenance</value>
         </filters>
-        <label>PTX Work Orders</label>
+        <label>PM WO - To be scheduled (due next month)</label>
     </listViews>
 </CustomObject>

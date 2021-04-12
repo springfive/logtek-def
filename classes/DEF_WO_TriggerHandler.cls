@@ -2,7 +2,7 @@
 * @description       : Handler for the Work Order berfore insert trigger.
 * @author            : Jawahar Moorthy (SpringFive)
 * @group             : 
-* @last modified on  : 04-01-2021
+* @last modified on  : 02-26-2021
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 * Modifications Log 
 * Ver   Date         Author                               Modification
@@ -61,7 +61,7 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             
             //get full details(addresss+default territory) of WO location
             if(locationSet.size()>0){
-                locationRecords=[SELECT Id,DefaultTerritory__c,SVMXC__City__c,SVMXC__Country__c,SVMXC__Latitude__c,SVMXC__Longitude__c,SVMXC__State__c,SVMXC__Street__c,SVMXC__Zip__c FROM SVMXC__Site__c WHERE Id IN: locationSet];
+                locationRecords=[SELECT Id,Note_to_Planner__c,DefaultTerritory__c,SVMXC__City__c,SVMXC__Country__c,SVMXC__Latitude__c,SVMXC__Longitude__c,SVMXC__State__c,SVMXC__Street__c,SVMXC__Zip__c FROM SVMXC__Site__c WHERE Id IN: locationSet];
                 LocationEQList=[SELECT Id,Equipment__c,Equipment__r.Name,Location__c FROM Locations_Equipment__c WHERE Location__c IN :locationSet];
             }
             Map<id,String> locEqMap = new Map<id,String>();
@@ -185,6 +185,15 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                     }
 
                 }
+                if(locationMap.containsKey(woInstance.SVMXC__Site__c)){
+                    if(String.isBlank(noteToPlanner)){
+                        noteToPlanner=locationMap.get(woInstance.SVMXC__Site__c).Note_to_Planner__c;
+                    }
+                    else{
+                        noteToPlanner=noteToPlanner+'\n'+locationMap.get(woInstance.SVMXC__Site__c).Note_to_Planner__c;
+                        
+                    }
+                }
                 if(locEqMap.containskey(woInstance.SVMXC__Site__c)){
                     if(String.isBlank(noteToPlanner)){
                         noteToPlanner=locEqMap.get(woInstance.SVMXC__Site__c);
@@ -245,6 +254,12 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                 if((woInstance.Customer_Confirmed__c!=this.triggerMapOld.get(woInstance.Id).Customer_Confirmed__c && woInstance.Customer_Confirmed__c == true && woInstance.SVMXC__Order_Status__c != 'Customer Confirmed') || (woInstance.SVMXC__Dispatch_Status__c != this.triggerMapOld.get(woInstance.Id).SVMXC__Dispatch_Status__c && woInstance.SVMXC__Dispatch_Status__c == 'Assigned' && woInstance.SVMXC__Country__c == 'GB')){
                     woInstance.SVMXC__Order_Status__c = 'Customer Confirmed';
 
+
+                }
+
+                //**--> Set Customer Confirmed checkbox to true when order status is Customer Confirmed*/
+                if(woInstance.SVMXC__Order_Status__c!=this.triggerMapOld.get(woInstance.Id).SVMXC__Order_Status__c && woInstance.SVMXC__Order_Status__c=='Customer Confirmed'){
+                    woInstance.Customer_Confirmed__c=true;
                 }
                 //**---> Set WorkOrder Default Territory based on the location**//
                 if((woInstance.SVMXC__Primary_Territory__c==null && woInstance.SVMXC__Order_Status__c=='New' && woInstance.SVMXC__Site__c!=null && locationMap.size()>0 && locationMap.containsKey(woInstance.SVMXC__Site__c)) || (woInstance.SVMXC__Site__c!=this.triggerMapOld.get(woInstance.Id).SVMXC__Site__c && woInstance.SVMXC__Site__c!=null && locationMap.size()>0 && locationMap.containsKey(woInstance.SVMXC__Site__c))){
@@ -301,9 +316,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             set<id> PrimaryTerritorySet = new set<id> ();
             set<id> WOSetForOwnerUpdate = new set<id> ();
             List<DEF_WorkOrderPlatformEvent__e> WOPEList = new List<DEF_WorkOrderPlatformEvent__e>();
-            Set<Id> pmScheduleDefSet = new Set<Id>();
-            map<Id,Id> workOrderSdMap = new map<Id,Id>();
-
             for(SVMXC__Service_Order__c workorderInstance:this.triggerNew)
             {
                 if (workorderInstance.Tech_Trigger_Back_Office__c==true) {
@@ -321,12 +333,7 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                     System.debug('@WoListForOwnerUpdate...');
 
                 }
-                if(workorderInstance.SVMXC__Order_Type__c=='Maintenance' && workorderInstance.PM_Schedule_Definition__c!=null){
-                    workOrderSdMap.put(workorderInstance.Id,workorderInstance.PM_Schedule_Definition__c);
-                    pmScheduleDefSet.add(workorderInstance.PM_Schedule_Definition__c);
-
-                    
-                }
+                
             }
             //**Start-->Apex Code is for sending work order id to the back office whenever the callout work order is created**//
             if(woToSendToBO.size()>0){
@@ -343,11 +350,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                 //DEF_WO_TriggerHelper.SetOwnerTOWorkOrder(WoListForOwnerUpdate,PrimaryTerritorySet);
             }
             //**End-->Apex code to set the Owner of WO from Owner of Territory
-
-            if(workOrderSdMap.size()>0 &&pmScheduleDefSet.size()>0 ){
-                DEF_WO_TriggerHelper.workDetailFromPlannedParts(workOrderSdMap,pmScheduleDefSet);
-
-            }
 
             
             
@@ -444,6 +446,51 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
         if(DEF_WW_Utils_PAD_Methodology.canTrigger('DEF_WO_AU')){
             System.debug('@On After Update ...');
 
+            //**Start-->Apex Code is for sending work order id to the back office whenever the callout work order is created**//
+            /*
+try {
+for(SVMXC__Service_Order__c workorderInstance:this.triggerNew)
+{
+if(this.triggerMapOld.containsKey(workorderInstance.Id)){
+if(this.triggerMapOld.get(workorderInstance.Id).Tech_Trigger_Back_Office__c!=workorderInstance.Tech_Trigger_Back_Office__c){
+if (workorderInstance.Tech_Trigger_Back_Office__c==true) {
+//Apex Code is for sending work order id to the back office whenever the callout work order is created
+DEF_WO_SendWOToBackOffice.SendWODetails(workorderInstance);
+}
+}
+}
+}
+} catch (Exception e) {
+System.debug('The Error Thrown When calling the DEF_WO_SendWOToBackOffice '+e);
+
+}
+*/
+            //**End--> Apex Code is for sending work order id to the back office whenever the callout work order is created**//
+            
+            //**Start-->Apex Code to Send Email with attachement (SIR) when the work Order status is Job Complete and has Email field**//
+            /*
+try {
+List<SVMXC__Service_Order__c> woToSendEmail=new List<SVMXC__Service_Order__c>();
+for(SVMXC__Service_Order__c workorderInstance:this.triggerNew){
+if(this.triggerMapOld.containsKey(workorderInstance.Id)){
+if((this.triggerMapOld.get(workorderInstance.Id).SVMXC__Order_Status__c!=workorderInstance.SVMXC__Order_Status__c) && workorderInstance.SVMXC__Order_Status__c=='Job Complete' && workorderInstance.Contact_Email_SF__c!=null){
+woToSendEmail.add(workorderInstance);
+}
+}
+
+}
+//send filtered Work Orders to class DEF_WO_SendEmailToContacts
+if(woToSendEmail.size()>0){
+DEF_WO_SendEmailToContacts.SendEmailToContacts(woToSendEmail);
+
+}
+
+} catch (Exception e) {
+System.debug('The Error Thrown When calling the DEF_WO_SendEmailToContacts '+e);
+
+}
+*/
+            //**End--> Apex Code to Send Email with attachement (SIR) when the work Order status is Job Complete and has Email field**//
             Set<Id> technicianSetToCreateEvent=new Set<Id>();
             Set<Id> accountSetToCreateEvent=new Set<Id>();
             Set<Id> woSetToUpdateEvent=new Set<Id>();
@@ -453,8 +500,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             List<SVMXC__Service_Order__c> woToSendEmail=new List<SVMXC__Service_Order__c>();
             List<SVMXC__Service_Order__c> woToSendToBO=new List<SVMXC__Service_Order__c>();
             List<DEF_WorkOrderPlatformEvent__e> WOPEList = new List<DEF_WorkOrderPlatformEvent__e>();
-            //List<SVMXC__Service_Order__c> woToUpdateEvent=new List<SVMXC__Service_Order__c>();
-            //Map<Id,SVMXC__Service_Order__c> woToUpdateEventMap=new Map<Id,SVMXC__Service_Order__c>();
             for(SVMXC__Service_Order__c workorderInstance:this.triggerNew)
             {
                 if(workorderInstance.SVMXC__Group_Member__c!=null){
@@ -495,26 +540,10 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                     WOPEList.add(WOPEInstance);
 
                 }
-                //Check whether Confirmation request status or Customer Confirmed checkbox is changed
-                /*
-                if((workorderInstance.Confirmation_Request_Status__c != this.triggerMapOld.get(workorderInstance.Id).Confirmation_Request_Status__c) || (workorderInstance.Customer_Confirmed__c != this.triggerMapOld.get(workorderInstance.Id).Customer_Confirmed__c)){
-                    woToUpdateEvent.add(workorderInstance);
-
-
-                }
-                */
                 
                 
             }
-            //**Start-->Code to Update Event with new Subject **/
-            /*
-            if(woToUpdateEvent.size()>0){
-                DEF_WO_TriggerHelper.UpdateEventSubject(woToUpdateEvent);
-
-            }
-            */
             
-            //**End-->Code to Update Event with new Subject **/
             
             //**Start--> Code for Create Event for Work Order Whenever The CreateEventFromMobile Is set to True **//
             if(woListToCreateEvent.size()>0){
