@@ -26,6 +26,20 @@
             </valueSetDefinition>
         </valueSet>
     </fields>
+    <fields>
+        <fullName>Owner_Full_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>/*Owner:User.FirstName +&quot; &quot;+ Owner:User.LastName*/
+
+ IF(Owner:Queue.Id=NULL,Owner:User.FirstName +&quot; &quot;+ Owner:User.LastName,
+			 Owner:Queue.QueueName)</formula>
+        <label>Owner Full Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <listViews>
         <fullName>WO_due_next_month</fullName>
         <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
@@ -34,13 +48,15 @@
         <columns>SVMXC__Site__c</columns>
         <columns>SVMXC__Component__c</columns>
         <columns>SVMXC__Preferred_Start_Time__c</columns>
+        <columns>Owner_Full_Name__c</columns>
+        <columns>OWNER.ALIAS</columns>
         <columns>SVMXC__Preferred_Technician__c</columns>
         <columns>SVMXC__Order_Status__c</columns>
         <columns>SVMXC__Zip__c</columns>
         <columns>SVMXC__City__c</columns>
         <columns>WoDetails__c</columns>
-        <columns>SVMX_PS_Subject__c</columns>
         <columns>Alert__c</columns>
+        <columns>SVMX_PS_Subject__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>SVMXC__Preferred_Start_Time__c</field>
