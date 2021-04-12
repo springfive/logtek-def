@@ -34,10 +34,12 @@
         <members>Field_Feedback__c.Quote_Description__c</members>
         <members>Field_Feedback__c.ServiceProject__c</members>
         <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
+        <members>Issue__c.Associated_Work_Order__c</members>
         <members>Issue__c.ServiceProject__c</members>
         <members>Issue__c.Symptom__c</members>
         <members>Issue__c.Symptoms_rootCause__c</members>
         <members>Issue__c.Type__c</members>
+        <members>Issue__c.Work_Performed_by_Installer__c</members>
         <members>Locations_Equipment__c.Equipment__c</members>
         <members>Planned_Parts__c.PM_Schedule_Definition__c</members>
         <members>Planned_Parts__c.Part__c</members>
@@ -67,12 +69,14 @@
         <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.Owner_Full_Name__c</members>
         <members>SVMXC__Service_Order__c.PM_Schedule_Definition__c</members>
+        <members>SVMXC__Service_Order__c.QuoteReference__c</members>
         <members>SVMXC__Service_Order__c.Quote_Description__c</members>
         <members>SVMXC__Service_Order__c.Return_Visit_Required__c</members>
         <members>SVMXC__Service_Order__c.Revisit_Comment__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Symptom__c</members>
         <members>SVMXC__Service_Order__c.SVMX_PS_Revisit_Reason__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
+        <members>SVMXC__Service_Order__c.ServiceProject__c</members>
         <members>SVMXC__Service_Order__c.Symptom__c</members>
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
         <members>SVMXC__Service_Request__c.Customer_Reference__c</members>
@@ -155,11 +159,21 @@
         <name>Layout</name>
     </types>
     <types>
+        <members>SVMXC__Service_Order__c.All_WO_To_be_validated</members>
+        <members>SVMXC__Service_Order__c.Awaiting_Customer_Confirmation_WO</members>
+        <members>SVMXC__Service_Order__c.Callout_WO_Paused_SLA</members>
         <members>SVMXC__Service_Order__c.Callout_WO_To_be_confirmed</members>
         <members>SVMXC__Service_Order__c.Callout_WO_To_confirm_this_week</members>
+        <members>SVMXC__Service_Order__c.Callout_Work_Orders</members>
+        <members>SVMXC__Service_Order__c.High_Priority_Work_Orders</members>
         <members>SVMXC__Service_Order__c.Maintenance_WO_To_be_confirmed</members>
         <members>SVMXC__Service_Order__c.Maintenance_WO_To_confirm_this_week</members>
+        <members>SVMXC__Service_Order__c.New_Works_Work_Orders</members>
+        <members>SVMXC__Service_Order__c.PM_WO_To_be_scheduled_next_3_Months</members>
         <members>SVMXC__Service_Order__c.PTX_Work_Orders</members>
+        <members>SVMXC__Service_Order__c.Preventive_Maintenance_Work_Orders</members>
+        <members>SVMXC__Service_Order__c.Ready_to_Dispatch_Work_Orders</members>
+        <members>SVMXC__Service_Order__c.SVMX_PS_All_Awaiting_Customer_Orders</members>
         <members>SVMXC__Service_Order__c.WO_due_next_month</members>
         <name>ListView</name>
     </types>
