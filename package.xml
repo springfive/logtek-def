@@ -94,6 +94,7 @@
         <members>ServiceProject__c.Project_Manager__c</members>
         <members>ServiceProject__c.Start_Date__c</members>
         <members>ServiceProject__c.Status__c</members>
+        <members>ServiceProject__c.Type__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -156,6 +157,7 @@
         <members>SVMXC__Service_Plan__c-DEF_WW_Service Plan Layout</members>
         <members>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</members>
         <members>SVMXC__Site__c-DEF_WW_Site Layout</members>
+        <members>ServiceProject__c-DEF_WW_Project Page Layout</members>
         <name>Layout</name>
     </types>
     <types>

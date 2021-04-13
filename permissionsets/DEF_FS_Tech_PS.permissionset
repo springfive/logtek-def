@@ -15446,6 +15446,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Tech_ProductServicedCount__c</field>
         <readable>true</readable>
@@ -17503,6 +17508,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>ServiceProject__c.Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ServiceProject__c.Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
