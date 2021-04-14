@@ -2,9 +2,9 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fields>
-        <fullName>Note_to_Planner__c</fullName>
+        <fullName>BE_DEF_Navision_Ref_Num__c</fullName>
         <externalId>false</externalId>
-        <label>Note to Planner</label>
+        <label>BE DEF Navision Ref Num</label>
         <length>255</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
