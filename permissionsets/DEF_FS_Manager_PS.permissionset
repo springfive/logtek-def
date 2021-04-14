@@ -632,6 +632,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Project_Location_Relationship__c.Contact__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Number__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -5117,6 +5122,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Request__c.InitialResponseCustomerBy__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Request__c.InitialResponse__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Request__c.Installation__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5234,6 +5249,11 @@
         <editable>false</editable>
         <field>SVMXC__Service_Request__c.SVMXC__Type__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Request__c.Tech_BusinessHours__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>

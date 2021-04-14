@@ -88,6 +88,7 @@
         <members>SVMXC__Service_Order__c.Symptom__c</members>
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
         <members>SVMXC__Service_Order__c.Work_Performed_Picklist__c</members>
+        <members>SVMXC__Service_Request__c.Call_Date_Time__c</members>
         <members>SVMXC__Service_Request__c.Customer_Reference__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
         <members>SVMXC__Service_Request__c.Quote_Description__c</members>
@@ -111,6 +112,7 @@
         <members>DEF_ServiceContract_Integration__e</members>
         <members>DEF_WorkOrderPlatformEvent__e</members>
         <members>Planned_Parts__c</members>
+        <members>Project_Location_Relationship__c</members>
         <members>SVMXC__Service_Request__c</members>
         <members>ServiceProject__c</members>
         <name>CustomObject</name>
@@ -202,6 +204,7 @@
         <members>DEF - AD - Interface</members>
         <members>DEF BE Hybrid</members>
         <members>DEF FS Planner</members>
+        <members>DEF FS Tech</members>
         <members>DEF Integration</members>
         <members>DEF_IT_Sub_Contractors</members>
         <members>DEF_WW_Support</members>
