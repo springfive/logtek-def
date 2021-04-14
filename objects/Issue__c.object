@@ -26,6 +26,35 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>false</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>In progress</fullName>
+                    <default>false</default>
+                    <label>In progress</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Symptom__c</fullName>
         <description>Symptom noticed on the Installation.</description>
         <externalId>false</externalId>
@@ -64,16 +93,36 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Issue</fullName>
+                    <fullName>ISSUE</fullName>
                     <default>false</default>
                     <label>Issue</label>
                 </value>
                 <value>
-                    <fullName>Work Performed</fullName>
+                    <fullName>WORK_PERFORMED</fullName>
                     <default>false</default>
                     <label>Work Performed</label>
                 </value>
             </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WorkPerformed__c</fullName>
+        <externalId>false</externalId>
+        <label>Work Performed</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Work_Performed__c</fullName>
+        <externalId>false</externalId>
+        <label>Work Performed</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>DEF_WorkPerformed</valueSetName>
         </valueSet>
     </fields>
     <fields>

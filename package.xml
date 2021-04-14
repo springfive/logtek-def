@@ -36,14 +36,18 @@
         <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
         <members>Issue__c.Associated_Work_Order__c</members>
         <members>Issue__c.ServiceProject__c</members>
+        <members>Issue__c.Status__c</members>
         <members>Issue__c.Symptom__c</members>
         <members>Issue__c.Symptoms_rootCause__c</members>
         <members>Issue__c.Type__c</members>
+        <members>Issue__c.WorkPerformed__c</members>
+        <members>Issue__c.Work_Performed__c</members>
         <members>Issue__c.Work_Performed_by_Installer__c</members>
         <members>Locations_Equipment__c.Equipment__c</members>
         <members>Planned_Parts__c.PM_Schedule_Definition__c</members>
         <members>Planned_Parts__c.Part__c</members>
         <members>Planned_Parts__c.Required_Quantity__c</members>
+        <members>Project_Location_Relationship__c.Service_Project__c</members>
         <members>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Number__c</members>
         <members>SVMXC__Installed_Product__c.Description__c</members>
         <members>SVMXC__PM_Plan__c.Note_to_Planner__c</members>
@@ -52,6 +56,7 @@
         <members>SVMXC__Quote__c.Description__c</members>
         <members>SVMXC__Quote__c.FieldFeedback__c</members>
         <members>SVMXC__Quote__c.ServiceRequest__c</members>
+        <members>SVMXC__Service_Contract_Contacts__c.Must_receive_scheduling_email__c</members>
         <members>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Number__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
@@ -63,9 +68,11 @@
         <members>SVMXC__Service_Order__c.Designation__c</members>
         <members>SVMXC__Service_Order__c.Field_Comments__c</members>
         <members>SVMXC__Service_Order__c.How_was_the_service__c</members>
+        <members>SVMXC__Service_Order__c.Installation_Status__c</members>
         <members>SVMXC__Service_Order__c.Intervention_End_Date_and_Time__c</members>
         <members>SVMXC__Service_Order__c.Intervention_Start_Date_and_Time__c</members>
         <members>SVMXC__Service_Order__c.Is_First_Time_Fixed__c</members>
+        <members>SVMXC__Service_Order__c.Language__c</members>
         <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.Owner_Full_Name__c</members>
         <members>SVMXC__Service_Order__c.PM_Schedule_Definition__c</members>
@@ -77,8 +84,10 @@
         <members>SVMXC__Service_Order__c.SVMX_PS_Revisit_Reason__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
         <members>SVMXC__Service_Order__c.ServiceProject__c</members>
+        <members>SVMXC__Service_Order__c.Service_Project_Name__c</members>
         <members>SVMXC__Service_Order__c.Symptom__c</members>
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
+        <members>SVMXC__Service_Order__c.Work_Performed_Picklist__c</members>
         <members>SVMXC__Service_Request__c.Customer_Reference__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
         <members>SVMXC__Service_Request__c.Quote_Description__c</members>
