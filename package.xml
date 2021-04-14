@@ -6,6 +6,8 @@
     </types>
     <types>
         <members>SVMXC__Service_Order__c.Copy_Of_Permit_To_Work_Attached__c</members>
+        <members>SVMXC__Service_Order__c.Log_Verification__c</members>
+        <members>SVMXC__Service_Order__c.Non_Compliance_Reported__c</members>
         <members>SVMXC__Service_Order__c.Owner_Full_Name__c</members>
         <members>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</members>
         <members>SVMXC__Service_Request__c.Customer_Reference__c</members>
