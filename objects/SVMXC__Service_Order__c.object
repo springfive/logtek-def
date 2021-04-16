@@ -3,6 +3,7 @@
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fields>
         <fullName>BE_DEF_Navision_Ref_Number__c</fullName>
+<<<<<<< Updated upstream
         <externalId>false</externalId>
         <label>BE DEF Navision Ref Number</label>
         <required>false</required>
@@ -48,6 +49,57 @@
     </fields>
     <fields>
         <fullName>Contact_Phone_SF__c</fullName>
+=======
+>>>>>>> Stashed changes
+        <externalId>false</externalId>
+        <label>BE DEF Navision Ref Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Confirmation_Request_Status__c</fullName>
+        <externalId>false</externalId>
+<<<<<<< Updated upstream
+        <label>Copy Of Permit To Work Attached ?</label>
+=======
+        <label>Confirmation Request Status</label>
+>>>>>>> Stashed changes
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Request Not Sent</fullName>
+                    <default>false</default>
+                    <label>Request Not Sent</label>
+                </value>
+                <value>
+                    <fullName>Request Sent</fullName>
+                    <default>false</default>
+                    <label>Request Sent 📧❓</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contact_Email_SF__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__Contact__r.Email</formula>
+        <label>Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Phone_SF__c</fullName>
         <externalId>false</externalId>
         <formula>SVMXC__Contact__r.Phone</formula>
         <label>Contact Phone</label>
@@ -56,30 +108,6 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Copy_Of_Permit_To_Work_Attached__c</fullName>
-        <externalId>false</externalId>
-        <label>Copy Of Permit To Work Attached ?</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Yes</fullName>
-                    <default>false</default>
-                    <label>Yes</label>
-                </value>
-                <value>
-                    <fullName>No</fullName>
-                    <default>false</default>
-                    <label>No</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Designation__c</fullName>
@@ -285,6 +313,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+<<<<<<< Updated upstream
     </fields>
     <fields>
         <fullName>QuoteReference__c</fullName>
@@ -298,6 +327,8 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+=======
+>>>>>>> Stashed changes
     </fields>
     <fields>
         <fullName>Quote_Description__c</fullName>
@@ -343,6 +374,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <type>TextArea</type>
     </fields>
     <fields>
+<<<<<<< Updated upstream
         <fullName>SVMXC__Symptom__c</fullName>
         <deprecated>false</deprecated>
         <description>Symptom that was noted before the failure.</description>
@@ -393,6 +425,8 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <visibleLines>6</visibleLines>
     </fields>
     <fields>
+=======
+>>>>>>> Stashed changes
         <fullName>SVMX_PS_Revisit_Reason__c</fullName>
         <externalId>false</externalId>
         <label>Revisit Reason</label>
@@ -540,6 +574,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <type>Text</type>
         <unique>false</unique>
     </fields>
+<<<<<<< Updated upstream
     <fields>
         <fullName>Work_Performed_Picklist__c</fullName>
         <externalId>false</externalId>
@@ -553,4 +588,224 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
             <valueSetName>DEF_WorkPerformed</valueSetName>
         </valueSet>
     </fields>
+=======
+    <recordTypes>
+        <fullName>New_Works</fullName>
+        <active>true</active>
+        <label>New Works</label>
+        <picklistValues>
+            <picklist>Confirmation_Request_Status__c</picklist>
+            <values>
+                <fullName>Request Not Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_was_the_service__c</picklist>
+            <values>
+                <fullName>HS0001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HS0010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HS0020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HS0030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HS0040</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Return_Visit_Required__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMX_PS_Revisit_Reason__c</picklist>
+            <values>
+                <fullName>RR0001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0050</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0060</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0070</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0080</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0090</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0110</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0120</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR9999</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SmallWorks_PTX</fullName>
+        <active>true</active>
+        <label>Small Works (PTX)</label>
+        <picklistValues>
+            <picklist>Confirmation_Request_Status__c</picklist>
+            <values>
+                <fullName>Request Not Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>How_was_the_service__c</picklist>
+            <values>
+                <fullName>HS0001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HS0010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HS0020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HS0030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HS0040</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Return_Visit_Required__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMX_PS_Revisit_Reason__c</picklist>
+            <values>
+                <fullName>RR0001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0050</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0060</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0070</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0080</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0090</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0110</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR0120</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RR9999</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+>>>>>>> Stashed changes
 </CustomObject>

@@ -462,11 +462,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Field_Feedback__c.Quote_Description__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Field_Feedback__c.ServiceProject__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -557,6 +552,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< Updated upstream
         <field>Issue__c.ServiceProject__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -572,6 +568,8 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+=======
+>>>>>>> Stashed changes
         <field>Issue__c.Symptoms_Old__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -3456,11 +3454,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Owner_Full_Name__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.PM_Schedule_Definition__c</field>
         <readable>true</readable>
@@ -3498,6 +3491,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Purchase_Order__c</field>
+<<<<<<< Updated upstream
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3508,6 +3502,8 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Quote_Description__c</field>
+=======
+>>>>>>> Stashed changes
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4781,11 +4777,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Symptom__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.SymptomsRootCause__c</field>
         <readable>true</readable>
@@ -5026,11 +5017,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Request__c.Call_Date_Time__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.Closure_Comment__c</field>
         <readable>true</readable>
@@ -5048,11 +5034,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.Contract__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Request__c.Customer_Reference__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5094,16 +5075,6 @@
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.Preferred_Technician_SR__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Request__c.Quote_Description__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Request__c.Quote_required__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -5196,6 +5167,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< Updated upstream
         <editable>false</editable>
         <field>SVMXC__Service_Request__c.Tech_BusinessHours__c</field>
         <readable>false</readable>
@@ -5206,6 +5178,8 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+=======
+>>>>>>> Stashed changes
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.Top_Level__c</field>
         <readable>true</readable>
@@ -5258,11 +5232,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Site__c.Location_Address__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>SVMXC__Site__c.Note_to_Planner__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

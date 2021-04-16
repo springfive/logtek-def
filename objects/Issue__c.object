@@ -25,6 +25,7 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+<<<<<<< Updated upstream
     <fields>
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
@@ -133,4 +134,6 @@
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
+=======
+>>>>>>> Stashed changes
 </CustomObject>
