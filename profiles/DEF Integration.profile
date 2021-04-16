@@ -222,6 +222,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>DEF_QuoteCreateSMAX2NAV__e.Location__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -243,6 +248,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.SVMXC_Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>DEF_QuoteCreateSMAX2NAV__e.ServiceContract__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -687,6 +697,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Quote__c.Location__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Quote__c.ServiceContract__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Quote__c.ServiceRequest__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1073,6 +1093,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order_Line__c.SVMXC__Line_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order_Line__c.ShowMilesDriven__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
