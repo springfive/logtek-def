@@ -59,6 +59,7 @@
         <members>SVMXC__Service_Contract_Contacts__c.Must_receive_scheduling_email__c</members>
         <members>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Number__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
+        <members>SVMXC__Service_Order_Line__c.ShowMilesDriven__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <members>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Number__c</members>
         <members>SVMXC__Service_Order__c.Confirmation_Request_Status__c</members>
@@ -81,6 +82,7 @@
         <members>SVMXC__Service_Order__c.Return_Visit_Required__c</members>
         <members>SVMXC__Service_Order__c.Revisit_Comment__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Symptom__c</members>
+        <members>SVMXC__Service_Order__c.SVMXC__Work_Performed__c</members>
         <members>SVMXC__Service_Order__c.SVMX_PS_Revisit_Reason__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
         <members>SVMXC__Service_Order__c.ServiceProject__c</members>
@@ -106,6 +108,33 @@
         <members>ServiceProject__c.Status__c</members>
         <members>ServiceProject__c.Type__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_Device_Type</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_Difficulties</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_Name</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_Performed_by_Installer</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_Status</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_Technician_notes</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_Issues_Device_Type</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_Issues_Difficulties</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_Issues_Name</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_Issues_Performedby_Instal</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_Issues_Status</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_Issues_Techniciannotes</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_Issues_WO</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_WorkPerformedWP</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_WorkPerformed_Devicetype</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_WorkPerformed_Difficultie</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_WorkPerformed_Remarks</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_WorkPerformed_TypeofWP</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Related_WorkPerformed_WO</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Work_PerformedDeviceType</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Work_PerformedName</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Work_PerformedWork_Difficulties_M</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Work_PerformedWork_Performed_Type</members>
+        <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_Notes</members>
+        <name>CustomMetadata</name>
     </types>
     <types>
         <members>DEF_QuoteCreateSMAX2NAV__e</members>
@@ -136,9 +165,11 @@
     <types>
         <members>Chatter_UtilityBar</members>
         <members>DEF_IT_Sub_Contractors_Home_Page</members>
+        <members>DEF_WW_Location_Record_Page</members>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
         <members>DEF_WW_Service_Project_Page</members>
         <members>DEF_WW_Service_Request_Record_Page</members>
+        <members>DEF_WW_Work_Order_record_page</members>
         <name>FlexiPage</name>
     </types>
     <types>
@@ -167,6 +198,7 @@
         <members>SVMXC__Service_Order__c-DEF_WW_SmallWorks_PTX Work Order Layout</members>
         <members>SVMXC__Service_Plan__c-DEF_WW_Service Plan Layout</members>
         <members>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</members>
+        <members>SVMXC__Service__c-DEF_WW_Service Layout</members>
         <members>SVMXC__Site__c-DEF_WW_Site Layout</members>
         <members>ServiceProject__c-DEF_WW_Project Page Layout</members>
         <name>Layout</name>

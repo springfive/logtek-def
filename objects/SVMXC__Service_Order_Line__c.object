@@ -15,6 +15,16 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>ShowMilesDriven__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Display or not Miles Driven in SIR</description>
+        <externalId>false</externalId>
+        <label>Show Miles Driven</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Technician_Van_Stock__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
