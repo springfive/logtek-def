@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DEF_SC_RestAPICall</members>
@@ -89,6 +89,7 @@
         <members>SVMXC__Service_Order__c.SVMXC__Work_Performed__c</members>
         <members>SVMXC__Service_Order__c.SVMX_PS_Revisit_Reason__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
+        <members>SVMXC__Service_Order__c.Scheduled_End_Date_Time__c</members>
         <members>SVMXC__Service_Order__c.ServiceProject__c</members>
         <members>SVMXC__Service_Order__c.Service_Project_Name__c</members>
         <members>SVMXC__Service_Order__c.Symptom__c</members>
@@ -159,6 +160,13 @@
     <types>
         <members>SVMXC__ServiceMaxDocuments/BelgiumFooter.png</members>
         <name>Document</name>
+    </types>
+    <types>
+        <members>unfiled$public/DEF_IT_Assigned_Technician_Template</members>
+        <members>unfiled$public/DEF_IT_Assigned_Technician_Template_Multi_Day</members>
+        <members>unfiled$public/DEF_IT_Customer_Confirmed_Template</members>
+        <members>unfiled$public/DEF_IT_Customer_Confirmed_Template_Multi_Day</members>
+        <name>EmailTemplate</name>
     </types>
     <types>
         <members>SVMXC__Service_Order__c.SVMXC__SM_Service_Board_Fields</members>
@@ -264,7 +272,15 @@
         <name>Role</name>
     </types>
     <types>
+        <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Assigned_Technician_Multi_Day</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Send_email_when_Appointment_confirmed_with_the_Customer_Multi_Day</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer Of Appointment Confirmation</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer Of Appointment Confirmation Multi-Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
     <version>50.0</version>
