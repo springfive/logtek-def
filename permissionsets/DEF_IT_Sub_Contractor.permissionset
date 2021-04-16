@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldPermissions>
         <editable>false</editable>
@@ -1539,6 +1539,11 @@
         <editable>true</editable>
         <field>Field_Feedback__c.Observation_Description__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Field_Feedback__c.Quote_Description__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -5401,6 +5406,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Product_Stock__c.External_ID__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Product_Stock__c.SVMXC__ActualQtyBeforeUpdate__c</field>
         <readable>true</readable>
@@ -5841,6 +5851,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Quote__c.Location__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Quote__c.SVMXC__Company__c</field>
         <readable>true</readable>
@@ -5899,6 +5914,11 @@
         <editable>true</editable>
         <field>SVMXC__Quote__c.SVMXC__Valid_Until__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Quote__c.ServiceContract__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -11691,6 +11711,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract_Contacts__c.Must_receive_scheduling_email__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Contract_Contacts__c.SVMXC__Contact__c</field>
         <readable>true</readable>
@@ -13706,7 +13731,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-<<<<<<< Updated upstream
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.QuoteReference__c</field>
         <readable>false</readable>
@@ -13717,8 +13741,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-=======
->>>>>>> Stashed changes
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Quote_Received__c</field>
         <readable>true</readable>
@@ -15104,6 +15126,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Symptom__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.SymptomsRootCause__c</field>
         <readable>true</readable>
@@ -15389,6 +15416,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Request__c.Call_Date_Time__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.Closure_Comment__c</field>
         <readable>true</readable>
@@ -15447,6 +15479,16 @@
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.Preferred_Technician_SR__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Request__c.Quote_Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Request__c.Quote_required__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -15539,7 +15581,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-<<<<<<< Updated upstream
         <editable>false</editable>
         <field>SVMXC__Service_Request__c.Tech_BusinessHours__c</field>
         <readable>false</readable>
@@ -15550,8 +15591,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-=======
->>>>>>> Stashed changes
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.Top_Level__c</field>
         <readable>true</readable>
@@ -15745,6 +15784,11 @@
         <editable>false</editable>
         <field>SVMXC__Site__c.Accreditation__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Site__c.BE_DEF_Navision_Ref_Num__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
