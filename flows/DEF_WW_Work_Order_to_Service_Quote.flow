@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>51.0</apiVersion>
-    <interviewLabel>DEF_WW_ServiceQuote_Trigger Platform Event {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>DEF_WW_ServiceQuote_Trigger Platform Event</label>
+    <interviewLabel>DEF_WW_Work Order to Service Quote {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DEF_WW_Work Order to Service Quote</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -23,86 +23,71 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
-        <name>Create_Platform_Event_Record</name>
-        <label>Create Platform Event Record</label>
-        <locationX>616</locationX>
-        <locationY>359</locationY>
-        <inputAssignments>
-            <field>Back_Office_Ref_Number__c</field>
-            <value>
-                <elementReference>$Record.Back_Office_Ref_Number__c</elementReference>
-            </value>
-        </inputAssignments>
+        <name>Generate_Service_Quote</name>
+        <label>Generate Service Quote</label>
+        <locationX>177</locationX>
+        <locationY>388</locationY>
         <inputAssignments>
             <field>Description__c</field>
             <value>
-                <elementReference>$Record.Description__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>FieldFeedback__c</field>
-            <value>
-                <elementReference>$Record.FieldFeedback__c</elementReference>
+                <elementReference>$Record.SVMXC__Problem_Description__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Location__c</field>
             <value>
-                <elementReference>$Record.Location__c</elementReference>
+                <elementReference>$Record.SVMXC__Site__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Name__c</field>
-            <value>
-                <elementReference>$Record.Name</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>SVMXC_Account__c</field>
+            <field>SVMXC__Company__c</field>
             <value>
                 <elementReference>$Record.SVMXC__Company__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>SVMXC_Contact__c</field>
+            <field>SVMXC__Contact__c</field>
             <value>
                 <elementReference>$Record.SVMXC__Contact__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>SVMXC_Service_Order__c</field>
+            <field>SVMXC__Service_Order__c</field>
             <value>
-                <elementReference>$Record.SVMXC__Service_Order__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>SVMXC_Status__c</field>
-            <value>
-                <elementReference>$Record.SVMXC__Status__c</elementReference>
+                <elementReference>$Record.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>ServiceContract__c</field>
             <value>
-                <elementReference>$Record.ServiceContract__c</elementReference>
+                <elementReference>$Record.SVMXC__Service_Contract__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>ServiceRequest__c</field>
             <value>
-                <elementReference>$Record.ServiceRequest__c</elementReference>
+                <elementReference>$Record.SVMXC__SM_Service_Request__c</elementReference>
             </value>
         </inputAssignments>
-        <object>DEF_QuoteCreateSMAX2NAV__e</object>
+        <object>SVMXC__Quote__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <start>
-        <locationX>490</locationX>
-        <locationY>48</locationY>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
         <connector>
-            <targetReference>Create_Platform_Event_Record</targetReference>
+            <targetReference>Generate_Service_Quote</targetReference>
         </connector>
-        <object>SVMXC__Quote__c</object>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Quote_Required__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </filters>
+        <object>SVMXC__Service_Order__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>

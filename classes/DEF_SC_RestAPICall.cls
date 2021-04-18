@@ -2,7 +2,7 @@
 * @description       : 
 * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
 * @group             : 
-* @last modified on  : 12-11-2020
+* @last modified on  : 04-15-2021
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 * Modifications Log 
 * Ver   Date         Author                               Modification
@@ -44,6 +44,7 @@ global class DEF_SC_RestAPICall {
         global string Status{get;set;}
         global string contractLineId{get;set;}
         global String InstallationDiscipline{get;set;}
+        global String ServicePlan{get;set;}
         global List<IncludedServicesWrapper> IncludedServices{get;set;}
     }
     global class IncludedServicesWrapper {
@@ -220,7 +221,10 @@ global class DEF_SC_RestAPICall {
                     }
                    
                 }
-                
+                //New Field: Service Plan
+                if(!String.isBlank(contractLineInstance.ServicePlan)){
+                    cl.SVMXC__Service_Plan__c=contractLineInstance.ServicePlan;
+                }
                 contractLineValidatedList.add(cl);
             }
         }
