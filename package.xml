@@ -43,7 +43,7 @@
         <members>Issue__c.Symptoms_rootCause__c</members>
         <members>Issue__c.Type__c</members>
         <members>Issue__c.WorkPerformed__c</members>
-        <members>Issue__c.Work_Performed__c</members>
+        <!--<members>Issue__c.Work_Performed__c</members>-->
         <members>Issue__c.Work_Performed_by_Installer__c</members>
         <members>Locations_Equipment__c.Equipment__c</members>
         <members>Planned_Parts__c.PM_Schedule_Definition__c</members>
@@ -94,7 +94,8 @@
         <members>SVMXC__Service_Order__c.Service_Project_Name__c</members>
         <members>SVMXC__Service_Order__c.Symptom__c</members>
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
-        <members>SVMXC__Service_Order__c.Work_Performed_Picklist__c</members>
+        <!--<members>SVMXC__Service_Order__c.Work_Performed_Picklist__c</members>-->
+		<members>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</members>
         <members>SVMXC__Service_Request__c.Call_Date_Time__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
         <members>SVMXC__Service_Request__c.Quote_Description__c</members>
@@ -182,7 +183,7 @@
         <members>DEF_WW_Location_Record_Page</members>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
         <members>DEF_WW_Service_Project_Page</members>
-        <members>DEF_WW_Service_Request_Record_Page</members>
+        <!--<members>DEF_WW_Service_Request_Record_Page</members>-->
         <members>DEF_WW_Work_Order_record_page</members>
         <name>FlexiPage</name>
     </types>
@@ -195,9 +196,10 @@
         <members>DEF_WW_Work_Order_to_Service_Quote</members>
         <name>Flow</name>
     </types>
-    <types>
-        <members>DEF_WW_ServiceQuote_Trigger_Platform_Event</members>
-        <name>FlowDefinition</name>
+	<types>
+        <members>DEF_WW_WorkPerformed</members>
+		<members>DEF_WW_Issues</members>
+        <name>CustomLabel</name>
     </types>
     <types>
         <members>Installation_Discipline</members>
@@ -251,7 +253,7 @@
     <types>
         <members>Admin</members>
         <members>DEF - AD - Interface</members>
-        <members>DEF BE Hybrid</members>
+        <!--<members>DEF BE Hybrid</members>-->
         <members>DEF FS Planner</members>
         <members>DEF FS Tech</members>
         <members>DEF Integration</members>
@@ -259,11 +261,11 @@
         <members>DEF_WW_Support</members>
         <name>Profile</name>
     </types>
-    <types>
+    <!--<types>
         <members>SVMXC__Service_Order__c.New_Works</members>
         <members>SVMXC__Service_Order__c.SmallWorks_PTX</members>
         <name>RecordType</name>
-    </types>
+    </types>-->
     <types>
         <members>DEF_WW_RampupKPIs/DEF_WW_First_Time_Fix_X7x</members>
         <members>DEF_WW_RampupKPIs/DEF_WW_Hours_declared_on_site_1xt</members>
@@ -287,5 +289,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>50.0</version>
+    <version>51.0</version>
 </Package>

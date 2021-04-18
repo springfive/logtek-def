@@ -57,11 +57,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Issue__c.Work_Performed__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Issue__c.Work_Performed_by_Installer__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -302,6 +297,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Scheduled_End_Date_Time__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.ServiceProject__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -322,7 +322,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Work_Performed_Picklist__c</field>
+        <field>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

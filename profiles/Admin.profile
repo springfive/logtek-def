@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>DEF_IT_Sub_Contractors_Chatter</application>
@@ -148,11 +148,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Issue__c.WorkPerformed__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Issue__c.Work_Performed__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -396,8 +391,8 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>SVMXC__Service_Order__c.Work_Performed_Picklist__c</field>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -657,11 +652,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>
-        <recordType>SVMXC__Service_Order__c.New_Works</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SVMXC__Service_Order__c-DEF_WW_SmallWorks_PTX Work Order Layout</layout>
-        <recordType>SVMXC__Service_Order__c.SmallWorks_PTX</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Plan__c-DEF_WW_Service Plan Layout</layout>
@@ -745,19 +735,9 @@
         <object>ServiceProject__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>SVMXC__Service_Order__c.New_Works</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>SVMXC__Service_Order__c.SmallWorks_PTX</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
-        <visible>DefaultOn</visible>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
