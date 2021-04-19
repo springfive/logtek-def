@@ -482,7 +482,6 @@
         <fields>Issue_Location__c</fields>
         <fields>Technician_notes__c</fields>
         <fields>Work_Performed__c</fields>
-        <fields>WorkPerformed__c</fields>
         <relatedList>Issue__c.Associated_Work_Order__c</relatedList>
     </relatedLists>
     <relatedLists>
