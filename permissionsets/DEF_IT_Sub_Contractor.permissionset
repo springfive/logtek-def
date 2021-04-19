@@ -1739,12 +1739,7 @@
         <editable>true</editable>
         <field>Issue__c.Technician_notes__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Issue__c.Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions> 
     <fieldPermissions>
         <editable>true</editable>
         <field>Issue__c.Type_of_Concerned_device__c</field>
@@ -1753,11 +1748,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Issue__c.Work_Performed__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Issue__c.Work_Performed_by_Installer__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15004,11 +14994,6 @@
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Scheduled_End_Date_Time__c</field>
         <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Service_Project_Name__c</field>
-        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
