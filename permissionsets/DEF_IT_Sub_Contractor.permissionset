@@ -1537,11 +1537,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Field_Feedback__c.ServiceProject__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Field_Feedback__c.Service_Maintenance_Contract__c</field>
         <readable>true</readable>
     </fieldPermissions>
