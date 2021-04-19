@@ -479,7 +479,6 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Type__c</fields>
         <fields>Issue_Location__c</fields>
         <fields>Technician_notes__c</fields>
         <fields>Work_Performed__c</fields>
