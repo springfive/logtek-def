@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>SVMXC__Service_Order__c.Confirmation_Request_Status__c</members>
+        <members>SVMXC__Service_Order__c.Designation__c</members>
+        <members>SVMXC__Service_Order__c.Scheduled_End_Date_Time__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>unfiled$public/DEF_IT_Assigned_Technician_Template</members>
+        <members>unfiled$public/DEF_IT_Assigned_Technician_Template_Multi_Day</members>
+        <members>unfiled$public/DEF_IT_Customer_Confirmed_Template</members>
+        <members>unfiled$public/DEF_IT_Customer_Confirmed_Template_Multi_Day</members>
+        <name>EmailTemplate</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.SVMXC__SM_Service_Board_Fields</members>
+        <name>FieldSet</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c-DEF_WW_Callout Work Order Layout</members>
+        <members>SVMXC__Service_Order__c-DEF_WW_Preventive Maintenance Work Order Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.Callout_WO_To_be_confirmed</members>
+        <members>SVMXC__Service_Order__c.Callout_WO_To_confirm_this_week</members>
+        <members>SVMXC__Service_Order__c.Maintenance_WO_To_be_confirmed</members>
+        <members>SVMXC__Service_Order__c.Maintenance_WO_To_confirm_this_week</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>DEF_FS_Contract_Admin_PS</members>
+        <members>DEF_FS_Manager_PS</members>
+        <members>DEF_FS_Planner_PS</members>
+        <members>DEF_FS_Tech_PS</members>
+        <members>DEF_IT_Sub_Contractor</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>DEF - AD - Interface</members>
+        <members>DEF Integration</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Assigned_Technician_Multi_Day</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Send_email_when_Appointment_confirmed_with_the_Customer_Multi_Day</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer Of Appointment Confirmation</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer Of Appointment Confirmation Multi-Day</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
+        <name>WorkflowRule</name>
+    </types>
+    <version>50.0</version>
+</Package>
