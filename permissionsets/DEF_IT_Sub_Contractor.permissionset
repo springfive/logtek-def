@@ -1722,11 +1722,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Issue__c.Symptom__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Issue__c.Symptoms__c</field>
         <readable>true</readable>
     </fieldPermissions>
