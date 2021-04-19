@@ -199,10 +199,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Non_Compliances_Reported_To_Responsible__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
                 <field>Non_Compliance_Or_Defects_Identified__c</field>
             </layoutItems>
         </layoutColumns>
