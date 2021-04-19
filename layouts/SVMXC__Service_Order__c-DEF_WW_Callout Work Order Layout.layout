@@ -125,10 +125,6 @@
                 <behavior>Readonly</behavior>
                 <field>Quote_Received__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Quote_Description__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
