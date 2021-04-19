@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <decisions>
+        <name>Connection_type</name>
+        <label>Connection type</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <defaultConnector>
+            <targetReference>Login_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ServiceMax_Go</name>
+            <conditionLogic>1 AND (NOT(2))</conditionLogic>
+            <conditions>
+                <leftValueReference>LoginFlow_LoginType</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Remote Access Client</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LoginFlow_UserAgent</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>SalesforceMobileSDK</stringValue>
+                </rightValue>
+            </conditions>
+            <label>ServiceMax Go</label>
+        </rules>
+    </decisions>
+    <description>Login flow.
+Used to prevent the Sub Contractors to login via the Web</description>
+    <interviewLabel>DEF_Login {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DEF_Login</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Login_Screen</name>
+        <label>Login Screen</label>
+        <locationX>308</locationX>
+        <locationY>278</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Login_Message</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(218, 13, 13);&quot;&gt;You cannot access the requested ressource.&lt;/span&gt;&lt;span style=&quot;color: rgb(205, 29, 29);&quot;&gt;﻿&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Connection_type</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>LoginFlow_LoginType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>This variable holds the details about the user&apos;s current browser</description>
+        <name>LoginFlow_UserAgent</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

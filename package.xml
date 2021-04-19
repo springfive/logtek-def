@@ -198,6 +198,7 @@
         <name>FlexiPage</name>
     </types>
     <types>
+        <members>DEF_Login</members>
         <members>DEF_WW_Field_Feedback_to_Service_Quote</members>
         <members>DEF_WW_SC_Trigger_Platform_Event</members>
         <members>DEF_WW_ServiceQuote_Trigger_Platform_Event</members>
