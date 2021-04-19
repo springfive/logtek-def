@@ -1,34 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-    <applicationVisibilities>
-        <application>DEF_IT_Sub_Contractors_Chatter</application>
-        <default>false</default>
-        <visible>false</visible>
-    </applicationVisibilities>
-    <classAccesses>
-        <apexClass>DEF_SC_RestAPICall</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DEF_SC_RestAPICallTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DEF_WO_PE_TriggerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DEF_WO_TriggerHandler</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DEF_WO_TriggerHandlerTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DEF_WO_TriggerHelper</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
     <custom>true</custom>
     <fieldPermissions>
         <editable>false</editable>
@@ -102,167 +73,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DEF_ServiceContract_Integration__e.RecordId__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Field_Feedback__c.Contract_HeaderLink__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Field_Feedback__c.Quote_Description__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Field_Feedback__c.ServiceProject__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Field_Feedback__c.Tech_Non_Compliance_Count__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.ServiceProject__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.Status__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.Symptom__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.Symptoms_rootCause__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.WorkPerformed__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.Work_Performed_by_Installer__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Planned_Parts__c.Part__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Planned_Parts__c.Required_Quantity__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Product2.BE_DEF_Navision_Ref_Num__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Project_Location_Relationship__c.Contact__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Number__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Installed_Product__c.Description__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__PM_Plan__c.Note_to_Planner__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Product_Stock__c.External_ID__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Quote__c.Back_Office_Ref_Number__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Quote__c.Description__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Quote__c.FieldFeedback__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Quote__c.Location__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Quote__c.ServiceContract__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Quote__c.ServiceRequest__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Contract_Contacts__c.Must_receive_scheduling_email__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Number__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order_Line__c.Product_Stock__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order_Line__c.Product_Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order_Line__c.ShowMilesDriven__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -600,108 +411,22 @@
         <field>SVMXC__Service_Request__c.Top_Level__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Site__c.BE_DEF_Navision_Ref_Num__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>ServiceProject__c.Account__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>ServiceProject__c.Contact__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>ServiceProject__c.Description__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>ServiceProject__c.End_Date__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>ServiceProject__c.Location__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>ServiceProject__c.PreferredTechnician__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>ServiceProject__c.Project_Manager__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>ServiceProject__c.Start_Date__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>ServiceProject__c.Status__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>ServiceProject__c.Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <layoutAssignments>
-        <layout>Account-DEF_WW_Account Layout</layout>
-    </layoutAssignments>
     <layoutAssignments>
         <layout>Contact-DEF_WW_Contact Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Issue__c-DEF_WW_Issue Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Planned_Parts__c-DEF_WW_Planned Parts Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Product2-DEF_WW_Product Page Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>SVMXC__Service_Plan__c-DEF_WW_Service Plan Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SVMXC__Service__c-DEF_WW_Service Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SVMXC__Site__c-DEF_WW_Site Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>ServiceProject__c-DEF_WW_Project Page Layout</layout>
     </layoutAssignments>
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
         <startAddress>0.0.0.0</startAddress>
     </loginIpRanges>
-    <tabVisibilities>
-        <tab>ServiceProject__c</tab>
-        <visible>DefaultOn</visible>
-    </tabVisibilities>
     <userLicense>Salesforce Platform</userLicense>
     <userPermissions>
         <enabled>true</enabled>

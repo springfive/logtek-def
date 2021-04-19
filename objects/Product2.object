@@ -4,8 +4,10 @@
         <fullName>BE_DEF_Navision_Ref_Num__c</fullName>
         <externalId>false</externalId>
         <label>BE DEF Navision Ref Num</label>
+        <length>255</length>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>TextArea</type>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
 </CustomObject>

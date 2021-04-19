@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>DEF_IT_Sub_Contractors_Chatter</application>
@@ -37,6 +37,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.BE_DEF_Navision_Ref_Num__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.Back_Office_Ref_Number__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -58,6 +63,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>DEF_QuoteCreateSMAX2NAV__e.QuoteId__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -163,6 +173,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Planned_Parts__c.Required_Quantity__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product2.BE_DEF_Navision_Ref_Num__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -323,6 +338,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.PM_Schedule_Definition__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.ProjectManager__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -639,10 +659,16 @@
         <layout>Account-DEF_WW_Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Contact-DEF_WW_Contact Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Issue__c-DEF_WW_Issue Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Planned_Parts__c-DEF_WW_Planned Parts Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Product2-DEF_WW_Product Page Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</layout>
@@ -674,7 +700,7 @@
     </loginIpRanges>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <userLicense>Salesforce Platform</userLicense>
     <userPermissions>
