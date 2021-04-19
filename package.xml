@@ -37,12 +37,12 @@
         <members>DEF_IT_Sub_Contractor</members>
         <name>PermissionSet</name>
     </types>-->
-    <types>
+    <!--<types>
         <members>Admin</members>
         <members>DEF - AD - Interface</members>
         <members>DEF Integration</members>
         <name>Profile</name>
-    </types>
+    </types>-->
     <types>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Assigned_Technician_Multi_Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_when_Appointment_confirmed_with_the_Customer_Multi_Day</members>
