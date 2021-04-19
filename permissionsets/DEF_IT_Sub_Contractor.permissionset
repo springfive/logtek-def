@@ -3096,11 +3096,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Number__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Installed_Product__c.Battery_Fitted_Date__c</field>
         <readable>true</readable>
