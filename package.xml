@@ -29,14 +29,14 @@
         <members>SVMXC__Service_Order__c.Maintenance_WO_To_confirm_this_week</members>
         <name>ListView</name>
     </types>
-    <types>
+    <!--<types>
         <members>DEF_FS_Contract_Admin_PS</members>
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
         <members>DEF_FS_Tech_PS</members>
         <members>DEF_IT_Sub_Contractor</members>
         <name>PermissionSet</name>
-    </types>
+    </types>-->
     <types>
         <members>Admin</members>
         <members>DEF - AD - Interface</members>
