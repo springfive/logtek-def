@@ -73,10 +73,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>BE_DEF_Navision_Ref_Number__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Installation_Status__c</field>
             </layoutItems>
         </layoutColumns>
@@ -136,10 +132,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Quote_Description__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>ServiceProject__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -564,10 +556,7 @@
         <fields>NAME</fields>
         <fields>CREATED_DATE</fields>
         <fields>Difficulties_Met__c</fields>
-        <fields>ServiceProject__c</fields>
         <fields>Technician_notes__c</fields>
-        <fields>Work_Performed__c</fields>
-        <fields>WorkPerformed__c</fields>
         <relatedList>Issue__c.Associated_Work_Order__c</relatedList>
     </relatedLists>
     <relatedLists>
