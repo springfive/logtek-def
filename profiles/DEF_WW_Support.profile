@@ -37,6 +37,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.BE_DEF_Navision_Ref_Num__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.Back_Office_Ref_Number__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -58,6 +63,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>DEF_QuoteCreateSMAX2NAV__e.QuoteId__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -163,6 +173,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Planned_Parts__c.Required_Quantity__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product2.BE_DEF_Navision_Ref_Num__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -323,6 +338,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.PM_Schedule_Definition__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.ProjectManager__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

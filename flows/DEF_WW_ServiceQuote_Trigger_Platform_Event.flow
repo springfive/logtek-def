@@ -26,7 +26,7 @@
         <name>Create_Platform_Event_Record</name>
         <label>Create Platform Event Record</label>
         <locationX>616</locationX>
-        <locationY>359</locationY>
+        <locationY>358</locationY>
         <inputAssignments>
             <field>Back_Office_Ref_Number__c</field>
             <value>
@@ -55,6 +55,12 @@
             <field>Name__c</field>
             <value>
                 <elementReference>$Record.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>QuoteId__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>

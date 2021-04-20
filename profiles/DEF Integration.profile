@@ -36,6 +36,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.BE_DEF_Navision_Ref_Num__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.Back_Office_Ref_Number__c</field>
         <readable>false</readable>
@@ -58,6 +63,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>DEF_QuoteCreateSMAX2NAV__e.QuoteId__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -164,6 +174,11 @@
         <editable>true</editable>
         <field>Planned_Parts__c.Required_Quantity__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product2.BE_DEF_Navision_Ref_Num__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -323,6 +338,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.PM_Schedule_Definition__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.ProjectManager__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -639,10 +659,16 @@
         <layout>Account-DEF_WW_Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Contact-DEF_WW_Contact Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Issue__c-DEF_WW_Issue Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Planned_Parts__c-DEF_WW_Planned Parts Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Product2-DEF_WW_Product Page Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</layout>
