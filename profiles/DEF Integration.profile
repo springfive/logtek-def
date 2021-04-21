@@ -341,7 +341,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.ProjectManager__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -675,6 +675,11 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>
+        <recordType>SVMXC__Service_Order__c.New_Works</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SVMXC__Service_Order__c-DEF_WW_SmallWorks_PTX Work Order Layout</layout>
+        <recordType>SVMXC__Service_Order__c.SmallWorks_PTX</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Plan__c-DEF_WW_Service Plan Layout</layout>
@@ -758,6 +763,16 @@
         <object>ServiceProject__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>SVMXC__Service_Order__c.New_Works</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>SVMXC__Service_Order__c.SmallWorks_PTX</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
         <visibility>DefaultOn</visibility>

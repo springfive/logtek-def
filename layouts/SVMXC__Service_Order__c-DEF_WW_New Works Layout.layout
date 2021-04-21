@@ -49,10 +49,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>RootCause__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
                 <field>internal_comments__c</field>
             </layoutItems>
             <layoutItems>
@@ -76,7 +72,7 @@
                 <field>Installation_Status__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>ProjectManager__c</field>
             </layoutItems>
         </layoutColumns>

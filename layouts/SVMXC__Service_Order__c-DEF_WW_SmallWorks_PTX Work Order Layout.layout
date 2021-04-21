@@ -60,10 +60,6 @@
                 <field>DEF_Company__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>RootCause__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Symptom__c</field>
             </layoutItems>
@@ -100,7 +96,7 @@
                 <field>Installation_Status__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>ProjectManager__c</field>
             </layoutItems>
         </layoutColumns>

@@ -660,6 +660,11 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>
+        <recordType>SVMXC__Service_Order__c.New_Works</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SVMXC__Service_Order__c-DEF_WW_SmallWorks_PTX Work Order Layout</layout>
+        <recordType>SVMXC__Service_Order__c.SmallWorks_PTX</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Site__c-DEF_WW_Site Layout</layout>
@@ -671,6 +676,16 @@
         <endAddress>255.255.255.255</endAddress>
         <startAddress>0.0.0.0</startAddress>
     </loginIpRanges>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>SVMXC__Service_Order__c.New_Works</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>SVMXC__Service_Order__c.SmallWorks_PTX</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
         <visibility>DefaultOn</visibility>
