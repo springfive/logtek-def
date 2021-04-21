@@ -37,6 +37,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.BE_DEF_Navision_Ref_Num__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.Back_Office_Ref_Number__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -58,6 +63,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>DEF_QuoteCreateSMAX2NAV__e.QuoteId__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -151,11 +161,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Issue__c.Work_Performed__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>Issue__c.Work_Performed_by_Installer__c</field>
         <readable>false</readable>
@@ -168,6 +173,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Planned_Parts__c.Required_Quantity__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product2.BE_DEF_Navision_Ref_Num__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -332,6 +342,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Order__c.ProjectManager__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.QuoteReference__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -372,6 +387,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Scheduled_End_Date_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.ServiceProject__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -392,7 +412,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Work_Performed_Picklist__c</field>
+        <field>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -635,15 +655,8 @@
         <field>ServiceProject__c.Type__c</field>
         <readable>false</readable>
     </fieldPermissions>
-    <flowAccesses>
-        <enabled>false</enabled>
-        <flow>DEF_WW_ServiceQuote_Trigger_Platform_Event</flow>
-    </flowAccesses>
     <layoutAssignments>
         <layout>Issue__c-DEF_WW_Issue Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>

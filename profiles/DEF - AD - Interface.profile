@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>DEF_IT_Sub_Contractors_Chatter</application>
@@ -36,6 +36,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.BE_DEF_Navision_Ref_Num__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.Back_Office_Ref_Number__c</field>
         <readable>false</readable>
@@ -58,6 +63,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>DEF_QuoteCreateSMAX2NAV__e.Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>DEF_QuoteCreateSMAX2NAV__e.QuoteId__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -151,11 +161,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Issue__c.Work_Performed__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>Issue__c.Work_Performed_by_Installer__c</field>
         <readable>false</readable>
@@ -169,6 +174,11 @@
         <editable>false</editable>
         <field>Planned_Parts__c.Required_Quantity__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product2.BE_DEF_Navision_Ref_Num__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -332,6 +342,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Order__c.ProjectManager__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.QuoteReference__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -396,9 +411,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>SVMXC__Service_Order__c.Work_Performed_Picklist__c</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -644,7 +659,13 @@
         <layout>Account-DEF_WW_Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Contact-DEF_WW_Contact Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Issue__c-DEF_WW_Issue Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Product2-DEF_WW_Product Page Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</layout>
@@ -747,7 +768,7 @@
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
-        <visible>DefaultOn</visible>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>

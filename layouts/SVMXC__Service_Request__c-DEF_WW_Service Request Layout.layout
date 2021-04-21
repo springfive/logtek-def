@@ -91,10 +91,6 @@
                 <behavior>Readonly</behavior>
                 <field>Contact_Email__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>DEF_Company__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -166,6 +162,10 @@
         <editHeading>true</editHeading>
         <label>External ID</label>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>DEF_Company__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SVMXC__ERP_External_ID__c</field>

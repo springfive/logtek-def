@@ -42,7 +42,7 @@
                     <label>Open</label>
                 </value>
                 <value>
-                    <fullName>In progress</fullName>
+                    <fullName>Inprogress</fullName>
                     <default>false</default>
                     <label>In progress</label>
                 </value>
@@ -89,7 +89,6 @@
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
-            <restricted>true</restricted>
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
@@ -112,18 +111,6 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
-    </fields>
-    <fields>
-        <fullName>Work_Performed__c</fullName>
-        <externalId>false</externalId>
-        <label>Type of Work Performed</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>DEF_WorkPerformed</valueSetName>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Work_Performed_by_Installer__c</fullName>
