@@ -42,6 +42,10 @@
                 <behavior>Edit</behavior>
                 <field>WorkPerformed__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>NeedsToBeReviewedByManager__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

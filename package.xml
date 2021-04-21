@@ -39,6 +39,7 @@
         <members>Field_Feedback__c.ServiceProject__c</members>
         <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
         <members>Issue__c.Associated_Work_Order__c</members>
+        <members>Issue__c.NeedsToBeReviewedByManager__c</members>
         <members>Issue__c.ServiceProject__c</members>
         <members>Issue__c.Status__c</members>
         <members>Issue__c.Symptom__c</members>
@@ -261,6 +262,7 @@
     <types>
         <members>Admin</members>
         <members>DEF - AD - Interface</members>
+        <members>DEF BE Hybrid</members>
         <members>DEF FS Contract Admin</members>
         <members>DEF FS Manager</members>
         <members>DEF FS Planner</members>
