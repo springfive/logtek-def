@@ -713,7 +713,7 @@
         <endAddress>255.255.255.255</endAddress>
         <startAddress>0.0.0.0</startAddress>
     </loginIpRanges>
-    <recordTypeVisibilities>
+    <!--<recordTypeVisibilities>
         <default>false</default>
         <recordType>SVMXC__Service_Order__c.New_Works</recordType>
         <visible>true</visible>
@@ -722,7 +722,7 @@
         <default>false</default>
         <recordType>SVMXC__Service_Order__c.SmallWorks_PTX</recordType>
         <visible>true</visible>
-    </recordTypeVisibilities>
+    </recordTypeVisibilities>-->
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
         <visibility>DefaultOn</visibility>

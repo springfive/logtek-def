@@ -100,7 +100,7 @@
         <criteriaItems>
             <field>SVMXC__Service_Order__c.Confirmation_Request_Status__c</field>
             <operation>equals</operation>
-            <value>Request Sent</value>
+            <value>CRS0002</value>
         </criteriaItems>
         <criteriaItems>
             <field>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</field>
@@ -126,7 +126,7 @@
         <criteriaItems>
             <field>SVMXC__Service_Order__c.Confirmation_Request_Status__c</field>
             <operation>equals</operation>
-            <value>Request Sent</value>
+            <value>CRS0002</value>
         </criteriaItems>
         <criteriaItems>
             <field>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</field>
