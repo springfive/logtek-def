@@ -315,6 +315,11 @@
         <field>SVMXC__Service_Order__c.Installation_Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
+     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Log_Verification__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Intervention_End_Date_and_Time__c</field>
@@ -326,8 +331,18 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Non_Compliance_Reported__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Is_First_Time_Fixed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Owner_Full_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -426,6 +441,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.Accreditation__c</field>
         <readable>true</readable>
@@ -454,6 +474,11 @@
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.Contract__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Request__c.Customer_Reference__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -614,6 +639,11 @@
         <editable>false</editable>
         <field>SVMXC__Site__c.BE_DEF_Navision_Ref_Num__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Site__c.Note_to_Planner__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>

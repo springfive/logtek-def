@@ -5,8 +5,6 @@
         <members>DEF_SC_RestAPICallTest</members>
         <members>DEF_WO_PE_TriggerTest</members>
         <members>DEF_WO_TriggerHandler</members>
-        <members>DEF_WO_TriggerHandlerTest</members>
-        <members>DEF_WO_TriggerHelper</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -258,7 +256,6 @@
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
         <members>DEF_FS_Tech_PS</members>
-        <members>DEF_IT_Sub_Contractor</members>
         <name>PermissionSet</name>
     </types>
     <types>
@@ -271,8 +268,6 @@
         <members>DEF FS Tech</members>
         <members>DEF IT Sub Contractor</members>
         <members>DEF Integration</members>
-        <members>DEF_IT_Sub_Contractors</members>
-        <members>DEF_WW_Support</members>
         <name>Profile</name>
     </types>
     <types>

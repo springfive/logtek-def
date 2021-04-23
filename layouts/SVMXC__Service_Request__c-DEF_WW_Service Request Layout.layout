@@ -112,6 +112,10 @@
                 <behavior>Edit</behavior>
                 <field>SVMXC__Serial_Number__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Customer_Reference__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -125,6 +129,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Preferred_Business_Hours__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>DEF_Company__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>

@@ -426,6 +426,16 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Owner_Full_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.Accreditation__c</field>
         <readable>true</readable>
@@ -443,6 +453,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Request__c.Contact_Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Log_Verification__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -536,6 +551,20 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <field>SVMXC__Service_Request__c.Customer_Reference__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.DBin_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.DEF_Company__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.SVMXC__Closed_On__c</field>
         <readable>true</readable>
@@ -565,9 +594,19 @@
         <field>SVMXC__Service_Request__c.SVMXC__Problem_Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
+     <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Account__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.SVMXC__Product__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Actual_Initial_Response__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -577,7 +616,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Appointment_Duration__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Request__c.SVMXC__Service_Request_Source__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Closed_By__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Closed_On__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -617,12 +671,62 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Contact__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__ERP_External_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Preferred_Start_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Priority__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>ServiceProject__c.Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Problem_Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>ServiceProject__c.Contact__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Product__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Serial_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+     <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Service_Request_Source__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Subject__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -665,6 +769,21 @@
         <field>ServiceProject__c.Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.SVMXC__Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Request__c.Top_Level__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Site__c.Note_to_Planner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Account-DEF_WW_Account Layout</layout>
     </layoutAssignments>
@@ -696,9 +815,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SVMXC__Service__c-DEF_WW_Service Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Site__c-DEF_WW_Site Layout</layout>
