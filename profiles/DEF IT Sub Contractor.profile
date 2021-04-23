@@ -132,6 +132,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Issue__c.NeedsToBeReviewedByManager__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Issue__c.ServiceProject__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -338,6 +343,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.PM_Schedule_Definition__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.ProjectManagerEmail__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -699,13 +709,6 @@
     <layoutAssignments>
         <layout>ServiceProject__c-DEF_WW_Project Page Layout</layout>
     </layoutAssignments>
-    <loginFlows>
-        <flow>DEF_Login</flow>
-        <flowType>UI</flowType>
-        <friendlyName>DEF_Login_Sub_Contractor</friendlyName>
-        <uiLoginFlowType>VisualWorkflow</uiLoginFlowType>
-        <useLightningRuntime>true</useLightningRuntime>
-    </loginFlows>
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
         <startAddress>0.0.0.0</startAddress>

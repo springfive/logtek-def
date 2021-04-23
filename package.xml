@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DEF_SC_RestAPICall</members>
@@ -84,6 +84,7 @@
         <members>SVMXC__Service_Order__c.Language__c</members>
         <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.PM_Schedule_Definition__c</members>
+        <members>SVMXC__Service_Order__c.ProjectManagerEmail__c</members>
         <members>SVMXC__Service_Order__c.ProjectManager__c</members>
         <members>SVMXC__Service_Order__c.QuoteReference__c</members>
         <members>SVMXC__Service_Order__c.Quote_Description__c</members>
@@ -210,6 +211,7 @@
     </types>
     <types>
         <members>Installation_Discipline</members>
+        <members>Symptoms</members>
         <name>GlobalValueSet</name>
     </types>
     <types>
