@@ -5,11 +5,6 @@
         <fullName>SVMXC__SM_Service_Board_Fields</fullName>
         <description>The fields listed in this set will be synced to Service Board.</description>
         <displayedFields>
-            <field>TestSBSync__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </displayedFields>
-        <displayedFields>
             <field>Service_Project_Name__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
