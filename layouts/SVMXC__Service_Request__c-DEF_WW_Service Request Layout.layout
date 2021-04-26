@@ -172,10 +172,6 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DEF_Company__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>SVMXC__ERP_External_ID__c</field>
             </layoutItems>
         </layoutColumns>
