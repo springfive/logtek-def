@@ -340,11 +340,11 @@
         <field>SVMXC__Service_Order__c.Is_First_Time_Fixed__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+    <!--<fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Owner_Full_Name__c</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions>-->
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Language__c</field>
