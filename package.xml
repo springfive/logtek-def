@@ -161,6 +161,7 @@
         <members>DEF_WorkOrderPlatformEvent__e</members>
         <members>Planned_Parts__c</members>
         <members>Project_Location_Relationship__c</members>
+        <members>SVMXC__Installed_Product__c</members>
         <members>SVMXC__PM_Plan__c</members>
         <members>SVMXC__Product_Stock__c</members>
         <members>SVMXC__Service_Contract__c</members>
