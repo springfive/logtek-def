@@ -30,12 +30,6 @@
         <members>DEF_WO_ToSynchWithSB</members>
         <members>DEF_WO_ToSynchWithSB_Test</members>
         <members>DEF_WO_TriggerHandler</members>
-        <members>DEF_WO_TriggerHandlerTest</members>
-        <members>DEF_WO_TriggerHelper</members>
-        <members>DEF_WW_Utils_PAD_Methodology</members>
-        <members>DEF_WW_Utils_PAD_MethodologyTest</members>
-        <members>TriggerHandler</members>
-        <members>TriggerHandler_Test</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -232,44 +226,6 @@
         <members>SVMXC__Service_Order__c.Contact_Email_SF__c</members>
         <members>SVMXC__Service_Order__c.Contact_Phone_SF__c</members>
         <members>SVMXC__Service_Order__c.Copy_Of_Permit_To_Work_Attached__c</members>
-        <members>SVMXC__Service_Order__c.Create_Event_From_Mobile__c</members>
-        <members>SVMXC__Service_Order__c.Created_Last_7_Days__c</members>
-        <members>SVMXC__Service_Order__c.Customer_Comment__c</members>
-        <members>SVMXC__Service_Order__c.Customer_Confirmed__c</members>
-        <members>SVMXC__Service_Order__c.Customer_Contact_1__c</members>
-        <members>SVMXC__Service_Order__c.Customer_Contact_2__c</members>
-        <members>SVMXC__Service_Order__c.Customer_Contact_3__c</members>
-        <members>SVMXC__Service_Order__c.Customer_Contact_4__c</members>
-        <members>SVMXC__Service_Order__c.DBin_Ref_Number__c</members>
-        <members>SVMXC__Service_Order__c.DEF_Company__c</members>
-        <members>SVMXC__Service_Order__c.DEF_Company__c</members>
-        <members>SVMXC__Service_Order__c.DesignationYear__c</members>
-        <members>SVMXC__Service_Order__c.Designation__c</members>
-        <members>SVMXC__Service_Order__c.Disable_Picture_After_Job__c</members>
-        <members>SVMXC__Service_Order__c.Disable_Picture_Before_Job__c</members>
-        <members>SVMXC__Service_Order__c.Due_Date__c</members>
-        <members>SVMXC__Service_Order__c.Entitled_Contact__c</members>
-        <members>SVMXC__Service_Order__c.External_Cause_Comments__c</members>
-        <members>SVMXC__Service_Order__c.External_Cause_Type__c</members>
-        <members>SVMXC__Service_Order__c.External_Cause__c</members>
-        <members>SVMXC__Service_Order__c.Field_Comments__c</members>
-        <members>SVMXC__Service_Order__c.How_was_the_service__c</members>
-        <members>SVMXC__Service_Order__c.Installation_Discipline__c</members>
-        <members>SVMXC__Service_Order__c.Installation_in_Order__c</members>
-        <members>SVMXC__Service_Order__c.Intervention_End_Date_and_Time__c</members>
-        <members>SVMXC__Service_Order__c.Intervention_End_Time__c</members>
-        <members>SVMXC__Service_Order__c.Intervention_Start_Date_and_Time__c</members>
-        <members>SVMXC__Service_Order__c.Is_First_Time_Fixed__c</members>
-        <members>SVMXC__Service_Order__c.Is_Fixed_First_Time__c</members>
-        <members>SVMXC__Service_Order__c.Is_Follow_up_WO__c</members>
-        <members>SVMXC__Service_Order__c.Is_Overtime__c</members>
-        <members>SVMXC__Service_Order__c.Is_Solved__c</members>
-        <members>SVMXC__Service_Order__c.Is_Vehicle_check_Undertaken__c</members>
-        <members>SVMXC__Service_Order__c.Job_Complete__c</members>
-        <members>SVMXC__Service_Order__c.Late_on_Initial_Response__c</members>
-        <members>SVMXC__Service_Order__c.Late_on_Onsite_Response__c</members>
-        <members>SVMXC__Service_Order__c.Late_on_SLA__c</members>
-        <members>SVMXC__Service_Order__c.Location_has_default_Territory__c</members>
         <members>SVMXC__Service_Order__c.Log_Verification__c</members>
         <members>SVMXC__Service_Order__c.Malfunction__c</members>
         <members>SVMXC__Service_Order__c.Material_Replaced__c</members>
@@ -353,33 +309,12 @@
         <members>SVMXC__Service_Request__c.Contact_Phone__c</members>
         <members>SVMXC__Service_Request__c.Contract__c</members>
         <members>SVMXC__Service_Request__c.DBin_Id__c</members>
+        <members>SVMXC__Service_Order__c.Non_Compliance_Reported__c</members>
+        <members>SVMXC__Service_Order__c.Owner_Full_Name__c</members>
+        <members>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</members>
+        <members>SVMXC__Service_Request__c.Customer_Reference__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
-        <members>SVMXC__Service_Request__c.Installation__c</members>
-        <members>SVMXC__Service_Request__c.Location__c</members>
-        <members>SVMXC__Service_Request__c.Preferred_Business_Hours__c</members>
-        <members>SVMXC__Service_Request__c.Preferred_Technician_SR__c</members>
-        <members>SVMXC__Service_Request__c.Reason_for_Closure__c</members>
-        <members>SVMXC__Service_Request__c.SLA_Terms__c</members>
-        <members>SVMXC__Service_Request__c.SVMXC__Status__c</members>
-        <members>SVMXC__Service_Request__c.Top_Level__c</members>
-        <members>SVMXC__Service__c.SVMXC__Data_Type__c</members>
-        <members>SVMXC__Site__c.Accreditation__c</members>
-        <members>SVMXC__Site__c.DefaultTerritory__c</members>
-        <members>SVMXC__Site__c.False_Alarms_Have_Occured__c</members>
-        <members>SVMXC__Site__c.Fire_Alarm_Monitored__c</members>
-        <members>SVMXC__Site__c.IP_Type__c</members>
-        <members>SVMXC__Site__c.Index__c</members>
-        <members>SVMXC__Site__c.Italy_Navision_Ref_Number__c</members>
-        <members>SVMXC__Site__c.Location_Address__c</members>
-        <members>SVMXC__Site__c.Number_Of_Alarms_In_The_Past_12_Month__c</members>
-        <members>SVMXC__Site__c.Number_Of_Detectors__c</members>
-        <members>SVMXC__Site__c.SVMXC__Country__c</members>
-        <members>SVMXC__Site__c.UK_Navision_Ref_Num__c</members>
-        <members>SVMXC__Site__c.Zone_Chart_Present__c</members>
-        <members>SVMXC__Timesheet_Entry__c.DurationInHour__c</members>
-        <members>SVMXC__Timesheet_Entry__c.Is_Holiday__c</members>
-        <members>SVMXC__Timesheet_Entry__c.WO_Description__c</members>
-        <members>User.DEF_Company__c</members>
+        <members>SVMXC__Site__c.Note_to_Planner__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -472,6 +407,7 @@
         <members>Issue__c</members>
         <members>LocationContactRelationship__c</members>
         <members>Locations_Equipment__c</members>
+        <members>SVMXC__Service_Request__c</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -739,12 +675,28 @@
         <name>PathAssistant</name>
     </types>
     <types>
+        <members>DEF_WW_Service_Request_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>DEF_WW_SR_PrePopulate_SRBeforeCreate</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</members>
+        <members>SVMXC__Site__c-DEF_WW_Site Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.WO_due_next_month</members>
+        <name>ListView</name>
+    </types>
+    <types>
         <members>All_Modify</members>
         <members>DEF_FS_Contract_Admin_PS</members>
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
         <members>DEF_FS_Tech_PS</members>
-        <members>DEF_IT_Sub_Contractor</members>
         <name>PermissionSet</name>
     </types>
     <types>
@@ -754,9 +706,8 @@
         <members>DEF FS Planner</members>
         <members>DEF FS Tech</members>
         <members>DEF IT Hybrid</members>
+        <members>DEF - AD - Interface</members>
         <members>DEF Integration</members>
-        <members>DEF_IT_Sub_Contractors</members>
-        <members>DEF_WW_Support</members>
         <name>Profile</name>
     </types>
     <types>

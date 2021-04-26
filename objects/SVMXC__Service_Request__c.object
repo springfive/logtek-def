@@ -5,6 +5,7 @@
         <externalId>false</externalId>
         <label>Accreditation</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
@@ -38,6 +39,7 @@
         <label>Closure Comment</label>
         <length>250</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -76,9 +78,20 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Reference__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Reference</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>DBin_Id__c</fullName>
@@ -88,6 +101,7 @@
         <label>DBin Id</label>
         <length>100</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -98,6 +112,7 @@
         <externalId>false</externalId>
         <label>DEF_Company</label>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -115,6 +130,7 @@
         <relationshipLabel>Service Requests (Installed Product)</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -128,6 +144,7 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -140,6 +157,7 @@
         <referenceTo>BusinessHours</referenceTo>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -153,6 +171,7 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -162,6 +181,7 @@
         <externalId>false</externalId>
         <label>Reason for Closure</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -240,10 +260,12 @@
         <relationshipLabel>Service Requests (Top-Level)</relationshipLabel>
         <relationshipName>Service_Requests1</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <label>Service Request</label>
     <listViews>
         <fullName>All_service_requests</fullName>
         <columns>NAME</columns>
@@ -292,4 +314,15 @@
         </filters>
         <label>Service requests to be processed</label>
     </listViews>
+    <nameField>
+        <displayFormat>SR-{00000000}</displayFormat>
+        <label>Request Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Service Requests</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

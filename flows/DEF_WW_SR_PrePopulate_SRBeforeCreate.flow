@@ -2,10 +2,10 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>50.0</apiVersion>
     <assignments>
-        <name>User_Id</name>
-        <label>User_Id</label>
-        <locationX>526</locationX>
-        <locationY>369</locationY>
+        <name>PrePopulateDefComany</name>
+        <label>Pre-populate Def Comany</label>
+        <locationX>50</locationX>
+        <locationY>551</locationY>
         <assignmentItems>
             <assignToReference>$Record.DEF_Company__c</assignToReference>
             <operator>Assign</operator>
@@ -17,8 +17,8 @@
     <decisions>
         <name>Check_Bypass_Flow</name>
         <label>Check Bypass Flow</label>
-        <locationX>250</locationX>
-        <locationY>290</locationY>
+        <locationX>380</locationX>
+        <locationY>311</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Bypass_Flow_Not_True</name>
@@ -31,9 +31,32 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>User_Id</targetReference>
+                <targetReference>DefComanyAlreadyPopulated</targetReference>
             </connector>
             <label>Bypass Flow Not True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Def Comany is blank or not.</description>
+        <name>DefComanyAlreadyPopulated</name>
+        <label>Def Comany already populated?</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CompanyNotPopulated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.DEF_Company__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>PrePopulateDefComany</targetReference>
+            </connector>
+            <label>Company Not Populated</label>
         </rules>
     </decisions>
     <description>Initialise the Service Request values before create.
@@ -50,7 +73,7 @@ Updated fields:
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -61,8 +84,8 @@ Updated fields:
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <start>
-        <locationX>51</locationX>
-        <locationY>65</locationY>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Check_Bypass_Flow</targetReference>
         </connector>
