@@ -271,31 +271,6 @@
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>Copy_Of_Permit_To_Work_Attached__c</fullName>
-        <externalId>false</externalId>
-        <label>Permit To Work Completed ?</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Yes</fullName>
-                    <default>false</default>
-                    <label>Yes</label>
-                </value>
-                <value>
-                    <fullName>No</fullName>
-                    <default>false</default>
-                    <label>No</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>Log_Verification__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -1616,17 +1591,6 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
             </values>
             <values>
                 <fullName>CRS0002</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Copy_Of_Permit_To_Work_Attached__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
