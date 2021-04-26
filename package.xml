@@ -161,6 +161,7 @@
         <members>DEF_WorkOrderPlatformEvent__e</members>
         <members>Planned_Parts__c</members>
         <members>Project_Location_Relationship__c</members>
+        <members>SVMXC__Service_Contract__c</members>
         <members>SVMXC__Service_Request__c</members>
         <members>ServiceProject__c</members>
         <name>CustomObject</name>
