@@ -312,7 +312,7 @@
             </valueSetDefinition>
         </valueSet>
     </fields>
-    <fields>
+    <!--<fields>
         <fullName>Owner_Full_Name__c</fullName>
         <externalId>false</externalId>
         <formula>IF(Owner:Queue.Id=NULL,Owner:User.FirstName +&quot; &quot;+ Owner:User.LastName,
@@ -323,7 +323,7 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
+    </fields>-->
     <fields>
         <fullName>Tech_SC_Installation_Discipline__c</fullName>
         <description>This field will store the value of Service Contract Installation Discipline so that we can set criteria for Wizards for SIR and Checklist</description>
@@ -1276,7 +1276,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <columns>SVMXC__Site__c</columns>
         <columns>SVMXC__Component__c</columns>
         <columns>SVMXC__Preferred_Start_Time__c</columns>
-        <columns>Owner_Full_Name__c</columns>
+        <!--<columns>Owner_Full_Name__c</columns>-->
         <columns>SVMXC__Preferred_Technician__c</columns>
         <columns>SVMXC__Order_Status__c</columns>
         <columns>SVMXC__Zip__c</columns>
