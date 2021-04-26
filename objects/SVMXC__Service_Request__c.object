@@ -691,6 +691,17 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Technician_Preferred_Territory_SR__c</fullName>
+        <externalId>false</externalId>
+        <formula>Location__r.SVMX_PS_Preferred_Technician__r.SVMXC__Service_Territory__r.Name</formula>
+        <label>Technician Preferred Territory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Top_Level__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>

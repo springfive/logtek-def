@@ -85,6 +85,10 @@
                 <field>Preferred_Technician_SR__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Technician_Preferred_Territory_SR__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Preferred_Business_Hours__c</field>
             </layoutItems>
