@@ -354,6 +354,8 @@
         <members>SVMXC__Service_Request__c.Contract__c</members>
         <members>SVMXC__Service_Request__c.DBin_Id__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
+        <members>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</members>
+        <members>SVMXC__Site__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Request__c.Installation__c</members>
         <members>SVMXC__Service_Request__c.Location__c</members>
         <members>SVMXC__Service_Request__c.Preferred_Business_Hours__c</members>
@@ -648,6 +650,7 @@
         <members>SVMXC__Service_Order__c-DEF_WW_Preventive Maintenance Work Order Layout</members>
         <members>SVMXC__Service_Plan__c-DEF_WW_Service Plan Layout</members>
         <members>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</members>
+        <members>SVMXC__Service_Request__c-Service Request Layout</members>
         <members>SVMXC__Service__c-DEF_WW_Service Layout</members>
         <members>SVMXC__Site__c-DEF_WW_Location - Dispatcher</members>
         <members>SVMXC__Site__c-DEF_WW_Site Layout</members>

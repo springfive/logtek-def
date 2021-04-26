@@ -244,6 +244,78 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>SVMXC__Subject__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Subject of the service request</description>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Type of service request</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Depot Repair</fullName>
+                    <default>false</default>
+                    <label>Depot Repair</label>
+                </value>
+                <value>
+                    <fullName>Field Service</fullName>
+                    <default>false</default>
+                    <label>Field Service</label>
+                </value>
+                <value>
+                    <fullName>Return</fullName>
+                    <default>false</default>
+                    <label>Return</label>
+                </value>
+                <value>
+                    <fullName>Exchange</fullName>
+                    <default>false</default>
+                    <label>Exchange</label>
+                </value>
+                <value>
+                    <fullName>Replacement</fullName>
+                    <default>false</default>
+                    <label>Replacement</label>
+                </value>
+                <value>
+                    <fullName>Shipment</fullName>
+                    <default>false</default>
+                    <label>Shipment</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Technician_Preferred_Territory_SR__c</fullName>
+        <externalId>false</externalId>
+        <formula>Location__r.SVMX_PS_Preferred_Technician__r.SVMXC__Service_Territory__r.Name</formula>
+        <label>Technician Preferred Territory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Top_Level__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
