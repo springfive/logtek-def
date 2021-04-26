@@ -829,18 +829,6 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         </valueSet>
     </fields>
     <fields>
-        <fullName>Owner_Full_Name__c</fullName>
-        <externalId>false</externalId>
-        <formula>IF(Owner:Queue.Id=NULL,Owner:User.FirstName +&quot; &quot;+ Owner:User.LastName,
-			 Owner:Queue.QueueName)</formula>
-        <label>Owner Full Name</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Scheduled_Duration_in_hours__c</fullName>
         <externalId>false</externalId>
         <formula>SVMXC__SM_Scheduled_Duration__c / 60</formula>
