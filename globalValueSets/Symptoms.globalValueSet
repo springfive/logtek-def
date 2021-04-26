@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>SYM090</fullName>
+        <default>false</default>
+        <label>Base contacts</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM210</fullName>
+        <default>false</default>
+        <label>Combiner</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM260</fullName>
+        <default>false</default>
+        <label>Connection problem</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM070</fullName>
+        <default>false</default>
+        <label>Detector</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM200</fullName>
+        <default>false</default>
+        <label>EFC</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM170</fullName>
+        <default>false</default>
+        <label>EVAC system</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM010</fullName>
+        <default>false</default>
+        <label>External power supply</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM310</fullName>
+        <default>false</default>
+        <label>Extinguishing system control</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM300</fullName>
+        <default>false</default>
+        <label>Extinguishing system cylinders</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM080</fullName>
+        <default>false</default>
+        <label>Fouling detector</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM120</fullName>
+        <default>false</default>
+        <label>Front panel</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM110</fullName>
+        <default>false</default>
+        <label>I / O info module</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM001</fullName>
+        <default>false</default>
+        <label>Internal supply</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM220</fullName>
+        <default>false</default>
+        <label>IP converter</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM030</fullName>
+        <default>false</default>
+        <label>Loop board</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM250</fullName>
+        <default>false</default>
+        <label>Loop opening</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM100</fullName>
+        <default>false</default>
+        <label>Manual button</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM020</fullName>
+        <default>false</default>
+        <label>Motherboard</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM050</fullName>
+        <default>false</default>
+        <label>Network card</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM060</fullName>
+        <default>false</default>
+        <label>Other card</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM150</fullName>
+        <default>false</default>
+        <label>Panels O / A</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM130</fullName>
+        <default>false</default>
+        <label>Printer</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM270</fullName>
+        <default>false</default>
+        <label>Programming error</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM140</fullName>
+        <default>false</default>
+        <label>Radio transpoder</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM040</fullName>
+        <default>false</default>
+        <label>Relay board</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM230</fullName>
+        <default>false</default>
+        <label>Short circuit loop</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM160</fullName>
+        <default>false</default>
+        <label>Siren</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM290</fullName>
+        <default>false</default>
+        <label>Software</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM320</fullName>
+        <default>false</default>
+        <label>Suction System</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM280</fullName>
+        <default>false</default>
+        <label>User management error</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM999</fullName>
+        <default>false</default>
+        <label>Various</label>
+    </customValue>
+    <customValue>
+        <fullName>SYM330</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Symptoms</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
