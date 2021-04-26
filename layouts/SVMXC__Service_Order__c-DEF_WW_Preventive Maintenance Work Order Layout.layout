@@ -139,6 +139,10 @@
         <label>Order Information</label>
         <layoutColumns>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Confirmation_Request_Status__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>SVMXC__Preferred_Start_Time__c</field>
             </layoutItems>
@@ -196,10 +200,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Non_Compliance_Or_Defects_Identified__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Non_Compliances_Reported_To_Responsible__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -340,6 +340,36 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>LogACall</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>5</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>NewOpportunity</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>NewCase</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>7</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>NewLead</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>8</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>FeedItem.LinkPost</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>10</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>FeedItem.PollPost</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>11</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>FeedItem.QuestionPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>12</sortOrder>
@@ -370,16 +400,6 @@
             <sortOrder>17</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>FeedItem.RypplePost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>9</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.LinkPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>10</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>FeedItem.TextPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
@@ -405,33 +425,18 @@
             <sortOrder>4</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>LogACall</actionName>
+            <actionName>FeedItem.RypplePost</actionName>
             <actionType>QuickAction</actionType>
-            <sortOrder>5</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>NewOpportunity</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>6</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>NewCase</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>7</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>NewLead</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>8</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.PollPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>11</sortOrder>
+            <sortOrder>9</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
-        <relatedList>RelatedEntityHistoryList</relatedList>
+        <fields>NAME</fields>
+        <fields>SVMXC__Service_Group_Members__c.NAME</fields>
+        <fields>Start_Date_and_Time__c</fields>
+        <fields>End_Date_and_Time__c</fields>
+        <fields>Status__c</fields>
+        <relatedList>Assigned_Tools_Technician__c.Work_Order__c</relatedList>
     </relatedLists>
     <relatedLists>
         <excludeButtons>New</excludeButtons>
@@ -460,28 +465,7 @@
         <relatedList>RelatedFileList</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
-        <fields>RECORDTYPE</fields>
-        <fields>SVMXC__Company__c</fields>
-        <fields>SVMXC__Order_Status__c</fields>
-        <fields>SVMXC__Source_Location__c</fields>
-        <fields>SVMXC__Source_City__c</fields>
-        <fields>SVMXC__Source_Country__c</fields>
-        <fields>SVMXC__Destination_Location__c</fields>
-        <fields>SVMXC__Destination_City__c</fields>
-        <fields>SVMXC__Destination_Country__c</fields>
-        <relatedList>SVMXC__RMA_Shipment_Order__c.SVMXC__Service_Order__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>SVMXC__RMA_Shipment_Line__c.SVMXC__Service_Order__c</relatedList>
-    </relatedLists>
-    <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>SVMXC__SVMX_Event__c.SVMXC__Service_Order__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
@@ -495,48 +479,17 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>SVMXC__Service_Group_Members__c.NAME</fields>
-        <fields>Start_Date_and_Time__c</fields>
-        <fields>End_Date_and_Time__c</fields>
-        <fields>Status__c</fields>
-        <relatedList>Assigned_Tools_Technician__c.Work_Order__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
+        <fields>Issue_Location__c</fields>
+        <fields>Technician_notes__c</fields>
+        <fields>Work_Performed__c</fields>
         <relatedList>Issue__c.Associated_Work_Order__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>SVMXC__Company__c</fields>
-        <fields>SVMXC__Contact__c</fields>
-        <fields>SVMXC__Quote_Amount2__c</fields>
-        <fields>SVMXC__Revised_From__c</fields>
-        <fields>SVMXC__Status__c</fields>
-        <fields>CREATEDBY_USER</fields>
-        <relatedList>SVMXC__Quote__c.SVMXC__Service_Order__c</relatedList>
+        <relatedList>SVMXC__SVMX_Event__c.SVMXC__Service_Order__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>NewEvent</excludeButtons>
-        <excludeButtons>NewTask</excludeButtons>
-        <fields>TASK.SUBJECT</fields>
-        <fields>TASK.WHO_NAME</fields>
-        <fields>ACTIVITY.TASK</fields>
-        <fields>TASK.DUE_DATE</fields>
-        <fields>TASK.STATUS</fields>
-        <fields>TASK.PRIORITY</fields>
-        <fields>CORE.USERS.FULL_NAME</fields>
-        <relatedList>RelatedActivityList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <excludeButtons>MailMerge</excludeButtons>
-        <excludeButtons>RequestUpdate</excludeButtons>
-        <fields>TASK.SUBJECT</fields>
-        <fields>TASK.WHO_NAME</fields>
-        <fields>ACTIVITY.TASK</fields>
-        <fields>TASK.DUE_DATE</fields>
-        <fields>CORE.USERS.FULL_NAME</fields>
-        <fields>TASK.LAST_UPDATE</fields>
-        <relatedList>RelatedHistoryList</relatedList>
+        <relatedList>RelatedEntityHistoryList</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

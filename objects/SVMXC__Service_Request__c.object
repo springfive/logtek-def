@@ -84,16 +84,6 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Customer_Reference__c</fullName>
-        <externalId>false</externalId>
-        <label>Customer Reference</label>
-        <required>false</required>
-        <trackFeedHistory>true</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>TextArea</type>
-    </fields>
-    <fields>
         <fullName>DBin_Id__c</fullName>
         <caseSensitive>false</caseSensitive>
         <description>[Middleware POC] - Id of the service request coming from DBin (Call Center)</description>
@@ -216,6 +206,7 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -227,6 +218,7 @@
         <externalId>false</externalId>
         <label>Status</label>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -265,7 +257,6 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <label>Service Request</label>
     <listViews>
         <fullName>All_service_requests</fullName>
         <columns>NAME</columns>
@@ -314,15 +305,4 @@
         </filters>
         <label>Service requests to be processed</label>
     </listViews>
-    <nameField>
-        <displayFormat>SR-{00000000}</displayFormat>
-        <label>Request Number</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>AutoNumber</type>
-    </nameField>
-    <pluralLabel>Service Requests</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
-    <visibility>Public</visibility>
 </CustomObject>
