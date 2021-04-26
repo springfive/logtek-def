@@ -3115,11 +3115,11 @@
         <field>SVMXC__Service_Order__c.Number_of_Technicians_Needed__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
+   <!-- <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Owner_Full_Name__c</field>
         <readable>false</readable>
-    </fieldPermissions>
+    </fieldPermissions>-->
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.PM_WO_Sent_To_DEX__c</field>
