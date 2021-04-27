@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DEF_API_WO_RequestCallBack</members>
@@ -84,7 +84,6 @@
         <members>Field_Feedback__c.Non_Compliance_Defect__c</members>
         <members>Field_Feedback__c.Observation_Description__c</members>
         <members>Field_Feedback__c.Service_Maintenance_Contract__c</members>
-        <members>Field_Feedback__c.Status__c</members>
         <members>Field_Feedback__c.Status__c</members>
         <members>Field_Feedback__c.Tech_Count__c</members>
         <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
@@ -242,7 +241,6 @@
         <members>SVMXC__Service_Order__c.Customer_Contact_4__c</members>
         <members>SVMXC__Service_Order__c.DBin_Ref_Number__c</members>
         <members>SVMXC__Service_Order__c.DEF_Company__c</members>
-        <members>SVMXC__Service_Order__c.DEF_Company__c</members>
         <members>SVMXC__Service_Order__c.DesignationYear__c</members>
         <members>SVMXC__Service_Order__c.Designation__c</members>
         <members>SVMXC__Service_Order__c.Disable_Picture_After_Job__c</members>
@@ -298,7 +296,6 @@
         <members>SVMXC__Service_Order__c.Return_of_Service_Date_Time__c</members>
         <members>SVMXC__Service_Order__c.Revisit_Comment__c</members>
         <members>SVMXC__Service_Order__c.RootCause__c</members>
-        <members>SVMXC__Service_Order__c.RootCause__c</members>
         <members>SVMXC__Service_Order__c.Root_Cause_Text__c</members>
         <members>SVMXC__Service_Order__c.SL_InstallationType__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Country__c</members>
@@ -343,7 +340,6 @@
         <members>SVMXC__Service_Order__c.Total_duration_Regular_Labor__c</members>
         <members>SVMXC__Service_Order__c.VisitNumber__c</members>
         <members>SVMXC__Service_Order__c.WoDetails__c</members>
-        <members>SVMXC__Service_Order__c.WoDetails__c</members>
         <members>SVMXC__Service_Order__c.Work_Performed_Picklist__c</members>
         <members>SVMXC__Service_Order__c.internal_comments__c</members>
         <members>SVMXC__Service_Plan__c.DEF_Company__c</members>
@@ -354,8 +350,6 @@
         <members>SVMXC__Service_Request__c.Contract__c</members>
         <members>SVMXC__Service_Request__c.DBin_Id__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
-        <members>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</members>
-        <members>SVMXC__Site__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Request__c.Installation__c</members>
         <members>SVMXC__Service_Request__c.Location__c</members>
         <members>SVMXC__Service_Request__c.Preferred_Business_Hours__c</members>
@@ -363,6 +357,7 @@
         <members>SVMXC__Service_Request__c.Reason_for_Closure__c</members>
         <members>SVMXC__Service_Request__c.SLA_Terms__c</members>
         <members>SVMXC__Service_Request__c.SVMXC__Status__c</members>
+        <members>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</members>
         <members>SVMXC__Service_Request__c.Top_Level__c</members>
         <members>SVMXC__Service__c.SVMXC__Data_Type__c</members>
         <members>SVMXC__Site__c.Accreditation__c</members>
@@ -373,6 +368,7 @@
         <members>SVMXC__Site__c.Index__c</members>
         <members>SVMXC__Site__c.Italy_Navision_Ref_Number__c</members>
         <members>SVMXC__Site__c.Location_Address__c</members>
+        <members>SVMXC__Site__c.Note_to_Planner__c</members>
         <members>SVMXC__Site__c.Number_Of_Alarms_In_The_Past_12_Month__c</members>
         <members>SVMXC__Site__c.Number_Of_Detectors__c</members>
         <members>SVMXC__Site__c.SVMXC__Country__c</members>
@@ -551,7 +547,6 @@
         <members>DEF_WW_Contract_Admin_Home_Page</members>
         <members>DEF_WW_Entitled_Contact_Record_Page</members>
         <members>DEF_WW_Field_Feedback_Record_Page</members>
-        <members>DEF_WW_Field_Feedback_Record_Page</members>
         <members>DEF_WW_Installed_Product_Record_Page</members>
         <members>DEF_WW_Issue_Record_Page</members>
         <members>DEF_WW_Location_Record_Page</members>
@@ -570,7 +565,6 @@
         <members>DEF_WW_Work_Order_record_page</members>
         <members>Included_Service_Record_Page</members>
         <members>Location_Contact_Relationship_Record_Page</members>
-        <members>PM_Plan_Template_Record_Page</members>
         <members>PM_Plan_Template_Record_Page</members>
         <members>Preventive_Maintenance_Coverage_Record_Page</members>
         <members>SLA_Terms_Record_Page</members>
@@ -896,5 +890,5 @@
         <members>SVMXC__Service_Order__c.SVMX_PS - Set WO to Assigned</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>50.0</version>
 </Package>
