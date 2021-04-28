@@ -93,7 +93,7 @@ Updated fields:
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordBeforeSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>User_Company</name>
         <dataType>Picklist</dataType>
