@@ -5,8 +5,22 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>GB_Clarkson_Northern_Region</members>
+        <members>GB_Clarkson_Scotland</members>
+        <members>GB_Clarkson_South_East</members>
+        <members>GB_Clarkson_South_West</members>
+        <name>Group</name>
+    </types>
+    <types>
         <members>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</members>
         <name>Layout</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.NORTHERN_ENGLANDPM_WO_To_be_scheduled</members>
+        <members>SVMXC__Service_Order__c.SCOTLAND_PM_WO_To_be_scheduled</members>
+        <members>SVMXC__Service_Order__c.SOUTH_EAST_PM_WO_To_be_scheduled</members>
+        <members>SVMXC__Service_Order__c.SOUTH_WEST_PM_WO_To_be_scheduled</members>
+        <name>ListView</name>
     </types>
     <types>
         <members>DEF_FS_Contract_Admin_PS</members>
