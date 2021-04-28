@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    
+    <types>
+        <members>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>DEF_FS_Contract_Admin_PS</members>
+        <members>DEF_FS_Manager_PS</members>
+        <members>DEF_FS_Planner_PS</members>
+        <name>PermissionSet</name>
+    </types>
     <version>50.0</version>
 </Package>
