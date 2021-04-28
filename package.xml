@@ -1,55 +1,32 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>DEF_WO_TriggerHandler</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>SVMXC__Service_Order__c.Copy_Of_Permit_To_Work_Attached__c</members>
-        <members>SVMXC__Service_Order__c.Log_Verification__c</members>
-        <members>SVMXC__Service_Order__c.Non_Compliance_Reported__c</members>
-        <members>SVMXC__Service_Order__c.Owner_Full_Name__c</members>
-        <members>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</members>
-        <members>SVMXC__Service_Request__c.Customer_Reference__c</members>
-        <members>SVMXC__Service_Request__c.DEF_Company__c</members>
         <members>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</members>
-        <members>SVMXC__Site__c.Note_to_Planner__c</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>SVMXC__Service_Request__c</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>DEF_WW_Service_Request_Record_Page</members>
-        <name>FlexiPage</name>
-    </types>
-    <types>
-        <members>DEF_WW_SR_PrePopulate_SRBeforeCreate</members>
-        <name>Flow</name>
+        <members>GB_Clarkson_Northern_Region</members>
+        <members>GB_Clarkson_Scotland</members>
+        <members>GB_Clarkson_South_East</members>
+        <members>GB_Clarkson_South_West</members>
+        <name>Group</name>
     </types>
     <types>
         <members>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</members>
-        <members>SVMXC__Service_Request__c-Service Request Layout</members>
-        <members>SVMXC__Site__c-DEF_WW_Site Layout</members>
         <name>Layout</name>
     </types>
     <types>
-        <members>SVMXC__Service_Order__c.WO_due_next_month</members>
+        <members>SVMXC__Service_Order__c.NORTHERN_ENGLANDPM_WO_To_be_scheduled</members>
+        <members>SVMXC__Service_Order__c.SCOTLAND_PM_WO_To_be_scheduled</members>
+        <members>SVMXC__Service_Order__c.SOUTH_EAST_PM_WO_To_be_scheduled</members>
+        <members>SVMXC__Service_Order__c.SOUTH_WEST_PM_WO_To_be_scheduled</members>
         <name>ListView</name>
     </types>
     <types>
         <members>DEF_FS_Contract_Admin_PS</members>
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
-        <members>DEF_FS_Tech_PS</members>
         <name>PermissionSet</name>
     </types>
-    <types>
-        <members>Admin</members>
-        <members>DEF - AD - Interface</members>
-        <members>DEF Integration</members>
-        <name>Profile</name>
-    </types>
-    <version>50.0</version>
+    <version>51.0</version>
 </Package>
