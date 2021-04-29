@@ -4852,6 +4852,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Tech_Enable_SIR__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.Tech_Has_Parts__c</field>
         <readable>true</readable>
     </fieldPermissions>

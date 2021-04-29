@@ -1477,6 +1477,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Tech_Enable_SIR__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</field>
         <readable>false</readable>
     </fieldPermissions>
