@@ -72,6 +72,8 @@
         <members>SVMXC__Service_Order_Line__c.ShowMilesDriven__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <members>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Number__c</members>
+        <members>SVMXC__Service_Order__c.Client_Request_Closed__c</members>
+        <members>SVMXC__Service_Order__c.Client_Request_Closure_Comment__c</members>
         <members>SVMXC__Service_Order__c.Confirmation_Request_Status__c</members>
         <members>SVMXC__Service_Order__c.Contact_Email_SF__c</members>
         <members>SVMXC__Service_Order__c.Contact_Phone_SF__c</members>
@@ -185,10 +187,10 @@
         <members>DEF_WW_RampupKPIs/GUQZkXNMcPlkBNVWmRVsHAtWHTnadx</members>
         <name>Dashboard</name>
     </types>
-    <!--<types>
+    <types>
         <members>SVMXC__ServiceMaxDocuments/BelgiumFooter.png</members>
         <name>Document</name>
-    </types>-->
+    </types>
     <types>
         <members>unfiled$public/DEF_IT_Assigned_Technician_Template</members>
         <members>unfiled$public/DEF_IT_Assigned_Technician_Template_Multi_Day</members>
@@ -273,12 +275,10 @@
     <types>
         <members>Admin</members>
         <members>DEF - AD - Interface</members>
-        <members>DEF BE Hybrid</members>
         <members>DEF FS Contract Admin</members>
         <members>DEF FS Manager</members>
         <members>DEF FS Planner</members>
         <members>DEF FS Tech</members>
-        <members>DEF IT Sub Contractor</members>
         <members>DEF Integration</members>
         <name>Profile</name>
     </types>

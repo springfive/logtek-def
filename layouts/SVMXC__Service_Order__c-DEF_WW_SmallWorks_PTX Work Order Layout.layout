@@ -214,12 +214,12 @@
                 <field>Relevant_Details_Of_The_Work_Carried_Out__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Non_Compliance_Or_Defects_Identified__c</field>
+                <behavior>Edit</behavior>
+                <field>Non_Compliance_Reported__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Non_Compliances_Reported_To_Responsible__c</field>
+                <field>Non_Compliance_Or_Defects_Identified__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
