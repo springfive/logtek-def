@@ -271,73 +271,6 @@
         <type>TextArea</type>
     </fields>
     <fields>
-        <fullName>Log_Verification__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Event Log Verification</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>Non_Compliance_Reported__c</fullName>
-        <description>Non-Compliances Reported To Responsible Person</description>
-        <externalId>false</externalId>
-        <label>Non-Compliance Reported</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Yes</fullName>
-                    <default>false</default>
-                    <label>Yes</label>
-                </value>
-                <value>
-                    <fullName>No</fullName>
-                    <default>false</default>
-                    <label>No</label>
-                </value>
-                <value>
-                    <fullName>N/A</fullName>
-                    <default>false</default>
-                    <label>N/A</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <!--<fields>
-        <fullName>Owner_Full_Name__c</fullName>
-        <externalId>false</externalId>
-        <formula>IF(Owner:Queue.Id=NULL,Owner:User.FirstName +&quot; &quot;+ Owner:User.LastName,
-			 Owner:Queue.QueueName)</formula>
-        <label>Owner Full Name</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>-->
-    <fields>
-        <fullName>Tech_SC_Installation_Discipline__c</fullName>
-        <description>This field will store the value of Service Contract Installation Discipline so that we can set criteria for Wizards for SIR and Checklist</description>
-        <externalId>false</externalId>
-        <formula>TEXT(SVMXC__Service_Contract__r.Installation_Discipline__c)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Tech_SC Installation Discipline</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Confirmation_Request_Status__c</fullName>
         <defaultValue>&quot;Request Not Sent&quot;</defaultValue>
         <externalId>false</externalId>
@@ -388,7 +321,7 @@
     <fields>
         <fullName>Copy_Of_Permit_To_Work_Attached__c</fullName>
         <externalId>false</externalId>
-        <label>Copy Of Permit To Work Attached ?</label>
+        <label>Permit To Work Completed ?</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -593,6 +526,46 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         </valueSet>
     </fields>
     <fields>
+        <fullName>Log_Verification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Event Log Verification</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Non_Compliance_Reported__c</fullName>
+        <description>Non-Compliances Reported To Responsible Person</description>
+        <externalId>false</externalId>
+        <label>Non-Compliance Reported</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Note_to_Planner__c</fullName>
         <externalId>false</externalId>
         <label>Note to Planner</label>
@@ -600,6 +573,18 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Full_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Owner:Queue.Id=NULL,Owner:User.FirstName +&quot; &quot;+ Owner:User.LastName,
+Owner:Queue.QueueName)</formula>
+        <label>Owner Full Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>PM_Schedule_Definition__c</fullName>
@@ -613,30 +598,6 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>ProjectManagerEmail__c</fullName>
-        <externalId>false</externalId>
-        <formula>ServiceProject__r.Project_Manager__r.Email</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Project Manager email</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>ProjectManager__c</fullName>
-        <externalId>false</externalId>
-        <formula>ServiceProject__r.Project_Manager__c</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Project Manager</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>QuoteReference__c</fullName>
@@ -693,43 +654,6 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
-    </fields>
-    <fields>
-        <fullName>SVMXC__Symptom__c</fullName>
-        <deprecated>false</deprecated>
-        <description>Symptom that was noted before the failure.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Symptom that was noted before the failure.</inlineHelpText>
-        <label>Symptom</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Error Code 0001</fullName>
-                    <default>false</default>
-                    <label>Error Code 0001</label>
-                </value>
-                <value>
-                    <fullName>Error Code 0002</fullName>
-                    <default>false</default>
-                    <label>Error Code 0002</label>
-                </value>
-                <value>
-                    <fullName>Error Code 0003</fullName>
-                    <default>false</default>
-                    <label>Error Code 0003</label>
-                </value>
-                <value>
-                    <fullName>Error Code 0004</fullName>
-                    <default>false</default>
-                    <label>Error Code 0004</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>SVMXC__Work_Performed__c</fullName>
@@ -878,21 +802,6 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Symptom__c</fullName>
-        <description>Symptom noticed on the Installation.</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Symptom noticed on the Installation.</inlineHelpText>
-        <label>Symptom</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>Symptoms</valueSetName>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>Tech_MainFsrInitials__c</fullName>
         <externalId>false</externalId>
         <formula>Left(SVMXC__Group_Member__r.Name,1)&amp; Mid(SVMXC__Group_Member__r.Name,Find(&quot; &quot;,SVMXC__Group_Member__r.Name)+1,1)</formula>
@@ -908,6 +817,19 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <externalId>false</externalId>
         <formula>SVMXC__Primary_Territory__r.Name</formula>
         <label>Primary Territory Formula</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tech_SC_Installation_Discipline__c</fullName>
+        <description>This field will store the value of Service Contract Installation Discipline so that we can set criteria for Wizards for SIR and Checklist</description>
+        <externalId>false</externalId>
+        <formula>TEXT(SVMXC__Service_Contract__r.Installation_Discipline__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tech_SC Installation Discipline</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -1276,7 +1198,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <columns>SVMXC__Site__c</columns>
         <columns>SVMXC__Component__c</columns>
         <columns>SVMXC__Preferred_Start_Time__c</columns>
-        <!--<columns>Owner_Full_Name__c</columns>-->
+        <columns>Owner_Full_Name__c</columns>
         <columns>SVMXC__Preferred_Technician__c</columns>
         <columns>SVMXC__Order_Status__c</columns>
         <columns>SVMXC__Zip__c</columns>
@@ -1383,7 +1305,11 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Return_Visit_Required__c</picklist>
+            <picklist>Non_Compliance_Reported__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>No</fullName>
                 <default>false</default>
@@ -1394,21 +1320,13 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>SVMXC__Symptom__c</picklist>
+            <picklist>Return_Visit_Required__c</picklist>
             <values>
-                <fullName>Error Code 0001</fullName>
+                <fullName>No</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Error Code 0002</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Error Code 0003</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Error Code 0004</fullName>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1471,101 +1389,6 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
                 <default>false</default>
             </values>
         </picklistValues>
-        <picklistValues>
-            <picklist>Symptom__c</picklist>
-            <values>
-                <fullName>SYM0000</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0001</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0010</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0020</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0030</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0040</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0050</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0060</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0070</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0080</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0090</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0100</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0110</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0120</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0130</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0140</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0150</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0160</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0170</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0180</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0190</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0200</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM9999</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>SmallWorks_PTX</fullName>
@@ -1579,6 +1402,17 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
             </values>
             <values>
                 <fullName>CRS0002</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Copy_Of_Permit_To_Work_Attached__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1632,7 +1466,11 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Return_Visit_Required__c</picklist>
+            <picklist>Non_Compliance_Reported__c</picklist>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>No</fullName>
                 <default>false</default>
@@ -1643,21 +1481,13 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>SVMXC__Symptom__c</picklist>
+            <picklist>Return_Visit_Required__c</picklist>
             <values>
-                <fullName>Error Code 0001</fullName>
+                <fullName>No</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Error Code 0002</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Error Code 0003</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Error Code 0004</fullName>
+                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1717,101 +1547,6 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
             </values>
             <values>
                 <fullName>RR9999</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Symptom__c</picklist>
-            <values>
-                <fullName>SYM0000</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0001</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0010</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0020</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0030</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0040</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0050</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0060</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0070</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0080</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0090</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0100</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0110</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0120</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0130</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0140</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0150</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0160</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0170</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0180</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0190</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM0200</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>SYM9999</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

@@ -199,6 +199,7 @@
         <externalId>false</externalId>
         <label>Call Date/Time</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -297,6 +298,7 @@
         <externalId>false</externalId>
         <label>Initial Response Customer By</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -308,6 +310,7 @@
         <precision>10</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
@@ -373,6 +376,7 @@
         <externalId>false</externalId>
         <label>Quote Description</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
@@ -382,6 +386,7 @@
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Quote required?</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -550,7 +555,7 @@
         <externalId>false</externalId>
         <label>Priority</label>
         <required>false</required>
-        <trackFeedHistory>true</trackFeedHistory>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -756,9 +761,21 @@ e.g. if Business Hour From = SLA, then the Business Hours used will be the one a
         <referenceTo>BusinessHours</referenceTo>
         <relationshipName>ServiceRequests_SLA</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Technician_Preferred_Territory_SR__c</fullName>
+        <externalId>false</externalId>
+        <formula>Location__r.SVMX_PS_Preferred_Technician__r.SVMXC__Service_Territory__r.Name</formula>
+        <label>Technician Preferred Territory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Time_Elapsed__c</fullName>

@@ -22,6 +22,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.BE_DEF_Navision_Ref_Num__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.BillingAddress</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1456,6 +1461,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Field_Feedback__c.Contract_HeaderLink__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Field_Feedback__c.Corrective_Action_Recommended__c</field>
         <readable>true</readable>
@@ -1509,6 +1519,11 @@
         <editable>false</editable>
         <field>Field_Feedback__c.Quote_Description__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Field_Feedback__c.ServiceProject__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -1666,6 +1681,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Issue__c.Issue_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Issue__c.Issue_Location__c</field>
         <readable>true</readable>
@@ -1683,6 +1703,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Issue__c.NeedsToBeReviewedByManager__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Issue__c.Root_Cause_Old__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1708,11 +1733,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Issue__c.Symptom__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Issue__c.Symptoms__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1748,6 +1768,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Issue__c.Work_Performed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Issue__c.Work_Performed_by_Installer__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3092,6 +3117,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Installed_Product__c.Battery_Fitted_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3107,6 +3137,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Installed_Product__c.Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Installed_Product__c.Fire_alarm_Monitored__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3114,6 +3149,11 @@
         <editable>true</editable>
         <field>SVMXC__Installed_Product__c.InstallationDiscipline__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Installed_Product__c.Installation_Discipline__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -3251,6 +3291,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Installed_Product__c.SVMXC__SM_Batch_Lot2__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Installed_Product__c.SVMXC__SM_External_Company__c</field>
         <readable>true</readable>
@@ -3371,6 +3416,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Installed_Product__c.SVMX_PS_Active_Coverage__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Installed_Product__c.SVMX_PS_Asset_Uptime__c</field>
         <readable>true</readable>
@@ -3384,6 +3434,11 @@
         <editable>true</editable>
         <field>SVMXC__Installed_Product__c.SVMX_PS_External_ID__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Installed_Product__c.SVMX_PS_Health_Indicator__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -3967,13 +4022,43 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__PM_Plan__c.CurrentDate__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__PM_Plan__c.DEF_Company__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__PM_Plan__c.DEF_NumberOfWorkOrder__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__PM_Plan__c.DesignationYear__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__PM_Plan__c.NextAnniversaryDate__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__PM_Plan__c.Note_to_Planner__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__PM_Plan__c.PM_Delta_Start_of_Year__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__PM_Plan__c.PmStartOfYear__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -5421,6 +5506,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Product_Stock__c.SVMX_PS_VS_Product_Tracking__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Proforma_Invoice_Detail__c.SVMXC__Case__c</field>
         <readable>true</readable>
@@ -5834,6 +5924,11 @@
         <editable>false</editable>
         <field>SVMXC__Quote__c.ServiceContract__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Quote__c.ServiceRequest__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -11621,6 +11716,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract_Contacts__c.Must_receive_scheduling_email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Contract_Contacts__c.SVMXC__Contact__c</field>
         <readable>true</readable>
@@ -11831,9 +11931,19 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Account_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Contract__c.Accreditation__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Alert__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -11841,9 +11951,49 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Back_Office_Country__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Back_Office_System__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Bill_to__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Contract_Header_Contract_Line__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Contract_Line_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Contract__c.DEF_Company__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Date_of_Notice__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Due_Date__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -11856,9 +12006,49 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Installation__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Contract__c.Is_Evergreen__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Location__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Part_Discount_Percentage__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Preferred_Technician__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Product__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Reason_for_Cancellation__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.RecordType_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Renewal_Price_Increase_Percentage__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -12126,9 +12316,29 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.SVMX_PS_Upsell_Potential__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Service_Maintenance_Contract_Line__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Signature_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Contract__c.Status__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Top_Level__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -12842,6 +13052,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Order_Line__c.Mileage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Order_Line__c.NOK_IP__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -12868,6 +13083,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order_Line__c.OK__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order_Line__c.Product_Stock__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13272,6 +13492,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Order_Line__c.Used_Qty__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -13298,6 +13523,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Any_Changes_Required_to_RAMS__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13337,7 +13567,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>SVMXC__Service_Order__c.Confirmation_Request_Status__c</field>
+        <field>SVMXC__Service_Order__c.Client_Request_Closed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Client_Request_Closure_Comment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13482,7 +13717,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Installation_in_Service__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Order__c.Intervention_End_Date_and_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Intervention_End_Time__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13532,6 +13777,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Logbook_Completed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Order__c.Malfunction__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -13562,8 +13812,13 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>SVMXC__Service_Order__c.Note_to_Planner__c</field>
+        <field>SVMXC__Service_Order__c.Non_Compliances_Reported_To_Responsible__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Note_to_Planner__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -13585,11 +13840,16 @@
         <field>SVMXC__Service_Order__c.Overtime_Duration__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <!--<fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Owner_Full_Name__c</field>
-        <readable>false</readable>
-    </fieldPermissions>-->
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.PM_Schedule_Definition__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.PM_WO_Sent_To_DEX__c</field>
@@ -13618,16 +13878,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Previous_Service_Visit__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order__c.ProjectManagerEmail__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order__c.ProjectManager__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13673,6 +13923,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Return_Visit_Required__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Return_of_Order_Date_Time__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15002,6 +15257,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Order__c.SVMX_PS_Work_Order_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.SVMX_PS_Zinc_Hotline_Message__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15022,11 +15282,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Scheduled_End_Date_Time__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>SVMXC__Service_Order__c.Service_Project_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15036,13 +15291,13 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Symptom__c</field>
-        <readable>false</readable>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.SymptomsRootCause__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>SVMXC__Service_Order__c.SymptomsRootCause__c</field>
+        <field>SVMXC__Service_Order__c.Symptoms__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15068,6 +15323,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Tech_Account_Activation_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Tech_Enable_SIR__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15162,6 +15422,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Total_Duration__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Order__c.Total_Labor__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15193,6 +15458,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Work_Performed_Picklist__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.internal_comments__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15328,6 +15598,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Request__c.Accreditation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Request__c.Call_Date_Time__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -15499,6 +15774,11 @@
         <editable>false</editable>
         <field>SVMXC__Service_Request__c.Tech_BusinessHours__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -15698,6 +15978,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Site__c.Accreditation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Site__c.BE_DEF_Navision_Ref_Num__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -17898,6 +18183,15 @@
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Planned_Parts__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
@@ -19428,6 +19722,15 @@
     </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ServiceProject__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
@@ -19540,7 +19843,15 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
+        <recordType>SVMXC__Service_Order__c.New_Works</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <recordType>SVMXC__Service_Order__c.Preventive_Maintenance</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>SVMXC__Service_Order__c.SmallWorks_PTX</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
@@ -19565,6 +19876,10 @@
     </recordTypeVisibilities>
     <tabSettings>
         <tab>Field_Feedback__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Issue__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>

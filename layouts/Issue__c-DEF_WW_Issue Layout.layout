@@ -71,6 +71,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Root_Cause__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Symptoms_rootCause__c</field>
             </layoutItems>
         </layoutColumns>

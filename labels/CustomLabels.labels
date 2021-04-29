@@ -7,4 +7,19 @@
         <shortDescription>DEF_IntegrationProfile</shortDescription>
         <value>00e7R000001B9sUQAS</value>
     </labels>
+    <labels>
+        <fullName>DEF_WW_Issues</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Issues</shortDescription>
+        <value>Issues</value>
+    </labels>
+    <labels>
+        <fullName>DEF_WW_WorkPerformed</fullName>
+        <categories>Lightning Record Page Translations</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Work Performed</shortDescription>
+        <value>Work Performed</value>
+    </labels>
 </CustomLabels>

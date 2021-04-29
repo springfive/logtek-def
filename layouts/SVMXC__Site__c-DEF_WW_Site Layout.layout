@@ -49,10 +49,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>BE_DEF_Navision_Ref_Num__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Zone_Chart_Present__c</field>
             </layoutItems>
             <layoutItems>
@@ -173,13 +169,6 @@
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
-        <fields>NAME</fields>
-        <fields>SVMXC__Product__c</fields>
-        <fields>SVMXC__Available_Qty__c</fields>
-        <fields>SVMXC__Status__c</fields>
-        <relatedList>SVMXC__Product_Stock__c.SVMXC__Location__c</relatedList>
-    </relatedLists>
-    <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>
         <fields>NAME</fields>
         <fields>SVMXC__Service_Group_Members__c.NAME</fields>
@@ -220,13 +209,6 @@
         <fields>SVMXC__Priority__c</fields>
         <fields>SVMXC__Subject__c</fields>
         <relatedList>SVMXC__Service_Request__c.Location__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>Status__c</fields>
-        <fields>Type__c</fields>
-        <fields>Account__c</fields>
-        <relatedList>ServiceProject__c.Location__c</relatedList>
     </relatedLists>
     <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>
@@ -292,17 +274,6 @@
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <relatedList>SVMXC__PM_Plan__c.SVMXC__Location__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>SVMXC__Company__c</fields>
-        <fields>SVMXC__Contact__c</fields>
-        <fields>SVMXC__Service_Order__c</fields>
-        <fields>SVMXC__Quote_Amount2__c</fields>
-        <fields>SVMXC__Revised_From__c</fields>
-        <fields>SVMXC__Status__c</fields>
-        <fields>CREATEDBY_USER</fields>
-        <relatedList>SVMXC__Quote__c.Location__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
