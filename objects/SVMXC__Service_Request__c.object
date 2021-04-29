@@ -154,7 +154,7 @@
     <description>This object can be used to store service request data from 3rd party CRM systems</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableFeeds>false</enableFeeds>
+    <enableFeeds>true</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
@@ -167,6 +167,7 @@
         <externalId>false</externalId>
         <label>Accreditation</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
@@ -198,6 +199,7 @@
         <externalId>false</externalId>
         <label>Call Date/Time</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -209,6 +211,7 @@
         <label>Closure Comment</label>
         <length>250</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -247,9 +250,20 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Reference__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Reference</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>DBin_Id__c</fullName>
@@ -259,6 +273,7 @@
         <label>DBin Id</label>
         <length>100</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -269,6 +284,7 @@
         <externalId>false</externalId>
         <label>DEF_Company</label>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -282,6 +298,7 @@
         <externalId>false</externalId>
         <label>Initial Response Customer By</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -293,6 +310,7 @@
         <precision>10</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
@@ -307,6 +325,7 @@
         <relationshipLabel>Service Requests (Installed Product)</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -320,6 +339,7 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -332,6 +352,7 @@
         <referenceTo>BusinessHours</referenceTo>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -345,6 +366,7 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -354,6 +376,7 @@
         <externalId>false</externalId>
         <label>Quote Description</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
@@ -363,6 +386,7 @@
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Quote required?</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -372,6 +396,7 @@
         <externalId>false</externalId>
         <label>Reason for Closure</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -406,6 +431,7 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -421,6 +447,7 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -432,6 +459,7 @@
         <externalId>false</externalId>
         <label>Actual Initial Response</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -445,6 +473,7 @@
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Number</type>
@@ -460,6 +489,7 @@
         <referenceTo>User</referenceTo>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -471,6 +501,7 @@
         <externalId>false</externalId>
         <label>Closed On</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -486,6 +517,7 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -498,6 +530,7 @@
         <label>ERP External ID</label>
         <length>100</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -510,6 +543,7 @@
         <externalId>false</externalId>
         <label>Preferred Start Time</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -521,6 +555,7 @@
         <externalId>false</externalId>
         <label>Priority</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -552,6 +587,7 @@
         <externalId>false</externalId>
         <label>Problem Description</label>
         <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
@@ -568,6 +604,7 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -583,6 +620,7 @@
         <relationshipLabel>Service Requests</relationshipLabel>
         <relationshipName>Service_Requests</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -594,6 +632,7 @@
         <externalId>false</externalId>
         <label>Service Request Source</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -625,6 +664,7 @@
         <externalId>false</externalId>
         <label>Status</label>
         <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -657,6 +697,7 @@
         <label>Subject</label>
         <length>255</length>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -669,6 +710,7 @@
         <externalId>false</externalId>
         <label>Type</label>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -719,9 +761,21 @@ e.g. if Business Hour From = SLA, then the Business Hours used will be the one a
         <referenceTo>BusinessHours</referenceTo>
         <relationshipName>ServiceRequests_SLA</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Technician_Preferred_Territory_SR__c</fullName>
+        <externalId>false</externalId>
+        <formula>Location__r.SVMX_PS_Preferred_Technician__r.SVMXC__Service_Territory__r.Name</formula>
+        <label>Technician Preferred Territory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Time_Elapsed__c</fullName>
@@ -751,6 +805,7 @@ IF(ISPICKVAL(SVMXC__Status__c, &apos;Closed&apos;)||ISPICKVAL(SVMXC__Status__c, 
         <relationshipLabel>Service Requests (Top-Level)</relationshipLabel>
         <relationshipName>Service_Requests1</relationshipName>
         <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -807,6 +862,7 @@ IF(ISPICKVAL(SVMXC__Status__c, &apos;Closed&apos;)||ISPICKVAL(SVMXC__Status__c, 
     <nameField>
         <displayFormat>SR-{00000000}</displayFormat>
         <label>Request Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>

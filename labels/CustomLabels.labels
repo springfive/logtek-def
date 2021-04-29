@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>DEF_IntegrationProfile</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEF_IntegrationProfile</shortDescription>
+        <value>00e7R000001B9sUQAS</value>
+    </labels>
+    <labels>
         <fullName>DEF_WW_Issues</fullName>
         <language>en_US</language>
         <protected>false</protected>

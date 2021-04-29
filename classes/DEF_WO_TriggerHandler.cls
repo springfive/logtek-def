@@ -61,7 +61,7 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             
             //get full details(addresss+default territory) of WO location
             if(locationSet.size()>0){
-                locationRecords=[SELECT Id,DefaultTerritory__c,SVMXC__City__c,SVMXC__Country__c,SVMXC__Latitude__c,SVMXC__Longitude__c,SVMXC__State__c,SVMXC__Street__c,SVMXC__Zip__c FROM SVMXC__Site__c WHERE Id IN: locationSet];
+                locationRecords=[SELECT Id,Note_to_Planner__c,DefaultTerritory__c,SVMXC__City__c,SVMXC__Country__c,SVMXC__Latitude__c,SVMXC__Longitude__c,SVMXC__State__c,SVMXC__Street__c,SVMXC__Zip__c FROM SVMXC__Site__c WHERE Id IN: locationSet];
                 LocationEQList=[SELECT Id,Equipment__c,Equipment__r.Name,Location__c FROM Locations_Equipment__c WHERE Location__c IN :locationSet];
             }
             Map<id,String> locEqMap = new Map<id,String>();
@@ -185,6 +185,14 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                     }
 
                 }
+                if(locationMap.containsKey(woInstance.SVMXC__Site__c)){
+                    if(String.isBlank(noteToPlanner)){
+                        noteToPlanner=locationMap.get(woInstance.SVMXC__Site__c).Note_to_Planner__c;
+                    }
+                    else{
+                        noteToPlanner=noteToPlanner+'\n'+locationMap.get(woInstance.SVMXC__Site__c).Note_to_Planner__c;
+                    }
+                }
                 if(locEqMap.containskey(woInstance.SVMXC__Site__c)){
                     if(String.isBlank(noteToPlanner)){
                         noteToPlanner=locEqMap.get(woInstance.SVMXC__Site__c);
@@ -245,6 +253,12 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                 if((woInstance.Customer_Confirmed__c!=this.triggerMapOld.get(woInstance.Id).Customer_Confirmed__c && woInstance.Customer_Confirmed__c == true && woInstance.SVMXC__Order_Status__c != 'Customer Confirmed') || (woInstance.SVMXC__Dispatch_Status__c != this.triggerMapOld.get(woInstance.Id).SVMXC__Dispatch_Status__c && woInstance.SVMXC__Dispatch_Status__c == 'Assigned' && woInstance.SVMXC__Country__c == 'GB')){
                     woInstance.SVMXC__Order_Status__c = 'Customer Confirmed';
 
+
+                }
+
+                //**--> Set Customer Confirmed checkbox to true when order status is Customer Confirmed*/
+                if(woInstance.SVMXC__Order_Status__c!=this.triggerMapOld.get(woInstance.Id).SVMXC__Order_Status__c && woInstance.SVMXC__Order_Status__c=='Customer Confirmed'){
+                    woInstance.Customer_Confirmed__c=true;
                 }
                 //**---> Set WorkOrder Default Territory based on the location**//
                 if((woInstance.SVMXC__Primary_Territory__c==null && woInstance.SVMXC__Order_Status__c=='New' && woInstance.SVMXC__Site__c!=null && locationMap.size()>0 && locationMap.containsKey(woInstance.SVMXC__Site__c)) || (woInstance.SVMXC__Site__c!=this.triggerMapOld.get(woInstance.Id).SVMXC__Site__c && woInstance.SVMXC__Site__c!=null && locationMap.size()>0 && locationMap.containsKey(woInstance.SVMXC__Site__c))){

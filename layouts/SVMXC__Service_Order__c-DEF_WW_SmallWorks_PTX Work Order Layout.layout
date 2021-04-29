@@ -61,7 +61,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Symptom__c</field>
+                <field>Symptoms__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -94,10 +94,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Installation_Status__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>ProjectManager__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

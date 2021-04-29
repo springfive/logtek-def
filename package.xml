@@ -1,15 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DEF_SC_RestAPICall</members>
         <members>DEF_SC_RestAPICallTest</members>
+        <members>DEF_SC_TriggerHandler</members>
+        <members>DEF_SC_TriggerHelper</members>
+        <members>DEF_StringHelper</members>
         <members>DEF_WO_PE_TriggerTest</members>
         <members>DEF_WO_TriggerHandler</members>
-        <members>DEF_WO_TriggerHandlerTest</members>
-        <members>DEF_WO_TriggerHelper</members>
         <name>ApexClass</name>
     </types>
     <types>
+        <members>DEF_SC_Trigger</members>
         <members>DEF_WO_PE_Trigger</members>
         <name>ApexTrigger</name>
     </types>
@@ -82,23 +84,25 @@
         <members>SVMXC__Service_Order__c.Intervention_Start_Date_and_Time__c</members>
         <members>SVMXC__Service_Order__c.Is_First_Time_Fixed__c</members>
         <members>SVMXC__Service_Order__c.Language__c</members>
+        <members>SVMXC__Service_Order__c.Log_Verification__c</members>
+        <members>SVMXC__Service_Order__c.Non_Compliance_Reported__c</members>
         <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
+        <members>SVMXC__Service_Order__c.Owner_Full_Name__c</members>
         <members>SVMXC__Service_Order__c.PM_Schedule_Definition__c</members>
-        <members>SVMXC__Service_Order__c.ProjectManager__c</members>
         <members>SVMXC__Service_Order__c.QuoteReference__c</members>
         <members>SVMXC__Service_Order__c.Quote_Description__c</members>
         <members>SVMXC__Service_Order__c.Return_Visit_Required__c</members>
         <members>SVMXC__Service_Order__c.Revisit_Comment__c</members>
-        <members>SVMXC__Service_Order__c.SVMXC__Symptom__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Work_Performed__c</members>
         <members>SVMXC__Service_Order__c.SVMX_PS_Revisit_Reason__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_End_Date_Time__c</members>
         <members>SVMXC__Service_Order__c.ServiceProject__c</members>
         <members>SVMXC__Service_Order__c.Service_Project_Name__c</members>
-        <members>SVMXC__Service_Order__c.Symptom__c</members>
+        <members>SVMXC__Service_Order__c.Tech_Enable_SIR__c</members>
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
         <members>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</members>
+        <members>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</members>
         <members>SVMXC__Service_Request__c.Call_Date_Time__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
         <members>SVMXC__Service_Request__c.InitialResponseCustomerBy__c</members>
@@ -107,6 +111,7 @@
         <members>SVMXC__Service_Request__c.Tech_BusinessHours__c</members>
         <members>SVMXC__Service_Request__c.Time_Elapsed__c</members>
         <members>SVMXC__Site__c.BE_DEF_Navision_Ref_Num__c</members>
+        <members>SVMXC__Site__c.Note_to_Planner__c</members>
         <members>ServiceProject__c.Account__c</members>
         <members>ServiceProject__c.Contact__c</members>
         <members>ServiceProject__c.DEF_Company__c</members>
@@ -121,6 +126,7 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>DEF_IntegrationProfile</members>
         <members>DEF_WW_Issues</members>
         <members>DEF_WW_WorkPerformed</members>
         <name>CustomLabel</name>
@@ -154,6 +160,7 @@
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_PerformedWork_Performed_Type</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_CreatedDate</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_Notes</members>
+        <members>DEF_RunTrigger.DEF_SC_AI</members>
         <name>CustomMetadata</name>
     </types>
     <types>
@@ -162,6 +169,10 @@
         <members>DEF_WorkOrderPlatformEvent__e</members>
         <members>Planned_Parts__c</members>
         <members>Project_Location_Relationship__c</members>
+        <members>SVMXC__Installed_Product__c</members>
+        <members>SVMXC__PM_Plan__c</members>
+        <members>SVMXC__Product_Stock__c</members>
+        <members>SVMXC__Service_Contract__c</members>
         <members>SVMXC__Service_Request__c</members>
         <members>ServiceProject__c</members>
         <name>CustomObject</name>
@@ -174,10 +185,10 @@
         <members>DEF_WW_RampupKPIs/GUQZkXNMcPlkBNVWmRVsHAtWHTnadx</members>
         <name>Dashboard</name>
     </types>
-    <types>
+    <!--<types>
         <members>SVMXC__ServiceMaxDocuments/BelgiumFooter.png</members>
         <name>Document</name>
-    </types>
+    </types>-->
     <types>
         <members>unfiled$public/DEF_IT_Assigned_Technician_Template</members>
         <members>unfiled$public/DEF_IT_Assigned_Technician_Template_Multi_Day</members>
@@ -210,6 +221,7 @@
     </types>
     <types>
         <members>Installation_Discipline</members>
+        <members>Symptoms</members>
         <name>GlobalValueSet</name>
     </types>
     <types>
@@ -256,7 +268,6 @@
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
         <members>DEF_FS_Tech_PS</members>
-        <members>DEF_IT_Sub_Contractor</members>
         <name>PermissionSet</name>
     </types>
     <types>
@@ -269,8 +280,6 @@
         <members>DEF FS Tech</members>
         <members>DEF IT Sub Contractor</members>
         <members>DEF Integration</members>
-        <members>DEF_IT_Sub_Contractors</members>
-        <members>DEF_WW_Support</members>
         <name>Profile</name>
     </types>
     <types>
@@ -301,5 +310,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>50.0</version>
+    <version>51.0</version>
 </Package>

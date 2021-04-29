@@ -1,6 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SVMX_PS_Service_Maintenance_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>DEF_WW_Service_Contract_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>SVMXC__Company__c</fields>
+        <fields>SVMXC__End_Date__c</fields>
+        <fields>SVMX_PS_Expiring_Soon__c</fields>
+        <fields>Alert__c</fields>
+        <fields>SVMXC__Service_Level__c</fields>
+        <label>DEF_WW_Service Contract Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>DEF_WW_Service_Contract_Line_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>SVMXC__Company__c</fields>
+        <fields>SVMXC__End_Date__c</fields>
+        <fields>SVMX_PS_Expiring_Soon__c</fields>
+        <fields>Alert__c</fields>
+        <fields>SVMXC__Service_Level__c</fields>
+        <fields>Contract_Header_Contract_Line__c</fields>
+        <label>DEF_WW_Service Contract Line Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>SVMX_PS_Service_Maintenance_Layout</fullName>
+        <fields>Name</fields>
+        <fields>SVMXC__Company__c</fields>
+        <fields>SVMXC__End_Date__c</fields>
+        <fields>SVMX_PS_Expiring_Soon__c</fields>
+        <fields>SVMX_PS_Upsell_Potential__c</fields>
+        <fields>SVMXC__Service_Level__c</fields>
+        <label>Service Maintenance Layout - PS</label>
+    </compactLayouts>
+    <customHelpPage>SVMXC__SVMX_LaunchHelp</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Service Contract documents details of entitlement provided to a customer for products bought. Usually shipped/delivered products are covered for a predefined period through a basic warranty. If customers wish to get coverage for repairs beyond the normal warranty period, they normally purchase extended service contracts. Service contract is interchangeably referred to as a service agreement as well.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
     <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <description>This field will have the Account Name so that we can search the Contracts on basis of this field because we can use Account (look-up) field in a search criteria for Contract Object.</description>
+        <externalId>false</externalId>
+        <label>Account Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Accreditation__c</fullName>
+        <externalId>false</externalId>
+        <label>Accreditation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Accreditation</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Alert__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (
+ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
+&apos;🚨 Account Blocked 🚨&apos;,
+&apos;Ok ✅&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Alert</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <fields>
         <fullName>BE_DEF_Navision_Ref_Number__c</fullName>
         <externalId>false</externalId>
@@ -10,4 +238,2131 @@
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
     </fields>
+    <fields>
+        <fullName>Back_Office_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Back Office Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Back_Office_System__c</fullName>
+        <externalId>false</externalId>
+        <label>Back Office System</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bill_to__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Bill-to</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Service/Maintenance Contracts (Bill-to)</relationshipLabel>
+        <relationshipName>Service_Maintenance_Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Header_Contract_Line__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMX_PS_Parent_Contract__r.Name+&quot; - &quot;+ Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Header-Contract Line</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Line_Number__c</fullName>
+        <displayFormat>SL-{0000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Contract Line Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>DEF_Company__c</fullName>
+        <externalId>false</externalId>
+        <label>DEF Company</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Company</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Date_of_Notice__c</fullName>
+        <description>Date on which the client notices of his</description>
+        <externalId>false</externalId>
+        <label>Date of Notice</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Installation_Discipline__c</fullName>
+        <externalId>false</externalId>
+        <label>Installation Discipline</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Installation_Discipline</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Installation_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Installation Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bucket</fullName>
+                    <default>false</default>
+                    <label>Bucket</label>
+                </value>
+                <value>
+                    <fullName>Units</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Units</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Installation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Installation</label>
+        <referenceTo>SVMXC__Installed_Product__c</referenceTo>
+        <relationshipLabel>Service Contract</relationshipLabel>
+        <relationshipName>Service_Maintenance_Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Is_Evergreen__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Evergreen</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <referenceTo>SVMXC__Site__c</referenceTo>
+        <relationshipLabel>Service/Maintenance Contracts</relationshipLabel>
+        <relationshipName>Service_Maintenance_Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Part_Discount_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <label>Part Discount %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Preferred_Technician__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Preferred Technician</label>
+        <referenceTo>SVMXC__Service_Group_Members__c</referenceTo>
+        <relationshipLabel>Service/Maintenance Contracts (Preferred Technician)</relationshipLabel>
+        <relationshipName>Service_Maintenance_Contracts_del</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Service/Maintenance Contracts</relationshipLabel>
+        <relationshipName>Service_Maintenance_Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Cancellation__c</fullName>
+        <description>Reason communicated by the client for cancelling the contract</description>
+        <externalId>false</externalId>
+        <label>Reason for Cancellation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cost</fullName>
+                    <default>false</default>
+                    <label>Cost</label>
+                </value>
+                <value>
+                    <fullName>Poor Performance</fullName>
+                    <default>false</default>
+                    <label>Poor Performance</label>
+                </value>
+                <value>
+                    <fullName>Business Status</fullName>
+                    <default>false</default>
+                    <label>Business Status</label>
+                </value>
+                <value>
+                    <fullName>Missing feature set</fullName>
+                    <default>false</default>
+                    <label>Missing feature set</label>
+                </value>
+                <value>
+                    <fullName>Out of state coverage</fullName>
+                    <default>false</default>
+                    <label>Out of state coverage</label>
+                </value>
+                <value>
+                    <fullName>Unserviceable - Facilities</fullName>
+                    <default>false</default>
+                    <label>Unserviceable - Facilities</label>
+                </value>
+                <value>
+                    <fullName>Unserviceable - Product/Design</fullName>
+                    <default>false</default>
+                    <label>Unserviceable - Product/Design</label>
+                </value>
+                <value>
+                    <fullName>Unserviceable - Construction</fullName>
+                    <default>false</default>
+                    <label>Unserviceable - Construction</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RecordType_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RecordType Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal_Price_Increase_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal Price Increase %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Activation_Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Service/Maintenance Contract Activation Notes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service/Maintenance Contract Activation Notes</inlineHelpText>
+        <label>Activation Notes</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Flag indicating if this contract is currently active or not. This flag is checked automatically when you activate a contract</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag indicating if this contract is currently active or not. This flag is checked automatically when you activate a contract</inlineHelpText>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__All_Contacts_Covered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Flag that indicates if all contacts from this customer are entitled for support. This flag does not drive any functionality in ServiceMax and is for informational purposes only</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag that indicates if all contacts from this customer are entitled for support. This flag does not drive any functionality in ServiceMax and is for informational purposes only</inlineHelpText>
+        <label>All Contacts Covered</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__All_Products_Covered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Flag that indicates if this contract covers all products purchased by this customer.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag that indicates if this contract covers all products purchased by this customer.</inlineHelpText>
+        <label>All Products Covered</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__All_Services_Covered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Flag that indicates if the customer is entitled to all types of services offered. This flag does not drive any functionality in ServiceMax and is for informational purposes only</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag that indicates if the customer is entitled to all types of services offered. This flag does not drive any functionality in ServiceMax and is for informational purposes only</inlineHelpText>
+        <label>All Services Covered</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__All_Sites_Covered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Flag that indicates if all customer locations are covered by this contract. This flag does not drive any functionality in ServiceMax and is for informational purposes only</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag that indicates if all customer locations are covered by this contract. This flag does not drive any functionality in ServiceMax and is for informational purposes only</inlineHelpText>
+        <label>All Sites Covered</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Billing_Schedule__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates the frequency of how the customer prefers to be invoiced for the contract amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the frequency of how the customer prefers to be invoiced for the contract amount</inlineHelpText>
+        <label>Billing Schedule</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Annual</fullName>
+                    <default>false</default>
+                    <label>Annual</label>
+                </value>
+                <value>
+                    <fullName>Semi Annual</fullName>
+                    <default>false</default>
+                    <label>Semi Annual</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Full Upfront</fullName>
+                    <default>false</default>
+                    <label>Full Upfront</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Business_Hours__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Business Hours</label>
+        <referenceTo>BusinessHours</referenceTo>
+        <relationshipName>Service_Maintenance_Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Cancelation_Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Service/Maintenance Contract Cancelation Notes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service/Maintenance Contract Cancelation Notes</inlineHelpText>
+        <label>Cancelation Notes</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Canceled_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Name of the salesforce user  that canceled this service contract</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the salesforce user  that canceled this service contract</inlineHelpText>
+        <label>Canceled By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>R00N70000001hzcwEAA</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Canceled_On__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date/time on which this service contract was canceled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/time on which this service contract was canceled</inlineHelpText>
+        <label>Canceled On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Customer to whom this service contract is sold. Is a lookup to an existing salesforce account record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer to whom this service contract is sold. Is a lookup to an existing salesforce account record</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Service/Maintenance Contracts</relationshipLabel>
+        <relationshipName>R00N70000001hzYIEAY</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Name of the contact person from the customer account associated with this contract. Is a lookup to an existing salesforce contact record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the contact person from the customer account associated with this contract. Is a lookup to an existing salesforce contact record</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>R00N70000001hzcEEAQ</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Contract_Price2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total price of the service contract before discount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total price of the service contract before discount</inlineHelpText>
+        <label>Contract Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Contract_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total price of the service contract before discount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total price of the service contract before discount</inlineHelpText>
+        <label>Contract Price(DO NOT USE)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Counter_Usages_Processed_Until__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Counter Usages Processed Until</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Default_Group_Member__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Not used</description>
+        <externalId>false</externalId>
+        <label>Default Group Member</label>
+        <referenceTo>SVMXC__Service_Group_Members__c</referenceTo>
+        <relationshipLabel>Service Contracts (Default Group Member)</relationshipLabel>
+        <relationshipName>Service_Contract</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Default_Parts_Price_Book__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default price book to be used when no parts price is defined</description>
+        <externalId>false</externalId>
+        <label>Default Parts Price Book</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Default_Service_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Not used</description>
+        <externalId>false</externalId>
+        <label>Default Service Group</label>
+        <referenceTo>SVMXC__Service_Group__c</referenceTo>
+        <relationshipLabel>Service Contracts</relationshipLabel>
+        <relationshipName>Service_Contract</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Default_Travel_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Travel Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Default_Travel_Unit__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Travel Unit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Flat Rate</fullName>
+                    <default>false</default>
+                    <label>Flat Rate</label>
+                </value>
+                <value>
+                    <fullName>Per Hour</fullName>
+                    <default>false</default>
+                    <label>Per Hour</label>
+                </value>
+                <value>
+                    <fullName>Tiered Per Mile/Km</fullName>
+                    <default>false</default>
+                    <label>Tiered Per Mile/Km</label>
+                </value>
+                <value>
+                    <fullName>Zone Based</fullName>
+                    <default>false</default>
+                    <label>Zone Based</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Discount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Percentage discount to be applied on the contract price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Percentage discount on the contract price</inlineHelpText>
+        <label>Discount%</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Discounted_Price2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Contract Price minus discount. Calculated automatically</description>
+        <externalId>false</externalId>
+        <formula>SVMXC__Contract_Price2__c - (SVMXC__Contract_Price2__c * SVMXC__Discount__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Contract Price minus discount. Calculated automatically</inlineHelpText>
+        <label>Discounted Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Discounted_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Contract Price minus discount. Calculated automatically</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract Price minus discount. Calculated automatically</inlineHelpText>
+        <label>Discounted Price(DO NOT USE)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>End date of the service contract</description>
+        <externalId>false</externalId>
+        <inlineHelpText>End date of the service contract</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__EndpointURL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Not used</description>
+        <externalId>false</externalId>
+        <formula>$Api.Enterprise_Server_URL_70</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>EndpointURL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Exchange_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Type of exchange allowed as per the service contract</description>
+        <externalId>false</externalId>
+        <label>Exchange Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Advance Exchange</fullName>
+                    <default>false</default>
+                    <label>Advance Exchange</label>
+                </value>
+                <value>
+                    <fullName>Return Exchange</fullName>
+                    <default>false</default>
+                    <label>Return Exchange</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Labor_Rounding_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rounding Type (Labor)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Round Up</fullName>
+                    <default>false</default>
+                    <label>Round Up</label>
+                </value>
+                <value>
+                    <fullName>Round Down</fullName>
+                    <default>false</default>
+                    <label>Round Down</label>
+                </value>
+                <value>
+                    <fullName>Actuals</fullName>
+                    <default>true</default>
+                    <label>Actuals</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Minimum_Labor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Minimum labor price for overtime</description>
+        <externalId>false</externalId>
+        <label>Minimum Labor (Mins)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Minimum_Travel__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Minimum labor price for travel</description>
+        <externalId>false</externalId>
+        <label>Minimum Travel (Mins)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Primary_Technician__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Primary technician for this service contract. Reference to an existing Technician record in ServiceMax</description>
+        <externalId>false</externalId>
+        <label>Primary Technician</label>
+        <referenceTo>SVMXC__Service_Group_Members__c</referenceTo>
+        <relationshipLabel>Service Contracts (Primary Technician)</relationshipLabel>
+        <relationshipName>Service_Contract_Primary_Tech</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Renewal_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date on which the contract was renewed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date on which the contract was renewed</inlineHelpText>
+        <label>Renewal Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Renewal_Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Service/Maintenance Contract Renewal Notes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service/Maintenance Contract Renewal Notes</inlineHelpText>
+        <label>Renewal Notes</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Renewal_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is incremented automatically when an existing service contract is renewed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is incremented automatically when an existing service contract is renewed</inlineHelpText>
+        <label>Renewal Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Renewed_From__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The original service contract from which this contract was renewed. Is populated automatically when a service contract is renewed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The original service contract from which this contract was renewed. Is populated automatically when a service contract is renewed</inlineHelpText>
+        <label>Renewed From</label>
+        <referenceTo>SVMXC__Service_Contract__c</referenceTo>
+        <relationshipLabel>Renewal History</relationshipLabel>
+        <relationshipName>R00N70000001hzdoEAA</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Round_Labor_To_Nearest__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Maximum minutes a technician can work as overtime</description>
+        <externalId>false</externalId>
+        <label>Round Labor To Nearest (Mins)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Round_Travel_To_Nearest__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Upon travel based on timing, what is the increment used to round off travel time</description>
+        <externalId>false</externalId>
+        <label>Round Travel to Nearest (Mins)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__SESSION_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Not used</description>
+        <externalId>false</externalId>
+        <formula>$Api.Session_ID</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SESSION ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Sales_Rep__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Name of the internal sales representative responsible for or involved in selling this contract. Is a lookup to a valid salesforce user</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the internal sales representative responsible for or involved in selling this contract. Is a lookup to a valid salesforce user</inlineHelpText>
+        <label>Sales Rep</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>R00N70000001hzbvEAA</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Select__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Field to bind check box in List of Service Contract Line records on Visualforce page with controller.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field to bind check box in List of Service Contract Line records on Visualforce page with controller.</inlineHelpText>
+        <label>Select</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Service_Contract_Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Free text that shows any exceptions or conditions that apply when entitling the customer based on this contract. Information entered here is displayed on the Case Entitlement when this contract is used.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Define exceptions or conditions that apply when entitling the customer based on this contract. Information entered here is displayed on the Case Entitlement when this contract is used.</inlineHelpText>
+        <label>Service Contract Notes</label>
+        <length>32000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Service_Level__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Service level the customer is entitled to by this contract. Is a lookup to an existing service level record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service level the customer is entitled to by this contract. Is a lookup to an existing service level record</inlineHelpText>
+        <label>SLA Terms</label>
+        <referenceTo>SVMXC__Service_Level__c</referenceTo>
+        <relationshipLabel>Service/Maintenance Contracts</relationshipLabel>
+        <relationshipName>R00N70000001hzdfEAA</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Service_Plan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Plan</label>
+        <referenceTo>SVMXC__Service_Plan__c</referenceTo>
+        <relationshipLabel>Service/Maintenance Contracts</relationshipLabel>
+        <relationshipName>Service_Maintenance_Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Service_Pricebook__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Pricebook</label>
+        <referenceTo>SVMXC__Service_Pricebook__c</referenceTo>
+        <relationshipLabel>Service/Maintenance Contracts</relationshipLabel>
+        <relationshipName>Service_Maintenance_Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Start date of the service contract</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Start date of the service contract</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Travel_Rounding_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rounding Type (Travel)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Round Up</fullName>
+                    <default>false</default>
+                    <label>Round Up</label>
+                </value>
+                <value>
+                    <fullName>Round Down</fullName>
+                    <default>false</default>
+                    <label>Round Down</label>
+                </value>
+                <value>
+                    <fullName>Actuals</fullName>
+                    <default>false</default>
+                    <label>Actuals</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Weeks_To_Renewal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of weeks before the contract expires. Calculated automatically</description>
+        <externalId>false</externalId>
+        <formula>(SVMXC__End_Date__c - TODAY()) / 7</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Weeks To Renewal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Zone__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Zone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Zone 1</fullName>
+                    <default>false</default>
+                    <label>Zone 1</label>
+                </value>
+                <value>
+                    <fullName>Zone 2</fullName>
+                    <default>false</default>
+                    <label>Zone 2</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMX_PS_Contract_Renewed__c</fullName>
+        <description>This is used to calculate Contract Renewal Rate. If there is a Renewal Date field it will return a value of 1. If the field is blank the value of 0 is returned.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISNULL( SVMXC__Renewal_Date__c ) , 0, 1)</formula>
+        <label>Contract Renewed</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMX_PS_Expiring_Soon__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(
+if( SVMXC__End_Date__c &gt;= TODAY()+91, &quot;/resource/ServiceMaxIcons/OK.png&quot;,
+if( SVMXC__End_Date__c &lt; TODAY()+90, &quot;/resource/ServiceMaxIcons/No.png&quot;,
+&quot;/s.gif&quot;)
+),
+&quot;Expiration Flag&quot;, 16,16) +
+/*if( SVMXC__End_Date__c &gt;= TODAY()+91, &quot; No&quot;, &quot; Yes&quot;) */
+if( SVMXC__End_Date__c &lt; TODAY(), &quot; Expired&quot;, if( SVMXC__End_Date__c &gt;= TODAY()+91, &quot; No&quot;, &quot; Yes&quot;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expiring Soon?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMX_PS_External_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>SVMX_PS_Parent_Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Contract</label>
+        <referenceTo>SVMXC__Service_Contract__c</referenceTo>
+        <relationshipLabel>Contract Line</relationshipLabel>
+        <relationshipName>ContractLine</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMX_PS_Renewed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Renewed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMX_PS_Upsell_Potential__c</fullName>
+        <externalId>false</externalId>
+        <formula>IMAGE(
+if( SVMXC__End_Date__c &lt; TODAY()+90, &quot;/resource/ServiceMaxIcons/YesUpsell.png&quot;,
+if( SVMXC__End_Date__c &gt; TODAY()+90, &quot;/resource/ServiceMaxIcons/NoUpsell.png&quot;,
+&quot;/s.gif&quot;)
+),
+&quot;UpSell Potential&quot;, 20, 20)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Upsell Potential</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Maintenance_Contract_Line__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Service Contract Line</description>
+        <externalId>false</externalId>
+        <label>Service/Maintenance Contract Line</label>
+        <referenceTo>SVMXC__Service_Contract__c</referenceTo>
+        <relationshipLabel>Service Maintenance Contract Lines</relationshipLabel>
+        <relationshipName>Service_Maintenance_Contracts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Signature_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Signature Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Expired</fullName>
+                    <default>false</default>
+                    <label>Expired</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Top_Level__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Top-Level</label>
+        <referenceTo>SVMXC__Installed_Product__c</referenceTo>
+        <relationshipLabel>Service/Maintenance Contracts (Top-Level)</relationshipLabel>
+        <relationshipName>Service_Maintenance_Contracts1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Service/Maintenance Contract</label>
+    <listViews>
+        <fullName>Active_Service_Contract_lines</fullName>
+        <columns>SVMX_PS_Parent_Contract__c</columns>
+        <columns>NAME</columns>
+        <columns>SVMXC__Company__c</columns>
+        <columns>SVMXC__Contact__c</columns>
+        <columns>SVMXC__Start_Date__c</columns>
+        <columns>SVMXC__End_Date__c</columns>
+        <columns>Installation__c</columns>
+        <columns>SVMXC__Service_Plan__c</columns>
+        <columns>SVMXC__Service_Level__c</columns>
+        <columns>SVMX_PS_External_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SVMXC__Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>SVMXC__Service_Contract__c.Contract_Line</value>
+        </filters>
+        <label>Active Service Contract Lines</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Service_Contracts</fullName>
+        <columns>NAME</columns>
+        <columns>SVMXC__Active__c</columns>
+        <columns>SVMXC__Company__c</columns>
+        <columns>SVMXC__Contact__c</columns>
+        <columns>SVMXC__Start_Date__c</columns>
+        <columns>SVMXC__End_Date__c</columns>
+        <columns>Is_Evergreen__c</columns>
+        <columns>SVMX_PS_External_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>SVMXC__Service_Contract__c.Contract_Header</value>
+        </filters>
+        <label>All Service Contracts</label>
+    </listViews>
+    <listViews>
+        <fullName>Contracts_to_be_set_up</fullName>
+        <columns>NAME</columns>
+        <columns>SVMXC__Company__c</columns>
+        <columns>SVMXC__Contact__c</columns>
+        <columns>SVMXC__Start_Date__c</columns>
+        <columns>SVMXC__End_Date__c</columns>
+        <columns>Is_Evergreen__c</columns>
+        <columns>SVMX_PS_External_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>SVMXC__Service_Contract__c.Contract_Header</value>
+        </filters>
+        <label>Contracts to be set up</label>
+    </listViews>
+    <listViews>
+        <fullName>SVMXC__Active_Service_Contracts</fullName>
+        <columns>NAME</columns>
+        <columns>SVMXC__Company__c</columns>
+        <columns>SVMXC__Contact__c</columns>
+        <columns>SVMXC__Start_Date__c</columns>
+        <columns>SVMXC__End_Date__c</columns>
+        <columns>Is_Evergreen__c</columns>
+        <columns>SVMX_PS_External_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SVMXC__Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>SVMXC__Service_Contract__c.Contract_Header</value>
+        </filters>
+        <label>Active Service Contracts</label>
+    </listViews>
+    <nameField>
+        <label>Contract Name/Number</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Service/Maintenance Contracts</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Contract_Header</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>DEF_WW_Service_Contract_Compact_Layout</compactLayoutAssignment>
+        <label>Contract Header</label>
+        <picklistValues>
+            <picklist>Accreditation__c</picklist>
+            <values>
+                <fullName>Jail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nuclear Plant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Access 001</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>DEF_Company__c</picklist>
+            <values>
+                <fullName>BE_DEF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BE_VLV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GB_Clarkson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT_DEF</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Installation_Discipline__c</picklist>
+            <values>
+                <fullName>ID0001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0070</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0080</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0090</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0110</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0120</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0130</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0150</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0160</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0170</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0180</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0190</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0210</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0220</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0230</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0240</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0250</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0270</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0280</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0290</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0310</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0320</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0330</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0340</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0350</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0360</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Installation_Type__c</picklist>
+            <values>
+                <fullName>Bucket</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_for_Cancellation__c</picklist>
+            <values>
+                <fullName>Business Status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing feature set</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Out of state coverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poor Performance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unserviceable - Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unserviceable - Facilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unserviceable - Product%2FDesign</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Billing_Schedule__c</picklist>
+            <values>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full Upfront</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi Annual</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Default_Travel_Unit__c</picklist>
+            <values>
+                <fullName>Flat Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Per Hour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tiered Per Mile%2FKm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zone Based</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Exchange_Type__c</picklist>
+            <values>
+                <fullName>Advance Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return Exchange</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Labor_Rounding_Type__c</picklist>
+            <values>
+                <fullName>Actuals</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Round Down</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Round Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Travel_Rounding_Type__c</picklist>
+            <values>
+                <fullName>Actuals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Round Down</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Round Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Zone__c</picklist>
+            <values>
+                <fullName>Zone 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zone 2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Contract_Line</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>DEF_WW_Service_Contract_Line_Compact_Layout</compactLayoutAssignment>
+        <label>Contract Line</label>
+        <picklistValues>
+            <picklist>Accreditation__c</picklist>
+            <values>
+                <fullName>Jail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nuclear Plant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Access 001</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>DEF_Company__c</picklist>
+            <values>
+                <fullName>BE_DEF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BE_VLV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GB_Clarkson</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT_DEF</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Installation_Discipline__c</picklist>
+            <values>
+                <fullName>ID0001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0070</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0080</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0090</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0110</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0120</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0130</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0150</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0160</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0170</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0180</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0190</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0210</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0220</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0230</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0240</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0250</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0270</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0280</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0290</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0300</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0310</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0320</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0330</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0340</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0350</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0360</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Installation_Type__c</picklist>
+            <values>
+                <fullName>Bucket</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_for_Cancellation__c</picklist>
+            <values>
+                <fullName>Business Status</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing feature set</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Out of state coverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poor Performance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unserviceable - Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unserviceable - Facilities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unserviceable - Product%2FDesign</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Billing_Schedule__c</picklist>
+            <values>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Full Upfront</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi Annual</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Default_Travel_Unit__c</picklist>
+            <values>
+                <fullName>Flat Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Per Hour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tiered Per Mile%2FKm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zone Based</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Exchange_Type__c</picklist>
+            <values>
+                <fullName>Advance Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return Exchange</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Labor_Rounding_Type__c</picklist>
+            <values>
+                <fullName>Actuals</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Round Down</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Round Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Travel_Rounding_Type__c</picklist>
+            <values>
+                <fullName>Actuals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Round Down</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Round Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Zone__c</picklist>
+            <values>
+                <fullName>Zone 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zone 2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>SVMXC__Company__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SVMXC__Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SVMXC__Active__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SVMXC__Renewal_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SVMXC__Renewal_Number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SVMXC__Start_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SVMXC__End_Date__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>SVMXC__Company__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SVMXC__Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SVMXC__Active__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SVMXC__Renewal_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SVMXC__Renewal_Number__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SVMXC__Start_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SVMXC__End_Date__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SVMXC__Company__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SVMXC__Contact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SVMXC__Active__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SVMXC__Renewal_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SVMXC__Renewal_Number__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SVMXC__Start_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SVMXC__End_Date__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>SVMXC__Company__c</searchFilterFields>
+        <searchFilterFields>SVMXC__Contact__c</searchFilterFields>
+        <searchFilterFields>SVMXC__Active__c</searchFilterFields>
+        <searchFilterFields>SVMXC__Renewal_Date__c</searchFilterFields>
+        <searchFilterFields>SVMXC__Renewal_Number__c</searchFilterFields>
+        <searchFilterFields>SVMXC__Start_Date__c</searchFilterFields>
+        <searchFilterFields>SVMXC__End_Date__c</searchFilterFields>
+        <searchFilterFields>SVMXC__Contract_Price2__c</searchFilterFields>
+        <searchResultsAdditionalFields>SVMXC__Company__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SVMXC__Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SVMXC__Active__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SVMXC__Renewal_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SVMXC__Renewal_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SVMXC__Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SVMXC__End_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>DEF_WW_Make_Contract_As_ReadOnly</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+    CONTAINS($Label.DEF_Contract_Validation_Profile,$Profile.Name), 
+TEXT(PRIORVALUE(Status__c)) = &apos;Active&apos;, 
+OR(ISCHANGED(SVMX_PS_Parent_Contract__c),
+ISCHANGED(Name),
+ISCHANGED(SVMXC__Active__c),
+ISCHANGED(Status__c),
+ISCHANGED(SVMXC__Company__c),
+ISCHANGED(SVMXC__Contact__c),
+ISCHANGED(SVMXC__Service_Contract_Notes__c),
+ISCHANGED(Location__c),
+ISCHANGED(SVMXC__Start_Date__c),
+ISCHANGED(SVMXC__End_Date__c),
+ISCHANGED(Installation__c),
+ISCHANGED(SVMXC__Service_Plan__c),
+ISCHANGED(Preferred_Technician__c),
+ISCHANGED(SVMXC__Sales_Rep__c),
+ISCHANGED(Description__c),
+ISCHANGED(Signature_Date__c),
+ISCHANGED(Bill_to__c),
+ISCHANGED(Is_Evergreen__c),
+ISCHANGED(SVMXC__Renewal_Number__c),
+ISCHANGED(SVMX_PS_Renewed__c),
+ISCHANGED(SVMXC__Renewal_Date__c),
+ISCHANGED(SVMXC__Renewed_From__c),
+ISCHANGED(Renewal_Price_Increase_Percentage__c),
+ISCHANGED(Date_of_Notice__c),
+ISCHANGED(Reason_for_Cancellation__c),
+ISCHANGED(SVMXC__Canceled_By__c),
+ISCHANGED(SVMXC__Canceled_On__c),
+ISCHANGED(OwnerId)
+)
+)</errorConditionFormula>
+        <errorMessage>Contract cannot be modified. Please contact System Administrator</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SVMXC__Service_Contract_Future_End_Date</fullName>
+        <active>false</active>
+        <description>Service contract end date should be in the future</description>
+        <errorConditionFormula>AND(ISNEW(),  SVMXC__End_Date__c  &lt;  TODAY())</errorConditionFormula>
+        <errorDisplayField>SVMXC__End_Date__c</errorDisplayField>
+        <errorMessage>End date should be a future date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SVMXC__Service_Contract_Start_End_Date</fullName>
+        <active>true</active>
+        <description>Service contract should have valid start and end dates</description>
+        <errorConditionFormula>SVMXC__End_Date__c  &lt;  SVMXC__Start_Date__c</errorConditionFormula>
+        <errorDisplayField>SVMXC__End_Date__c</errorDisplayField>
+        <errorMessage>End date should be greater or equal to Start date.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>SVMXC__Activate_Contract</fullName>
+        <availability>online</availability>
+        <description>Activate service contract</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Activate Contract</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR($Site.Prefix+&apos;/apex/SVMXC__SCON_Activation?id=&apos;+SVMXC__Service_Contract__c.Id)}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SVMXC__Cancel_Contract</fullName>
+        <availability>online</availability>
+        <description>Cancel Service Contract</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Cancel Contract</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR($Site.Prefix+&apos;/apex/SVMXC__SCON_Cancelation?id=&apos;+SVMXC__Service_Contract__c.Id)}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SVMXC__Coverage_By_Counters</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Coverage By Counters</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR($Site.Prefix+&apos;/apex/SVMXC__IPRD_CoverageByCounters_SContract?PId=&apos;+SVMXC__Service_Contract__c.Id)}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SVMXC__Preventive_Maintenance</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Preventive Maintenance</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR($Site.Prefix+&apos;/apex/SVMXC__PREV_ManagePMPlans?scid=&apos;+SVMXC__Service_Contract__c.Id)}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SVMXC__Print_Contract</fullName>
+        <availability>online</availability>
+        <description>Launch mail merge to print service contract details</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Generate Document(s)</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR($Site.Prefix+&apos;/apex/SVMXC__OPDOC_Delivery?SVMX_recordId=&apos;+SVMXC__Service_Contract__c.Id+&apos;&amp;SVMX_retURL=&apos;+SVMXC__Service_Contract__c.Id+&apos;&amp;SVMX_processId=SC_Report_001&apos;)}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SVMXC__Renew_Contract</fullName>
+        <availability>online</availability>
+        <description>Renew Service Contract</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Renew Contract</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>{!URLFOR($Site.Prefix+&apos;/apex/SVMXC__SCON_Renewal?id=&apos;+SVMXC__Service_Contract__c.Id)}</url>
+    </webLinks>
 </CustomObject>
