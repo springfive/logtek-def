@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>DEF_IT_Sub_Contractors_Chatter</application>
@@ -1907,7 +1907,7 @@
         <recordType>SVMXC__Service_Contract__c.Contract_Line</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
-    <recordTypeVisibilities>
+   <!--<recordTypeVisibilities>
         <default>false</default>
         <recordType>SVMXC__Service_Order__c.New_Works</recordType>
         <visible>true</visible>
@@ -1916,10 +1916,10 @@
         <default>false</default>
         <recordType>SVMXC__Service_Order__c.SmallWorks_PTX</recordType>
         <visible>true</visible>
-    </recordTypeVisibilities>
+    </recordTypeVisibilities>-->
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
-        <visible>DefaultOn</visible>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce Platform</userLicense>
     <userPermissions>
