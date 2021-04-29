@@ -271,6 +271,25 @@
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>Client_Request_Closed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Client Request Closed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Client_Request_Closure_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Request Closure Comment</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>Confirmation_Request_Status__c</fullName>
         <defaultValue>&quot;Request Not Sent&quot;</defaultValue>
         <externalId>false</externalId>

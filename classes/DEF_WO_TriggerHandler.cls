@@ -357,12 +357,6 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                 //DEF_WO_TriggerHelper.SetOwnerTOWorkOrder(WoListForOwnerUpdate,PrimaryTerritorySet);
             }
             //**End-->Apex code to set the Owner of WO from Owner of Territory
-
-            if(workOrderSdMap.size()>0 &&pmScheduleDefSet.size()>0 ){
-                DEF_WO_TriggerHelper.workDetailFromPlannedParts(workOrderSdMap,pmScheduleDefSet);
-
-            }
-
             
             
                         
