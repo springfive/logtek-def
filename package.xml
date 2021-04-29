@@ -3,11 +3,15 @@
     <types>
         <members>DEF_SC_RestAPICall</members>
         <members>DEF_SC_RestAPICallTest</members>
+        <members>DEF_SC_TriggerHandler</members>
+        <members>DEF_SC_TriggerHelper</members>
+        <members>DEF_StringHelper</members>
         <members>DEF_WO_PE_TriggerTest</members>
         <members>DEF_WO_TriggerHandler</members>
         <name>ApexClass</name>
     </types>
     <types>
+        <members>DEF_SC_Trigger</members>
         <members>DEF_WO_PE_Trigger</members>
         <name>ApexTrigger</name>
     </types>
@@ -80,6 +84,8 @@
         <members>SVMXC__Service_Order__c.Intervention_Start_Date_and_Time__c</members>
         <members>SVMXC__Service_Order__c.Is_First_Time_Fixed__c</members>
         <members>SVMXC__Service_Order__c.Language__c</members>
+        <members>SVMXC__Service_Order__c.Log_Verification__c</members>
+        <members>SVMXC__Service_Order__c.Non_Compliance_Reported__c</members>
         <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.PM_Schedule_Definition__c</members>
         <members>SVMXC__Service_Order__c.ProjectManagerEmail__c</members>
@@ -98,11 +104,7 @@
         <members>SVMXC__Service_Order__c.Symptom__c</members>
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
         <members>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</members>
-		<members>SVMXC__Service_Order__c.Log_Verification__c</members>
-		<members>SVMXC__Service_Order__c.Non_Compliance_Reported__c</members>
-		<!--<members>SVMXC__Service_Order__c.Owner_Full_Name__c</members>-->
-		<members>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</members>
-		<members>SVMXC__Site__c.Note_to_Planner__c</members>
+        <members>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</members>
         <members>SVMXC__Service_Request__c.Call_Date_Time__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
         <members>SVMXC__Service_Request__c.InitialResponseCustomerBy__c</members>
@@ -111,6 +113,7 @@
         <members>SVMXC__Service_Request__c.Tech_BusinessHours__c</members>
         <members>SVMXC__Service_Request__c.Time_Elapsed__c</members>
         <members>SVMXC__Site__c.BE_DEF_Navision_Ref_Num__c</members>
+        <members>SVMXC__Site__c.Note_to_Planner__c</members>
         <members>ServiceProject__c.Account__c</members>
         <members>ServiceProject__c.Contact__c</members>
         <members>ServiceProject__c.DEF_Company__c</members>
@@ -125,6 +128,7 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>DEF_IntegrationProfile</members>
         <members>DEF_WW_Issues</members>
         <members>DEF_WW_WorkPerformed</members>
         <name>CustomLabel</name>
@@ -158,6 +162,7 @@
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_PerformedWork_Performed_Type</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_CreatedDate</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_Notes</members>
+        <members>DEF_RunTrigger.DEF_SC_AI</members>
         <name>CustomMetadata</name>
     </types>
     <types>
