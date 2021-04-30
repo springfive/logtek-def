@@ -270,9 +270,22 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Product_Stock__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Stock</label>
+        <referenceTo>SVMXC__Product_Stock__c</referenceTo>
+        <relationshipLabel>Work Details</relationshipLabel>
+        <relationshipName>Work_Details</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Product_Type__c</fullName>
         <externalId>false</externalId>
-        <formula>TEXT( SVMXC__Serial_Number__r.SVMXC__Product__r.SVMXC__Product_Line__c)</formula>
+        <formula>TEXT(SVMXC__Serial_Number__r.SVMXC__Product__r.SVMXC__Product_Type__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Product Type</label>
         <required>false</required>
@@ -602,4 +615,27 @@
         <errorConditionFormula>DATEVALUE( SVMXC__Start_Date_and_Time__c )  &lt;&gt;  DATEVALUE(SVMXC__End_Date_and_Time__c)</errorConditionFormula>
         <errorMessage>Start Date Time and End Date Time Should Belong to the same date</errorMessage>
     </validationRules>
+    <fields>
+        <fullName>ShowMilesDriven__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Display or not Miles Driven in SIR</description>
+        <externalId>false</externalId>
+        <label>Show Miles Driven</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Technician_Van_Stock__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Stock Location</label>
+        <referenceTo>SVMXC__Site__c</referenceTo>
+        <relationshipLabel>Work Details (Stock Location)</relationshipLabel>
+        <relationshipName>Work_Details</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
 </CustomObject>

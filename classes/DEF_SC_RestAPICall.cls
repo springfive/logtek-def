@@ -1,12 +1,12 @@
 /**
- * @description       : 
- * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
- * @group             : 
- * @last modified on  : 12-11-2020
- * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
- * Modifications Log 
- * Ver   Date         Author                               Modification
- * 1.0   09-24-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+* @description       : 
+* @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+* @group             : 
+* @last modified on  : 04-30-2021
+* @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+* Modifications Log 
+* Ver   Date         Author                               Modification
+* 1.0   09-24-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
 **/
 @RestResource(urlMapping='/v2/servicecontract/*')
 global class DEF_SC_RestAPICall {
@@ -25,13 +25,16 @@ global class DEF_SC_RestAPICall {
         global string BillTo{get;set;}
         global String Description{get;set;}
         global String IsEvergreen{get;set;}
-       // global String Company{get;set;}
+        // global String Company{get;set;}
         global String DefCompany{get;set;}
         global String InstallationDiscipline{get;set;}
+        global String BillingSchedule{get;set;}
         global List<contractLineWrapper> ContractLines{get;set;}
     }
     global class contractLineWrapper {
         global string Name {get; set;}
+        global string contractLineName {get; set;}
+        global string AccountId{get;set;}
         global string StartDate {get; set;}
         global string EndDate {get; set;}
         global string Installation {get; set;}
@@ -41,10 +44,17 @@ global class DEF_SC_RestAPICall {
         global string Status{get;set;}
         global string contractLineId{get;set;}
         global String InstallationDiscipline{get;set;}
-        
-        
+        global String ServicePlan{get;set;}
+        global List<IncludedServicesWrapper> IncludedServices{get;set;}
     }
-   
+    global class IncludedServicesWrapper {
+        global String IncludedServiceId;
+        global String ServiceType;
+        global String contractId;
+        global String contractLineId;
+        global String Company{get;set;}
+    }
+    
     global class ResponseContractWrapper{
         
         global id contractId {get;set;}
@@ -60,10 +70,10 @@ global class DEF_SC_RestAPICall {
         global string contractLineName {get;set;}
         global String errorDetails{get;set;}
     }
-   
+    
     public static List<SVMXC__Service_Contract__c> getHeaderContractFromWrapper(List<contractHeaderWrapper> serviceContracts,String actionName){
         List<SVMXC__Service_Contract__c> headerContractList=new List<SVMXC__Service_Contract__c>();
-       
+        
         String headerRecordTypeId = String.valueOf(Schema.SObjectType.SVMXC__Service_Contract__c.getRecordTypeInfosByName().get('Contract Header').getRecordTypeId());
         for(contractHeaderWrapper header:serviceContracts)
         {
@@ -115,7 +125,6 @@ global class DEF_SC_RestAPICall {
             if(!String.isBlank(header.InstallationDiscipline)){
                 headerInstance.Installation_Discipline__c=header.InstallationDiscipline;
             }
-
             
             headerContractList.add(headerInstance);
         }
@@ -185,7 +194,6 @@ global class DEF_SC_RestAPICall {
                 }
                 //***Add Dependent Fields of location in Contract Line***/
                 if(!String.isBlank(contractLineInstance.Location)){
-
                     if(locationMap.containsKey(contractLineInstance.Location)){
                         SVMXC__Site__c siteInstance=locationMap.get(contractLineInstance.Location);
                         cl.Accreditation__c=siteInstance.Accreditation__c;
@@ -213,7 +221,10 @@ global class DEF_SC_RestAPICall {
                     }
                    
                 }
-                
+                //New Field: Service Plan
+                if(!String.isBlank(contractLineInstance.ServicePlan)){
+                    cl.SVMXC__Service_Plan__c=contractLineInstance.ServicePlan;
+                }
                 contractLineValidatedList.add(cl);
             }
         }
@@ -401,7 +412,6 @@ global class DEF_SC_RestAPICall {
         //Get The Location details using SOQL Query and Create a Map of Location Id-> Sobject Record Location
         List<SVMXC__Site__c> locationList=[SELECT Accreditation__c,Id,Name,SVMXC__Preferred_Business_Hours__c,SVMX_PS_Preferred_Technician__c FROM SVMXC__Site__c];
         Map<Id,SVMXC__Site__c> locationMap=new Map<Id,SVMXC__Site__c>(locationList);
-
         Map<String,SVMXC__Service_Contract__c> extIdToSC=new Map<String,SVMXC__Service_Contract__c>();
         for (Integer k=0;k<headerResultList.size();k++) {
             if (headerResultList[k].isSuccess()) {
@@ -428,7 +438,6 @@ global class DEF_SC_RestAPICall {
             ResponseContractLineWrapper lineInstance=new ResponseContractLineWrapper();
             if(lineResultList[k].isSuccess())
             {
-
                 lineInstance.contractLineId=lineResultList[k].getId();
                 lineInstance.BOContractLineId=contractLineValidatedList[k].SVMX_PS_External_ID__c;
                 lineInstance.contractLineName=contractLineValidatedList[k].Name;
@@ -466,9 +475,105 @@ global class DEF_SC_RestAPICall {
             }
             contractResponseList.add(res);
         }
-    return contractResponseList;
+        return contractResponseList;
         
     }
     
+    @HttpGet
+    global static List<contractHeaderWrapper> getServiceContract(){
+        RestRequest req = RestContext.request;
+        RestResponse res = RestContext.response;
+        //get id from the requested url
+        String ServiceContractID = req.requestURI.substring(req.requestURI.lastIndexOf('/')+1);
+        if(String.isNotBlank(ServiceContractID)){
+            //instance for wrapper
+            List<contractHeaderWrapper> response = new List<contractHeaderWrapper>();
+            ID recordId = ServiceContractID;	
+            DescribeSObjectResult describeResult = recordId.getSObjectType().getDescribe();	
+            //retrieve the names of all fields for Header Contract
+            List<String> fieldNames = new List<String>( describeResult.fields.getMap().keySet() );	
+            String query =	  ' SELECT ' +	      String.join( fieldNames, ',' ) +	  ' FROM ' +	      describeResult.getName() +	  ' WHERE ' +	      ' id = :recordId ' +	  ' LIMIT 1 '	;	
+            // return generic list of sobjects or typecast to expected type	
+            List<SVMXC__Service_Contract__c> headercontractList = Database.query( query );
+            
+            //List of ContractLine:
+            List<SVMXC__Service_Contract__c> contractLineList = [SELECT ID,Name,SVMX_PS_Parent_Contract__c,
+                                                                 SVMXC__Company__c,Location__c, Installation__c, SVMXC__End_Date__c,
+                                                                 SVMXC__Start_Date__c,SVMX_PS_External_ID__c
+                                                                 FROM SVMXC__Service_Contract__c 
+                                                                 WHERE SVMX_PS_Parent_Contract__c =: recordId];
+            if(!headercontractList.isEmpty()){
+                //List of Included Service:
+                List<SVMXC__Service_Contract_Services__c> incserviceList= [SELECT Id, SVMXC__Service__r.Name,SVMXC__Service_Contract__c,SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c,
+                                                                           SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__r.DEF_Company__c
+                                                                           FROM SVMXC__Service_Contract_Services__c
+                                                                           WHERE SVMXC__Service_Contract__c IN : contractLineList];
+               
+                //Create Map where key--> ContractLineId and value--> list<IncludedServicesWrapper>:
+                Map<Id,List<IncludedServicesWrapper>> lineServiceWrapperMap = new Map<Id,List<IncludedServicesWrapper>>();
+                for(SVMXC__Service_Contract_Services__c serObj : incserviceList){
+                    List<IncludedServicesWrapper> serviceWrapperList = new List<IncludedServicesWrapper>();
+                    IncludedServicesWrapper incWrapper = new IncludedServicesWrapper();
+                    incWrapper.IncludedServiceId = serObj.Id;
+                    incWrapper.ServiceType = serObj.SVMXC__Service__r.Name;
+                    incWrapper.contractId = serObj.SVMXC__Service_Contract__c;
+                    incWrapper.contractLineId = serObj.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c;
+                    incWrapper.Company = serObj.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__r.DEF_Company__c;
+                    serviceWrapperList.add(incWrapper);
+                    if(lineServiceWrapperMap.containsKey(serObj.SVMXC__Service_Contract__c)){
+                        lineServiceWrapperMap.get(serObj.SVMXC__Service_Contract__c).addAll(serviceWrapperList);
+                    }else{
+                        lineServiceWrapperMap.put(serObj.SVMXC__Service_Contract__c,serviceWrapperList);
+                    }
+                }
+                
+                //Create Map where key-->ParentContractId and values -->List<ContractLineWrapper>
+                Map<Id,List<contractLineWrapper>> headerLineWrapperMap = new Map<Id,List<contractLineWrapper>>();
+                for(SVMXC__Service_Contract__c lineObj : contractLineList){
+                    List<contractLineWrapper> lineWrapperList = new List<contractLineWrapper>();
+                    contractLineWrapper lineWrapperObj = new contractLineWrapper();
+                    lineWrapperObj.contractLineId = lineObj.Id;
+                    lineWrapperObj.contractLineName = lineObj.Name;
+                    lineWrapperObj.AccountId = lineObj.Id;
+                    lineWrapperObj.Location = lineObj.Id;
+                    lineWrapperObj.Installation = String.valueOf(lineObj.Installation__c);
+                    lineWrapperObj.StartDate = String.valueOf(lineObj.SVMXC__Start_Date__c);
+                    lineWrapperObj.EndDate = String.valueOf(lineObj.SVMXC__End_Date__c);
+                    lineWrapperObj.BOContractLineId = lineObj.SVMX_PS_External_ID__c;
+                    lineWrapperObj.IncludedServices = lineServiceWrapperMap.get(lineObj.Id);
+                    lineWrapperList.add(lineWrapperObj);
+                    if(headerLineWrapperMap.containsKey(lineObj.SVMX_PS_Parent_Contract__c)){
+                        headerLineWrapperMap.get(lineObj.SVMX_PS_Parent_Contract__c).addAll(lineWrapperList);
+                    }else{
+                        headerLineWrapperMap.put(lineObj.SVMX_PS_Parent_Contract__c,lineWrapperList);
+                    }
+                }
 
+				//Set Header values:                
+                for(SVMXC__Service_Contract__c headerInstance : headercontractList){
+                    List<contractHeaderWrapper> headerWrapperList = new List<contractHeaderWrapper>();
+                    contractHeaderWrapper headerWrapperObj = new contractHeaderWrapper();
+                    //headerWrapperObj.contractId = headerInstance.Id;
+                    headerWrapperObj.Name = headerInstance.Name;
+                    headerWrapperObj.AccountId = headerInstance.SVMXC__Company__c;
+                    headerWrapperObj.IsEvergreen = String.valueof(headerInstance.Is_Evergreen__c);
+                    headerWrapperObj.BillingSchedule = headerInstance.SVMXC__Billing_Schedule__c;
+                    headerWrapperObj.StartDate = String.valueOf(headerInstance.SVMXC__Start_Date__c);
+                    headerWrapperObj.EndDate = String.valueOf(headerInstance.SVMXC__End_Date__c);
+                    headerWrapperObj.Status = headerInstance.Status__c;
+                    headerWrapperObj.BOContractId = headerInstance.SVMX_PS_External_ID__c;
+                    headerWrapperObj.BOSystem = headerInstance.Back_Office_System__c;
+                    headerWrapperObj.BOCountry = headerInstance.Back_Office_Country__c;
+                    headerWrapperObj.ContractLines = headerLineWrapperMap.get(headerInstance.Id);
+                    response.add(headerWrapperObj);
+                }
+                return response;
+            }
+            return null;
+        }else{
+            return null;
+        }
+        
+    }
+    
 }

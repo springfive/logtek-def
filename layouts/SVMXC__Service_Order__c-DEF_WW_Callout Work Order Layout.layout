@@ -64,12 +64,28 @@
                 <field>RootCause__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Symptoms__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>internal_comments__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Number_of_Technicians_Needed__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>QuoteReference__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>BE_DEF_Navision_Ref_Number__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Installation_Status__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -124,6 +140,14 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Quote_Received__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Quote_Description__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ServiceProject__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -196,6 +220,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Relevant_Details_Of_The_Work_Carried_Out__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Non_Compliance_Reported__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -450,14 +478,14 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>FeedItem.ContentPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>1</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>FeedItem.TextPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>FeedItem.ContentPost</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>1</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>NewEvent</actionName>
@@ -544,7 +572,10 @@
         <fields>NAME</fields>
         <fields>CREATED_DATE</fields>
         <fields>Difficulties_Met__c</fields>
+        <fields>ServiceProject__c</fields>
         <fields>Technician_notes__c</fields>
+        <fields>Work_Performed__c</fields>
+        <fields>WorkPerformed__c</fields>
         <relatedList>Issue__c.Associated_Work_Order__c</relatedList>
     </relatedLists>
     <relatedLists>

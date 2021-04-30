@@ -228,6 +228,21 @@
         <externalId>false</externalId>
         <label>Issue Location</label>
         <referenceTo>SVMXC__Site__c</referenceTo>
+    </fields>
+    <fields>
+        <fullName>NeedsToBeReviewedByManager__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Needs to be reviewed by Manager</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ServiceProject__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Service Project</label>
+        <referenceTo>ServiceProject__c</referenceTo>
         <relationshipLabel>Issues</relationshipLabel>
         <relationshipName>Issues</relationshipName>
         <required>false</required>
@@ -251,9 +266,9 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>OLD_Symptoms__c</fullName>
+        <fullName>Status__c</fullName>
         <externalId>false</externalId>
-        <label>OLD_Symptoms</label>
+        <label>Status</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -262,58 +277,21 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Work</fullName>
+                    <fullName>Open</fullName>
                     <default>false</default>
-                    <label>Work</label>
+                    <label>Open</label>
                 </value>
                 <value>
-                    <fullName>Water infiltration</fullName>
+                    <fullName>Inprogress</fullName>
                     <default>false</default>
-                    <label>Water infiltration</label>
+                    <label>In progress</label>
                 </value>
                 <value>
-                    <fullName>Thunderstorm</fullName>
+                    <fullName>Closed</fullName>
                     <default>false</default>
-                    <label>Thunderstorm</label>
-                </value>
-                <value>
-                    <fullName>Electrical surge</fullName>
-                    <default>false</default>
-                    <label>Electrical surge</label>
-                </value>
-                <value>
-                    <fullName>Unintentional damage</fullName>
-                    <default>false</default>
-                    <label>Unintentional damage</label>
-                </value>
-                <value>
-                    <fullName>Vandalism</fullName>
-                    <default>false</default>
-                    <label>Vandalism</label>
-                </value>
-                <value>
-                    <fullName>Polluted environment</fullName>
-                    <default>false</default>
-                    <label>Polluted environment</label>
-                </value>
-                <value>
-                    <fullName>Wear-off</fullName>
-                    <default>false</default>
-                    <label>Wear-off</label>
+                    <label>Closed</label>
                 </value>
             </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>Root_Cause_Old__c</fullName>
-        <externalId>false</externalId>
-        <label>Root Cause</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>RootCause</valueSetName>
         </valueSet>
     </fields>
     <fields>
@@ -335,18 +313,6 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
-    </fields>
-    <fields>
-        <fullName>Symptoms_Old__c</fullName>
-        <externalId>false</externalId>
-        <label>Symptoms</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>Type_of_Concerned_device</valueSetName>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Symptoms__c</fullName>
@@ -396,175 +362,24 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Type_Of_Concerned_Device_OLD__c</fullName>
+        <fullName>Type__c</fullName>
         <externalId>false</externalId>
-        <label>Type Of Concerned Device_OLD</label>
+        <label>Type</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
         <valueSet>
-            <restricted>true</restricted>
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Internal supply</fullName>
+                    <fullName>ISSUE</fullName>
                     <default>false</default>
-                    <label>Internal supply</label>
+                    <label>Issue</label>
                 </value>
                 <value>
-                    <fullName>External power supply</fullName>
+                    <fullName>WORK_PERFORMED</fullName>
                     <default>false</default>
-                    <label>External power supply</label>
-                </value>
-                <value>
-                    <fullName>Motherboard</fullName>
-                    <default>false</default>
-                    <label>Motherboard</label>
-                </value>
-                <value>
-                    <fullName>Loop board</fullName>
-                    <default>false</default>
-                    <label>Loop board</label>
-                </value>
-                <value>
-                    <fullName>Relay board</fullName>
-                    <default>false</default>
-                    <label>Relay board</label>
-                </value>
-                <value>
-                    <fullName>Network card</fullName>
-                    <default>false</default>
-                    <label>Network card</label>
-                </value>
-                <value>
-                    <fullName>Other card</fullName>
-                    <default>false</default>
-                    <label>Other card</label>
-                </value>
-                <value>
-                    <fullName>Detector</fullName>
-                    <default>false</default>
-                    <label>Detector</label>
-                </value>
-                <value>
-                    <fullName>Fouling detector</fullName>
-                    <default>false</default>
-                    <label>Fouling detector</label>
-                </value>
-                <value>
-                    <fullName>Base contacts</fullName>
-                    <default>false</default>
-                    <label>Base contacts</label>
-                </value>
-                <value>
-                    <fullName>Manual button</fullName>
-                    <default>false</default>
-                    <label>Manual button</label>
-                </value>
-                <value>
-                    <fullName>I / O info module</fullName>
-                    <default>false</default>
-                    <label>I / O info module</label>
-                </value>
-                <value>
-                    <fullName>Front panel</fullName>
-                    <default>false</default>
-                    <label>Front panel</label>
-                </value>
-                <value>
-                    <fullName>Printer</fullName>
-                    <default>false</default>
-                    <label>Printer</label>
-                </value>
-                <value>
-                    <fullName>Radio transpoder</fullName>
-                    <default>false</default>
-                    <label>Radio transpoder</label>
-                </value>
-                <value>
-                    <fullName>Panels O / A</fullName>
-                    <default>false</default>
-                    <label>Panels O / A</label>
-                </value>
-                <value>
-                    <fullName>Siren</fullName>
-                    <default>false</default>
-                    <label>Siren</label>
-                </value>
-                <value>
-                    <fullName>EVAC system</fullName>
-                    <default>false</default>
-                    <label>EVAC system</label>
-                </value>
-                <value>
-                    <fullName>EFC</fullName>
-                    <default>false</default>
-                    <label>EFC</label>
-                </value>
-                <value>
-                    <fullName>Combiner</fullName>
-                    <default>false</default>
-                    <label>Combiner</label>
-                </value>
-                <value>
-                    <fullName>IP converter</fullName>
-                    <default>false</default>
-                    <label>IP converter</label>
-                </value>
-                <value>
-                    <fullName>Short circuit loop</fullName>
-                    <default>false</default>
-                    <label>Short circuit loop</label>
-                </value>
-                <value>
-                    <fullName>Loop opening</fullName>
-                    <default>false</default>
-                    <label>Loop opening</label>
-                </value>
-                <value>
-                    <fullName>Connection problem</fullName>
-                    <default>false</default>
-                    <label>Connection problem</label>
-                </value>
-                <value>
-                    <fullName>Programming error</fullName>
-                    <default>false</default>
-                    <label>Programming error</label>
-                </value>
-                <value>
-                    <fullName>User management error</fullName>
-                    <default>false</default>
-                    <label>User management error</label>
-                </value>
-                <value>
-                    <fullName>Software</fullName>
-                    <default>false</default>
-                    <label>Software</label>
-                </value>
-                <value>
-                    <fullName>Extinguishing system cylinders</fullName>
-                    <default>false</default>
-                    <label>Extinguishing system cylinders</label>
-                </value>
-                <value>
-                    <fullName>Extinguishing system control</fullName>
-                    <default>false</default>
-                    <label>Extinguishing system control</label>
-                </value>
-                <value>
-                    <fullName>Suction System</fullName>
-                    <default>false</default>
-                    <label>Suction System</label>
-                </value>
-                <value>
-                    <fullName>Other</fullName>
-                    <default>false</default>
-                    <label>Other</label>
-                </value>
-                <value>
-                    <fullName>Various</fullName>
-                    <default>false</default>
-                    <label>Various</label>
+                    <label>Work Performed</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -634,6 +449,14 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>Work_Performed_by_Installer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Work Performed by Installer</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <gender>Feminine</gender>
     <label>Issue</label>

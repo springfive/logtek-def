@@ -22,6 +22,30 @@
                 <behavior>Edit</behavior>
                 <field>Issue_Location__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ServiceProject__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Work_Performed_by_Installer__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Type__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Status__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>WorkPerformed__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>NeedsToBeReviewedByManager__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -44,6 +68,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Type_of_Concerned_device__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Root_Cause__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

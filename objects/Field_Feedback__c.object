@@ -235,6 +235,14 @@
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>Quote_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>Follow_up_Action__c</fullName>
         <externalId>false</externalId>
         <label>Follow-up Action Type</label>
@@ -289,6 +297,16 @@
         <relationshipName>Field_Feedbacks</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>ServiceProject__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Service Project</label>
+        <referenceTo>ServiceProject__c</referenceTo>
+        <relationshipLabel>Field Feedbacks</relationshipLabel>
+        <relationshipName>Field_Feedbacks</relationshipName>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>

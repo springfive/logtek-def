@@ -116,6 +116,11 @@ ISPICKVAL( Status__c , &apos;Blocked&apos;),
         <externalId>false</externalId>
         <inlineHelpText>Technicians enter here a suggestion of an update to be made on the Account</inlineHelpText>
         <label>Update Suggestion</label>
+    </fields>  
+    <fields>
+        <fullName>BE_DEF_Navision_Ref_Num__c</fullName>
+        <externalId>false</externalId>
+        <label>BE DEF Navision Ref Num</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>TextArea</type>

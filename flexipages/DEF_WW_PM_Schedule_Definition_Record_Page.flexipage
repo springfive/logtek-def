@@ -147,6 +147,15 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>maxheight</name>
+                    <value>medium</value>
+                </componentInstanceProperties>
+                <componentName>SVMXC:SFM_Wizard</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>tabs</name>
                     <value>sidebartabs</value>
                 </componentInstanceProperties>

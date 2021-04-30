@@ -16,6 +16,17 @@
         <visibleLines>4</visibleLines>
     </fields>
     <fields>
+        <fullName>Note_to_Planner__c</fullName>
+        <externalId>false</externalId>
+        <label>Note to Planner</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>DefaultTerritory__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <description>Location default territory.
