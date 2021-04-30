@@ -666,6 +666,15 @@ Owner:Queue.QueueName)</formula>
         </valueSet>
     </fields>
     <fields>
+        <fullName>Return_of_Order_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Return of Order Date Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
         <fullName>Revisit_Comment__c</fullName>
         <externalId>false</externalId>
         <label>Revisit Comment</label>
