@@ -256,6 +256,16 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Customer_Reference__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Reference</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>DBin_Id__c</fullName>
         <caseSensitive>false</caseSensitive>
         <description>[Middleware POC] - Id of the service request coming from DBin (Call Center)</description>
@@ -800,6 +810,7 @@ IF(ISPICKVAL(SVMXC__Status__c, &apos;Closed&apos;)||ISPICKVAL(SVMXC__Status__c, 
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
+    <label>Service Request</label>
     <listViews>
         <fullName>All_service_requests</fullName>
         <columns>NAME</columns>

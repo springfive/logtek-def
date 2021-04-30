@@ -2,7 +2,7 @@
 * @description       : 
 * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
 * @group             : 
-* @last modified on  : 04-30-2021
+* @last modified on  : 12-15-2020
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 * Modifications Log 
 * Ver   Date         Author                               Modification
@@ -11,22 +11,22 @@
 @isTest
 public class DEF_SC_RestAPICallTest {
     /*
-    public static String getUUID()
-    {
-        Blob b = Crypto.GenerateAESKey(128);
-        String h = EncodingUtil.ConvertTohex(b);
-        String guid = h.SubString(0,8)+ '-' + h.SubString(8,12) + '-' + h.SubString(12,16) + '-' + h.SubString(16,20) + '-' + h.substring(20);
-        system.debug(guid);
-        return guid;
-    }
-    */
+public static String getUUID()
+{
+Blob b = Crypto.GenerateAESKey(128);
+String h = EncodingUtil.ConvertTohex(b);
+String guid = h.SubString(0,8)+ '-' + h.SubString(8,12) + '-' + h.SubString(12,16) + '-' + h.SubString(16,20) + '-' + h.substring(20);
+system.debug(guid);
+return guid;
+}
+*/
     static testMethod void testPost() {
         Profile p = [SELECT Id FROM Profile WHERE Name='DEF Integration']; 
         User u = new User(Alias = 'intet', Email='test.user@testorg.com', 
-            EmailEncodingKey='UTF-8',FirstName='Test',LastName='User', LanguageLocaleKey='en_US', 
-            LocaleSidKey='en_US', ProfileId = p.Id, 
-            TimeZoneSidKey='Europe/Paris', UserName='test.user@def-fs.com');
-
+                          EmailEncodingKey='UTF-8',FirstName='Test',LastName='User', LanguageLocaleKey='en_US', 
+                          LocaleSidKey='en_US', ProfileId = p.Id, 
+                          TimeZoneSidKey='Europe/Paris', UserName='test.user@def-fs.com');
+        
         System.runAs(u) {
             // The following code runs as user 'u' 
             System.debug('Current User: ' + UserInfo.getUserName());

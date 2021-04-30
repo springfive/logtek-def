@@ -195,7 +195,6 @@
         <label>Account Name</label>
         <length>255</length>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -206,7 +205,6 @@
         <externalId>false</externalId>
         <label>Accreditation</label>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
@@ -246,7 +244,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <label>Back Office Country</label>
         <length>255</length>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -258,7 +255,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <label>Back Office System</label>
         <length>255</length>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Text</type>
@@ -273,7 +269,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <relationshipLabel>Service/Maintenance Contracts (Bill-to)</relationshipLabel>
         <relationshipName>Service_Maintenance_Contracts</relationshipName>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -304,7 +299,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <externalId>false</externalId>
         <label>DEF Company</label>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -319,7 +313,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <externalId>false</externalId>
         <label>Date of Notice</label>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
@@ -329,7 +322,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <externalId>false</externalId>
         <label>Description</label>
         <length>32768</length>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
@@ -340,7 +332,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <externalId>false</externalId>
         <label>Due Date</label>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
@@ -350,7 +341,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <externalId>false</externalId>
         <label>Installation Discipline</label>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -364,7 +354,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <externalId>false</externalId>
         <label>Installation Type</label>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -395,8 +384,7 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <relationshipLabel>Service Contract</relationshipLabel>
         <relationshipName>Service_Maintenance_Contracts</relationshipName>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -405,7 +393,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Is Evergreen</label>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -419,8 +406,7 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <relationshipLabel>Service/Maintenance Contracts</relationshipLabel>
         <relationshipName>Service_Maintenance_Contracts</relationshipName>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -431,7 +417,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Percent</type>
@@ -445,7 +430,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <relationshipLabel>Service/Maintenance Contracts (Preferred Technician)</relationshipLabel>
         <relationshipName>Service_Maintenance_Contracts_del</relationshipName>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -459,7 +443,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <relationshipLabel>Service/Maintenance Contracts</relationshipLabel>
         <relationshipName>Service_Maintenance_Contracts</relationshipName>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -470,7 +453,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <externalId>false</externalId>
         <label>Reason for Cancellation</label>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
@@ -546,7 +528,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Percent</type>
@@ -572,7 +553,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <externalId>false</externalId>
         <inlineHelpText>Flag indicating if this contract is currently active or not. This flag is checked automatically when you activate a contract</inlineHelpText>
         <label>Active</label>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -737,7 +717,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <relationshipLabel>Service/Maintenance Contracts</relationshipLabel>
         <relationshipName>R00N70000001hzYIEAY</relationshipName>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -753,7 +732,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <referenceTo>Contact</referenceTo>
         <relationshipName>R00N70000001hzcEEAQ</relationshipName>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -768,7 +746,6 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Currency</type>
@@ -1472,7 +1449,6 @@ if( SVMXC__End_Date__c &gt; TODAY()+90, &quot;/resource/ServiceMaxIcons/NoUpsell
         <relationshipLabel>Service/Maintenance Contracts (Top-Level)</relationshipLabel>
         <relationshipName>Service_Maintenance_Contracts1</relationshipName>
         <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>

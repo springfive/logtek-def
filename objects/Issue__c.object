@@ -1,172 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Accept</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>CancelEdit</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Clone</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Delete</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Edit</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>List</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>New</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>SaveEdit</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <formFactor>Large</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <formFactor>Small</formFactor>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>DEF_WW_Issue_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>DEF_WW_Issue_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>Issue_compact_Layout</compactLayoutAssignment>
-    <compactLayouts>
-        <fullName>Issue_compact_Layout</fullName>
-        <fields>Associated_Work_Order__c</fields>
-        <fields>Issue_Location__c</fields>
-        <fields>Issue_Solved__c</fields>
-        <fields>LastModifiedById</fields>
-        <label>Issue compact Layout</label>
-    </compactLayouts>
-    <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>false</enableActivities>
-    <enableBulkApi>true</enableBulkApi>
-    <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
-    <enableLicensing>false</enableLicensing>
-    <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
-    <enableSharing>true</enableSharing>
-    <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>Associated_Work_Order__c</fullName>
         <externalId>false</externalId>
@@ -179,55 +12,6 @@
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
-    </fields>
-    <fields>
-        <fullName>Difficulties_Met__c</fullName>
-        <externalId>false</externalId>
-        <label>Difficulties Met</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Unable to identify/locate the device due to lack of documentation</fullName>
-                    <default>false</default>
-                    <label>Unable to identify/locate the device due to lack of documentation</label>
-                </value>
-                <value>
-                    <fullName>Unable to identify/locate the device due to access difficulties</fullName>
-                    <default>false</default>
-                    <label>Unable to identify/locate the device due to access difficulties</label>
-                </value>
-                <value>
-                    <fullName>Position of devices at high alttitude</fullName>
-                    <default>false</default>
-                    <label>Position of devices at high alttitude</label>
-                </value>
-                <value>
-                    <fullName>None</fullName>
-                    <default>false</default>
-                    <label>None</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>Issue_ID__c</fullName>
-        <displayFormat>IS-{0000}</displayFormat>
-        <externalId>false</externalId>
-        <label>Issue ID</label>
-        <trackTrending>false</trackTrending>
-        <type>AutoNumber</type>
-    </fields>
-    <fields>
-        <fullName>Issue_Location__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Issue Location</label>
-        <referenceTo>SVMXC__Site__c</referenceTo>
     </fields>
     <fields>
         <fullName>NeedsToBeReviewedByManager__c</fullName>
@@ -248,22 +32,6 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>Issue_Solved__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Issue Solved</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>Log_verification__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Log verification</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Status__c</fullName>
@@ -295,29 +63,11 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>Root_Cause__c</fullName>
+        <fullName>Symptom__c</fullName>
+        <description>Symptom noticed on the Installation.</description>
         <externalId>false</externalId>
-        <label>Root Cause</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>DEF_RootCause</valueSetName>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>Root_Cause_text__c</fullName>
-        <externalId>false</externalId>
-        <label>Root Cause</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>TextArea</type>
-    </fields>
-    <fields>
-        <fullName>Symptoms__c</fullName>
-        <externalId>false</externalId>
-        <label>Symptoms</label>
+        <inlineHelpText>Symptom noticed on the Installation.</inlineHelpText>
+        <label>Symptom</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -338,28 +88,6 @@
             <restricted>true</restricted>
             <valueSetName>DEF_RootCause</valueSetName>
         </valueSet>
-    </fields>
-    <fields>
-        <fullName>Tech_Count__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>Tech_Count</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Technician_notes__c</fullName>
-        <externalId>false</externalId>
-        <label>Technician notes</label>
-        <length>250</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Type__c</fullName>
@@ -385,70 +113,12 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>Type_of_Concerned_device__c</fullName>
-        <externalId>false</externalId>
-        <label>Type of Concerned device</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>Type_of_Concerned_device</valueSetName>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>Work_Performed__c</fullName>
+        <fullName>WorkPerformed__c</fullName>
         <externalId>false</externalId>
         <label>Work Performed</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Device replacement</fullName>
-                    <default>false</default>
-                    <label>Device replacement</label>
-                </value>
-                <value>
-                    <fullName>Re-connection</fullName>
-                    <default>false</default>
-                    <label>Re-connection</label>
-                </value>
-                <value>
-                    <fullName>Re-programming</fullName>
-                    <default>false</default>
-                    <label>Re-programming</label>
-                </value>
-                <value>
-                    <fullName>Software update</fullName>
-                    <default>false</default>
-                    <label>Software update</label>
-                </value>
-                <value>
-                    <fullName>Handling/Manipulation</fullName>
-                    <default>false</default>
-                    <label>Handling/Manipulation</label>
-                </value>
-                <value>
-                    <fullName>Training</fullName>
-                    <default>false</default>
-                    <label>Training</label>
-                </value>
-                <value>
-                    <fullName>Test</fullName>
-                    <default>false</default>
-                    <label>Test</label>
-                </value>
-                <value>
-                    <fullName>Line check with multimeter</fullName>
-                    <default>false</default>
-                    <label>Line check with multimeter</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>Work_Performed_by_Installer__c</fullName>
@@ -458,29 +128,4 @@
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
-    <gender>Feminine</gender>
-    <label>Issue</label>
-    <listViews>
-        <fullName>All</fullName>
-        <columns>NAME</columns>
-        <columns>Log_verification__c</columns>
-        <columns>Type_Of_Concerned_Device_OLD__c</columns>
-        <columns>OLD_Symptoms__c</columns>
-        <columns>Root_Cause__c</columns>
-        <columns>Work_Performed__c</columns>
-        <columns>Issue_Solved__c</columns>
-        <columns>Difficulties_Met__c</columns>
-        <columns>Technician_notes__c</columns>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
-    <nameField>
-        <displayFormat>Iss-{0000}</displayFormat>
-        <label>Issue Name</label>
-        <type>AutoNumber</type>
-    </nameField>
-    <pluralLabel>Issues</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
-    <visibility>Public</visibility>
 </CustomObject>

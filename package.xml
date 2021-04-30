@@ -1,58 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>DEF_API_WO_RequestCallBack</members>
-        <members>DEF_MockHttpResponseGenerator</members>
-        <members>DEF_PM_WorkOrderBatch</members>
-        <members>DEF_PM_WorkOrderBatchTest</members>
         <members>DEF_SC_RestAPICall</members>
         <members>DEF_SC_RestAPICallTest</members>
-        <members>DEF_SC_ShedulerForBatchContractStatus</members>
-        <members>DEF_SC_UpdateStatusContractExpiredTest</members>
-        <members>DEF_SC_UpdateStatusWhenContractExpired</members>
-        <members>DEF_StringHelper</members>
-        <members>DEF_TestDataFactory</members>
-        <members>DEF_WD_TriggerHandler</members>
-        <members>DEF_WD_TriggerHandlerTest</members>
-        <members>DEF_WD_TriggerHelper</members>
-        <members>DEF_WO_PE_TriggerTest</members>
-        <members>DEF_WO_RestAPICall</members>
-        <members>DEF_WO_RestAPICallTest</members>
-        <members>DEF_WO_RestAPICallV2</members>
-        <members>DEF_WO_RestAPICallV2Test</members>
-        <members>DEF_WO_SirSender</members>
-        <members>DEF_WO_SirSenderTest</members>
-        <members>DEF_WO_SirSender_Helper</members>
-        <members>DEF_WO_ToSynchWithSB</members>
-        <members>DEF_WO_ToSynchWithSB_Test</members>
-        <members>DEF_WO_TriggerHandler</members>
-        <members>DEF_WO_TriggerHandlerTest</members>
-        <members>DEF_WO_TriggerHelper</members>
-        <members>DEF_WW_Utils_PAD_Methodology</members>
-        <members>DEF_WW_Utils_PAD_MethodologyTest</members>
-        <members>TriggerHandler</members>
-        <members>TriggerHandler_Test</members>
         <members>DEF_SC_TriggerHandler</members>
         <members>DEF_SC_TriggerHelper</members>
+        <members>DEF_StringHelper</members>
+        <members>DEF_WO_PE_TriggerTest</members>
+        <members>DEF_WO_TriggerHandler</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>DEF_WD_Trigger</members>
-        <members>DEF_WO_PE_Trigger</members>
-        <members>DEF_WO_Trigger</members>
         <members>DEF_SC_Trigger</members>
+        <members>DEF_WO_PE_Trigger</members>
         <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>SVMXC__Timesheet__c.DEF_WW_Submit_Timesheet_for_Approval</members>
-        <name>ApprovalProcess</name>
-    </types>
-    <types>
-        <members>Account.DEF_Account_Compact_Layout</members>
-        <members>SVMXC__PM_Plan__c.DEF_WW_Preventative_Maintenance_Layout_PS</members>
-        <members>SVMXC__Service_Contract__c.DEF_WW_Service_Contract_Compact_Layout</members>
-        <members>SVMXC__Service_Order__c.DEF_WW_Work_Order_Compact_Layout</members>
-        <name>CompactLayout</name>
     </types>
     <types>
         <members>DEF_IT_Sub_Contractors_Chatter</members>
@@ -298,18 +259,6 @@
         <members>SVMXC__Service_Order__c.Ready_to_Dispatch_Work_Orders</members>
         <members>SVMXC__Service_Order__c.SVMX_PS_All_Awaiting_Customer_Orders</members>
         <members>SVMXC__Service_Order__c.WO_due_next_month</members>
-        <members>SVMXC__Service_Plan__c.SVMXC__All_Service_Plans</members>
-        <members>SVMXC__Service_Pricebook_Entry__c.SVMXC__All_Service_Pricebook_Entry</members>
-        <members>SVMXC__Service_Pricebook__c.SVMXC__All_Service_Pricebook</members>
-        <members>SVMXC__Service_Request__c.All_service_requests</members>
-        <members>SVMXC__Service_Request__c.Service_requests_in_progress</members>
-        <members>SVMXC__Service_Request__c.Service_requests_to_be_processed</members>
-        <members>SVMXC__Service_Template__c.SVMXC__All_Warranty_Terms</members>
-        <members>SVMXC__Service__c.SVMXC__All_Available_Services</members>
-        <members>SVMXC__Site__c.SVMXC__All_Locations</members>
-        <members>SVMXC__Task_Template__c.SVMXC__All_Work_Templates</members>
-        <members>SVMXC__Territory__c.GB_Default_Territory</members>
-        <members>SVMXC__Territory__c.IT_Default_Territory</members>
         <name>ListView</name>
     </types>
     <types>
@@ -318,7 +267,6 @@
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
         <members>DEF_FS_Tech_PS</members>
-        <members>DEF_IT_Sub_Contractor</members>
         <name>PermissionSet</name>
     </types>
     <types>
@@ -329,8 +277,6 @@
         <members>DEF FS Planner</members>
         <members>DEF FS Tech</members>
         <members>DEF Integration</members>
-        <members>DEF_IT_Sub_Contractors</members>
-        <members>DEF_WW_Support</members>
         <name>Profile</name>
     </types>
     <types>
