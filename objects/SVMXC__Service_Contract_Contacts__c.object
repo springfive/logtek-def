@@ -2,7 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fields>
-        <fullName>Must_receive_scheduling_email__c</fullName>
+        <fullName>MustReceiveSchedulingEmail__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Must receive scheduling email</label>
