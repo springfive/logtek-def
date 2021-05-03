@@ -116,6 +116,7 @@
         <members>SVMXC__Service_Request__c.InitialResponse__c</members>
         <members>SVMXC__Service_Request__c.Quote_Description__c</members>
         <members>SVMXC__Service_Request__c.Tech_BusinessHours__c</members>
+        <members>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</members>
         <members>SVMXC__Service_Request__c.Time_Elapsed__c</members>
         <members>SVMXC__Site__c.BE_DEF_Navision_Ref_Num__c</members>
         <members>SVMXC__Site__c.Note_to_Planner__c</members>
