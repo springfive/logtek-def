@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <fieldPermissions>
         <editable>false</editable>
@@ -468,6 +468,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Issue__c.Symptom__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Issue__c.Symptoms__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1797,12 +1802,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>SVMXC__Service_Contract_Contacts__c.Must_Receive_Report__c</field>
+        <field>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>SVMXC__Service_Contract_Contacts__c.Must_receive_scheduling_email__c</field>
+        <field>SVMXC__Service_Contract_Contacts__c.Must_Receive_Report__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

@@ -52,6 +52,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Issue__c.Symptoms__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Issue__c.Symptoms_rootCause__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -902,7 +907,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>SVMXC__Service_Contract_Contacts__c.Must_receive_scheduling_email__c</field>
+        <field>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1372,6 +1377,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Order__c.CustomerReference__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.Designation__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1388,6 +1398,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Installation_Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Installation_in_Service__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1413,6 +1428,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Log_Verification__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Logbook_Completed__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

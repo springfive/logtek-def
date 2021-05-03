@@ -65,7 +65,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Purchase_Order__c</field>
+                <field>CustomerReference__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

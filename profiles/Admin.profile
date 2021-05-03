@@ -155,9 +155,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Issue__c.Symptoms__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -986,7 +986,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>SVMXC__Service_Contract_Contacts__c.Must_receive_scheduling_email__c</field>
+        <field>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
