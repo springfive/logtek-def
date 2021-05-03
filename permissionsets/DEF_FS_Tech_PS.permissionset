@@ -15778,7 +15778,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
