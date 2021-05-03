@@ -78,6 +78,7 @@
         <members>SVMXC__Service_Order__c.Contact_Email_SF__c</members>
         <members>SVMXC__Service_Order__c.Contact_Phone_SF__c</members>
         <members>SVMXC__Service_Order__c.Copy_Of_Permit_To_Work_Attached__c</members>
+        <members>SVMXC__Service_Order__c.CustomerReference__c</members>
         <members>SVMXC__Service_Order__c.Designation__c</members>
         <members>SVMXC__Service_Order__c.Field_Comments__c</members>
         <members>SVMXC__Service_Order__c.How_was_the_service__c</members>
