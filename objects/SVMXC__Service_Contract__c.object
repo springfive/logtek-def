@@ -2233,9 +2233,9 @@ if( SVMXC__End_Date__c &gt; TODAY()+90, &quot;/resource/ServiceMaxIcons/NoUpsell
         <searchFilterFields>SVMXC__Contract_Price2__c</searchFilterFields>
         <searchResultsAdditionalFields>SVMXC__Company__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>SVMXC__Contact__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>SVMXC__Active__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>SVMXC__Renewal_Date__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>SVMXC__Renewal_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Location__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Installation__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Installation_Discipline__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>SVMXC__Start_Date__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>SVMXC__End_Date__c</searchResultsAdditionalFields>
     </searchLayouts>
