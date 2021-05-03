@@ -362,6 +362,17 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>CustomerReference__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Reference</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Designation__c</fullName>
         <externalId>false</externalId>
         <formula>/*Confirmation request*/
@@ -481,6 +492,15 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         </valueSet>
     </fields>
     <fields>
+        <fullName>Installation_in_Service__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Installation in Service</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Intervention_End_Date_and_Time__c</fullName>
         <externalId>false</externalId>
         <label>Intervention End Date and Time</label>
@@ -549,6 +569,15 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Event Log Verification</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Logbook_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Logbook Completed</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
