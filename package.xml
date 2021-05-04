@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>DEF_SC_RestAPICall</members>
@@ -67,9 +67,11 @@
         <members>SVMXC__Quote__c.ServiceContract__c</members>
         <members>SVMXC__Quote__c.ServiceRequest__c</members>
         <members>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</members>
+        <members>SVMXC__Service_Contract_Contacts__c.Must_Receive_Report__c</members>
         <members>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Number__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Type__c</members>
+        <members>SVMXC__Service_Order_Line__c.SVMXC__Line_Type__c</members>
         <members>SVMXC__Service_Order_Line__c.ShowMilesDriven__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <members>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Number__c</members>
@@ -215,6 +217,7 @@
     </types>
     <types>
         <members>DEF_Login</members>
+        <members>DEF_WW_Create_New_Contact_and_Add_as_Entitled_Contact</members>
         <members>DEF_WW_Field_Feedback_to_Service_Quote</members>
         <members>DEF_WW_SC_Trigger_Platform_Event</members>
         <members>DEF_WW_ServiceQuote_Trigger_Platform_Event</members>
@@ -272,12 +275,14 @@
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
         <members>DEF_FS_Tech_PS</members>
+        <members>DEF_IT_Sub_Contractor</members>
         <name>PermissionSet</name>
     </types>
     <types>
         <members>Admin</members>
         <members>DEF - AD - Interface</members>
         <members>DEF BE Hybrid</members>
+        <members>DEF BE Subcontractor</members>
         <members>DEF FS Contract Admin</members>
         <members>DEF FS Manager</members>
         <members>DEF FS Planner</members>
@@ -314,5 +319,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>50.0</version>
 </Package>
