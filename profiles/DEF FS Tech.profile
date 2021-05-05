@@ -991,6 +991,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Contract_Contacts__c.Must_Receive_Report__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Contract__c.Account_Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1407,6 +1412,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order_Line__c.Product_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order_Line__c.SVMXC__Line_Type__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
