@@ -12,7 +12,7 @@
             <field>SVMX_PS_Contact_Email__c</field>
             <type>email</type>
         </recipients>
-        <senderAddress>devendra.singh@springfive.com</senderAddress>
+        <senderAddress>assistenza@def-online.it</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
         <template>unfiled$public/DEF_IT_Assigned_Technician_Template_Multi_Day</template>
     </alerts>
@@ -28,7 +28,7 @@
             <field>SVMX_PS_Contact_Email__c</field>
             <type>email</type>
         </recipients>
-        <senderAddress>devendra.singh@springfive.com</senderAddress>
+        <senderAddress>assistenza@def-online.it</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
         <template>unfiled$public/DEF_IT_Customer_Confirmed_Template_Multi_Day</template>
     </alerts>

@@ -67,9 +67,11 @@
         <members>SVMXC__Quote__c.ServiceContract__c</members>
         <members>SVMXC__Quote__c.ServiceRequest__c</members>
         <members>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</members>
+        <members>SVMXC__Service_Contract_Contacts__c.Must_Receive_Report__c</members>
         <members>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Number__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Type__c</members>
+        <members>SVMXC__Service_Order_Line__c.SVMXC__Line_Type__c</members>
         <members>SVMXC__Service_Order_Line__c.ShowMilesDriven__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <members>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Number__c</members>
@@ -201,10 +203,6 @@
         <name>EmailTemplate</name>
     </types>
     <types>
-        <members>SVMXC__Service_Order__c.SVMXC__SM_Service_Board_Fields</members>
-        <name>FieldSet</name>
-    </types>
-    <types>
         <members>Chatter_UtilityBar</members>
         <members>DEF_IT_Sub_Contractors_Home_Page</members>
         <members>DEF_WW_Location_Record_Page</members>
@@ -215,6 +213,7 @@
     </types>
     <types>
         <members>DEF_Login</members>
+        <members>DEF_WW_Create_New_Contact_and_Add_as_Entitled_Contact</members>
         <members>DEF_WW_Field_Feedback_to_Service_Quote</members>
         <members>DEF_WW_SC_Trigger_Platform_Event</members>
         <members>DEF_WW_ServiceQuote_Trigger_Platform_Event</members>
@@ -248,36 +247,17 @@
         <name>Layout</name>
     </types>
     <types>
-        <members>SVMXC__Service_Order__c.All_WO_To_be_validated</members>
-        <members>SVMXC__Service_Order__c.Awaiting_Customer_Confirmation_WO</members>
-        <members>SVMXC__Service_Order__c.Callout_WO_Paused_SLA</members>
-        <members>SVMXC__Service_Order__c.Callout_WO_To_be_confirmed</members>
-        <members>SVMXC__Service_Order__c.Callout_WO_To_confirm_this_week</members>
-        <members>SVMXC__Service_Order__c.Callout_Work_Orders</members>
-        <members>SVMXC__Service_Order__c.High_Priority_Work_Orders</members>
-        <members>SVMXC__Service_Order__c.Maintenance_WO_To_be_confirmed</members>
-        <members>SVMXC__Service_Order__c.Maintenance_WO_To_confirm_this_week</members>
-        <members>SVMXC__Service_Order__c.New_Works_Work_Orders</members>
-        <members>SVMXC__Service_Order__c.PM_WO_To_be_scheduled_next_3_Months</members>
-        <members>SVMXC__Service_Order__c.PTX_Work_Orders</members>
-        <members>SVMXC__Service_Order__c.Preventive_Maintenance_Work_Orders</members>
-        <members>SVMXC__Service_Order__c.Ready_to_Dispatch_Work_Orders</members>
-        <members>SVMXC__Service_Order__c.SVMX_PS_All_Awaiting_Customer_Orders</members>
-        <members>SVMXC__Service_Order__c.WO_due_next_month</members>
-        <name>ListView</name>
-    </types>
-    <types>
         <members>All_Modify</members>
         <members>DEF_FS_Contract_Admin_PS</members>
         <members>DEF_FS_Manager_PS</members>
         <members>DEF_FS_Planner_PS</members>
         <members>DEF_FS_Tech_PS</members>
+        <members>DEF_IT_Sub_Contractor</members>
         <name>PermissionSet</name>
     </types>
     <types>
         <members>Admin</members>
         <members>DEF - AD - Interface</members>
-        <members>DEF BE Hybrid</members>
         <members>DEF FS Contract Admin</members>
         <members>DEF FS Manager</members>
         <members>DEF FS Planner</members>

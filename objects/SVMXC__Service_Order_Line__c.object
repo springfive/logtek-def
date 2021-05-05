@@ -27,6 +27,42 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>SVMXC__Line_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates the type of usage: Parts, Labor or Expenses</description>
+        <externalId>false</externalId>
+        <label>Line Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Parts</fullName>
+                    <default>false</default>
+                    <label>Parts</label>
+                </value>
+                <value>
+                    <fullName>Labor</fullName>
+                    <default>false</default>
+                    <label>Labor</label>
+                </value>
+                <value>
+                    <fullName>Travel</fullName>
+                    <default>true</default>
+                    <label>Travel</label>
+                </value>
+                <value>
+                    <fullName>Expenses</fullName>
+                    <default>false</default>
+                    <label>Expenses</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>ShowMilesDriven__c</fullName>
         <defaultValue>false</defaultValue>
         <description>Display or not Miles Driven in SIR</description>

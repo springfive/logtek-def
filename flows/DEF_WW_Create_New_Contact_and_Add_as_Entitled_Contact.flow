@@ -95,6 +95,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>MustReceiveSchedulingEmail__c</field>
+            <value>
+                <elementReference>Mustreceiveschedulingemail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Must_Receive_Report__c</field>
             <value>
                 <elementReference>Must_Receive_Report</elementReference>
@@ -363,6 +369,13 @@
                 <booleanValue>false</booleanValue>
             </defaultValue>
             <fieldText>Must Receive Report</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Mustreceiveschedulingemail</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Must receive scheduling email</fieldText>
             <fieldType>InputField</fieldType>
             <isRequired>true</isRequired>
         </fields>
