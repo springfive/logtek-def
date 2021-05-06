@@ -212,6 +212,8 @@
     <types>
         <members>Chatter_UtilityBar</members>
         <members>DEF_IT_Sub_Contractors_Home_Page</members>
+        <members>DEF_Manager_Home_Page_2011_1644WW_M</members>
+        <members>DEF_WW_Contract_Admin_Home_Page</members>
         <members>DEF_WW_Location_Record_Page</members>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
         <members>DEF_WW_Service_Project_Page</members>
@@ -318,5 +320,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>50.0</version>
 </Package>
