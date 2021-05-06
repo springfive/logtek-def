@@ -2,7 +2,7 @@
  * @description       : Handler for the Work Order berfore insert trigger.
  * @author            : Sofiane Bazizen (SpringFive)
  * @group             : 
- * @last modified on  : 04-16-2021
+ * @last modified on  : 05-06-2021
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  * Modifications Log 
  * Ver   Date         Author                               Modification
@@ -18,5 +18,7 @@ public class DEF_StringHelper {
 	+ ' FROM SVMXC__Service_Offerings__c'
 	+ ' WHERE SVMXC__Service_Plan__c In: servicePlanSet'
 	+ '';
+    public static String type_DailySIR='DailyInterventionReport';
+    public static string type_RegularSIR='InterventionReport';
 
 }
