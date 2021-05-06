@@ -4,8 +4,9 @@
  *		- Wrapper Class and query structure
  *		- retrieval of SIR and creation of attachments for the SIR emails
  *		- Sending of SIR emails
- * @last modified on  : 2020-01-11
- * @last modified by  : Sofiane Bazizen
+ * @last modified on  : 05-06-2021
+ * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+
  * Modifications Log 
  * Ver   Date         Author                               Modification
  * 1.0   2020-01-11   Sofiane Bazizen					  Initial Version
@@ -245,9 +246,9 @@ public class DEF_WO_SirSender_Helper {
 		//Key: Def Company, Value: SIR_Config__mdt (contains info about email template to use and sender email)
 		Map<String, SIR_Config__mdt> sirConfigMap = new Map<String, SIR_Config__mdt> ();
 
-		for (SIR_Config__mdt sConf :[SELECT MasterLabel, DeveloperName, EmailTemplateName__c, OrgWideEmailAddress__c FROM SIR_Config__mdt WHERE DeveloperName IN :defCompanySet]) {
+		for (SIR_Config__mdt sConf :[SELECT Type__c,MasterLabel, DeveloperName, EmailTemplateName__c, OrgWideEmailAddress__c FROM SIR_Config__mdt WHERE MasterLabel IN :defCompanySet AND Type__c=:DEF_StringHelper.type_RegularSIR]) { //@dev
 			sirMapping.put(sConf.EmailTemplateName__c, sConf);
-			sirConfigMap.put(sConf.DeveloperName, sConf);
+			sirConfigMap.put(sConf.MasterLabel, sConf); //@dev
 		}
 		System.debug('@sirMapping: ' + sirMapping);
 
@@ -256,7 +257,7 @@ public class DEF_WO_SirSender_Helper {
 		Map<String, EmailTemplate> templateMap = new Map<String, EmailTemplate> ();
 		for (EmailTemplate template :[SELECT DeveloperName, Id, Name FROM EmailTemplate WHERE DeveloperName In :sirMapping.keySet()]) {
 			System.debug('@template.DeveloperName: ' + template.DeveloperName);
-			templateMap.put(sirMapping.get(template.DeveloperName).DeveloperName, template);
+			templateMap.put(sirMapping.get(template.DeveloperName).MasterLabel, template); //@dev
 		}
 
 		System.debug('@templateMap: ' + templateMap);

@@ -6,7 +6,9 @@
         <members>DEF_SC_TriggerHandler</members>
         <members>DEF_SC_TriggerHelper</members>
         <members>DEF_StringHelper</members>
+        <members>DEF_WO_DailySIREmailBatch</members>
         <members>DEF_WO_PE_TriggerTest</members>
+        <members>DEF_WO_SirSender_Helper</members>
         <members>DEF_WO_TriggerHandler</members>
         <name>ApexClass</name>
     </types>
@@ -56,6 +58,7 @@
         <members>Planned_Parts__c.Required_Quantity__c</members>
         <members>Product2.BE_DEF_Navision_Ref_Num__c</members>
         <members>Project_Location_Relationship__c.Service_Project__c</members>
+        <members>SIR_Config__mdt.Type__c</members>
         <members>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Number__c</members>
         <members>SVMXC__Installed_Product__c.Description__c</members>
         <members>SVMXC__PM_Plan__c.Note_to_Planner__c</members>
@@ -137,6 +140,7 @@
     </types>
     <types>
         <members>DEF_IntegrationProfile</members>
+        <members>DEF_WO_DailySIRNamePrefix</members>
         <members>DEF_WW_Issues</members>
         <members>DEF_WW_WorkPerformed</members>
         <name>CustomLabel</name>
