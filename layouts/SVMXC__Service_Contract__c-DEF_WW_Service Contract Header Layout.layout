@@ -19,6 +19,10 @@
                 <behavior>Edit</behavior>
                 <field>DEF_Company__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>BE_DEF_Navision_Ref_Number__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
@@ -260,6 +264,17 @@
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedFileList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>SVMXC__Company__c</fields>
+        <fields>SVMXC__Contact__c</fields>
+        <fields>SVMXC__Service_Order__c</fields>
+        <fields>SVMXC__Quote_Amount2__c</fields>
+        <fields>SVMXC__Revised_From__c</fields>
+        <fields>SVMXC__Status__c</fields>
+        <fields>CREATEDBY_USER</fields>
+        <relatedList>SVMXC__Quote__c.ServiceContract__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

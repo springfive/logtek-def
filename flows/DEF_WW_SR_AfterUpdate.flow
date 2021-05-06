@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Retrieve_SLA_Dead_Lines</name>
+        <label>Retrieve SLA DeadLine</label>
+        <locationX>446</locationX>
+        <locationY>1463</locationY>
+        <actionName>DEF_SlaClockHelper</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>DEF_WW_SR_AfterUpdate_PopulateSLAInfo</targetReference>
+        </connector>
+        <inputParameters>
+            <name>bhId</name>
+            <value>
+                <elementReference>BusinessHour_Var</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>initResp</name>
+            <value>
+                <elementReference>DEF_WW_SR_AfterUpdate_RetrieveSLADetailsInfo.SVMXC__Customer_Commitment__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>srId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>startDate</name>
+            <value>
+                <elementReference>$Record.CreatedDate</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>initRespCustBy</assignToReference>
+            <name>initRespCustBy</name>
+        </outputParameters>
+    </actionCalls>
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <description>Use the retrieved SLA details (previous step) to populate the relevant SLA info on the Service Request.
+e.g. Initial Response; Initial Response Customer By; ect.</description>
+        <name>DEF_WW_SR_AfterUpdate_PopulateSLAInfo</name>
+        <label>Populate SLA Info</label>
+        <locationX>446</locationX>
+        <locationY>1583</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.InitialResponse__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>DEF_WW_SR_AfterUpdate_RetrieveSLADetailsInfo.SVMXC__Customer_Commitment__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.InitialResponseCustomerBy__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>initRespCustBy</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Tech_BusinessHours__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>BusinessHour_Var</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>DEF_WWW_SR_AfterUpdate_UpdateSRFields</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Define_Business_Hour_Variable</name>
+        <label>Define Business Hour Variable</label>
+        <locationX>50</locationX>
+        <locationY>1247</locationY>
+        <assignmentItems>
+            <assignToReference>BusinessHour_Var</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SLA_Terms__r.SVMXC__Business_Hours__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Retrieve_SLA_Dead_Lines</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Define_Business_Hour_Variable_0</name>
+        <label>Define Business Hour Variable</label>
+        <locationX>314</locationX>
+        <locationY>1247</locationY>
+        <assignmentItems>
+            <assignToReference>BusinessHour_Var</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SVMXC__Account__r.SVMXC__Business_Hours__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Retrieve_SLA_Dead_Lines</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Define_Business_Hour_Variable_0_0</name>
+        <label>Define Business Hour Variable</label>
+        <locationX>578</locationX>
+        <locationY>1247</locationY>
+        <assignmentItems>
+            <assignToReference>BusinessHour_Var</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Contract__r.SVMXC__Business_Hours__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Retrieve_SLA_Dead_Lines</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Set the relevant info when the Service Request is Converted to a Work Order.
+e.g. Actual Initial Response date/time.</description>
+        <name>Set_Convertion_Info</name>
+        <label>Set Convertion Info</label>
+        <locationX>600</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.SVMXC__Actual_Initial_Response__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SLAInfoUpdateNeeded</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>DEF_WW_SR_AfterUpdate_BypassOnFlow</name>
+        <label>Bypass on Flow ?</label>
+        <locationX>963</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>DEF_WW_SR_AfterUpdate_BypassFlowNotTrue</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.DEF_CS_BypassComponents__c.Bypass_Flows__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DEF_WW_SR_AfterUpdate_SRConvertedToWo</targetReference>
+            </connector>
+            <label>Bypass Flow Not True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>DEF_WW_SR_AfterUpdate_SRConvertedToWo</name>
+        <label>SR has been Converted to Work Order</label>
+        <locationX>732</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>SLAInfoUpdateNeeded</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>DEF_WW_SR_AfterUpdate_SrConverted</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SVMXC__Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.SVMXC__Status__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SVMXC__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Open_Converted</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Convertion_Info</targetReference>
+            </connector>
+            <label>SR has been Converted</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>RetrieveBusinessHoursFrom</name>
+        <label>Retrieve Business Hours From ?</label>
+        <locationX>446</locationX>
+        <locationY>1127</locationY>
+        <defaultConnector>
+            <targetReference>Retrieve_SLA_Dead_Lines</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SLA</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>DEF_WW_SR_AfterUpdate_RetrieveSLADetailsInfo.SVMXC__Business_Hours_Source__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SLA</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Define_Business_Hour_Variable</targetReference>
+            </connector>
+            <label>From SLA</label>
+        </rules>
+        <rules>
+            <name>Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>DEF_WW_SR_AfterUpdate_RetrieveSLADetailsInfo.SVMXC__Business_Hours_Source__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Account</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Define_Business_Hour_Variable_0</targetReference>
+            </connector>
+            <label>From Account</label>
+        </rules>
+        <rules>
+            <name>Contract</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>DEF_WW_SR_AfterUpdate_RetrieveSLADetailsInfo.SVMXC__Business_Hours_Source__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Contract</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Define_Business_Hour_Variable_0_0</targetReference>
+            </connector>
+            <label>From Contract</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>SLAInfoUpdateNeeded</name>
+        <label>SLA info update needed</label>
+        <locationX>732</locationX>
+        <locationY>767</locationY>
+        <defaultConnector>
+            <targetReference>DEF_WWW_SR_AfterUpdate_UpdateSRFields</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>DEF_WW_SE_AfterUodate_SLAInfoUpdateNeeded</name>
+            <conditionLogic>(1 OR 2) AND (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.SLA_Terms__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.SLA_Terms__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.SVMXC__Priority__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.SVMXC__Priority__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SVMXC__Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Open_Converted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SVMXC__Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DEF_WW_SR_AfterUpdate_RetrieveSLATermsInfo</targetReference>
+            </connector>
+            <label>SLA info update needed</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <description>Determine the SLA dead line (Date/Time)
+Created date of the Service Request + Customer Commitement</description>
+        <name>form_InitRespCustBy</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Record.CreatedDate} + 
+IF(TEXT({!DEF_WW_SR_AfterUpdate_RetrieveSLATermsInfo.SVMXC__SM_Initial_Unit_of_Measure__c}) == &quot;Minute&quot;,
+{!DEF_WW_SR_AfterUpdate_RetrieveSLADetailsInfo.SVMXC__Customer_Commitment__c} / 1440,
+{!DEF_WW_SR_AfterUpdate_RetrieveSLADetailsInfo.SVMXC__Customer_Commitment__c}
+)</expression>
+    </formulas>
+    <interviewLabel>DEF_WW_SR_AfterUpdate {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DEF_WW_SR_AfterUpdate</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Retrieves the SLA terms info to popopulate the SLA details on the Service Request.</description>
+        <name>DEF_WW_SR_AfterUpdate_RetrieveSLADetailsInfo</name>
+        <label>Retrieve SLA Details Info</label>
+        <locationX>446</locationX>
+        <locationY>1007</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>RetrieveBusinessHoursFrom</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SVMXC__SLA_Terms__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.SLA_Terms__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>SVMXC__Priority__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.SVMXC__Priority__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>SVMXC__Commitment_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>InitialResponse</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SVMXC__SLA_Detail__c</object>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Retrieve info from the Service Request parent SLA term record</description>
+        <name>DEF_WW_SR_AfterUpdate_RetrieveSLATermsInfo</name>
+        <label>Retrieve SLA Terms Info</label>
+        <locationX>446</locationX>
+        <locationY>887</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>DEF_WW_SR_AfterUpdate_RetrieveSLADetailsInfo</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.SLA_Terms__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SVMXC__Service_Level__c</object>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>DEF_WWW_SR_AfterUpdate_UpdateSRFields</name>
+        <label>Update Service Request Fields</label>
+        <locationX>732</locationX>
+        <locationY>1799</locationY>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>837</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>DEF_WW_SR_AfterUpdate_BypassOnFlow</targetReference>
+        </connector>
+        <object>SVMXC__Service_Request__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Id of the Business Hour to be used in the Service Request.</description>
+        <name>BusinessHour_Var</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>initRespCustBy</description>
+        <name>initRespCustBy</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

@@ -5,6 +5,7 @@
         <members>DEF_SC_RestAPICallTest</members>
         <members>DEF_SC_TriggerHandler</members>
         <members>DEF_SC_TriggerHelper</members>
+        <members>DEF_SlaClockHelper</members>
         <members>DEF_StringHelper</members>
         <members>DEF_WO_DailySIREmailBatch</members>
         <members>DEF_WO_PE_TriggerTest</members>
@@ -16,6 +17,12 @@
         <members>DEF_SC_Trigger</members>
         <members>DEF_WO_PE_Trigger</members>
         <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>SVMXC__Service_Order__c.DEF_WW_Work_Order_Compact_Layout</members>
+        <members>SVMXC__Service_Request__c.DEF_WW_Service_Request_Compact_Layout</members>
+        <members>ServiceProject__c.DEF_WW_Service_Project_compact</members>
+        <name>CompactLayout</name>
     </types>
     <types>
         <members>DEF_IT_Sub_Contractors_Chatter</members>
@@ -51,6 +58,7 @@
         <members>Issue__c.Symptoms_rootCause__c</members>
         <members>Issue__c.Type__c</members>
         <members>Issue__c.WorkPerformed__c</members>
+        <members>Issue__c.Work_Performed__c</members>
         <members>Issue__c.Work_Performed_by_Installer__c</members>
         <members>Locations_Equipment__c.Equipment__c</members>
         <members>Planned_Parts__c.PM_Schedule_Definition__c</members>
@@ -72,6 +80,7 @@
         <members>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</members>
         <members>SVMXC__Service_Contract_Contacts__c.Must_Receive_Report__c</members>
         <members>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Number__c</members>
+        <members>SVMXC__Service_Contract__c.DEF_Company__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Type__c</members>
         <members>SVMXC__Service_Order_Line__c.SVMXC__Line_Type__c</members>
@@ -105,6 +114,7 @@
         <members>SVMXC__Service_Order__c.Return_Visit_Required__c</members>
         <members>SVMXC__Service_Order__c.Return_of_Order_Date_Time__c</members>
         <members>SVMXC__Service_Order__c.Revisit_Comment__c</members>
+        <members>SVMXC__Service_Order__c.SVMXC__Order_Type__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Work_Performed__c</members>
         <members>SVMXC__Service_Order__c.SVMX_PS_Revisit_Reason__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
@@ -212,6 +222,7 @@
         <members>DEF_WW_Location_Record_Page</members>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
         <members>DEF_WW_Service_Project_Page</members>
+        <members>DEF_WW_Service_Request_Record_Page</members>
         <members>DEF_WW_Work_Order_record_page</members>
         <name>FlexiPage</name>
     </types>
@@ -220,6 +231,9 @@
         <members>DEF_WW_Create_New_Contact_and_Add_as_Entitled_Contact</members>
         <members>DEF_WW_Field_Feedback_to_Service_Quote</members>
         <members>DEF_WW_SC_Trigger_Platform_Event</members>
+        <members>DEF_WW_SR_AfterCreate</members>
+        <members>DEF_WW_SR_AfterUpdate</members>
+        <members>DEF_WW_SR_PrePopulate_SRBeforeCreate</members>
         <members>DEF_WW_ServiceQuote_Trigger_Platform_Event</members>
         <members>DEF_WW_Service_Request_to_Service_Quote</members>
         <members>DEF_WW_Work_Order_Update_First_assigned_date_time_completed_date_time</members>
@@ -234,11 +248,17 @@
     <types>
         <members>Account-DEF_WW_Account Layout</members>
         <members>Contact-DEF_WW_Contact Layout</members>
+        <members>Field_Feedback__c-DEF_WW_Field Feedback Layout</members>
         <members>Issue__c-DEF_WW_Issue Layout</members>
         <members>Planned_Parts__c-DEF_WW_Planned Parts Layout</members>
         <members>Product2-DEF_WW_Product Page Layout</members>
+        <members>SVMXC__Installed_Product__c-DEF_WW_Installed Product Bucket Layout</members>
+        <members>SVMXC__Installed_Product__c-DEF_WW_Installed Product Layout</members>
         <members>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</members>
         <members>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</members>
+        <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</members>
+        <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Line Layout</members>
+        <members>SVMXC__Service_Group_Members__c-SVMX PS - Technician - Admin</members>
         <members>SVMXC__Service_Order__c-DEF_WW_Callout Work Order Layout</members>
         <members>SVMXC__Service_Order__c-DEF_WW_New Works Layout</members>
         <members>SVMXC__Service_Order__c-DEF_WW_Preventive Maintenance Work Order Layout</members>
@@ -262,6 +282,11 @@
     <types>
         <members>Admin</members>
         <members>DEF - AD - Interface</members>
+        <members>DEF BE Contract Admin</members>
+        <members>DEF BE Hybrid</members>
+        <members>DEF BE Manager</members>
+        <members>DEF BE Subcontractor</members>
+        <members>DEF BE Technician</members>
         <members>DEF FS Contract Admin</members>
         <members>DEF FS Manager</members>
         <members>DEF FS Planner</members>
@@ -282,6 +307,12 @@
         <name>Role</name>
     </types>
     <types>
+        <members>fr</members>
+        <members>it</members>
+        <members>nl_NL</members>
+        <name>Translations</name>
+    </types>
+    <types>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Assigned_Technician_Multi_Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_when_Appointment_confirmed_with_the_Customer_Multi_Day</members>
         <name>WorkflowAlert</name>
@@ -293,5 +324,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>50.0</version>
 </Package>
