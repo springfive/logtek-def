@@ -51,6 +51,10 @@
                 <behavior>Edit</behavior>
                 <field>InstallationDiscipline__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>BE_DEF_Navision_Ref_Number__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

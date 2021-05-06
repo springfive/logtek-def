@@ -74,6 +74,14 @@
                 <behavior>Edit</behavior>
                 <field>Customer_Reference__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Quote_required__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Quote_Description__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -234,6 +242,17 @@
         <fields>SVMXC__Zip__c</fields>
         <fields>Is_Follow_up_WO__c</fields>
         <relatedList>SVMXC__Service_Order__c.SVMXC__SM_Service_Request__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>SVMXC__Company__c</fields>
+        <fields>SVMXC__Contact__c</fields>
+        <fields>SVMXC__Service_Order__c</fields>
+        <fields>SVMXC__Quote_Amount2__c</fields>
+        <fields>SVMXC__Revised_From__c</fields>
+        <fields>SVMXC__Status__c</fields>
+        <fields>CREATEDBY_USER</fields>
+        <relatedList>SVMXC__Quote__c.ServiceRequest__c</relatedList>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedFileList</relatedList>

@@ -133,6 +133,18 @@
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>Work_Performed__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Work Performed</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>DEF_WorkPerformed</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Work_Performed_by_Installer__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>

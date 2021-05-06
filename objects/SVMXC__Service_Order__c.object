@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayouts>
+        <fullName>DEF_WW_Work_Order_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Designation__c</fields>
+        <fields>SVMX_PS_Is_Entitled__c</fields>
+        <fields>SVMX_PS_FSE_Assignment__c</fields>
+        <fields>SVMXC__Group_Member__c</fields>
+        <fields>Alert__c</fields>
+        <fields>Pending_Quote__c</fields>
+        <fields>SVMXC__Order_Type__c</fields>
+        <label>DEF_WW_Work Order Compact Layout</label>
+    </compactLayouts>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fields>
         <fullName>BE_DEF_Navision_Ref_Number__c</fullName>
@@ -117,10 +129,12 @@
         <externalId>false</externalId>
         <formula>/*Confirmation request*/
 IF(ISPICKVAL (Confirmation_Request_Status__c, &apos;CRS0002&apos;)&amp;&amp; NOT(ISPICKVAL(SVMXC__Order_Status__c,&quot;Customer Confirmed&quot;)) ,&quot;❓&quot;&amp;&quot; | &quot;,&quot;&quot;)
+
 /*Customer confirmed*/
 &amp;
 IF( ISPICKVAL (SVMXC__Order_Status__c, &quot;Customer Confirmed&quot;), 
 &quot;✅&quot;&amp;&quot; | &quot;,&quot;&quot;)
+
 /*Order Type*/
 &amp;
 IF(ISPICKVAL( SVMXC__Order_Type__c, &quot;Maintenance&quot;),
@@ -129,6 +143,7 @@ IF(ISPICKVAL( SVMXC__Order_Type__c, &quot;Maintenance&quot;),
 		    	&quot;☎️ &quot;,
 					  IF(ISPICKVAL(SVMXC__Order_Type__c, &quot;New Works&quot;), 
 		    	&quot;📐 &quot;,&quot;🔧&quot;)))
+
 /*Installation discipline*/
 &amp;
 IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0001&quot;),&quot;| &quot;&amp;&quot;🔥&quot;,
@@ -140,6 +155,7 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0020&quot;),&quot;| &quot;&amp
 IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0030&quot;),&quot;| &quot;&amp;&quot;🧯❄️&quot;,
 IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0040&quot;),&quot;| &quot;&amp;&quot;🧯💨&quot;,
 IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp;&quot;🧯💦&quot;,&quot;&quot;)))))))))
+
 	/*Location*/
 	&amp;&quot;| &quot;&amp;
 	SVMXC__Site__r.Name</formula>
@@ -447,6 +463,43 @@ Owner:Queue.QueueName)</formula>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Order_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Type of service order: Field Service, Depot repair etc.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of service order: Field Service, Depot repair etc.</inlineHelpText>
+        <label>Order Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Maintenance</fullName>
+                    <default>true</default>
+                    <label>Maintenance</label>
+                </value>
+                <value>
+                    <fullName>Outcalls</fullName>
+                    <default>false</default>
+                    <label>Callout</label>
+                </value>
+                <value>
+                    <fullName>New Works</fullName>
+                    <default>false</default>
+                    <label>New Works</label>
+                </value>
+                <value>
+                    <fullName>Small Works (PTX)</fullName>
+                    <default>false</default>
+                    <label>Small Works (PTX)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>SVMXC__Work_Performed__c</fullName>
