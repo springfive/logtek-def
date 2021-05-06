@@ -1942,7 +1942,6 @@
         <recordType>SVMXC__Service_Contract__c.Contract_Line</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
-    </recordTypeVisibilities>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
         <visibility>DefaultOn</visibility>
