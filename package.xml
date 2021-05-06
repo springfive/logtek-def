@@ -149,13 +149,6 @@
         <name>CustomField</name>
     </types>
     <types>
-        <members>DEF_IntegrationProfile</members>
-        <members>DEF_WO_DailySIRNamePrefix</members>
-        <members>DEF_WW_Issues</members>
-        <members>DEF_WW_WorkPerformed</members>
-        <name>CustomLabel</name>
-    </types>
-    <types>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_CreatedDate</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_Device_Type</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_Difficulties</members>
@@ -324,5 +317,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>50.0</version>
+    <version>51.0</version>
 </Package>
