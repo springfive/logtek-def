@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>SVMXC__Timesheet__c.SVMXC__Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>SVMXC__Timesheet__c.SVMXC__End_Date__c</field>
+    </columns>
+    <columns>
+        <field>SVMXC__Timesheet__c.SVMXC__User__c</field>
+    </columns>
+    <columns>
+        <field>SVMXC__Timesheet__c.SVMX_PS_Utilization__c</field>
+    </columns>
+    <columns>
+        <field>SVMXC__Timesheet__c.SVMX_PS_Total_Productive_Hours__c</field>
+    </columns>
+    <columns>
+        <field>SVMXC__Timesheet__c.SVMX_PS_Total_Non_Productive_Hours__c</field>
+    </columns>
+    <columns>
+        <field>SVMXC__Timesheet__c.SVMXC__Total_Hours__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Technician Utilization Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$SVMXC__Timesheet__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>SVMXC__Timesheet__c.SVMX_PS_Utilization__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>SVMXC__Timesheet__c.SVMXC__End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <assignments>
+        <description>Update the PM Schedule Template with the Work Order Purpose description.</description>
+        <name>Set_PM_Schedule_Template_Description</name>
+        <label>Set PM Schedule Template - Description</label>
+        <locationX>176</locationX>
+        <locationY>373</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.SVMXC__Visit_Description__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_visit_purpose_description.SVMXC__Description__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Update PM Schedule Template fields based on the parent Task Template (Work Order Purpose) value.
+e.g. The description field is retrieved from the Work Order Purpose - to allow the information to be added to the PM plan generated Work Orders later on.</description>
+    <interviewLabel>DEF_WW_PMST_SetValuesFromWorkOrderPurpose {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DEF_WW_PMST_SetValuesFromWorkOrderPurpose</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Retrieve the description of the PM Schedule Template parent Work Order Purpose</description>
+        <name>Get_visit_purpose_description</name>
+        <label>Get visit purpose description</label>
+        <locationX>176</locationX>
+        <locationY>253</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_PM_Schedule_Template_Description</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.SVMXC__Work_Order_Purpose__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SVMXC__Task_Template__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>SVMXC__Description__c</queriedFields>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_visit_purpose_description</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>SVMXC__Work_Order_Purpose__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SVMXC__Work_Order_Purpose__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>SVMXC__PM_Schedule_Template__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
