@@ -7,6 +7,8 @@
         <members>DEF_SC_TriggerHelper</members>
         <members>DEF_SlaClockHelper</members>
         <members>DEF_StringHelper</members>
+        <members>DEF_WD_TriggerHandler</members>
+        <members>DEF_WD_TriggerHandlerTest</members>
         <members>DEF_WO_DailySIREmailBatch</members>
         <members>DEF_WO_PE_TriggerTest</members>
         <members>DEF_WO_SirSender_Helper</members>

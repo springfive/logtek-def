@@ -30,15 +30,28 @@ public with sharing class DEF_WD_TriggerHandlerTest {
         SVMXC__Service_Group_Members__c technician=DEF_TestDataFactory.CreateTechnicianOrEquipment('TestTechnician',serviceTeam,recordTypeTechnicianTE);
         insert technician;
         //Create Work Detail Of Labor Line Type
-        SVMXC__Service_Order_Line__c LaborInstance1=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',Datetime.now(),Datetime.now().addHours(1),technician);
+        Date tdy = Date.today();
+		Time Time1 = Time.newInstance(0, 0, 0, 0);
+        Time Time2 = Time.newInstance(1, 0, 0, 0);
+        DateTime dt1 = DateTime.newInstance(tdy, Time1);
+        DateTime dt2 = DateTime.newInstance(tdy, Time2);
+        SVMXC__Service_Order_Line__c LaborInstance1=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',dt1,dt2,technician);
         insert LaborInstance1;
         //Create Work Detail Of Labor Line Type
-        SVMXC__Service_Order_Line__c LaborInstance2=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',Datetime.now().addHours(1),Datetime.now().addHours(2),technician);
+        Time Time3 = Time.newInstance(1, 0, 0, 0);
+        Time Time4 = Time.newInstance(2, 0, 0, 0);
+        DateTime dt3 = DateTime.newInstance(tdy, Time3);
+        DateTime dt4 = DateTime.newInstance(tdy, Time4);
+        SVMXC__Service_Order_Line__c LaborInstance2=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',dt3,dt4,technician);
         insert LaborInstance2;
         Test.startTest();
         try{
         //Create Work Detail Of Labor Line Type
-        SVMXC__Service_Order_Line__c NewLaborInstance=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',Datetime.now(),Datetime.now().addHours(2),technician);
+        Time Time5 = Time.newInstance(0, 0, 0, 0);
+        Time Time6 = Time.newInstance(2, 0, 0, 0);
+        DateTime dt5 = DateTime.newInstance(tdy, Time5);
+        DateTime dt6 = DateTime.newInstance(tdy, Time6);
+        SVMXC__Service_Order_Line__c NewLaborInstance=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',dt5,dt6,technician);
         insert NewLaborInstance;
         }
         catch(Exception e){
@@ -68,25 +81,46 @@ public with sharing class DEF_WD_TriggerHandlerTest {
         SVMXC__Service_Group_Members__c technician=DEF_TestDataFactory.CreateTechnicianOrEquipment('TestTechnician',serviceTeam,recordTypeTechnicianTE);
         insert technician;
         //Create Work Detail Of Labor Line Type
-        SVMXC__Service_Order_Line__c LaborInstance1=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',Datetime.now(),Datetime.now().addHours(1),technician);
+        Date tdy = Date.today();
+		Time Time1 = Time.newInstance(0, 0, 0, 0);
+        Time Time2 = Time.newInstance(1, 0, 0, 0);
+        DateTime dt1 = DateTime.newInstance(tdy, Time1);
+        DateTime dt2 = DateTime.newInstance(tdy, Time2);
+        SVMXC__Service_Order_Line__c LaborInstance1=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',dt1,dt2,technician);
         insert LaborInstance1;
-        SVMXC__Service_Order_Line__c LaborInstance2=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',Datetime.now().addHours(1),Datetime.now().addHours(2),technician);
+        Time Time3 = Time.newInstance(1, 0, 0, 0);
+        Time Time4 = Time.newInstance(2, 0, 0, 0);
+        DateTime dt3 = DateTime.newInstance(tdy, Time3);
+        DateTime dt4 = DateTime.newInstance(tdy, Time4);
+        SVMXC__Service_Order_Line__c LaborInstance2=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',dt3,dt4,technician);
         insert LaborInstance2;
-        SVMXC__Service_Order_Line__c LaborInstance3=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',Datetime.now().addHours(2),Datetime.now().addHours(3),technician);
+        Time Time5 = Time.newInstance(2, 0, 0, 0);
+        Time Time6 = Time.newInstance(3, 0, 0, 0);
+        DateTime dt5 = DateTime.newInstance(tdy, Time5);
+        DateTime dt6 = DateTime.newInstance(tdy, Time6);
+        SVMXC__Service_Order_Line__c LaborInstance3=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',dt5,dt6,technician);
         insert LaborInstance3;
-        SVMXC__Service_Order_Line__c LaborInstance4=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',Datetime.now().addHours(3),Datetime.now().addHours(4),technician);
+        Time Time7 = Time.newInstance(3, 0, 0, 0);
+        Time Time8 = Time.newInstance(4, 0, 0, 0);
+        DateTime dt7 = DateTime.newInstance(tdy, Time7);
+        DateTime dt8 = DateTime.newInstance(tdy, Time8);
+        SVMXC__Service_Order_Line__c LaborInstance4=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',dt7,dt8,technician);
         insert LaborInstance4;
-        SVMXC__Service_Order_Line__c LaborInstance5=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',Datetime.now().addHours(4),Datetime.now().addHours(5),technician);
+        Time Time9 = Time.newInstance(4, 0, 0, 0);
+        Time Time10 = Time.newInstance(5, 0, 0, 0);
+        DateTime dt9 = DateTime.newInstance(tdy, Time9);
+        DateTime dt10 = DateTime.newInstance(tdy, Time10);
+        SVMXC__Service_Order_Line__c LaborInstance5=DEF_TestDataFactory.CreateWorkDetailLabor(workOrderInstance,'Installation',dt9,dt10,technician);
         insert LaborInstance5;
         Test.startTest();
         try{
         //Create Work Detail Of Labor Line Type
         update LaborInstance4;
-        LaborInstance5.SVMXC__Start_Date_and_Time__c=Datetime.now().addDays(-1);
-        LaborInstance5.SVMXC__End_Date_and_Time__c=Datetime.now().addDays(-1);
+        LaborInstance5.SVMXC__Start_Date_and_Time__c=LaborInstance5.SVMXC__Start_Date_and_Time__c.addDays(-1);
+        LaborInstance5.SVMXC__End_Date_and_Time__c=LaborInstance5.SVMXC__End_Date_and_Time__c.addDays(-1);
         update LaborInstance5;
-        LaborInstance3.SVMXC__Start_Date_and_Time__c=Datetime.now();
-        LaborInstance3.SVMXC__End_Date_and_Time__c=Datetime.now().addHours(2);
+        LaborInstance3.SVMXC__Start_Date_and_Time__c=dt1;
+        LaborInstance3.SVMXC__End_Date_and_Time__c=dt2;
         update LaborInstance3;
         
         }
