@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <classAccesses>
         <apexClass>DEF_SlaClockHelper</apexClass>
@@ -1412,9 +1412,6 @@
     <layoutAssignments>
         <layout>SVMXC__Installed_Product__c-DEF_WW_Installed Product Layout</layout>
         <recordType>SVMXC__Installed_Product__c.Installation_non_physical_Product</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</layout>
