@@ -11,6 +11,7 @@
         <members>DEF_WD_TriggerHandlerTest</members>
         <members>DEF_WO_DailySIREmailBatch</members>
         <members>DEF_WO_PE_TriggerTest</members>
+        <members>DEF_WO_SirSenderTest</members>
         <members>DEF_WO_SirSender_Helper</members>
         <members>DEF_WO_TriggerHandler</members>
         <name>ApexClass</name>
