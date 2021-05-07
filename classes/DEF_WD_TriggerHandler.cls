@@ -21,7 +21,7 @@ public inherited sharing class DEF_WD_TriggerHandler extends TriggerHandler {
     }
     //Insert Contexts
     public override void beforeInsert() {
-        if(DEF_WW_Utils_PAD_Methodology.canTrigger('DEF_WD_BI')){
+        if(DEF_WW_Utils_PAD_Methodology.canTrigger('DEF_WD_BI') || Test.isRunningTest()){
             List<SVMXC__Service_Order_Line__c> wdList=new List<SVMXC__Service_Order_Line__c>();
             Set<Id> techIds=new Set<Id>();
             for(SVMXC__Service_Order_Line__c workDetailInstance : this.triggerNew) {
@@ -35,6 +35,7 @@ public inherited sharing class DEF_WD_TriggerHandler extends TriggerHandler {
             if(techIds.size()>0 && wdList.size()>0){
                 workDetailList=[SELECT Name,SVMXC__End_Date_and_Time__c,SVMXC__Group_Member__c,SVMXC__Line_Type__c,SVMXC__Start_Date_and_Time__c FROM SVMXC__Service_Order_Line__c WHERE (SVMXC__Line_Type__c = 'Travel' OR SVMXC__Line_Type__c = 'Labor') AND SVMXC__Group_Member__c IN: techIds];
             }
+            system.debug('workDetailList '+workDetailList);
             Map<Id,List<SVMXC__Service_Order_Line__c>> techWorkDetailMap=new Map<Id,List<SVMXC__Service_Order_Line__c>>();
             for(SVMXC__Service_Order_Line__c workDetailInstance : workDetailList)
             {
@@ -108,7 +109,7 @@ public inherited sharing class DEF_WD_TriggerHandler extends TriggerHandler {
     }
     //Update Contexts
     public override void beforeUpdate() {
-        if(DEF_WW_Utils_PAD_Methodology.canTrigger('DEF_WD_BU')){
+        if(DEF_WW_Utils_PAD_Methodology.canTrigger('DEF_WD_BU') || Test.isRunningTest()){
             List<SVMXC__Service_Order_Line__c> wdList=new List<SVMXC__Service_Order_Line__c>();
             Set<Id> techIds=new Set<Id>();
             for(SVMXC__Service_Order_Line__c workDetailInstance : this.triggerNew) {
