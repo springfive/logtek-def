@@ -244,6 +244,7 @@
     </types>
     <types>
         <members>DEF_WorkPerformed</members>
+        <members>External_Cause_Type</members>
         <members>Installation_Discipline</members>
         <members>Symptoms</members>
         <name>GlobalValueSet</name>
