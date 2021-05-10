@@ -98,6 +98,7 @@
         <members>SVMXC__Service_Order__c.Copy_Of_Permit_To_Work_Attached__c</members>
         <members>SVMXC__Service_Order__c.CustomerReference__c</members>
         <members>SVMXC__Service_Order__c.Designation__c</members>
+        <members>SVMXC__Service_Order__c.External_Cause_Type__c</members>
         <members>SVMXC__Service_Order__c.Field_Comments__c</members>
         <members>SVMXC__Service_Order__c.How_was_the_service__c</members>
         <members>SVMXC__Service_Order__c.Installation_Status__c</members>
@@ -118,6 +119,7 @@
         <members>SVMXC__Service_Order__c.Return_of_Order_Date_Time__c</members>
         <members>SVMXC__Service_Order__c.Revisit_Comment__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Order_Type__c</members>
+        <members>SVMXC__Service_Order__c.SVMXC__Root_Cause__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Work_Performed__c</members>
         <members>SVMXC__Service_Order__c.SVMX_PS_Revisit_Reason__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
@@ -128,6 +130,7 @@
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
         <members>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</members>
         <members>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</members>
+        <members>SVMXC__Service_Order__c.Work_Performed_Picklist__c</members>
         <members>SVMXC__Service_Request__c.Call_Date_Time__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
         <members>SVMXC__Service_Request__c.InitialResponseCustomerBy__c</members>

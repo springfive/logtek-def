@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <compactLayouts>
-        <fullName>DEF_WW_Work_Order_Compact_Layout</fullName>
-        <fields>Name</fields>
-        <fields>Designation__c</fields>
-        <fields>SVMX_PS_Is_Entitled__c</fields>
-        <fields>SVMX_PS_FSE_Assignment__c</fields>
-        <fields>SVMXC__Group_Member__c</fields>
-        <fields>Alert__c</fields>
-        <fields>Pending_Quote__c</fields>
-        <fields>SVMXC__Order_Type__c</fields>
-        <label>DEF_WW_Work Order Compact Layout</label>
-    </compactLayouts>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <fields>
         <fullName>BE_DEF_Navision_Ref_Number__c</fullName>
@@ -165,6 +153,19 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_Cause_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>External Cause Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>External_Cause_Type</valueSetName>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Field_Comments__c</fullName>
@@ -502,6 +503,158 @@ Owner:Queue.QueueName)</formula>
         </valueSet>
     </fields>
     <fields>
+        <fullName>SVMXC__Root_Cause__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Root cause of the failure.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Root cause of the failure.</inlineHelpText>
+        <label>Root Cause</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>RC0000</fullName>
+                    <default>false</default>
+                    <label>No Problem Found</label>
+                </value>
+                <value>
+                    <fullName>RC0001</fullName>
+                    <default>false</default>
+                    <label>Battery Leak</label>
+                </value>
+                <value>
+                    <fullName>RC0010</fullName>
+                    <default>false</default>
+                    <label>Short circuit on Connection Cables</label>
+                </value>
+                <value>
+                    <fullName>RC0020</fullName>
+                    <default>false</default>
+                    <label>Open Circuit</label>
+                </value>
+                <value>
+                    <fullName>RC0030</fullName>
+                    <default>false</default>
+                    <label>Low insulation on connection cable</label>
+                </value>
+                <value>
+                    <fullName>RC0040</fullName>
+                    <default>false</default>
+                    <label>Bad Contact</label>
+                </value>
+                <value>
+                    <fullName>RC0050</fullName>
+                    <default>false</default>
+                    <label>Earth Leakage</label>
+                </value>
+                <value>
+                    <fullName>RC0060</fullName>
+                    <default>false</default>
+                    <label>Possible electromagnetic interference</label>
+                </value>
+                <value>
+                    <fullName>RC0070</fullName>
+                    <default>false</default>
+                    <label>Cabling Error</label>
+                </value>
+                <value>
+                    <fullName>RC0080</fullName>
+                    <default>false</default>
+                    <label>Flooding</label>
+                </value>
+                <value>
+                    <fullName>RC0090</fullName>
+                    <default>false</default>
+                    <label>Humidity</label>
+                </value>
+                <value>
+                    <fullName>RC0100</fullName>
+                    <default>false</default>
+                    <label>Presence of external bodies</label>
+                </value>
+                <value>
+                    <fullName>RC0110</fullName>
+                    <default>false</default>
+                    <label>Installation Modified</label>
+                </value>
+                <value>
+                    <fullName>RC0120</fullName>
+                    <default>false</default>
+                    <label>Printer Not Working</label>
+                </value>
+                <value>
+                    <fullName>RC0130</fullName>
+                    <default>false</default>
+                    <label>Programming Error</label>
+                </value>
+                <value>
+                    <fullName>RC0140</fullName>
+                    <default>false</default>
+                    <label>User Error</label>
+                </value>
+                <value>
+                    <fullName>RC0150</fullName>
+                    <default>false</default>
+                    <label>SW/FW Issue</label>
+                </value>
+                <value>
+                    <fullName>RC0160</fullName>
+                    <default>false</default>
+                    <label>Polluted Detector</label>
+                </value>
+                <value>
+                    <fullName>RC0170</fullName>
+                    <default>false</default>
+                    <label>Clogged Pipe</label>
+                </value>
+                <value>
+                    <fullName>RC0180</fullName>
+                    <default>false</default>
+                    <label>Pipe Breakage</label>
+                </value>
+                <value>
+                    <fullName>RC0190</fullName>
+                    <default>false</default>
+                    <label>Base Contact</label>
+                </value>
+                <value>
+                    <fullName>RC0210</fullName>
+                    <default>false</default>
+                    <label>Dialer failure</label>
+                </value>
+                <value>
+                    <fullName>RC0220</fullName>
+                    <default>false</default>
+                    <label>Telephone line</label>
+                </value>
+                <value>
+                    <fullName>RC0230</fullName>
+                    <default>false</default>
+                    <label>SIM card problems</label>
+                </value>
+                <value>
+                    <fullName>RC0240</fullName>
+                    <default>false</default>
+                    <label>Device failure</label>
+                </value>
+                <value>
+                    <fullName>RC0200</fullName>
+                    <default>false</default>
+                    <label>Oxidation</label>
+                </value>
+                <value>
+                    <fullName>RC9999</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>SVMXC__Work_Performed__c</fullName>
         <deprecated>false</deprecated>
         <description>Details of work performed to address/resolve the service order</description>
@@ -691,5 +844,18 @@ Owner:Queue.QueueName)</formula>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Performed_Picklist__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Work Performed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>DEF_WorkPerformed</valueSetName>
+        </valueSet>
     </fields>
 </CustomObject>
