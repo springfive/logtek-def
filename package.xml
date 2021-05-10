@@ -22,12 +22,6 @@
         <name>ApexTrigger</name>
     </types>
     <types>
-        <members>SVMXC__Service_Order__c.DEF_WW_Work_Order_Compact_Layout</members>
-        <members>SVMXC__Service_Request__c.DEF_WW_Service_Request_Compact_Layout</members>
-        <members>ServiceProject__c.DEF_WW_Service_Project_compact</members>
-        <name>CompactLayout</name>
-    </types>
-    <types>
         <members>DEF_IT_Sub_Contractors_Chatter</members>
         <name>CustomApplication</name>
     </types>

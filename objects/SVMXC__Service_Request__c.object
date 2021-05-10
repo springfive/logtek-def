@@ -141,14 +141,6 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>DEF_WW_Service_Request_Compact_Layout</compactLayoutAssignment>
-    <compactLayouts>
-        <fullName>DEF_WW_Service_Request_Compact_Layout</fullName>
-        <fields>SVMXC__Account__c</fields>
-        <fields>SVMXC__Actual_Initial_Response__c</fields>
-        <fields>Time_Elapsed__c</fields>
-        <label>DEF_WW_Service Request Compact Layout</label>
-    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>This object can be used to store service request data from 3rd party CRM systems</description>
