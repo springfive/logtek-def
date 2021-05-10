@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>DEF_IT_Sub_Contractors_Chatter</application>
@@ -347,6 +347,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Issue__c.NeedsToBeReviewedByManager__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Issue__c.OLD_Symptoms__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -367,13 +372,28 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Issue__c.ServiceProject__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Issue__c.Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Issue__c.Symptom__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Issue__c.Symptoms_Old__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Issue__c.Symptoms__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -396,13 +416,28 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Issue__c.Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Issue__c.Type_of_Concerned_device__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Issue__c.WorkPerformed__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Issue__c.Work_Performed__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Issue__c.Work_Performed_by_Installer__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1834,18 +1869,11 @@
         <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</layout>
-        <recordType>SVMXC__Service_Contract__c.Contract_Header</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Line Layout</layout>
         <recordType>SVMXC__Service_Contract__c.Contract_Line</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Level__c-DEF_WW_SLA Terms Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SVMXC__Service_Order__c-DEF_WW_Callout Work Order Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_Callout Work Order Layout</layout>
@@ -1866,10 +1894,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Site__c-DEF_WW_Site Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SVMXC__Site__c-DEF_WW_Site Layout</layout>
-        <recordType>SVMXC__Site__c.SVMXC__Standard_Location</recordType>
     </layoutAssignments>
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
@@ -1932,111 +1956,111 @@
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>Assigned_Tools_Technician__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Field_Feedback__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Issue__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Locations_Equipment__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Code_Snippet__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Doc_Template__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SM_SB_Queue_Inbound__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SM_SB_Queue_Outbound__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SVMX_Event__c</tab>
-        <visibility>Hidden</visibility>
+        <visible>Hidden</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SVMX_Job_Logs__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SVMX_Jobs__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__ServiceMax_Config_Data__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__ServiceMax_Settings__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__ServiceMax_Setup</tab>
-        <visibility>Hidden</visibility>
+        <visible>Hidden</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Contract_Contacts__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Group_Members__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Group_Skills__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Level__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Offerings__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Order_Line__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Request__c</tab>
-        <visibility>Hidden</visibility>
+        <visible>Hidden</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Skill__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Territory__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Timesheet_Day_Entry__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Timesheet_Entry__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Timesheet__c</tab>
-        <visibility>Hidden</visibility>
+        <visible>Hidden</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Service_Board</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <userLicense>Salesforce Platform</userLicense>
     <userPermissions>
