@@ -6,6 +6,10 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>Installation_Discipline</members>
+        <name>GlobalValueSet</name>
+    </types>
+    <types>
         <members>GB_Clarkson_Northern_Region</members>
         <members>GB_Clarkson_Scotland</members>
         <members>GB_Clarkson_South_East</members>
