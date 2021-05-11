@@ -132,7 +132,13 @@
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
         <members>SVMXC__Service_Request__c.InitialResponseCustomerBy__c</members>
         <members>SVMXC__Service_Request__c.InitialResponse__c</members>
+        <members>SVMXC__Service_Request__c.PendingQuote__c</members>
+        <members>SVMXC__Service_Request__c.QuoteCreationDateInERP__c</members>
+        <members>SVMXC__Service_Request__c.QuoteReceived__c</members>
+        <members>SVMXC__Service_Request__c.QuoteReference__c</members>
         <members>SVMXC__Service_Request__c.Quote_Description__c</members>
+        <members>SVMXC__Service_Request__c.Quote_required__c</members>
+        <members>SVMXC__Service_Request__c.SynchLog__c</members>
         <members>SVMXC__Service_Request__c.Tech_BusinessHours__c</members>
         <members>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</members>
         <members>SVMXC__Service_Request__c.Time_Elapsed__c</members>
@@ -331,5 +337,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>50.0</version>
 </Package>

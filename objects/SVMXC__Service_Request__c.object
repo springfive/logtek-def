@@ -141,6 +141,15 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>DEF_WW_Service_Request_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>DEF_WW_Service_Request_Compact_Layout</fullName>
+        <fields>SVMXC__Account__c</fields>
+        <fields>SVMXC__Actual_Initial_Response__c</fields>
+        <fields>Time_Elapsed__c</fields>
+        <fields>Quote_required__c</fields>
+        <label>DEF_WW_Service Request Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>This object can be used to store service request data from 3rd party CRM systems</description>
@@ -337,6 +346,18 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>PendingQuote__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(Quote_required__c = TRUE, QuoteReceived__c = FALSE), &quot;TRUE&quot;, &quot;FALSE&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pending Quote</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Preferred_Business_Hours__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -362,6 +383,39 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>QuoteCreationDateInERP__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Creation Date in ERP</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>QuoteReceived__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When the quote is validated by the Client, the “Quote received’ field is automatically set to TRUE</description>
+        <externalId>false</externalId>
+        <label>Quote Received</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>QuoteReference__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Reference</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Quote_Description__c</fullName>
@@ -741,6 +795,16 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>SynchLog__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Synch Log</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Tech_BusinessHours__c</fullName>
