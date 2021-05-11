@@ -801,6 +801,21 @@ Owner:Queue.QueueName)</formula>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Symptoms__c</fullName>
+        <description>Symptom noticed on the Installation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Symptom noticed on the Installation.</inlineHelpText>
+        <label>Symptom</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Symptoms</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Tech_Enable_SIR__c</fullName>
         <defaultValue>false</defaultValue>
         <description>It is a technical field that determines whether or not to enable the SIR, the technical field will be true only if the required field of the SIR are filled previously on Update Work Order Action</description>

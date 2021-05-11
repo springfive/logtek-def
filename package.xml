@@ -122,6 +122,7 @@
         <members>SVMXC__Service_Order__c.Scheduled_End_Date_Time__c</members>
         <members>SVMXC__Service_Order__c.ServiceProject__c</members>
         <members>SVMXC__Service_Order__c.Service_Project_Name__c</members>
+        <members>SVMXC__Service_Order__c.Symptoms__c</members>
         <members>SVMXC__Service_Order__c.Tech_Enable_SIR__c</members>
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
         <members>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</members>
