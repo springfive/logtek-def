@@ -320,10 +320,6 @@
         <name>Translations</name>
     </types>
     <types>
-        <members>SVMXC__Service_Order_Line__c.DEF_WD_StartDate_and_EndDate_Validation</members>
-        <name>ValidationRule</name>
-    </types>
-    <types>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Assigned_Technician_Multi_Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_when_Appointment_confirmed_with_the_Customer_Multi_Day</members>
         <name>WorkflowAlert</name>
