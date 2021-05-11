@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>DEF_IT_Sub_Contractors_Chatter</application>
@@ -172,6 +172,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Issue__c.WorkPerformed__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Issue__c.Work_Performed__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1600,9 +1605,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>SVMXC__Service_Order__c.Tech_Enable_SIR__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1896,6 +1901,9 @@
         <layout>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>
         <recordType>SVMXC__Service_Order__c.New_Works</recordType>
     </layoutAssignments>
@@ -1941,16 +1949,6 @@
         <default>false</default>
         <recordType>SVMXC__Service_Contract__c.Contract_Line</recordType>
         <visible>false</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>SVMXC__Service_Order__c.New_Works</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>SVMXC__Service_Order__c.SmallWorks_PTX</recordType>
-        <visible>true</visible>
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>

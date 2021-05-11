@@ -20,7 +20,7 @@
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>SVMX_PS_Parent_Contract__c</field>
             </layoutItems>
             <layoutItems>
@@ -28,15 +28,15 @@
                 <field>Contract_Line_Number__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>SVMXC__Start_Date__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>SVMXC__End_Date__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Description__c</field>
             </layoutItems>
             <layoutItems>
@@ -44,7 +44,7 @@
                 <field>Alert__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>OwnerId</field>
             </layoutItems>
             <layoutItems>
@@ -55,6 +55,10 @@
                 <behavior>Readonly</behavior>
                 <field>Contract_Header_Contract_Line__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>BE_DEF_Navision_Ref_Number__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -62,32 +66,36 @@
                 <field>SVMXC__Active__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Status__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>SVMXC__Company__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>SVMXC__Contact__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Location__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>Installation__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Preferred_Technician__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>SVMXC__Service_Plan__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Installation_Discipline__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -223,6 +231,17 @@
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <relatedList>SVMXC__Service_Request__c.Contract__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>SVMXC__Company__c</fields>
+        <fields>SVMXC__Contact__c</fields>
+        <fields>SVMXC__Service_Order__c</fields>
+        <fields>SVMXC__Quote_Amount2__c</fields>
+        <fields>SVMXC__Revised_From__c</fields>
+        <fields>SVMXC__Status__c</fields>
+        <fields>CREATEDBY_USER</fields>
+        <relatedList>SVMXC__Quote__c.ServiceContract__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

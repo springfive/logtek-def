@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>WP0001</fullName>
+        <default>false</default>
+        <label>Device replacement</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0010</fullName>
+        <default>false</default>
+        <label>Re-connection</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0020</fullName>
+        <default>false</default>
+        <label>Re-programming</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0040</fullName>
+        <default>false</default>
+        <label>Software update</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0050</fullName>
+        <default>false</default>
+        <label>Machining</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0060</fullName>
+        <default>false</default>
+        <label>Training</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0030</fullName>
+        <default>false</default>
+        <label>Recalibration</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0070</fullName>
+        <default>false</default>
+        <label>Test</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0080</fullName>
+        <default>false</default>
+        <label>Line check with multimeter</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0090</fullName>
+        <default>false</default>
+        <label>Line check with MINIBT</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0100</fullName>
+        <default>false</default>
+        <label>Line check with OCT/TOOL CA</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0110</fullName>
+        <default>false</default>
+        <label>Realignment of linear detectors</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0120</fullName>
+        <default>false</default>
+        <label>Glare Test (Linear Detector)</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0130</fullName>
+        <default>false</default>
+        <label>Reset</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0140</fullName>
+        <default>false</default>
+        <label>Analysis</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0150</fullName>
+        <default>false</default>
+        <label>Cleaning</label>
+    </customValue>
+    <customValue>
+        <fullName>WP0160</fullName>
+        <default>false</default>
+        <label>Cleaning and recalibration</label>
+    </customValue>
+    <customValue>
+        <fullName>WP9999</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>WorkPerformed</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

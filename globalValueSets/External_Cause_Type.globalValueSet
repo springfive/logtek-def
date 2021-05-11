@@ -3,7 +3,7 @@
     <customValue>
         <fullName>ECT0001</fullName>
         <default>false</default>
-        <label>Work</label>
+        <label>Site</label>
     </customValue>
     <customValue>
         <fullName>ECT0010</fullName>
@@ -39,6 +39,11 @@
         <fullName>ECT0070</fullName>
         <default>false</default>
         <label>Wear-off</label>
+    </customValue>
+    <customValue>
+        <fullName>ECT0080</fullName>
+        <default>false</default>
+        <label>Various</label>
     </customValue>
     <customValue>
         <fullName>ECT9999</fullName>

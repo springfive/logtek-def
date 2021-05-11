@@ -147,16 +147,6 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
-    <compactLayoutAssignment>DEF_WW_Service_Project_compact</compactLayoutAssignment>
-    <compactLayouts>
-        <fullName>DEF_WW_Service_Project_compact</fullName>
-        <fields>Account__c</fields>
-        <fields>Status__c</fields>
-        <fields>Location__c</fields>
-        <fields>Start_Date__c</fields>
-        <fields>End_Date__c</fields>
-        <label>DEF_WW_Service Project compact</label>
-    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Projects are used to manage complex New Works for DEF Clients</description>
     <enableActivities>true</enableActivities>
