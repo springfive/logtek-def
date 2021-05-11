@@ -1,11 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
-    <validationRules>
-        <fullName>DEF_WD_StartDate_and_EndDate_Validation</fullName>
-        <active>false</active>
-        <description>Start Date time and End Date Time should  belong to the same date</description>
-        <errorConditionFormula>DATEVALUE( SVMXC__Start_Date_and_Time__c )  &lt;&gt;  DATEVALUE(SVMXC__End_Date_and_Time__c)</errorConditionFormula>
-        <errorMessage>Start Date Time and End Date Time Should Belong to the same date</errorMessage>
-    </validationRules>
+    <fields>
+        <fullName>Product_Stock__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Stock</label>
+        <referenceTo>SVMXC__Product_Stock__c</referenceTo>
+        <relationshipLabel>Work Details</relationshipLabel>
+        <relationshipName>Work_Details</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(SVMXC__Serial_Number__r.SVMXC__Product__r.SVMXC__Product_Type__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Line_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates the type of usage: Parts, Labor or Expenses</description>
+        <externalId>false</externalId>
+        <label>Line Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Parts</fullName>
+                    <default>false</default>
+                    <label>Parts</label>
+                </value>
+                <value>
+                    <fullName>Labor</fullName>
+                    <default>false</default>
+                    <label>Labor</label>
+                </value>
+                <value>
+                    <fullName>Travel</fullName>
+                    <default>true</default>
+                    <label>Travel</label>
+                </value>
+                <value>
+                    <fullName>Expenses</fullName>
+                    <default>false</default>
+                    <label>Expenses</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ShowMilesDriven__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Display or not Miles Driven in SIR</description>
+        <externalId>false</externalId>
+        <label>Show Miles Driven</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Technician_Van_Stock__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Stock Location</label>
+        <referenceTo>SVMXC__Site__c</referenceTo>
+        <relationshipLabel>Work Details (Stock Location)</relationshipLabel>
+        <relationshipName>Work_Details</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
 </CustomObject>
