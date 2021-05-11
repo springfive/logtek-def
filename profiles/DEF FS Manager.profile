@@ -176,6 +176,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Issue__c.Work_Performed__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Issue__c.Work_Performed_by_Installer__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1894,6 +1899,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>

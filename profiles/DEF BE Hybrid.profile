@@ -136,9 +136,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>Issue__c.Work_Performed__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1415,7 +1415,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</layout>
-        <recordType>SVMXC__Service_Contract__c.Contract_Header</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Line Layout</layout>

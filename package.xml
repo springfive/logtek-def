@@ -14,18 +14,14 @@
         <members>DEF_WO_SirSenderTest</members>
         <members>DEF_WO_SirSender_Helper</members>
         <members>DEF_WO_TriggerHandler</members>
+        <members>DemoGetIPTreeData_UT</members>
+		<members>SVMX_PS_ZincMessage_UT</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>DEF_SC_Trigger</members>
         <members>DEF_WO_PE_Trigger</members>
         <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>SVMXC__Service_Order__c.DEF_WW_Work_Order_Compact_Layout</members>
-        <members>SVMXC__Service_Request__c.DEF_WW_Service_Request_Compact_Layout</members>
-        <members>ServiceProject__c.DEF_WW_Service_Project_compact</members>
-        <name>CompactLayout</name>
     </types>
     <types>
         <members>DEF_IT_Sub_Contractors_Chatter</members>
@@ -98,6 +94,7 @@
         <members>SVMXC__Service_Order__c.Copy_Of_Permit_To_Work_Attached__c</members>
         <members>SVMXC__Service_Order__c.CustomerReference__c</members>
         <members>SVMXC__Service_Order__c.Designation__c</members>
+        <members>SVMXC__Service_Order__c.External_Cause_Type__c</members>
         <members>SVMXC__Service_Order__c.Field_Comments__c</members>
         <members>SVMXC__Service_Order__c.How_was_the_service__c</members>
         <members>SVMXC__Service_Order__c.Installation_Status__c</members>
@@ -118,6 +115,7 @@
         <members>SVMXC__Service_Order__c.Return_of_Order_Date_Time__c</members>
         <members>SVMXC__Service_Order__c.Revisit_Comment__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Order_Type__c</members>
+        <members>SVMXC__Service_Order__c.SVMXC__Root_Cause__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Work_Performed__c</members>
         <members>SVMXC__Service_Order__c.SVMX_PS_Revisit_Reason__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
@@ -128,6 +126,7 @@
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
         <members>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</members>
         <members>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</members>
+        <members>SVMXC__Service_Order__c.Work_Performed_Picklist__c</members>
         <members>SVMXC__Service_Request__c.Call_Date_Time__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
         <members>SVMXC__Service_Request__c.InitialResponseCustomerBy__c</members>
@@ -181,7 +180,12 @@
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_CreatedDate</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_Notes</members>
         <members>DEF_RunTrigger.DEF_SC_AI</members>
+        <members>SIR_Config.IT_DEF_Intervention_Report</members>
         <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>NotifySalesforceUser</members>
+        <name>CustomNotificationType</name>
     </types>
     <types>
         <members>DEF_QuoteCreateSMAX2NAV__e</members>
@@ -219,6 +223,7 @@
         <members>DEF_WW_Contract_Admin_Home_Page</members>
         <members>DEF_WW_Location_Record_Page</members>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
+        <members>DEF_WW_Planner_Home_Page_1700</members>
         <members>DEF_WW_Service_Project_Page</members>
         <members>DEF_WW_Service_Request_Record_Page</members>
         <members>DEF_WW_Work_Order_record_page</members>
@@ -240,6 +245,7 @@
     </types>
     <types>
         <members>DEF_WorkPerformed</members>
+        <members>External_Cause_Type</members>
         <members>Installation_Discipline</members>
         <members>Symptoms</members>
         <name>GlobalValueSet</name>
@@ -290,6 +296,7 @@
         <members>DEF FS Manager</members>
         <members>DEF FS Planner</members>
         <members>DEF FS Tech</members>
+        <members>DEF IT Hybrid</members>
         <members>DEF IT Sub Contractor</members>
         <members>DEF Integration</members>
         <name>Profile</name>
