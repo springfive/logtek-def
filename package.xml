@@ -237,8 +237,10 @@
         <name>FlexiPage</name>
     </types>
     <types>
+        <members>DEF_Assign_Tools_Tech</members>
         <members>DEF_Login</members>
         <members>DEF_WW_Create_New_Contact_and_Add_as_Entitled_Contact</members>
+        <members>DEF_WW_Event_Create_Update_ATT_Records</members>
         <members>DEF_WW_Field_Feedback_to_Service_Quote</members>
         <members>DEF_WW_SC_Trigger_Platform_Event</members>
         <members>DEF_WW_SR_AfterCreate</members>
