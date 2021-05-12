@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>50.0</apiVersion>
+    <apiVersion>51.0</apiVersion>
     <assignments>
         <name>Tech_Repeated_is_False</name>
         <label>Tech Repeated is False</label>
-        <locationX>662</locationX>
-        <locationY>964</locationY>
+        <locationX>609</locationX>
+        <locationY>550</locationY>
         <assignmentItems>
             <assignToReference>Tech_Repeated</assignToReference>
             <operator>Assign</operator>
@@ -20,8 +20,8 @@
     <assignments>
         <name>Tech_Repeated_is_True</name>
         <label>Tech Repeated is True</label>
-        <locationX>660</locationX>
-        <locationY>504</locationY>
+        <locationX>610</locationX>
+        <locationY>927</locationY>
         <assignmentItems>
             <assignToReference>Tech_Repeated</assignToReference>
             <operator>Assign</operator>
@@ -35,49 +35,49 @@
     </assignments>
     <decisions>
         <name>Appointment_Status</name>
-        <label>Appointment Status ?</label>
-        <locationX>642</locationX>
-        <locationY>336</locationY>
+        <label>Appointment Status</label>
+        <locationX>605</locationX>
+        <locationY>408</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>Canceled</name>
+            <name>If_Canceled</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.SVMXC__SM_Appointment_Status__c</leftValueReference>
+                <leftValueReference>$Record.SVMXC__SM_Status__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Canceled</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_ATT_to_Cancel</targetReference>
+                <targetReference>Update_ATT_Record_to_Canceled</targetReference>
             </connector>
             <label>If Canceled</label>
         </rules>
         <rules>
-            <name>Pending_or_Confirmed</name>
+            <name>Not_Canceled</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.SVMXC__SM_Appointment_Status__c</leftValueReference>
+                <leftValueReference>$Record.SVMXC__SM_Status__c</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
                     <stringValue>Canceled</stringValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_ATT_to_Confirmed</targetReference>
+                <targetReference>Update_ATT_Record_to_Assigned</targetReference>
             </connector>
-            <label>Pending or Confirmed</label>
+            <label>Not Canceled</label>
         </rules>
     </decisions>
     <decisions>
-        <name>Check_Bypass_Flows</name>
-        <label>Check Bypass Flows</label>
-        <locationX>432</locationX>
-        <locationY>130</locationY>
+        <name>Check_Bypass_Flow</name>
+        <label>Bypass Flow ?</label>
+        <locationX>40</locationX>
+        <locationY>340</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>Bypass_Flow_not_true</name>
+            <name>If_Not_bypassed</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Setup.DEF_CS_BypassComponents__c.Bypass_Flows__c</leftValueReference>
@@ -87,22 +87,59 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Record_Created_Or_Updated</targetReference>
+                <targetReference>Technician_Equipment_ID</targetReference>
             </connector>
-            <label>Bypass Flow not true</label>
+            <label>If Not bypassed</label>
         </rules>
     </decisions>
     <decisions>
-        <name>If_Technician_Record_Exists</name>
-        <label>If Technician Record Exists ?</label>
-        <locationX>653</locationX>
-        <locationY>741</locationY>
+        <name>Record_Created_or_updated</name>
+        <label>Record Created or updated ?</label>
+        <locationX>381</locationX>
+        <locationY>410</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_Created</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SVMXSB__SM_Version_Number__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_ATT_Records</targetReference>
+            </connector>
+            <label>If Created</label>
+        </rules>
+        <rules>
+            <name>If_Updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SVMXSB__SM_Version_Number__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Appointment_Status</targetReference>
+            </connector>
+            <label>If Updated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Technician_Exists</name>
+        <label>Technician Exists ?</label>
+        <locationX>600</locationX>
+        <locationY>743</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>ATT_RecordID</leftValueReference>
+                <leftValueReference>ATT_Record_ID</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -117,7 +154,7 @@
             <name>No</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>ATT_RecordID</leftValueReference>
+                <leftValueReference>ATT_Record_ID</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -129,45 +166,8 @@
             <label>No</label>
         </rules>
     </decisions>
-    <decisions>
-        <name>Record_Created_Or_Updated</name>
-        <label>Record Created Or Updated ?</label>
-        <locationX>432</locationX>
-        <locationY>332</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>If_Created</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.SVMXC__SM_Version_Number__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <numberValue>0.0</numberValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Get_ATT_Record</targetReference>
-            </connector>
-            <label>If Created</label>
-        </rules>
-        <rules>
-            <name>If_Updated</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.SVMXC__SM_Version_Number__c</leftValueReference>
-                <operator>GreaterThan</operator>
-                <rightValue>
-                    <numberValue>0.0</numberValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Appointment_Status</targetReference>
-            </connector>
-            <label>If Updated</label>
-        </rules>
-    </decisions>
-    <interviewLabel>DEF_Assign_Tools/Tech {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>DEF_Create_Assigned_Tools/Tech</label>
+    <interviewLabel>DEF_WW_Event_Create_Update_ATT Records {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DEF_WW_SFEvent_Create_Update_ATT Records</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -190,24 +190,18 @@
     <recordCreates>
         <name>Create_ATT_Record</name>
         <label>Create ATT Record</label>
-        <locationX>926</locationX>
-        <locationY>738</locationY>
+        <locationX>1023</locationX>
+        <locationY>742</locationY>
         <inputAssignments>
             <field>End_Date_and_Time__c</field>
             <value>
-                <elementReference>$Record.SVMXC__EndDateTime__c</elementReference>
+                <elementReference>$Record.EndDateTime</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Start_Date_and_Time__c</field>
             <value>
-                <elementReference>$Record.SVMXC__StartDateTime__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status__c</field>
-            <value>
-                <stringValue>Assigned</stringValue>
+                <elementReference>$Record.StartDateTime</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -219,26 +213,26 @@
         <inputAssignments>
             <field>Technician_Equipment__c</field>
             <value>
-                <elementReference>$Record.SVMXC__Technician__c</elementReference>
+                <elementReference>Technician_Equipment_ID.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Work_Order__c</field>
             <value>
-                <elementReference>$Record.SVMXC__Service_Order__c</elementReference>
+                <elementReference>$Record.WhatId</elementReference>
             </value>
         </inputAssignments>
         <object>Assigned_Tools_Technician__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
-        <name>Get_ATT_Record</name>
-        <label>Get ATT Record</label>
-        <locationX>441</locationX>
-        <locationY>739</locationY>
+        <name>Get_ATT_Records</name>
+        <label>Get ATT Records</label>
+        <locationX>384</locationX>
+        <locationY>742</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>If_Technician_Record_Exists</targetReference>
+            <targetReference>Technician_Exists</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -252,120 +246,88 @@
             <field>Work_Order__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.SVMXC__Service_Order__c</elementReference>
+                <elementReference>$Record.WhatId</elementReference>
             </value>
         </filters>
         <filters>
             <field>Technician_Equipment__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.SVMXC__Technician__c</elementReference>
+                <elementReference>Technician_Equipment_ID.Id</elementReference>
             </value>
         </filters>
         <object>Assigned_Tools_Technician__c</object>
         <outputAssignments>
-            <assignToReference>ATT_RecordID</assignToReference>
+            <assignToReference>ATT_Record_ID</assignToReference>
             <field>Id</field>
         </outputAssignments>
     </recordLookups>
+    <recordLookups>
+        <name>Technician_Equipment_ID</name>
+        <label>Technician/Equipment ID</label>
+        <locationX>176</locationX>
+        <locationY>409</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Record_Created_or_updated</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SVMXC__Salesforce_User__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SVMXC__Service_Group_Members__c</object>
+        <queriedFields>Id</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
-        <name>Update_ATT_to_Cancel</name>
-        <label>Update ATT to Cancel</label>
-        <locationX>651</locationX>
-        <locationY>112</locationY>
+        <name>Update_ATT_Record_to_Assigned</name>
+        <label>Update ATT Record to Assigned</label>
+        <locationX>613</locationX>
+        <locationY>189</locationY>
         <filterLogic>1 AND 2 AND 3 AND 4</filterLogic>
         <filters>
             <field>Work_Order__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.SVMXC__Service_Order__c</elementReference>
+                <elementReference>$Record.WhatId</elementReference>
             </value>
         </filters>
         <filters>
             <field>Technician_Equipment__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.SVMXC__Technician__c</elementReference>
+                <elementReference>Technician_Equipment_ID.Id</elementReference>
             </value>
         </filters>
         <filters>
             <field>Start_Date_and_Time__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record__Prior.SVMXC__StartDateTime__c</elementReference>
+                <elementReference>$Record__Prior.StartDateTime</elementReference>
             </value>
         </filters>
         <filters>
             <field>End_Date_and_Time__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record__Prior.SVMXC__EndDateTime__c</elementReference>
+                <elementReference>$Record__Prior.EndDateTime</elementReference>
             </value>
         </filters>
         <inputAssignments>
             <field>End_Date_and_Time__c</field>
             <value>
-                <elementReference>$Record.SVMXC__EndDateTime__c</elementReference>
+                <elementReference>$Record.EndDateTime</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Start_Date_and_Time__c</field>
             <value>
-                <elementReference>$Record.SVMXC__StartDateTime__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status__c</field>
-            <value>
-                <stringValue>Cancelled</stringValue>
-            </value>
-        </inputAssignments>
-        <object>Assigned_Tools_Technician__c</object>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Update_ATT_to_Confirmed</name>
-        <label>Update ATT to Confirmed</label>
-        <locationX>883</locationX>
-        <locationY>331</locationY>
-        <filterLogic>1 AND 2 AND 3 AND 4</filterLogic>
-        <filters>
-            <field>Work_Order__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.SVMXC__Service_Order__c</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Technician_Equipment__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.SVMXC__Technician__c</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Start_Date_and_Time__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record__Prior.SVMXC__StartDateTime__c</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>End_Date_and_Time__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record__Prior.SVMXC__EndDateTime__c</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>End_Date_and_Time__c</field>
-            <value>
-                <elementReference>$Record.SVMXC__EndDateTime__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Start_Date_and_Time__c</field>
-            <value>
-                <elementReference>$Record.SVMXC__StartDateTime__c</elementReference>
+                <elementReference>$Record.StartDateTime</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -376,27 +338,81 @@
         </inputAssignments>
         <object>Assigned_Tools_Technician__c</object>
     </recordUpdates>
+    <recordUpdates>
+        <name>Update_ATT_Record_to_Canceled</name>
+        <label>Update ATT Record to Canceled</label>
+        <locationX>894</locationX>
+        <locationY>410</locationY>
+        <filterLogic>1 AND 2 AND 3 AND 4</filterLogic>
+        <filters>
+            <field>Work_Order__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Technician_Equipment__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Technician_Equipment_ID.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Start_Date_and_Time__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record__Prior.StartDateTime</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>End_Date_and_Time__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record__Prior.EndDateTime</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>End_Date_and_Time__c</field>
+            <value>
+                <elementReference>$Record.EndDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Start_Date_and_Time__c</field>
+            <value>
+                <elementReference>$Record.StartDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Cancelled</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Assigned_Tools_Technician__c</object>
+    </recordUpdates>
     <start>
         <locationX>50</locationX>
         <locationY>50</locationY>
         <connector>
-            <targetReference>Check_Bypass_Flows</targetReference>
+            <targetReference>Check_Bypass_Flow</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>SVMXC__WhatId__c</field>
+            <field>WhatId</field>
             <operator>StartsWith</operator>
             <value>
                 <stringValue>a1s</stringValue>
             </value>
         </filters>
-        <object>SVMXC__SVMX_Event__c</object>
+        <object>Event</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
     <variables>
-        <name>ATT_RecordID</name>
+        <name>ATT_Record_ID</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
