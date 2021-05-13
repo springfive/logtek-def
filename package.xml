@@ -67,7 +67,6 @@
         <members>Project_Location_Relationship__c.Service_Project__c</members>
         <members>SIR_Config__mdt.Type__c</members>
         <members>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Num__c</members>
-        <members>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Number__c</members>
         <members>SVMXC__Installed_Product__c.Description__c</members>
         <members>SVMXC__PM_Plan__c.Note_to_Planner__c</members>
         <members>SVMXC__Product_Stock__c.External_ID__c</members>
@@ -80,7 +79,6 @@
         <members>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</members>
         <members>SVMXC__Service_Contract_Contacts__c.Must_Receive_Report__c</members>
         <members>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Num__c</members>
-        <members>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Number__c</members>
         <members>SVMXC__Service_Contract__c.DEF_Company__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Type__c</members>
@@ -88,7 +86,6 @@
         <members>SVMXC__Service_Order_Line__c.ShowMilesDriven__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <members>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Num__c</members>
-        <members>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Number__c</members>
         <members>SVMXC__Service_Order__c.Client_Request_Closed__c</members>
         <members>SVMXC__Service_Order__c.Client_Request_Closure_Comment__c</members>
         <members>SVMXC__Service_Order__c.Confirmation_Request_Status__c</members>
