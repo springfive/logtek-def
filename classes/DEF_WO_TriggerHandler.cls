@@ -2,7 +2,7 @@
 * @description       : Handler for the Work Order berfore insert trigger.
 * @author            : Jawahar Moorthy (SpringFive)
 * @group             : 
-* @last modified on  : 04-01-2021
+* @last modified on  : 05-12-2021
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 * Modifications Log 
 * Ver   Date         Author                               Modification
@@ -341,6 +341,9 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
 
                     
                 }
+            }
+            if(workOrderSdMap.size()>0){
+                DEF_WO_TriggerHelper.workDetailFromPlannedParts(workOrderSdMap,pmScheduleDefSet);
             }
             //**Start-->Apex Code is for sending work order id to the back office whenever the callout work order is created**//
             if(woToSendToBO.size()>0){

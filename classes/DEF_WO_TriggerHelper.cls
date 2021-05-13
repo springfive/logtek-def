@@ -325,6 +325,52 @@ public without sharing class DEF_WO_TriggerHelper {
 
 
     }
+    public static void workDetailFromPlannedParts(map<Id,Id> workOrderSdMap,set<id> pmScheduleDefSet){
+        List<Planned_Parts__c> plannedPartsList = [SELECT Id,Part__c,Required_Quantity__c,PM_Schedule_Definition__c FROM Planned_Parts__c WHERE PM_Schedule_Definition__c IN: pmScheduleDefSet];
+        Map<id,List<Planned_Parts__c>> plannedPartScheduleDefMap = new Map<id,List<Planned_Parts__c>>();
+        List<SVMXC__Service_Order_Line__c> WdList = new List<SVMXC__Service_Order_Line__c>();
+        Id WD_RT_UsageOrConsumption=Schema.SObjectType.SVMXC__Service_Order_Line__c.getRecordTypeInfosByName().get('Usage/Consumption').getRecordTypeId();
+
+        for(Planned_Parts__c PpInstance:plannedPartsList){
+            if(plannedPartScheduleDefMap.containsKey(PpInstance.PM_Schedule_Definition__c)){
+                List<Planned_Parts__c> PPList = plannedPartScheduleDefMap.get(PpInstance.PM_Schedule_Definition__c);
+                PPList.add(PpInstance);
+                plannedPartScheduleDefMap.put(PpInstance.PM_Schedule_Definition__c,PPList);
+
+
+            }
+            else{
+                plannedPartScheduleDefMap.put(PpInstance.PM_Schedule_Definition__c,new List<Planned_Parts__c> {PpInstance});
+            }
+            //plannedPartScheduleDefMap.put(PpInstance.PM_Schedule_Definition__c,PpInstance);
+
+        }
+        for(Id woSdMapInstance:workOrderSdMap.Keyset()){
+
+            if(plannedPartScheduleDefMap.containsKey(workOrderSdMap.get(woSdMapInstance))){
+            
+    
+            
+                for(Planned_Parts__c PlannedPartInstance:plannedPartScheduleDefMap.get(workOrderSdMap.get(woSdMapInstance))){
+                    SVMXC__Service_Order_Line__c WdInstance = new SVMXC__Service_Order_Line__c();
+                    WdInstance.SVMXC__Service_Order__c = woSdMapInstance;
+                    WdInstance.SVMXC__Product__c=PlannedPartInstance.Part__c;
+                    WdInstance.Required_Quantity__c = PlannedPartInstance.Required_Quantity__c;
+                    WdInstance.SVMXC__Line_Type__c = 'Parts';
+                    WdInstance.RecordTypeId=WD_RT_UsageOrConsumption;
+                    WdList.add(WdInstance);
+
+                }
+            }
+
+        }
+        //DML
+        Insert WdList;
+
+    }
+    
+
+
 
 
 }

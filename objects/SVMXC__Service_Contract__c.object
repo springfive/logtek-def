@@ -230,7 +230,7 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>BE_DEF_Navision_Ref_Number__c</fullName>
+        <fullName>BE_DEF_Navision_Ref_Num__c</fullName>
         <externalId>false</externalId>
         <label>BE DEF Navision Ref Number</label>
         <required>false</required>
