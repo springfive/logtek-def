@@ -126,6 +126,7 @@
         <members>SVMXC__Service_Order__c.Symptoms__c</members>
         <members>SVMXC__Service_Order__c.Tech_Enable_SIR__c</members>
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
+        <members>SVMXC__Service_Order__c.Tech_MultiDay__c</members>
         <members>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</members>
         <members>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</members>
         <members>SVMXC__Service_Order__c.Work_Performed_Picklist__c</members>
