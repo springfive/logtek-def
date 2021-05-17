@@ -206,7 +206,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Number__c</field>
+        <field>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Num__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1016,7 +1016,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Number__c</field>
+        <field>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Num__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1436,7 +1436,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Number__c</field>
+        <field>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Num__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
