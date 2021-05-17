@@ -839,6 +839,16 @@ Owner:Queue.QueueName)</formula>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Tech_MultiDay__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Scheduled_Duration_in_hours__c &gt; 24, TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tech_Multi Day</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Tech_PrimaryTerritoryFormula__c</fullName>
         <externalId>false</externalId>
         <formula>SVMXC__Primary_Territory__r.Name</formula>
