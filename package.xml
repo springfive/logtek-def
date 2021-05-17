@@ -14,7 +14,7 @@
         <members>DEF_WO_SirSenderTest</members>
         <members>DEF_WO_SirSender_Helper</members>
         <members>DEF_WO_TriggerHandler</members>
-		<members>DEF_WO_TriggerHelper</members>
+        <members>DEF_WO_TriggerHelper</members>
         <members>DemoGetIPTreeData_UT</members>
         <members>SVMX_PS_ZincMessage_UT</members>
         <name>ApexClass</name>

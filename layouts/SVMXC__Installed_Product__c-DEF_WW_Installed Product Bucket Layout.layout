@@ -57,7 +57,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>BE_DEF_Navision_Ref_Number__c</field>
+                <field>BE_DEF_Navision_Ref_Num__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
