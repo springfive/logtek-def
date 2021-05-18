@@ -44,10 +44,6 @@
                 <field>Alert__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>OwnerId</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>DEF_Company__c</field>
             </layoutItems>
@@ -57,7 +53,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>BE_DEF_Navision_Ref_Number__c</field>
+                <field>BE_DEF_Navision_Ref_Num__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -96,6 +92,14 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Installation_Discipline__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SVMXC__Service_Level__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>OwnerId</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
