@@ -364,6 +364,11 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>FeedItem.TextPost</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>0</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>FeedItem.ContentPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
@@ -414,11 +419,6 @@
             <sortOrder>10</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>FeedItem.TextPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>FeedItem.PollPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>11</sortOrder>
@@ -456,6 +456,10 @@
     </platformActionList>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>SVMXC__Service_Group_Members__c.NAME</fields>
+        <fields>Start_Date_and_Time__c</fields>
+        <fields>End_Date_and_Time__c</fields>
+        <fields>Status__c</fields>
         <relatedList>Assigned_Tools_Technician__c.Work_Order__c</relatedList>
     </relatedLists>
     <relatedLists>

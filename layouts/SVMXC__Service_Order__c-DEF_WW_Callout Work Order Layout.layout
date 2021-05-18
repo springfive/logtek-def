@@ -77,7 +77,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>BE_DEF_Navision_Ref_Number__c</field>
+                <field>BE_DEF_Navision_Ref_Num__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -513,14 +513,14 @@
             <sortOrder>6</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>NewCase</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>7</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>NewLead</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>8</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>NewCase</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>7</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>FeedItem.RypplePost</actionName>
@@ -660,6 +660,7 @@
         <fields>SVMXC__Service_Group_Members__c.NAME</fields>
         <fields>Start_Date_and_Time__c</fields>
         <fields>End_Date_and_Time__c</fields>
+        <fields>Status__c</fields>
         <relatedList>Assigned_Tools_Technician__c.Work_Order__c</relatedList>
     </relatedLists>
     <relatedLists>
