@@ -115,6 +115,7 @@
         <members>SVMXC__Service_Order__c.Return_Visit_Required__c</members>
         <members>SVMXC__Service_Order__c.Return_of_Order_Date_Time__c</members>
         <members>SVMXC__Service_Order__c.Revisit_Comment__c</members>
+        <members>SVMXC__Service_Order__c.SVMXC__Order_Status__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Order_Type__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Root_Cause__c</members>
         <members>SVMXC__Service_Order__c.SVMXC__Work_Performed__c</members>
@@ -272,6 +273,7 @@
         <members>SVMXC__Installed_Product__c-DEF_WW_Installed Product Layout</members>
         <members>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</members>
         <members>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</members>
+        <members>SVMXC__Service_Contract__c-Copy-readonly of DEF_WW_Service Contract Line Layout</members>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</members>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Line Layout</members>
         <members>SVMXC__Service_Group_Members__c-SVMX PS - Technician - Admin</members>
