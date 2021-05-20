@@ -468,6 +468,78 @@ Owner:Queue.QueueName)</formula>
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>SVMXC__Order_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Current status of the service order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current status of the service order</inlineHelpText>
+        <label>Order Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Unschedule</fullName>
+                    <default>true</default>
+                    <label>Unscheduled</label>
+                </value>
+                <value>
+                    <fullName>Scheduled</fullName>
+                    <default>false</default>
+                    <label>Scheduled</label>
+                </value>
+                <value>
+                    <fullName>Assigned Technician</fullName>
+                    <default>false</default>
+                    <label>Assigned Technician</label>
+                </value>
+                <value>
+                    <fullName>Customer Confirmed</fullName>
+                    <default>false</default>
+                    <label>Customer Confirmed</label>
+                </value>
+                <value>
+                    <fullName>Job In Progress</fullName>
+                    <default>false</default>
+                    <label>Job In Progress</label>
+                </value>
+                <value>
+                    <fullName>Rescheduled</fullName>
+                    <default>false</default>
+                    <label>Rescheduled</label>
+                </value>
+                <value>
+                    <fullName>Job Complete</fullName>
+                    <default>false</default>
+                    <label>Job Complete</label>
+                </value>
+                <value>
+                    <fullName>Job Validated</fullName>
+                    <default>false</default>
+                    <label>Job Validated</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>Canceled</fullName>
+                    <default>false</default>
+                    <label>Canceled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>SVMXC__Order_Type__c</fullName>
         <deprecated>false</deprecated>
         <description>Type of service order: Field Service, Depot repair etc.</description>
