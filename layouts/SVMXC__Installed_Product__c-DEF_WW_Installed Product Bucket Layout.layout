@@ -283,6 +283,17 @@
         <relatedList>SVMXC__Installed_Product__c.SVMXC__Parent__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>NAME</fields>
+        <fields>SVMXC__Company__c</fields>
+        <fields>SVMXC__Contact__c</fields>
+        <fields>SVMXC__Active__c</fields>
+        <fields>SVMXC__Renewal_Date__c</fields>
+        <fields>SVMXC__Renewal_Number__c</fields>
+        <fields>SVMXC__Start_Date__c</fields>
+        <fields>SVMXC__End_Date__c</fields>
+        <relatedList>SVMXC__Service_Contract__c.Top_Level__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <excludeButtons>MassChangeOwner</excludeButtons>
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
@@ -335,7 +346,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1q000000FNDw</masterLabel>
+        <masterLabel>00h7R00000iGaIB</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
