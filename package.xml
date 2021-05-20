@@ -289,6 +289,11 @@
         <name>Layout</name>
     </types>
     <types>
+        <members>DEF_WW_New_Works_Path</members>
+        <members>DEF_WW_Small_Works_WO_Path</members>
+        <name>PathAssistant</name>
+    </types>
+    <types>
         <members>All_Modify</members>
         <members>DEF_FS_Contract_Admin_PS</members>
         <members>DEF_FS_Manager_PS</members>
