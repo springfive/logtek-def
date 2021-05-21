@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableEnhancedLookup>false</enableEnhancedLookup>
+    <fields>
+        <fullName>Customer_Reference__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Reference</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Purchase_Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Purchase Order</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <listViews>
         <fullName>NORTHERN_ENGLANDPM_WO_To_be_scheduled</fullName>
         <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
         <columns>NAME</columns>
         <columns>SVMXC__Service_Contract__c</columns>
+        <columns>Customer_Reference__c</columns>
         <columns>SVMXC__Site__c</columns>
         <columns>SVMXC__Component__c</columns>
         <columns>SVMXC__Preferred_Start_Time__c</columns>
@@ -44,6 +67,7 @@
         <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
         <columns>NAME</columns>
         <columns>SVMXC__Service_Contract__c</columns>
+        <columns>Customer_Reference__c</columns>
         <columns>SVMXC__Site__c</columns>
         <columns>SVMXC__Component__c</columns>
         <columns>SVMXC__Preferred_Start_Time__c</columns>
@@ -82,6 +106,7 @@
         <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
         <columns>NAME</columns>
         <columns>SVMXC__Service_Contract__c</columns>
+        <columns>Customer_Reference__c</columns>
         <columns>SVMXC__Site__c</columns>
         <columns>SVMXC__Component__c</columns>
         <columns>SVMXC__Preferred_Start_Time__c</columns>
@@ -120,6 +145,7 @@
         <booleanFilter>2 AND 4 AND (1 OR 3)</booleanFilter>
         <columns>NAME</columns>
         <columns>SVMXC__Service_Contract__c</columns>
+        <columns>Customer_Reference__c</columns>
         <columns>SVMXC__Site__c</columns>
         <columns>SVMXC__Component__c</columns>
         <columns>SVMXC__Preferred_Start_Time__c</columns>

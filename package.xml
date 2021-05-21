@@ -2,6 +2,8 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>SVMXC__Service_Contract__c.Installation_Discipline__c</members>
+        <members>SVMXC__Service_Order__c.Customer_Reference__c</members>
+        <members>SVMXC__Service_Order__c.Purchase_Order__c</members>
         <members>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</members>
         <name>CustomField</name>
     </types>
@@ -17,6 +19,8 @@
         <name>Group</name>
     </types>
     <types>
+        <members>SVMXC__Service_Order__c-DEF_WW_Callout Work Order Layout</members>
+        <members>SVMXC__Service_Order__c-DEF_WW_Preventive Maintenance Work Order Layout</members>
         <members>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</members>
         <name>Layout</name>
     </types>
