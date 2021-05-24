@@ -13747,6 +13747,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Is_Fixed_First_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Order__c.Is_Follow_up_WO__c</field>
         <readable>true</readable>
     </fieldPermissions>
