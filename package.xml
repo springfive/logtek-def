@@ -289,10 +289,6 @@
         <name>Layout</name>
     </types>
     <types>
-        <members>dEF_Sla_Clock_SR</members>
-        <name>LightningComponentBundle</name>
-    </types>
-    <types>
         <members>DEF_WW_New_Works_Path</members>
         <members>DEF_WW_Small_Works_WO_Path</members>
         <name>PathAssistant</name>
