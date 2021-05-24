@@ -110,6 +110,7 @@
         <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.Owner_Full_Name__c</members>
         <members>SVMXC__Service_Order__c.PM_Schedule_Definition__c</members>
+        <members>SVMXC__Service_Order__c.Purchase_Order__c</members>
         <members>SVMXC__Service_Order__c.QuoteReference__c</members>
         <members>SVMXC__Service_Order__c.Quote_Description__c</members>
         <members>SVMXC__Service_Order__c.Return_Visit_Required__c</members>
