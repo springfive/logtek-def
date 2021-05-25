@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>BE DEF email sent to Manager when Daily SIR is available (nl,fr,eng)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>DEF_Letterhead</letterhead>
+    <name>DEF_BE_Daily SIR email</name>
+    <style>freeForm</style>
+    <subject>Rapport Journalier/Dagelijks Verslag - {!SVMXC__Service_Order__c.SVMXC__Site__c} - {!SVMXC__Service_Order__c.Name}</subject>
+    <textOnly>Bonjour {!SVMXC__Service_Order__c.00N1x00000A5SlK},
+
+
+Un nouveau rapport journalier lié à l’intervention {!SVMXC__Service_Order__c.Name} - {!SVMXC__Service_Order__c.SVMXC__Site__c} est disponible en pièce jointe.
+
+
+- Compte:{!SVMXC__Service_Order__c.SVMXC__Company__c}
+
+- Service Projet: {!SVMXC__Service_Order__c.Service_Project_Name__c}
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+Hallo {!SVMXC__Service_Order__c.00N1x00000A5SlK},
+
+
+Een nieuw dagelijks rapport met betrekking tot de tussenkomst {!SVMXC__Service_Order__c.Name} - {!SVMXC__Service_Order__c.SVMXC__Site__c} is beschikbaar in bijlage.
+
+
+- Account: {!SVMXC__Service_Order__c.SVMXC__Company__c}
+
+- Service Project: {!SVMXC__Service_Order__c.Service_Project_Name__c}
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+Hello {!SVMXC__Service_Order__c.00N1x00000A5SlK},
+
+
+A new daily report related to the intervention {!SVMXC__Service_Order__c.Name} - {!SVMXC__Service_Order__c.SVMXC__Site__c} is available.
+
+
+- Account: {!SVMXC__Service_Order__c.SVMXC__Company__c}
+
+- Service Project: {!SVMXC__Service_Order__c.Service_Project_Name__c}
+
+
+
+
+
+
+
+
+
+
+DEF Belgium
+
++32 2 331 31 30
+
+http://www.def-online.be/</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
