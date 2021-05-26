@@ -43,4 +43,43 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Technical Observation</fullName>
+                    <default>false</default>
+                    <label>Technical Observation</label>
+                </value>
+                <value>
+                    <fullName>Technical Opportunity</fullName>
+                    <default>false</default>
+                    <label>Technical Opportunity</label>
+                </value>
+                <value>
+                    <fullName>New Service Opportunity</fullName>
+                    <default>false</default>
+                    <label>New Service Opportunity</label>
+                </value>
+                <value>
+                    <fullName>Internal_note</fullName>
+                    <default>false</default>
+                    <label>Internal note</label>
+                </value>
+                <value>
+                    <fullName>Maintenance Opportunity</fullName>
+                    <default>false</default>
+                    <label>Maintenance Opportunity</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
 </CustomObject>

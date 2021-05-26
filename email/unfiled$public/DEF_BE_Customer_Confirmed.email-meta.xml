@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>BE DEF email sent to Customer after Appointment Confirmation (nl,fr,eng)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>DEF_Letterhead</letterhead>
+    <name>DEF_BE_Customer Confirmed</name>
+    <style>freeForm</style>
+    <subject>Confirmation/Afspraakbevestiging/ - {!SVMXC__Service_Order__c.SVMXC__Site__c} - {!SVMXC__Service_Order__c.Name}</subject>
+    <textOnly>Bonjour {!SVMXC__Service_Order__c.SVMXC__Contact__c},
+
+
+Votre intervention de {!SVMXC__Service_Order__c.SVMXC__Order_Type__c} pour {!SVMXC__Service_Order__c.SVMXC__Site__c} - {! SVMXC__Service_Order__c.LocationAddress__c} {!SVMXC__Service_Order__c.SVMXC__City__c}{!SVMXC__Service_Order__c.SVMXC__Zip__c}
+
+est planifiée pour le {!SVMXC__Service_Order__c.SVMXC__Scheduled_Date_Time__c}.
+
+
+Votre technicien est
+
+{!SVMXC__Service_Order__c.SVMXC__Group_Member__c}
+
+{!SVMXC__Service_Order__c.TechnicianPhone__c}.
+
+
+Veuillez prévoir tous les accès.
+
+
+Si cette date ne vous convient pas, merci de nous contacter le plus rapidement possible (au moins 24h à l’avance) afin de convenir d&apos;un nouvel horaire. Sinon, nous nous réservons le droit de facturer une indemnité.
+
+
+Cordialement,
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+Hallo {!SVMXC__Service_Order__c.SVMXC__Contact__c},
+
+Uw tussenkomst voor {!SVMXC__Service_Order__c.SVMXC__Site__c} -
+{!SVMXC__Service_Order__c.LocationAddress__c} {!SVMXC__Service_Order__c.SVMXC__City__c}{!SVMXC__Service_Order__c.SVMXC__Zip__c} is geprogrammeerd voor de {!SVMXC__Service_Order__c.SVMXC__Scheduled_Date_Time__c}.
+
+Uw technicus is
+{!SVMXC__Service_Order__c.SVMXC__Group_Member__c}
+{!SVMXC__Service_Order__c.TechnicianPhone__c}
+
+Gelieve alle toegangen te voorzien.
+
+Indien deze datum u niet past, neem dan zo snel mogelijk (en minstens 24 uur op voorhand) contact met ons op om een nieuwe afspraak te maken. Zo niet behouden wij ons het recht om een vergoeding aan te rekenen.
+
+
+
+Met vriendelijke groeten,
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+Hello {!SVMXC__Service_Order__c.SVMXC__Contact__c},
+
+
+Your {!SVMXC__Service_Order__c.SVMXC__Order_Type__c} intervention for {!SVMXC__Service_Order__c.SVMXC__Site__c} - {! SVMXC__Service_Order__c.LocationAddress__c} {!SVMXC__Service_Order__c.SVMXC__City__c}{!SVMXC__Service_Order__c.SVMXC__Zip__c} is scheduled on {!SVMXC__Service_Order__c.SVMXC__Scheduled_Date_Time__c}.
+
+
+Your Technician is {!SVMXC__Service_Order__c.SVMXC__Group_Member__c}
+
+{!SVMXC__Service_Order__c.TechnicianPhone__c}.
+
+
+Please provide all access.
+
+
+If this date is not convenient for you, please contact us as soon as possible (at least 24 hours in advance) to agree on a new schedule. Otherwise, we reserve the right to charge you a fee.
+
+
+
+Sincerely,
+
+
+
+
+
+
+
+
+
+
+
+DEF Belgium
+
++32 2 331 31 30
+
+http://www.def-online.be/</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

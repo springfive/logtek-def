@@ -49,6 +49,7 @@
         <members>Field_Feedback__c.Quote_Description__c</members>
         <members>Field_Feedback__c.ServiceProject__c</members>
         <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
+        <members>Field_Feedback__c.Type__c</members>
         <members>Issue__c.Associated_Work_Order__c</members>
         <members>Issue__c.NeedsToBeReviewedByManager__c</members>
         <members>Issue__c.ServiceProject__c</members>
@@ -221,6 +222,11 @@
         <name>Dashboard</name>
     </types>
     <types>
+        <members>unfiled$public/DEF_BE_Customer_Confirmed</members>
+        <members>unfiled$public/DEF_BE_Daily_SIR_email</members>
+        <members>unfiled$public/DEF_BE_Reminder_email</members>
+        <members>unfiled$public/DEF_BE_Rescheduled_Appointment</members>
+        <members>unfiled$public/DEF_BE_Service_Intervention_Report_email_to_customer</members>
         <members>unfiled$public/DEF_IT_Assigned_Technician_Template</members>
         <members>unfiled$public/DEF_IT_Assigned_Technician_Template_Multi_Day</members>
         <members>unfiled$public/DEF_IT_Customer_Confirmed_Template</members>

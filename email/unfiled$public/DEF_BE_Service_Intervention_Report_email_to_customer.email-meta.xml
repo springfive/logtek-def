@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>DEF BE email sent to Client when SIR is generated (nl,fr,eng)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>DEF_Letterhead</letterhead>
+    <name>DEF_BE_Service Intervention Report email to customer</name>
+    <style>freeForm</style>
+    <subject>Rapport d&apos;Intervention/Interventieverslag {!SVMXC__Service_Order__c.SVMXC__Site__c}– {!SVMXC__Service_Order__c.Name}</subject>
+    <textOnly>Bonjour {!SVMXC__Service_Order__c.SVMXC__Contact__c},
+
+
+Veuillez trouver ci_joint le rapport d&apos;intervention relatif à la visite de {!SVMXC__Service_Order__c.SVMXC__Order_Type__c} pour {!SVMXC__Service_Order__c.SVMXC__Site__c} - {! SVMXC__Service_Order__c.LocationAddress__c} {!SVMXC__Service_Order__c.SVMXC__City__c}{!SVMXC__Service_Order__c.SVMXC__Zip__c}.
+
+
+
+Nous restons à votre disposition pour toute clarfication supplémentaire.
+
+
+Cordialement,
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+Hallo {!SVMXC__Service_Order__c.SVMXC__Contact__c},
+
+Bijgevoegd vindt u het antwoordrapport voor het bezoek van {!SVMXC__Service_Order__c.SVMXC__Order_Type__c} voor {!SVMXC__Service_Order__c.SVMXC__Site__c} -
+
+{!SVMXC__Service_Order__c.LocationAddress__c} {!SVMXC__Service_Order__c.SVMXC__City__c}{!SVMXC__Service_Order__c.SVMXC__Zip__c}.
+
+Wij blijven tot uw beschikking voor verdere verduidelijking.
+
+
+Met vriendelijke groeten,
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Hello {!SVMXC__Service_Order__c.SVMXC__Contact__c},
+
+
+Please find attached the Service Intervention Report on the {!SVMXC__Service_Order__c.SVMXC__Order_Type__c} intervention for {!SVMXC__Service_Order__c.SVMXC__Site__c} - {! SVMXC__Service_Order__c.LocationAddress__c} {!SVMXC__Service_Order__c.SVMXC__City__c}{!SVMXC__Service_Order__c.SVMXC__Zip__c}.
+
+
+We remain at your disposal for any further clarification.
+
+
+Sincerely,
+
+
+
+
+
+
+
+
+
+
+
+DEF Belgium
+
++32 2 331 31 30
+
+http://www.def-online.be/</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
