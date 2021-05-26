@@ -1890,6 +1890,9 @@
         <layout>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>SVMXC__Service_Group__c-DEF_WW_Service Group Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>
         <recordType>SVMXC__Service_Order__c.New_Works</recordType>
     </layoutAssignments>
@@ -2033,7 +2036,7 @@
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
