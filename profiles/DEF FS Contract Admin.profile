@@ -1904,6 +1904,9 @@
         <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>SVMXC__Service_Group__c-DEF_WW_Service Group Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>
         <recordType>SVMXC__Service_Order__c.New_Works</recordType>
     </layoutAssignments>
