@@ -205,11 +205,6 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Num__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Installed_Product__c.Battery_Fitted_Date__c</field>
         <readable>true</readable>
@@ -1021,11 +1016,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Num__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>SVMXC__Service_Contract__c.Back_Office_Country__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1437,11 +1427,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Num__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1934,6 +1919,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SVMXC__Service_Group__c-DEF_WW_Service Group Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>

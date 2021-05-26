@@ -1421,6 +1421,9 @@
         <recordType>SVMXC__Service_Contract__c.Contract_Line</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>SVMXC__Service_Group__c-DEF_WW_Service Group Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>SVMXC__Service_Request__c-DEF_WW_Service Request Layout</layout>
     </layoutAssignments>
     <layoutAssignments>

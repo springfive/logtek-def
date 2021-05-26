@@ -283,6 +283,7 @@
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</members>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Line Layout</members>
         <members>SVMXC__Service_Group_Members__c-SVMX PS - Technician - Admin</members>
+        <members>SVMXC__Service_Group__c-DEF_WW_Service Group Layout</members>
         <members>SVMXC__Service_Order__c-DEF_WW_Callout Work Order Layout</members>
         <members>SVMXC__Service_Order__c-DEF_WW_New Works Layout</members>
         <members>SVMXC__Service_Order__c-DEF_WW_Preventive Maintenance Work Order Layout</members>
@@ -311,18 +312,21 @@
     <types>
         <members>Admin</members>
         <members>DEF - AD - Interface</members>
+        <members>DEF - Admin - Platform</members>
         <members>DEF BE Contract Admin</members>
         <members>DEF BE Hybrid</members>
         <members>DEF BE Manager</members>
         <members>DEF BE Subcontractor</members>
         <members>DEF BE Technician</members>
         <members>DEF FS Contract Admin</members>
+        <members>DEF FS Hybrid</members>
         <members>DEF FS Manager</members>
         <members>DEF FS Planner</members>
         <members>DEF FS Tech</members>
         <members>DEF IT Hybrid</members>
         <members>DEF IT Sub Contractor</members>
         <members>DEF Integration</members>
+        <members>DEF_WW_Support</members>
         <name>Profile</name>
     </types>
     <types>

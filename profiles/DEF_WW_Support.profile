@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>DEF_IT_Sub_Contractors_Chatter</application>
@@ -347,27 +347,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Issue__c.OLD_Symptoms__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.Root_Cause_Old__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Issue__c.Root_Cause__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Issue__c.Root_Cause_text__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.Symptoms_Old__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -388,11 +373,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Issue__c.Technician_notes__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Issue__c.Type_Of_Concerned_Device_OLD__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1272,11 +1252,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Non_Compliances_Reported_To_Responsible__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>SVMXC__Service_Order__c.Note_to_Planner__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1374,11 +1349,6 @@
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Revisit_Comment__c</field>
         <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>SVMXC__Service_Order__c.RootCause__c</field>
-        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1829,9 +1799,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</layout>
         <recordType>SVMXC__Service_Contract__c.Contract_Header</recordType>
     </layoutAssignments>
     <layoutAssignments>
@@ -1839,7 +1806,7 @@
         <recordType>SVMXC__Service_Contract__c.Contract_Line</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>SVMXC__Service_Order__c-DEF_WW_Callout Work Order Layout</layout>
+        <layout>SVMXC__Service_Group__c-DEF_WW_Service Group Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_Callout Work Order Layout</layout>
@@ -1857,9 +1824,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service__c-DEF_WW_Service Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>SVMXC__Site__c-DEF_WW_Site Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Site__c-DEF_WW_Site Layout</layout>
@@ -1958,7 +1922,7 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SVMX_Event__c</tab>
-        <visibility>Hidden</visibility>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SVMX_Job_Logs__c</tab>
@@ -1978,7 +1942,7 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__ServiceMax_Setup</tab>
-        <visibility>Hidden</visibility>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Contract_Contacts__c</tab>
@@ -2006,7 +1970,7 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Request__c</tab>
-        <visibility>Hidden</visibility>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Skill__c</tab>
@@ -2026,7 +1990,7 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Timesheet__c</tab>
-        <visibility>Hidden</visibility>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Service_Board</tab>
