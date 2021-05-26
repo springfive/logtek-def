@@ -1252,11 +1252,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>SVMXC__Service_Order__c.Non_Compliances_Reported_To_Responsible__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>SVMXC__Service_Order__c.Note_to_Planner__c</field>
         <readable>false</readable>
     </fieldPermissions>
