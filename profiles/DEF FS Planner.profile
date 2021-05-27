@@ -1922,6 +1922,7 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Group__c-DEF_WW_Service Group Layout</layout>
+        <recordType>SVMXC__Service_Group__c.SVMXC__Technician</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_New Works Layout</layout>
@@ -1970,9 +1971,19 @@
         <recordType>SVMXC__Service_Contract__c.Contract_Line</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>SVMXC__Service_Group__c.SVMXC__Equipment</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>SVMXC__Service_Group__c.SVMXC__Technician</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <userLicense>Salesforce Platform</userLicense>
     <userPermissions>

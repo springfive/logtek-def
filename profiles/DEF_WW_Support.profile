@@ -1807,6 +1807,7 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Group__c-DEF_WW_Service Group Layout</layout>
+        <recordType>SVMXC__Service_Group__c.SVMXC__Technician</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Order__c-DEF_WW_Callout Work Order Layout</layout>
@@ -1864,6 +1865,16 @@
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>SVMXC__Service_Group__c.SVMXC__Equipment</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>SVMXC__Service_Group__c.SVMXC__Technician</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <default>false</default>
         <recordType>SVMXC__Service_Order_Line__c.InstalledProductServiced</recordType>
         <visible>false</visible>
@@ -1890,111 +1901,111 @@
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>Assigned_Tools_Technician__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Field_Feedback__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Issue__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Locations_Equipment__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Code_Snippet__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Doc_Template__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SM_SB_Queue_Inbound__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SM_SB_Queue_Outbound__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SVMX_Event__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SVMX_Job_Logs__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__SVMX_Jobs__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__ServiceMax_Config_Data__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__ServiceMax_Settings__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__ServiceMax_Setup</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Contract_Contacts__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Group_Members__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Group_Skills__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Level__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Offerings__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Order_Line__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Request__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Skill__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Territory__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Timesheet_Day_Entry__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Timesheet_Entry__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Timesheet__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Service_Board</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <userLicense>Salesforce Platform</userLicense>
     <userPermissions>
