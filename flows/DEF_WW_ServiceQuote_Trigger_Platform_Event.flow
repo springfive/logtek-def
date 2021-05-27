@@ -109,7 +109,7 @@
             <targetReference>Create_Platform_Event_Record</targetReference>
         </connector>
         <object>SVMXC__Quote__c</object>
-        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>

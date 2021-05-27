@@ -1849,6 +1849,7 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Group__c-DEF_WW_Service Group Layout</layout>
+        <recordType>SVMXC__Service_Group__c.SVMXC__Technician</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>SVMXC__Service_Level__c-DEF_WW_SLA Terms Layout</layout>
@@ -1905,6 +1906,16 @@
     <recordTypeVisibilities>
         <default>true</default>
         <recordType>SVMXC__Service_Group_Members__c.Technician</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>SVMXC__Service_Group__c.SVMXC__Equipment</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>SVMXC__Service_Group__c.SVMXC__Technician</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
