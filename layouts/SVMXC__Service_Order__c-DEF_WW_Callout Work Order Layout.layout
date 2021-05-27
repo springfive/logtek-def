@@ -281,6 +281,10 @@
                 <field>SVMXC__How_Fixed__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Installation_in_Service__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Return_of_Service_Date_Time__c</field>
             </layoutItems>

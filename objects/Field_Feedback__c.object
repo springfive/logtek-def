@@ -12,6 +12,18 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>DEF_Company__c</fullName>
+        <externalId>false</externalId>
+        <label>DEF Company</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Company</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Quote_Description__c</fullName>
         <externalId>false</externalId>
         <label>Quote Description</label>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent to Account owner when a Field Feedback with quote is created (fr-nl-eng)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>DEF_Letterhead</letterhead>
+    <name>DEF_BE_Field Feedback with Quote</name>
+    <style>formalLetter</style>
+    <subject>Evaluation sur le Terrain /Veld Feedback -{!Field_Feedback__c.Account__c}</subject>
+    <textOnly>Bonjour,
+
+
+Une nouvelle Evaluation sur le Terrain - Field Feedback nécessitant un devis a été créée pour le compte {!Field_Feedback__c.Account__c}:
+
+
+
+ID:{!Field_Feedback__c.Name__c}
+
+Technicien: {!Field_Feedback__c.CreatedBy}
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+
+Hallo,
+
+
+
+Er is een nieuwe veldfeedback die een offerte vereist aangemaakt voor de rekening {!Field_Feedback__c.Account__c}:
+
+
+ID:{!Field_Feedback__c.Name__c}
+
+Technicus: {!Field_Feedback__c.CreatedBy}
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+
+Hello,
+
+
+
+A new Field Feedback requiring a quote has been created for the {!Field_Feedback__c.Account__c} account:
+
+
+
+ID:{!Field_Feedback__c.Name__c}
+
+Technician: {!Field_Feedback__c.CreatedBy}
+
+
+
+
+
+
+
+DEF Belgium
+
++32 2 331 31 30
+
+http://www.def-online.be/</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
