@@ -330,11 +330,6 @@
         <name>Profile</name>
     </types>
     <types>
-        <members>SVMXC__Service_Group__c.SVMXC__Equipment</members>
-        <members>SVMXC__Service_Group__c.SVMXC__Technician</members>
-        <name>RecordType</name>
-    </types>
-    <types>
         <members>DEF_WW_RampupKPIs/DEF_WW_First_Time_Fix_X7x</members>
         <members>DEF_WW_RampupKPIs/DEF_WW_Hours_declared_on_site_1xt</members>
         <members>DEF_WW_RampupKPIs/DEF_WW_Work_Orders_validated_without_labor_rkI</members>
