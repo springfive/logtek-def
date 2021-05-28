@@ -5096,6 +5096,16 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Total_Estimated_Duration__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Total_Scheduled_Duration__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Validation_Date__c</field>
         <readable>true</readable>
@@ -5723,6 +5733,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>ServiceProject__c.End_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ServiceProject__c.Is_My_Project__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

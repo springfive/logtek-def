@@ -155,6 +155,7 @@
         <members>ServiceProject__c.DEF_Company__c</members>
         <members>ServiceProject__c.Description__c</members>
         <members>ServiceProject__c.End_Date__c</members>
+        <members>ServiceProject__c.Is_My_Project__c</members>
         <members>ServiceProject__c.Location__c</members>
         <members>ServiceProject__c.PreferredTechnician__c</members>
         <members>ServiceProject__c.Project_Manager__c</members>
