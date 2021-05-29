@@ -362,6 +362,9 @@
         <name>Translations</name>
     </types>
     <types>
+        <members>Field_Feedback__c.DEF_BE_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</members>
+        <members>Field_Feedback__c.DEF_GB_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</members>
+        <members>Field_Feedback__c.DEF_IT_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Assigned_Technician_Multi_Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_when_Appointment_confirmed_with_the_Customer_Multi_Day</members>
         <name>WorkflowAlert</name>
@@ -376,5 +379,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>50.0</version>
 </Package>
