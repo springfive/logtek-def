@@ -165,6 +165,12 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>DEF_BE_Contact_Success_Message</members>
+        <members>DEF_BE_Duplicate_Contact_Error</members>
+        <members>DEF_WW_Create_New_Contact</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_CreatedDate</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_Device_Type</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_Difficulties</members>
@@ -256,6 +262,7 @@
         <members>DEF_Assign_Tools_Tech</members>
         <members>DEF_Login</members>
         <members>DEF_WW_Before_Update_WO</members>
+        <members>DEF_WW_Create_New_Contact</members>
         <members>DEF_WW_Create_New_Contact_and_Add_as_Entitled_Contact</members>
         <members>DEF_WW_Event_Create_Update_ATT_Records</members>
         <members>DEF_WW_Field_Feedback_to_Service_Quote</members>

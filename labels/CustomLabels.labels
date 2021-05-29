@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>DEF_BE_Contact_Success_Message</fullName>
+        <categories>SuccessMessage</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Success message if User try to create a new contact</shortDescription>
+        <value>Contact is created successfully ✔</value>
+    </labels>
+    <labels>
+        <fullName>DEF_BE_Duplicate_Contact_Error</fullName>
+        <categories>ErrorMessage</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error message if User try to create new contact but it already exists in the sys</shortDescription>
+        <value>⚠ This Contact already exist.</value>
+    </labels>
+    <labels>
+        <fullName>DEF_WW_Create_New_Contact</fullName>
+        <categories>Lightning Record Page Translations</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Create New Contact</shortDescription>
+        <value>Create New Contact</value>
+    </labels>
+</CustomLabels>
