@@ -376,5 +376,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>50.0</version>
+    <version>51.0</version>
 </Package>
