@@ -956,6 +956,29 @@ Owner:Queue.QueueName)</formula>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Total_Estimated_Duration__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(FLOOR( SVMXC__SM_Estimated_Duration__c / 1440)) &amp;&apos;Days &apos;&amp; TEXT( FLOOR( MOD(SVMXC__SM_Estimated_Duration__c,1440 )  / 60)) &amp;&apos;hr &apos;&amp;   
+TEXT(FLOOR(MOD( MOD(SVMXC__SM_Estimated_Duration__c,1440),60)))&amp;&apos;min&apos;</formula>
+        <label>Total Estimated Duration</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Scheduled_Duration__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(FLOOR(SVMXC__SM_Scheduled_Duration__c/1440)) &amp; &apos;Days &apos; &amp; TEXT(FLOOR(MOD(SVMXC__SM_Scheduled_Duration__c,1440)/60)) &amp; &apos;hr &apos; &amp;  TEXT(FLOOR(MOD(MOD(SVMXC__SM_Scheduled_Duration__c,1440),60) )) &amp; &apos;min&apos;</formula>
+        <label>Total Scheduled Duration</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Work_Performed_Picklist__c</fullName>
         <externalId>false</externalId>
         <label>Type of Work Performed</label>
