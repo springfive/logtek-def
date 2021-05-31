@@ -46,6 +46,7 @@
         <members>DEF_ServiceContract_Integration__e.RecordId__c</members>
         <members>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</members>
         <members>Field_Feedback__c.Contract_HeaderLink__c</members>
+        <members>Field_Feedback__c.DEF_Company__c</members>
         <members>Field_Feedback__c.Quote_Description__c</members>
         <members>Field_Feedback__c.ServiceProject__c</members>
         <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
@@ -132,6 +133,8 @@
         <members>SVMXC__Service_Order__c.Tech_MultiDay__c</members>
         <members>SVMXC__Service_Order__c.Tech_PrimaryTerritoryFormula__c</members>
         <members>SVMXC__Service_Order__c.Tech_SC_Installation_Discipline__c</members>
+        <members>SVMXC__Service_Order__c.Total_Estimated_Duration__c</members>
+        <members>SVMXC__Service_Order__c.Total_Scheduled_Duration__c</members>
         <members>SVMXC__Service_Order__c.Work_Performed_Picklist__c</members>
         <members>SVMXC__Service_Request__c.Call_Date_Time__c</members>
         <members>SVMXC__Service_Request__c.DEF_Company__c</members>
@@ -154,6 +157,7 @@
         <members>ServiceProject__c.DEF_Company__c</members>
         <members>ServiceProject__c.Description__c</members>
         <members>ServiceProject__c.End_Date__c</members>
+        <members>ServiceProject__c.Is_My_Project__c</members>
         <members>ServiceProject__c.Location__c</members>
         <members>ServiceProject__c.PreferredTechnician__c</members>
         <members>ServiceProject__c.Project_Manager__c</members>
@@ -161,6 +165,12 @@
         <members>ServiceProject__c.Status__c</members>
         <members>ServiceProject__c.Type__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>DEF_BE_Contact_Success_Message</members>
+        <members>DEF_BE_Duplicate_Contact_Error</members>
+        <members>DEF_WW_Create_New_Contact</members>
+        <name>CustomLabel</name>
     </types>
     <types>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Issues_CreatedDate</members>
@@ -224,13 +234,16 @@
     <types>
         <members>unfiled$public/DEF_BE_Customer_Confirmed</members>
         <members>unfiled$public/DEF_BE_Daily_SIR_email</members>
+        <members>unfiled$public/DEF_BE_Field_Feedback_with_Quote</members>
         <members>unfiled$public/DEF_BE_Reminder_email</members>
         <members>unfiled$public/DEF_BE_Rescheduled_Appointment</members>
         <members>unfiled$public/DEF_BE_Service_Intervention_Report_email_to_customer</members>
+        <members>unfiled$public/DEF_GB_Field_Feedback_with_quote</members>
         <members>unfiled$public/DEF_IT_Assigned_Technician_Template</members>
         <members>unfiled$public/DEF_IT_Assigned_Technician_Template_Multi_Day</members>
         <members>unfiled$public/DEF_IT_Customer_Confirmed_Template</members>
         <members>unfiled$public/DEF_IT_Customer_Confirmed_Template_Multi_Day</members>
+        <members>unfiled$public/DEF_IT_Field_Feedback_with_quote</members>
         <name>EmailTemplate</name>
     </types>
     <types>
@@ -238,6 +251,7 @@
         <members>DEF_IT_Sub_Contractors_Home_Page</members>
         <members>DEF_Manager_Home_Page_2011_1644WW_M</members>
         <members>DEF_WW_Contract_Admin_Home_Page</members>
+        <members>DEF_WW_Installed_Product_Record_Page</members>
         <members>DEF_WW_Location_Record_Page</members>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
         <members>DEF_WW_Planner_Home_Page_1700</members>
@@ -249,6 +263,8 @@
     <types>
         <members>DEF_Assign_Tools_Tech</members>
         <members>DEF_Login</members>
+        <members>DEF_WW_Before_Update_WO</members>
+        <members>DEF_WW_Create_New_Contact</members>
         <members>DEF_WW_Create_New_Contact_and_Add_as_Entitled_Contact</members>
         <members>DEF_WW_Event_Create_Update_ATT_Records</members>
         <members>DEF_WW_Field_Feedback_to_Service_Quote</members>
@@ -258,6 +274,7 @@
         <members>DEF_WW_SR_PrePopulate_SRBeforeCreate</members>
         <members>DEF_WW_ServiceQuote_Trigger_Platform_Event</members>
         <members>DEF_WW_Service_Request_to_Service_Quote</members>
+        <members>DEF_WW_Update_Actual_Resolution_Actual_Restoration</members>
         <members>DEF_WW_Work_Order_Update_First_assigned_date_time_completed_date_time</members>
         <members>DEF_WW_Work_Order_to_Service_Quote</members>
         <name>Flow</name>
@@ -347,11 +364,17 @@
         <name>Translations</name>
     </types>
     <types>
+        <members>Field_Feedback__c.DEF_BE_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</members>
+        <members>Field_Feedback__c.DEF_GB_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</members>
+        <members>Field_Feedback__c.DEF_IT_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Assigned_Technician_Multi_Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_when_Appointment_confirmed_with_the_Customer_Multi_Day</members>
         <name>WorkflowAlert</name>
     </types>
     <types>
+        <members>Field_Feedback__c.DEF_BE_Notify Account Owner of Field Feedback with quote</members>
+        <members>Field_Feedback__c.DEF_GB_Notify Account Owner of Field Feedback with quote</members>
+        <members>Field_Feedback__c.DEF_IT_Notify Account Owner of Field Feedback with quote</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer Of Appointment Confirmation</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer Of Appointment Confirmation Multi-Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician</members>

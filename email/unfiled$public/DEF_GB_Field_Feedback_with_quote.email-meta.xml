@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent to Account owner when a Field Feedback with quote is created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>DEF_Letterhead</letterhead>
+    <name>DEF_GB_Field Feedback with quote</name>
+    <style>formalLetter</style>
+    <subject>Field Feedback with quote - {!Field_Feedback__c.Account__c}</subject>
+    <textOnly>Hello,
+
+
+
+A new Field Feedback requiring a quote has been created for the {!Field_Feedback__c.Account__c} account:
+
+
+
+ID:{!Field_Feedback__c.Name__c}
+
+Technician: {!Field_Feedback__c.CreatedBy}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
