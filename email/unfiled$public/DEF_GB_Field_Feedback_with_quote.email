@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal;"><font size="2"><span lang="NL" style="font-family: Arial, sans-serif;">Hello</span><span style="font-family: Arial, sans-serif;">,&nbsp;<o:p></o:p></span></font></p><p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal;"><font size="2"><span style="font-family: Arial, sans-serif;"><br></span></font></p><p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal;"><span style="font-family: Arial, sans-serif;"><font size="2">&nbsp;A new Field Feedback requiring a quote has been created for the&nbsp;</font></span><b style="font-family: Arial, sans-serif; font-size: small;">{!Field_Feedback__c.Account__c}&nbsp;</b><span style="font-size: small; font-family: Arial, sans-serif;">account:</span></p><p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal;"><span style="font-family: Arial, sans-serif;"><font size="2"><br></font></span></p><p class="MsoNormal" style="margin-bottom: 0cm; font-size: 12pt; line-height: normal;"><font face="Arial, sans-serif" size="2"><b>ID:</b></font><span style="font-family: Arial, sans-serif; font-size: small;">{!Field_Feedback__c.Name__c}</span></p><p class="MsoNormal" style="margin-bottom: 0cm; font-size: 12pt; line-height: normal;"><font face="Arial, sans-serif" size="2"><b>Technician:</b>&nbsp;</font><span style="font-family: Arial, sans-serif; font-size: small;">{!Field_Feedback__c.CreatedBy}</span></p><p class="MsoNormal" style="margin-bottom: 0cm; line-height: normal;"><br style="font-family: &quot;Times New Roman&quot;; background-color: rgb(255, 255, 255);"></p>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>
