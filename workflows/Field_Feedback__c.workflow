@@ -7,7 +7,7 @@
         <recipients>
             <type>accountOwner</type>
         </recipients>
-        <senderAddress>def_be@yopmail.com</senderAddress>
+        <senderAddress>devendra.singh@springfive.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
         <template>unfiled$public/DEF_BE_Field_Feedback_with_Quote</template>
     </alerts>
@@ -18,7 +18,8 @@
         <recipients>
             <type>accountOwner</type>
         </recipients>
-        <senderType>DefaultWorkflowUser</senderType>
+        <senderAddress>devendra.singh@springfive.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
         <template>unfiled$public/DEF_GB_Field_Feedback_with_quote</template>
     </alerts>
     <alerts>
@@ -28,7 +29,7 @@
         <recipients>
             <type>accountOwner</type>
         </recipients>
-        <senderAddress>def_be@yopmail.com</senderAddress>
+        <senderAddress>devendra.singh@springfive.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
         <template>unfiled$public/DEF_IT_Field_Feedback_with_quote</template>
     </alerts>
