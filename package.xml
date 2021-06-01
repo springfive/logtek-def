@@ -49,6 +49,7 @@
         <members>Field_Feedback__c.DEF_Company__c</members>
         <members>Field_Feedback__c.Quote_Description__c</members>
         <members>Field_Feedback__c.ServiceProject__c</members>
+        <members>Field_Feedback__c.Tech_Current_User__c</members>
         <members>Field_Feedback__c.Tech_Non_Compliance_Count__c</members>
         <members>Field_Feedback__c.Type__c</members>
         <members>Issue__c.Associated_Work_Order__c</members>
