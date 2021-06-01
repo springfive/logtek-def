@@ -1471,7 +1471,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Field_Feedback__c.DEF_Company__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1543,6 +1543,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Field_Feedback__c.Tech_Count__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Field_Feedback__c.Tech_Current_User__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
