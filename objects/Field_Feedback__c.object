@@ -44,6 +44,18 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Tech_Current_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This Technical field is created for getting the current user id in go app. This field is used in the code snippet Auto-Populate Def Company for field feedback</description>
+        <externalId>false</externalId>
+        <label>Tech_Current User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Field_Feedbacks</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Tech_Non_Compliance_Count__c</fullName>
         <defaultValue>0</defaultValue>
         <externalId>false</externalId>
