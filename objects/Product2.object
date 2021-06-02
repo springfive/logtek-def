@@ -10,4 +10,56 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>SVMXC__Stockable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Flag indicates if this product is stockable. ServiceMax does not maintain inventory of non-stockable products.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag indicates if this product is stockable. ServiceMax does not maintain inventory of non-stockable products.</inlineHelpText>
+        <label>Stockable</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Tracking__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If and how this product is tracked when sold to customers. Serialized products are tracked by unique serial numbers. Lot/Batch tracked items are identified by the batch or lot numbers. Non-tracked items do not have a lot or serial number.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If and how this product is tracked when sold to customers. Serialized products are tracked by unique serial numbers. Lot/Batch tracked items are identified by the batch or lot numbers. Non-tracked items do not have a lot or serial number.</inlineHelpText>
+        <label>Tracking</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Serialized</fullName>
+                    <default>false</default>
+                    <label>Serialized</label>
+                </value>
+                <value>
+                    <fullName>Lot/Batch Tracked</fullName>
+                    <default>false</default>
+                    <label>Lot/Batch Tracked</label>
+                </value>
+                <value>
+                    <fullName>Non-Tracked</fullName>
+                    <default>false</default>
+                    <label>Non-Tracked</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WarningStock__c</fullName>
+        <externalId>false</externalId>
+        <label>WarningStock</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
 </CustomObject>

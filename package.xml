@@ -68,6 +68,9 @@
         <members>Planned_Parts__c.Part__c</members>
         <members>Planned_Parts__c.Required_Quantity__c</members>
         <members>Product2.BE_DEF_Navision_Ref_Num__c</members>
+        <members>Product2.SVMXC__Stockable__c</members>
+        <members>Product2.SVMXC__Tracking__c</members>
+        <members>Product2.WarningStock__c</members>
         <members>Project_Location_Relationship__c.Service_Project__c</members>
         <members>SIR_Config__mdt.Type__c</members>
         <members>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Num__c</members>
@@ -382,5 +385,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>50.0</version>
 </Package>
