@@ -301,6 +301,7 @@
         <members>SVMXC__Installed_Product__c-DEF_WW_Installed Product Layout</members>
         <members>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</members>
         <members>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</members>
+        <members>SVMXC__Quote__c-DEF_WW_Service Quote Layout</members>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</members>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Line Layout</members>
         <members>SVMXC__Service_Group_Members__c-SVMX PS - Technician - Admin</members>
