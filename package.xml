@@ -68,6 +68,9 @@
         <members>Planned_Parts__c.Part__c</members>
         <members>Planned_Parts__c.Required_Quantity__c</members>
         <members>Product2.BE_DEF_Navision_Ref_Num__c</members>
+        <members>Product2.SVMXC__Stockable__c</members>
+        <members>Product2.SVMXC__Tracking__c</members>
+        <members>Product2.WarningStock__c</members>
         <members>Project_Location_Relationship__c.Service_Project__c</members>
         <members>SIR_Config__mdt.Type__c</members>
         <members>SVMXC__Installed_Product__c.BE_DEF_Navision_Ref_Num__c</members>
@@ -252,6 +255,7 @@
         <members>DEF_IT_Sub_Contractors_Home_Page</members>
         <members>DEF_Manager_Home_Page_2011_1644WW_M</members>
         <members>DEF_WW_Contract_Admin_Home_Page</members>
+        <members>DEF_WW_Field_Feedback_Record_Page</members>
         <members>DEF_WW_Installed_Product_Record_Page</members>
         <members>DEF_WW_Location_Record_Page</members>
         <members>DEF_WW_PM_Schedule_Definition_Record_Page</members>
@@ -298,6 +302,7 @@
         <members>SVMXC__Installed_Product__c-DEF_WW_Installed Product Layout</members>
         <members>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</members>
         <members>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</members>
+        <members>SVMXC__Quote__c-DEF_WW_Service Quote Layout</members>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</members>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Line Layout</members>
         <members>SVMXC__Service_Group_Members__c-SVMX PS - Technician - Admin</members>
