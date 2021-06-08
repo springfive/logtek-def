@@ -2408,7 +2408,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Contract__c.Top_Level__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
