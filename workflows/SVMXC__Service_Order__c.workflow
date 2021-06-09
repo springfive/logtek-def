@@ -51,7 +51,7 @@
             <value>IT</value>
         </criteriaItems>
         <criteriaItems>
-            <field>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</field>
+            <field>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</field>
             <operation>lessThan</operation>
             <value>24</value>
         </criteriaItems>
@@ -77,7 +77,7 @@
             <value>IT</value>
         </criteriaItems>
         <criteriaItems>
-            <field>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</field>
+            <field>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</field>
             <operation>greaterOrEqual</operation>
             <value>24</value>
         </criteriaItems>
@@ -103,7 +103,7 @@
             <value>CRS0002</value>
         </criteriaItems>
         <criteriaItems>
-            <field>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</field>
+            <field>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</field>
             <operation>lessThan</operation>
             <value>24</value>
         </criteriaItems>
@@ -129,7 +129,7 @@
             <value>CRS0002</value>
         </criteriaItems>
         <criteriaItems>
-            <field>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</field>
+            <field>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</field>
             <operation>greaterOrEqual</operation>
             <value>24</value>
         </criteriaItems>

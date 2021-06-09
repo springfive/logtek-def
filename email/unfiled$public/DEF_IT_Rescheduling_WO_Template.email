@@ -5,14 +5,14 @@
 </tr>
 <tr valign="top" height="300" >
 <td tEditID="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
-<![CDATA[<div style=""><div style=""><p class="MsoNormal" style=""><i style=""><span lang="IT" style="background: white;">Il Vostro appuntamento per la visita
+<![CDATA[<div style=""><div style=""><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><i style=""><span lang="IT" style="background: white;">Il Vostro appuntamento per la visita
 di&nbsp;</span></i><b style=""><i>{!SVMXC__Service_Order__c.SVMXC__Order_Type__c}</i></b><i style="">&nbsp;</i><i style=""><span lang="IT" style="background: white;">è stato ripianificato.</span></i></p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><br>
-<i><span lang="EN-GB" style="background: white;">Nuova data pianificata:&nbsp;</span></i><b><i>{!SVMXC__Service_Order__c.SVMXC__Scheduled_Date_Time__c}</i></b><i>.</i><o:p></o:p></p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><span lang="FR"><br>
+<i style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-GB" style="background: white;">Nuova data pianificata:&nbsp;</span></i><i style=""><font face="arial"><b>{!SVMXC__Service_Order__c.Initial_Scheduled_Start_Date_and_Time__c}</b><span style="font-size: 12pt;">.</span></font></i><font face="arial"><span style="font-size: 12pt;"><o:p></o:p></span></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><span lang="FR"><br>
 </span><i><span lang="IT" style="background: white;">Nel caso foste impossibilitati a
 rispettare l’appuntamento, vogliate cortesemente contattarci il prima possibile
 per concordare una nuova pianificazione.</span></i><span lang="FR"><br>
 <br>
-</span><i><span style="background: white;">Cordiali saluti,</span></i><o:p></o:p></p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><o:p>&nbsp;</o:p></p><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;">
+</span><i><span style="background: white;">Cordiali saluti,</span></i><o:p></o:p></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;"><o:p>&nbsp;</o:p></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt; line-height: normal;">
 
 
 
@@ -22,7 +22,7 @@ per concordare una nuova pianificazione.</span></i><span lang="FR"><br>
 
 
 
-</p><p class="MsoNormal" style="margin-bottom: 0.0001pt;"><i style=""><span style="background: white;">DEF Italia</span></i><o:p></o:p></p></div><div style=""><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; line-height: 107%;"><span style="font-family: Arial, Helvetica, sans-serif;"><b>Silvia Busso<br>Planificazione Interventi Tecnici<br>DEF Italia S.r.l.<br>Tel: +39 0331 742304</b></span></span></div><div style=""><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; line-height: 107%;"><a href="http://www.defonline.it/" style="font-family: &quot;Times New Roman&quot;;">http://www.defonline.it</a></span></div><div style="font-size: 12pt;"><img src="https://def-fs--devoct2020--c.documentforce.com/servlet/servlet.ImageServer?id=0151q000000FDIK&amp;oid=00D1q0000008bz8" border="0" align="left" alt=""><br></div></div>]]></td>
+</p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin-bottom: 0.0001pt;"><i style=""><span style="background: white;">DEF Italia</span></i><o:p></o:p></p></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; line-height: 107%;"><span style="font-family: Arial, Helvetica, sans-serif;"><b>Silvia Busso<br>Planificazione Interventi Tecnici<br>DEF Italia S.r.l.<br>Tel: +39 0331 742304</b></span></span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; line-height: 107%;"><a href="http://www.defonline.it/" style="font-family: &quot;Times New Roman&quot;;">http://www.defonline.it</a></span></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><img src="https://def-fs--devoct2020--c.documentforce.com/servlet/servlet.ImageServer?id=0151q000000FDIK&amp;oid=00D1q0000008bz8" border="0" align="left" alt=""><br></div></div>]]></td>
 </tr>
 <tr valign="top" height="50" >
 <td tEditID="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
