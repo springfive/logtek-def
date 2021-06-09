@@ -64,7 +64,7 @@
             <name>DEF_IT_Send_email_when_Appointment_confirmed_with_the_Customer_Multi_Day</name>
             <type>Alert</type>
         </actions>
-        <active>false</active>
+        <active>true</active>
         <booleanFilter>1 AND 2 AND 3</booleanFilter>
         <criteriaItems>
             <field>SVMXC__Service_Order__c.SVMXC__Order_Status__c</field>
@@ -116,7 +116,7 @@
             <name>DEF_IT_Send_email_to_customer_when_Assigned_Technician_Multi_Day</name>
             <type>Alert</type>
         </actions>
-        <active>false</active>
+        <active>true</active>
         <booleanFilter>1 AND 2 AND 3</booleanFilter>
         <criteriaItems>
             <field>SVMXC__Service_Order__c.DEF_Company__c</field>
