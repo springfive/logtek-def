@@ -95,6 +95,7 @@
         <members>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Num__c</members>
         <members>SVMXC__Service_Order__c.Client_Request_Closed__c</members>
         <members>SVMXC__Service_Order__c.Client_Request_Closure_Comment__c</members>
+        <members>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</members>
         <members>SVMXC__Service_Order__c.Confirmation_Request_Status__c</members>
         <members>SVMXC__Service_Order__c.Contact_Email_SF__c</members>
         <members>SVMXC__Service_Order__c.Contact_Phone_SF__c</members>
@@ -103,7 +104,9 @@
         <members>SVMXC__Service_Order__c.Designation__c</members>
         <members>SVMXC__Service_Order__c.External_Cause_Type__c</members>
         <members>SVMXC__Service_Order__c.Field_Comments__c</members>
+        <members>SVMXC__Service_Order__c.Final_Scheduled_End_Date_and_Time__c</members>
         <members>SVMXC__Service_Order__c.How_was_the_service__c</members>
+        <members>SVMXC__Service_Order__c.Initial_Scheduled_Start_Date_and_Time__c</members>
         <members>SVMXC__Service_Order__c.Installation_Status__c</members>
         <members>SVMXC__Service_Order__c.Installation_in_Service__c</members>
         <members>SVMXC__Service_Order__c.Intervention_End_Date_and_Time__c</members>
@@ -248,6 +251,8 @@
         <members>unfiled$public/DEF_IT_Customer_Confirmed_Template</members>
         <members>unfiled$public/DEF_IT_Customer_Confirmed_Template_Multi_Day</members>
         <members>unfiled$public/DEF_IT_Field_Feedback_with_quote</members>
+        <members>unfiled$public/DEF_IT_Reminder_Email_to_Customer</members>
+        <members>unfiled$public/DEF_IT_Rescheduling_WO_Template</members>
         <name>EmailTemplate</name>
     </types>
     <types>
@@ -387,5 +392,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>50.0</version>
 </Package>
