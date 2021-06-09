@@ -32,6 +32,21 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
+        <fullName>Client_Scheduled_Duration_in_hours__c</fullName>
+        <description>Scheduled duration perceived by the client. This field is different from the standard Smax field because it does not sum up the duration of all the events for the WO, but considers the time that the client needs to dedicate to the intervention. If for example, we have two technicians assigned to a WO for 8 hours each one, the Client Scheduled Duration is 8 hours because the client only needs to dedicate 8 hours for the intervention.</description>
+        <externalId>false</externalId>
+        <formula>( Final_Scheduled_End_Date_and_Time__c - Initial_Scheduled_Start_Date_and_Time__c )*24</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Client Scheduled Duration (in hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Confirmation_Request_Status__c</fullName>
         <defaultValue>&quot;Request Not Sent&quot;</defaultValue>
         <externalId>false</externalId>
@@ -181,6 +196,23 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
+        <fullName>Final_Scheduled_End_Date_and_Time__c</fullName>
+        <description>Rollup of all Asigned tools Technicians to find the last moment in which they are scheduled. Used for Italian email templates.</description>
+        <externalId>false</externalId>
+        <label>Final Scheduled End Date and Time</label>
+        <summarizedField>Assigned_Tools_Technician__c.End_Date_and_Time__c</summarizedField>
+        <summaryFilterItems>
+            <field>Assigned_Tools_Technician__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Rejeté, Annulé</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Assigned_Tools_Technician__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
         <fullName>How_was_the_service__c</fullName>
         <externalId>false</externalId>
         <label>How was the service?</label>
@@ -219,6 +251,23 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>Initial_Scheduled_Start_Date_and_Time__c</fullName>
+        <description>Rollup of all Asigned tools Technicians to find the first moment in which they are scheduled. Used for Italian email templates.</description>
+        <externalId>false</externalId>
+        <label>Initial Scheduled Start Date and Time</label>
+        <summarizedField>Assigned_Tools_Technician__c.Start_Date_and_Time__c</summarizedField>
+        <summaryFilterItems>
+            <field>Assigned_Tools_Technician__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Rejeté, Annulé</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Assigned_Tools_Technician__c.Work_Order__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
     </fields>
     <fields>
         <fullName>Installation_Status__c</fullName>
