@@ -67,7 +67,7 @@
         <description>Symptom noticed on the Installation.</description>
         <externalId>false</externalId>
         <inlineHelpText>Symptom noticed on the Installation.</inlineHelpText>
-        <label>Symptom</label>
+        <label>Symptom_OLD</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -92,7 +92,7 @@
         <fullName>Symptoms_rootCause__c</fullName>
         <description>Italy: field using Root Cause global value set</description>
         <externalId>false</externalId>
-        <label>Symptoms</label>
+        <label>Symptoms_OLD2</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>

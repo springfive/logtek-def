@@ -275,6 +275,7 @@
         <members>DEF_Assign_Tools_Tech</members>
         <members>DEF_Login</members>
         <members>DEF_WW_Before_Update_WO</members>
+        <members>DEF_WW_Close_Service_Request</members>
         <members>DEF_WW_Create_New_Contact</members>
         <members>DEF_WW_Create_New_Contact_and_Add_as_Entitled_Contact</members>
         <members>DEF_WW_Event_Create_Update_ATT_Records</members>
@@ -393,5 +394,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>50.0</version>
 </Package>
