@@ -21,11 +21,11 @@
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>SVMXC__Service_Contract__c</tab>
-        <visible>DefaultOn</visible>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
-        <visible>DefaultOn</visible>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce Platform</userLicense>
 </Profile>
