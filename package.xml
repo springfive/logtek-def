@@ -231,6 +231,7 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>SVMXC__Service_Contract__c</members>
         <members>ServiceProject__c</members>
         <name>CustomTab</name>
     </types>
