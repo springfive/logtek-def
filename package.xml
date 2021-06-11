@@ -93,6 +93,7 @@
         <members>SVMXC__Service_Order_Line__c.ShowMilesDriven__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <members>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Num__c</members>
+        <members>SVMXC__Service_Order__c.Certificate_Number__c</members>
         <members>SVMXC__Service_Order__c.Client_Request_Closed__c</members>
         <members>SVMXC__Service_Order__c.Client_Request_Closure_Comment__c</members>
         <members>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</members>
