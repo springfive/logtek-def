@@ -398,6 +398,16 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Multiple_day_intervention__c</fullName>
+        <externalId>false</externalId>
+        <formula>DAY(DATEVALUE(Final_Scheduled_End_Date_and_Time__c))&lt;&gt;DAY(DATEVALUE(Initial_Scheduled_Start_Date_and_Time__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Multiple day intervention</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Non_Compliance_Reported__c</fullName>
         <description>Non-Compliances Reported To Responsible Person</description>
         <externalId>false</externalId>

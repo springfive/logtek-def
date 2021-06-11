@@ -116,6 +116,7 @@
         <members>SVMXC__Service_Order__c.Language__c</members>
         <members>SVMXC__Service_Order__c.Log_Verification__c</members>
         <members>SVMXC__Service_Order__c.Logbook_Completed__c</members>
+        <members>SVMXC__Service_Order__c.Multiple_day_intervention__c</members>
         <members>SVMXC__Service_Order__c.Non_Compliance_Reported__c</members>
         <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.Owner_Full_Name__c</members>

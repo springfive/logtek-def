@@ -51,9 +51,9 @@
             <value>IT</value>
         </criteriaItems>
         <criteriaItems>
-            <field>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</field>
-            <operation>lessThan</operation>
-            <value>24</value>
+            <field>SVMXC__Service_Order__c.Multiple_day_intervention__c</field>
+            <operation>equals</operation>
+            <value>False</value>
         </criteriaItems>
         <description>Send e-mail confirmation to customer when a WO is scheduled and confirmed ( the email is automatically sent after the WO status changes to &quot;Customer Confirmed&quot;).</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
@@ -77,9 +77,9 @@
             <value>IT</value>
         </criteriaItems>
         <criteriaItems>
-            <field>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</field>
-            <operation>greaterOrEqual</operation>
-            <value>24</value>
+            <field>SVMXC__Service_Order__c.Multiple_day_intervention__c</field>
+            <operation>equals</operation>
+            <value>True</value>
         </criteriaItems>
         <description>Send e-mail confirmation to customer when a WO is scheduled and confirmed ( the email is automatically sent after the WO status changes to &quot;Customer Confirmed&quot;).</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
@@ -103,9 +103,9 @@
             <value>CRS0002</value>
         </criteriaItems>
         <criteriaItems>
-            <field>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</field>
-            <operation>lessThan</operation>
-            <value>24</value>
+            <field>SVMXC__Service_Order__c.Multiple_day_intervention__c</field>
+            <operation>equals</operation>
+            <value>False</value>
         </criteriaItems>
         <description>Notify the Customer of the Assigned Work Order and ask for confirmation of the appointment</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
@@ -129,9 +129,9 @@
             <value>CRS0002</value>
         </criteriaItems>
         <criteriaItems>
-            <field>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</field>
-            <operation>greaterOrEqual</operation>
-            <value>24</value>
+            <field>SVMXC__Service_Order__c.Multiple_day_intervention__c</field>
+            <operation>equals</operation>
+            <value>True</value>
         </criteriaItems>
         <description>Notify the Customer of the Assigned Work Order and ask for confirmation of the appointment when WO lasts more than one day</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
