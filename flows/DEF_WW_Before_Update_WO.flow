@@ -4,8 +4,8 @@
     <assignments>
         <name>Update_Actual_Resolution</name>
         <label>Update Actual Resolution</label>
-        <locationX>50</locationX>
-        <locationY>887</locationY>
+        <locationX>248</locationX>
+        <locationY>1103</locationY>
         <assignmentItems>
             <assignToReference>$Record.SVMXC__Actual_Resolution__c</assignToReference>
             <operator>Assign</operator>
@@ -15,10 +15,26 @@
         </assignmentItems>
     </assignments>
     <assignments>
-        <name>Update_Actual_Restoration</name>
-        <label>Update Actual Restoration</label>
+        <name>Update_Actual_Restoration_0</name>
+        <label>Update Actual Restoration with Return of Service Date Time</label>
         <locationX>50</locationX>
-        <locationY>551</locationY>
+        <locationY>671</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.SVMXC__Actual_Restoration__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ReturnofServiceDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_WO_Status_Installation</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Actual_Restoration_with_NOW</name>
+        <label>Update Actual Restoration with NOW</label>
+        <locationX>314</locationX>
+        <locationY>671</locationY>
         <assignmentItems>
             <assignToReference>$Record.SVMXC__Actual_Restoration__c</assignToReference>
             <operator>Assign</operator>
@@ -33,7 +49,7 @@
     <decisions>
         <name>Check_Bypass_Flow</name>
         <label>Check Bypass Flow</label>
-        <locationX>380</locationX>
+        <locationX>578</locationX>
         <locationY>311</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -55,8 +71,8 @@
     <decisions>
         <name>Check_WO_Status_Installation</name>
         <label>Check WO Status &amp; Installation</label>
-        <locationX>182</locationX>
-        <locationY>767</locationY>
+        <locationX>380</locationX>
+        <locationY>983</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>WO_is_Job_Complete_or_Validated_and_Installation_in_Service</name>
@@ -96,9 +112,34 @@
         </rules>
     </decisions>
     <decisions>
-        <name>WO_Installation_in_Service</name>
-        <label>Check WO Installation (Installation in Service?)</label>
+        <name>Return_of_Service_Date_Time_Populated</name>
+        <label>Return of Service Date Time Populated?</label>
         <locationX>182</locationX>
+        <locationY>551</locationY>
+        <defaultConnector>
+            <targetReference>Update_Actual_Restoration_with_NOW</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Return_of_Service_Date_Time__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>emptyDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Actual_Restoration_0</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>WO_Installation_in_Service</name>
+        <label>Installation in Service?</label>
+        <locationX>380</locationX>
         <locationY>431</locationY>
         <defaultConnector>
             <targetReference>Check_WO_Status_Installation</targetReference>
@@ -122,7 +163,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Actual_Restoration</targetReference>
+                <targetReference>Return_of_Service_Date_Time_Populated</targetReference>
             </connector>
             <label>Installation in Service</label>
         </rules>
@@ -136,6 +177,11 @@
         <name>NOW</name>
         <dataType>DateTime</dataType>
         <expression>{!$Flow.CurrentDateTime}</expression>
+    </formulas>
+    <formulas>
+        <name>ReturnofServiceDateTime</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Record.Return_of_Service_Date_Time__c}</expression>
     </formulas>
     <interviewLabel>DEF_WW_Before_Update_WO {!$Flow.CurrentDateTime}</interviewLabel>
     <label>DEF_WW_Before_Update_WO</label>
@@ -159,7 +205,7 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <start>
-        <locationX>254</locationX>
+        <locationX>452</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Check_Bypass_Flow</targetReference>
@@ -168,5 +214,5 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordBeforeSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
 </Flow>
