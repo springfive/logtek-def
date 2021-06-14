@@ -6,7 +6,7 @@
     <letterhead>DEF_Letterhead</letterhead>
     <name>DEF_IT_Customer Confirmed Template Multi-Day</name>
     <style>formalLetter</style>
-    <subject>Pianificazione Intervento DEF – ODL {!SVMXC__Service_Order__c.Name}</subject>
+    <subject>Pianificazione Intervento DEF - ODL {!SVMXC__Service_Order__c.Name}</subject>
     <textOnly>Gentile {!SVMXC__Service_Order__c.SVMXC__Contact__c}
 
 Il Vostro appuntamento per la visita di {!SVMXC__Service_Order__c.SVMXC__Order_Type__c} p/o {!SVMXC__Service_Order__c.SVMXC__Site__c} – {!SVMXC__Service_Order__c.Location_Address__c} , è pianificato per il giorno {!SVMXC__Service_Order__c.SVMXC__Scheduled_Date_Time__c}.
