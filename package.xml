@@ -93,6 +93,7 @@
         <members>SVMXC__Service_Order_Line__c.ShowMilesDriven__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
         <members>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Num__c</members>
+        <members>SVMXC__Service_Order__c.Certificate_Number__c</members>
         <members>SVMXC__Service_Order__c.Client_Request_Closed__c</members>
         <members>SVMXC__Service_Order__c.Client_Request_Closure_Comment__c</members>
         <members>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</members>
@@ -115,6 +116,7 @@
         <members>SVMXC__Service_Order__c.Language__c</members>
         <members>SVMXC__Service_Order__c.Log_Verification__c</members>
         <members>SVMXC__Service_Order__c.Logbook_Completed__c</members>
+        <members>SVMXC__Service_Order__c.Multiple_day_intervention__c</members>
         <members>SVMXC__Service_Order__c.Non_Compliance_Reported__c</members>
         <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.Owner_Full_Name__c</members>
@@ -275,6 +277,7 @@
         <members>DEF_Assign_Tools_Tech</members>
         <members>DEF_Login</members>
         <members>DEF_WW_Before_Update_WO</members>
+        <members>DEF_WW_Close_Service_Request</members>
         <members>DEF_WW_Create_New_Contact</members>
         <members>DEF_WW_Create_New_Contact_and_Add_as_Entitled_Contact</members>
         <members>DEF_WW_Event_Create_Update_ATT_Records</members>

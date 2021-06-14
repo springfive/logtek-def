@@ -177,7 +177,7 @@
         </rules>
     </decisions>
     <description>Close Service Request when WO is closed and there is no Follow-up WO</description>
-    <interviewLabel>DEF_WW_Close_Service_Request-1_InterviewLabel</interviewLabel>
+    <interviewLabel>DEF_WW_Close_Service_Request-2_InterviewLabel</interviewLabel>
     <label>DEF_WW Close Service Request</label>
     <processMetadataValues>
         <name>ObjectType</name>
