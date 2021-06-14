@@ -400,7 +400,9 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
     <fields>
         <fullName>Multiple_day_intervention__c</fullName>
         <externalId>false</externalId>
-        <formula>DAY(DATEVALUE(Final_Scheduled_End_Date_and_Time__c))&lt;&gt;DAY(DATEVALUE(Initial_Scheduled_Start_Date_and_Time__c))</formula>
+        <formula>OR(DAY(DATEVALUE(Final_Scheduled_End_Date_and_Time__c))&lt;&gt;DAY(DATEVALUE(Initial_Scheduled_Start_Date_and_Time__c)),
+MONTH(DATEVALUE(Final_Scheduled_End_Date_and_Time__c))&lt;&gt;MONTH(DATEVALUE(Initial_Scheduled_Start_Date_and_Time__c)),
+YEAR(DATEVALUE(Final_Scheduled_End_Date_and_Time__c))&lt;&gt;YEAR(DATEVALUE(Initial_Scheduled_Start_Date_and_Time__c)))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Multiple day intervention</label>
         <trackHistory>false</trackHistory>
