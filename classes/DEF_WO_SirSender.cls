@@ -1,8 +1,8 @@
 /**
  * @author: Sofiane Bazizen (SpringFive)
  * @description: Send emails to the relevant entitled Contacts for "Completed" Work Order 
- * @last modified on  : 2020-01-11
- * @last modified by  : Sofiane Bazizen
+ * @last modified on  : 06-01-2021
+ * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  * Modifications Log 
  * Ver   Date         Author                               Modification
  * 1.0   2020-01-11   Sofiane Bazizen					  Initial Version
@@ -30,12 +30,40 @@ public class DEF_WO_SirSender {
 		//populating the workOrderSet with List of WorkOrder Id
 		workOrderSet = workOrderMap.keySet();
 
+		//Retrieving Assigned Tools/technician records related to the Work orders
+		String attQuery = DEF_WO_SirSender_Helper.attQuery;
+		List<Assigned_Tools_Technician__c> attRecords=Database.query(attQuery);
+		Map<Id,Set<String>> woToAttMap=new Map<Id,Set<String>>();
+		Set<String> TechEmails;
+		for(Assigned_Tools_Technician__c attInstance : attRecords) {
+			
+			if(woToAttMap.containsKey(attInstance.Work_Order__c)){
+				
+				TechEmails=woToAttMap.get(attInstance.Work_Order__c);
+				TechEmails.add(attInstance.Technician_Equipment__r.SVMXC__Email__c);
+				woToAttMap.put(attInstance.Work_Order__c,TechEmails);
+				System.debug('@TechEmails'+TechEmails);
+
+			}
+			else{
+				TechEmails=new Set<String>();
+				TechEmails.add(attInstance.Technician_Equipment__r.SVMXC__Email__c);
+				woToAttMap.put(attInstance.Work_Order__c,TechEmails);
+				System.debug('@TechEmails'+TechEmails);
+
+			}
+		}
+		System.debug('@woToAttMap: ' + woToAttMap);
 		//retrieving Work Order parent contract data from the workorderRecords list
 		String woQuery = DEF_WO_SirSender_Helper.woQuery;
 		for (SVMXC__Service_Order__c wo : Database.query(woQuery)) {
 
 			System.debug('@wo: ' + wo);
-			woWrapperMap.put(wo.Id, new DEF_WO_SirSender_Helper.woWrapper(wo));
+			DEF_WO_SirSender_Helper.woWrapper woWrapperInstance=new DEF_WO_SirSender_Helper.woWrapper(wo);
+			if(woToAttMap.containsKey(wo.Id)){
+			 woWrapperInstance.setTechEmail(woToAttMap.get(wo.Id));
+			}
+			woWrapperMap.put(wo.Id,woWrapperInstance);
 			serviceContractIdSet.addAll(woWrapperMap.get(wo.Id).getcontractIdSet());
 
 		}

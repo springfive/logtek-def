@@ -11,6 +11,7 @@
         <members>DEF_WD_TriggerHandlerTest</members>
         <members>DEF_WO_DailySIREmailBatch</members>
         <members>DEF_WO_PE_TriggerTest</members>
+        <members>DEF_WO_SirSender</members>
         <members>DEF_WO_SirSenderTest</members>
         <members>DEF_WO_SirSender_Helper</members>
         <members>DEF_WO_TriggerHandler</members>
@@ -396,5 +397,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>50.0</version>
 </Package>
