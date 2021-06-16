@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
+        <fullName>DEF_IT_Reminder_to_Customer_about_Appointment</fullName>
+        <description>DEF_IT_Reminder to Customer about Appointment</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SVMXC__Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>SVMX_PS_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>assistenza@def-online.it</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/DEF_IT_Reminder_Email_to_Customer</template>
+    </alerts>
+    <alerts>
+        <fullName>DEF_IT_Reminder_to_Customer_about_Appointment_Multi_Day</fullName>
+        <description>DEF_IT_Reminder to Customer about Appointment Multi-Day</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SVMXC__Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>SVMX_PS_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>assistenza@def-online.it</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/DEF_IT_Reminder_Email_to_Customer_Multi_Day</template>
+    </alerts>
+    <alerts>
         <fullName>DEF_IT_Send_email_to_customer_when_Assigned_Technician_Multi_Day</fullName>
         <description>DEF_IT_Send email to customer when Assigned Technician Multi-Day</description>
         <protected>false</protected>
@@ -135,5 +167,65 @@
         </criteriaItems>
         <description>Notify the Customer of the Assigned Work Order and ask for confirmation of the appointment when WO lasts more than one day</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>DEF_IT_Reminder Email to Customer</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>SVMXC__Service_Order__c.SVMXC__Order_Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Confirmed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SVMXC__Service_Order__c.SVMXC__Country__c</field>
+            <operation>equals</operation>
+            <value>IT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SVMXC__Service_Order__c.Multiple_day_intervention__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Send reminder email to customer 1 week before intervention</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>DEF_IT_Reminder_to_Customer_about_Appointment</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>SVMXC__Service_Order__c.Initial_Scheduled_Start_Date_and_Time__c</offsetFromField>
+            <timeLength>-7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>DEF_IT_Reminder Email to Customer Multi-Day</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>SVMXC__Service_Order__c.SVMXC__Order_Status__c</field>
+            <operation>equals</operation>
+            <value>Customer Confirmed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SVMXC__Service_Order__c.SVMXC__Country__c</field>
+            <operation>equals</operation>
+            <value>IT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SVMXC__Service_Order__c.Multiple_day_intervention__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Send reminder email to customer 1 week before intervention</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>DEF_IT_Reminder_to_Customer_about_Appointment_Multi_Day</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>SVMXC__Service_Order__c.Initial_Scheduled_Start_Date_and_Time__c</offsetFromField>
+            <timeLength>-7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
     </rules>
 </Workflow>

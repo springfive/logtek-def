@@ -1,0 +1,28 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style=""><div style=""><p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal;"><i style=""><font style="" face="Verdana, Helvetica, sans-serif">Gentile
+{!SVMXC__Service_Order__c.SVMXC__Contact__c}<span style="background: white;">,</span><o:p></o:p></font></i></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal;"><i><font face="Verdana, Helvetica, sans-serif">&nbsp;</font></i></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal;"><font face="Verdana, Helvetica, sans-serif"><i style="color: rgb(0, 0, 0);"><span style="background: white;">Con la presente siamo a ricordarvi l'appuntamento
+fissato dal giorno&nbsp;</span></i><i style=""><b>{!SVMXC__Service_Order__c.Initial_Scheduled_Start_Date_and_Time__c}</b>&nbsp;</i><i style=""><span style="background: white;">al giorno&nbsp;</span></i><i style=""><span lang="FR"><b>{!SVMXC__Service_Order__c.Final_Scheduled_End_Date_and_Time__c}&nbsp;</b></span></i><i style="">per
+la visita di&nbsp;<b>{!SVMXC__Service_Order__c.SVMXC__Order_Type__c}</b>&nbsp;p/o&nbsp;<b>{!SVMXC__Service_Order__c.SVMXC__Site__c}</b>&nbsp;-&nbsp;<b>{!SVMXC__Service_Order__c.LocationAddress__c}</b>.</i></font></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal;"><i><font face="Verdana, Helvetica, sans-serif">&nbsp;</font></i></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal;"><i><font face="Verdana, Helvetica, sans-serif">Il
+Nostro tecnico presente sul sito sarà&nbsp;<b>{!SVMXC__Service_Order__c.SVMXC__Group_Member__c}</b>.<o:p></o:p></font></i></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal;"><i><font face="Verdana, Helvetica, sans-serif">&nbsp;</font></i></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal; background: white;"><i><span lang="FR"><font face="Verdana, Helvetica, sans-serif">Nel
+caso foste impossibilitati a rispettare l'appuntamento, vogliate cortesemente
+contattarci il prima possibile per concordare una nuova pianificazione.<o:p></o:p></font></span></i></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal; background: white;"><i><span lang="FR"><font face="Verdana, Helvetica, sans-serif">&nbsp;</font></span></i></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); margin-bottom: 0.0001pt; line-height: normal; background: white;"><i style=""><font face="Verdana, Helvetica, sans-serif">Cordiali saluti,<o:p></o:p></font></i></p></div><div style="color: rgb(0, 0, 0);"><div style="background-color: rgb(255, 255, 255);"><i><font face="Verdana, Helvetica, sans-serif"><br></font></i></div><div style="background-color: rgb(255, 255, 255);"><i><font face="Verdana, Helvetica, sans-serif">DEF Italia</font></i></div></div><div style="color: rgb(0, 0, 0);"><font face="Verdana, Helvetica, sans-serif" style=""><b style="">Silvia Busso<br>Planificazione Interventi Tecnici<br>DEF Italia S.r.l.<br>Tel: +39 0331 742304</b><br style=""><a href="http://www.defonline.it/" style="">http://www.defonline.it</a></font></div><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><img src="https://def-fs--devoct2020--c.documentforce.com/servlet/servlet.ImageServer?id=0151q000000FDIK&amp;oid=00D1q0000008bz8" border="0" align="left" alt=""><br></div><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><br></div></div>]]></td>
+</tr>
+</table>
