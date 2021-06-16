@@ -11,6 +11,7 @@
         <members>DEF_WD_TriggerHandlerTest</members>
         <members>DEF_WO_DailySIREmailBatch</members>
         <members>DEF_WO_PE_TriggerTest</members>
+        <members>DEF_WO_SirSender</members>
         <members>DEF_WO_SirSenderTest</members>
         <members>DEF_WO_SirSender_Helper</members>
         <members>DEF_WO_TriggerHandler</members>
@@ -307,6 +308,7 @@
         <members>Issue__c-DEF_WW_Issue Layout</members>
         <members>Planned_Parts__c-DEF_WW_Planned Parts Layout</members>
         <members>Product2-DEF_WW_Product Page Layout</members>
+        <members>SIR_Config__mdt-SIR Config Layout</members>
         <members>SVMXC__Installed_Product__c-DEF_WW_Installed Product Bucket Layout</members>
         <members>SVMXC__Installed_Product__c-DEF_WW_Installed Product Layout</members>
         <members>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</members>
