@@ -3,7 +3,7 @@
     <apiVersion>49.0</apiVersion>
     <packageVersions>
         <majorNumber>20</majorNumber>
-        <minorNumber>10000</minorNumber>
+        <minorNumber>20000</minorNumber>
         <namespace>SVMXC</namespace>
     </packageVersions>
     <status>Active</status>

@@ -48,7 +48,8 @@ public class DEF_WO_SirSender_Helper {
             this.wo = wo;
             this.contractIdSet = new Set<Id> { wo.SVMXC__Service_Contract__c };
                 this.contractIdSet.add(wo.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c);
-            //this.techEmail = wo.SVMXC__Group_Member__r.SVMXC__Email__c;
+            this.techEmail = new Set<String>();
+            this.emailSet = new Set<String>();
             
         }
         
@@ -124,7 +125,7 @@ public class DEF_WO_SirSender_Helper {
                 tempEmailSet.add(entCt.SVMXC__Contact__r.Email);
             }
             
-            if (this.emailSet == null) {
+            /*if (this.emailSet == null) {
                 
                 this.emailSet = new Set<String> (tempEmailSet);
                 
@@ -132,8 +133,8 @@ public class DEF_WO_SirSender_Helper {
                 
                 this.emailSet.addAll(tempEmailSet);
                 
-            }
-            
+            }*/
+			this.emailSet.addAll(tempEmailSet);            
             return this.emailSet;
         }
         
@@ -143,14 +144,9 @@ public class DEF_WO_SirSender_Helper {
         }
         
         public void setTechEmail(Set<String> techEmail) {
-            if(this.techEmail==null){
-                this.techEmail=new Set<String>(techEmail);
-                
-            }
-            else{
-                
+            
                 this.techEmail.addAll(techEmail);
-            }
+            
             System.debug('@this.techEmail '+this.techEmail);
         }
         
