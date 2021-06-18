@@ -28,6 +28,12 @@
         <locationX>617</locationX>
         <locationY>418</locationY>
         <inputAssignments>
+            <field>DEF_Company__c</field>
+            <value>
+                <elementReference>$Record.DEF_Company__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Description__c</field>
             <value>
                 <elementReference>$Record.SVMXC__Problem_Description__c</elementReference>

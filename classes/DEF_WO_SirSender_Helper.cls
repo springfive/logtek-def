@@ -4,7 +4,7 @@
 *		- Wrapper Class and query structure
 *		- retrieval of SIR and creation of attachments for the SIR emails
 *		- Sending of SIR emails
-* @last modified on  : 05-06-2021
+* @last modified on  : 06-04-2021
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 * Modifications Log 
 * Ver   Date         Author                               Modification
@@ -20,10 +20,14 @@ public class DEF_WO_SirSender_Helper {
         + '';
     
     public static string scQuery = 'SELECT Id'
-        + ', (SELECT Id, Full_Name__c, SVMXC__Contact__r.Email FROM R00N70000001hzcxEAA WHERE Must_Receive_Report__c = true)'
+        + ', (SELECT Id, Full_Name__c, SVMXC__Contact__r.Email FROM R00N70000001hzcxEAA WHERE Must_Receive_Report__c = true AND SVMXC__Contact__r.Email!=null)'
         + ' FROM SVMXC__Service_Contract__c'
         + ' WHERE Id In :serviceContractIdSet'
         + '';
+
+    public static string attQuery= 'SELECT Id, Name, Work_Order__c, Technician_Equipment__r.SVMXC__Email__c'
+        + ' FROM Assigned_Tools_Technician__c'
+        + ' WHERE Technician_Equipment__r.SVMXC__Email__c!=null AND Work_Order__c IN: workOrderSet';
     
     /*-------------------  WRAPPER CLASSES ---------------------*/
     public class woWrapper {
@@ -31,7 +35,7 @@ public class DEF_WO_SirSender_Helper {
         private SVMXC__Service_Order__c wo { get; Set; }
         private Set<Id> contractIdSet { get; set; }
         private Set<String> emailSet { get; set; }
-        private String techEmail { get; set; }
+        private Set<String> techEmail { get; set; }
         private List<ContentVersion> attachmentList { get; set; }
         private Boolean isSuccess { get; set; }
         Private String errorLog { get; set; }
@@ -44,7 +48,8 @@ public class DEF_WO_SirSender_Helper {
             this.wo = wo;
             this.contractIdSet = new Set<Id> { wo.SVMXC__Service_Contract__c };
                 this.contractIdSet.add(wo.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c);
-            this.techEmail = wo.SVMXC__Group_Member__r.SVMXC__Email__c;
+            this.techEmail = new Set<String>();
+            this.emailSet = new Set<String>();
             
         }
         
@@ -109,7 +114,12 @@ public class DEF_WO_SirSender_Helper {
         }
         
         public void setEmailSet(Set<String> emailSet) {
-            this.emailSet = emailSet;
+            if(this.emailSet==null){
+                this.emailSet=emailSet.clone();
+            }
+            else{
+            this.emailSet.addAll(emailSet);
+            }
         }
         
         public Set<String> addItemsToEmailSet(List<SVMXC__Service_Contract_Contacts__c> entCtList) {
@@ -122,24 +132,27 @@ public class DEF_WO_SirSender_Helper {
             
             if (this.emailSet == null) {
                 
-                this.emailSet = new Set<String> (tempEmailSet);
+                this.emailSet = tempEmailSet.clone();
                 
             } else {
                 
                 this.emailSet.addAll(tempEmailSet);
                 
             }
-            
+			//this.emailSet.addAll(tempEmailSet);            
             return this.emailSet;
         }
         
         //TechEmail getter and setter
-        public String getTechEmail() {
+        public Set<String> getTechEmail() {
             return this.techEmail;
         }
         
-        public void setTechEmail(String techEmail) {
-            this.techEmail = techEmail;
+        public void setTechEmail(Set<String> techEmail) {
+            
+                this.techEmail.addAll(techEmail);
+            
+            System.debug('@this.techEmail '+this.techEmail);
         }
         
         
@@ -250,11 +263,11 @@ public class DEF_WO_SirSender_Helper {
                                               WHERE MasterLabel IN :defCompanySet 
                                               AND Type__c=:DEF_StringHelper.type_RegularSIR];
         if(!cnfigSIRList.isEmpty()){
-        for (SIR_Config__mdt sConf :cnfigSIRList) { //@dev
-            sirMapping.put(sConf.EmailTemplateName__c, sConf);
-            sirConfigMap.put(sConf.MasterLabel, sConf); //@dev
-        }
-        System.debug('@sirMapping: ' + sirMapping);
+            for (SIR_Config__mdt sConf :cnfigSIRList) { //@dev
+                sirMapping.put(sConf.EmailTemplateName__c, sConf);
+                sirConfigMap.put(sConf.MasterLabel, sConf); //@dev
+            }
+            System.debug('@sirMapping: ' + sirMapping);
         
         
             //Key: Def Company, Value: Email Template
@@ -282,12 +295,14 @@ public class DEF_WO_SirSender_Helper {
             //Iterate Map and Generate SingleEmailMessage List for All workOrders
             String defCompany;
             String metaAddr; //address retrieved from the custom metadata types.
-            String techEmail;
+            Set<String> techEmail=new Set<String>();
             for (Id workOrderId : woWrapperMap.keyset()) {
                 
                 defCompany = null;
                 metaAddr = null;
-                techEmail = null;
+                if(techEmail.size()>0){
+                    techEmail.clear();
+                }
                 
                 List<ContentVersion> contentVersionListInstance = woWrapperMap.get(workOrderId).getAttachmentList();
                 List<Messaging.EmailFileAttachment> attachments = new List<Messaging.EmailFileAttachment> ();
@@ -307,23 +322,37 @@ public class DEF_WO_SirSender_Helper {
                     
                     //Apex Single email message
                     defCompany = woWrapperMap.get(workOrderId).getWo().DEF_Company__c;
-                    String templateId = templateMap.get(defCompany).Id;
+                    String templateId;
+                    if(templateMap.containsKey(defCompany)){
+                        templateId=templateMap.get(defCompany).Id;
+                    }
                     String userId = woWrapperMap.get(workOrderId).getWo().OwnerId;
                     String whatId = workOrderId;
-                    Messaging.SingleEmailMessage mail = Messaging.renderStoredEmailTemplate(templateId, userId, whatId);
-                    mail.setTreatTargetObjectAsRecipient(false);
-                    mail.setUseSignature(false);
-                    mail.setToAddresses(new List<String> (woWrapperMap.get(workOrderId).getEmailSet()));
-                    techEmail = woWrapperMap.get(workOrderId).getTechEmail();
-                    if (techEmail != null && techEmail != '') { mail.setCcAddresses(new List<String> { techEmail }); }
-                    System.debug('@sirConfigMap.get(defCompany): ' + sirConfigMap.get(defCompany));
-                    metaAddr = sirConfigMap.get(defCompany).OrgWideEmailAddress__c.toLowerCase();
-                    mail.setOrgWideEmailAddressId(SenderEmailMap.get(metaAddr));
-                    mail.setFileAttachments(attachments); //Set File Attachment
-                    mail.setSaveAsActivity(true);
                     
-                    //Add the List of Mail to be sended based on work orders to the List
-                    mailToSend.add(mail);
+                    if(templateId!=null){
+                        Messaging.SingleEmailMessage mail=Messaging.renderStoredEmailTemplate(templateId, userId, whatId);
+                        mail.setTreatTargetObjectAsRecipient(false);
+                        mail.setUseSignature(false);
+                        if(woWrapperMap.get(workOrderId).getEmailSet().size()>0){
+                        mail.setToAddresses(new List<String> (woWrapperMap.get(workOrderId).getEmailSet()));
+                        }
+                        techEmail = woWrapperMap.get(workOrderId).getTechEmail();
+                        if (techEmail.size()>0) { mail.setCcAddresses(new List<String> (techEmail)); }
+                        System.debug('@sirConfigMap.get(defCompany): ' + sirConfigMap.get(defCompany));
+                        metaAddr = sirConfigMap.get(defCompany).OrgWideEmailAddress__c.toLowerCase();
+                        if(SenderEmailMap.containsKey(metaAddr)){
+                        mail.setOrgWideEmailAddressId(SenderEmailMap.get(metaAddr));
+                        }
+                        mail.setFileAttachments(attachments); //Set File Attachment
+                        mail.setSaveAsActivity(true);
+
+                         //Add the List of Mail to be sended based on work orders to the List
+                        if(templateId!=null && woWrapperMap.get(workOrderId).getEmailSet().size()>0){
+                            mailToSend.add(mail);
+                        }
+                    }
+                    
+                   
                 }
                 else {
                     
