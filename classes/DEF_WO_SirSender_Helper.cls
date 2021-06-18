@@ -20,7 +20,7 @@ public class DEF_WO_SirSender_Helper {
         + '';
     
     public static string scQuery = 'SELECT Id'
-        + ', (SELECT Id, Full_Name__c, SVMXC__Contact__r.Email FROM R00N70000001hzcxEAA WHERE Must_Receive_Report__c = true)'
+        + ', (SELECT Id, Full_Name__c, SVMXC__Contact__r.Email FROM R00N70000001hzcxEAA WHERE Must_Receive_Report__c = true AND SVMXC__Contact__r.Email!=null)'
         + ' FROM SVMXC__Service_Contract__c'
         + ' WHERE Id In :serviceContractIdSet'
         + '';
@@ -48,7 +48,8 @@ public class DEF_WO_SirSender_Helper {
             this.wo = wo;
             this.contractIdSet = new Set<Id> { wo.SVMXC__Service_Contract__c };
                 this.contractIdSet.add(wo.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c);
-            //this.techEmail = wo.SVMXC__Group_Member__r.SVMXC__Email__c;
+            this.techEmail = new Set<String>();
+            this.emailSet = new Set<String>();
             
         }
         
@@ -113,7 +114,12 @@ public class DEF_WO_SirSender_Helper {
         }
         
         public void setEmailSet(Set<String> emailSet) {
-            this.emailSet = emailSet;
+            if(this.emailSet==null){
+                this.emailSet=emailSet.clone();
+            }
+            else{
+            this.emailSet.addAll(emailSet);
+            }
         }
         
         public Set<String> addItemsToEmailSet(List<SVMXC__Service_Contract_Contacts__c> entCtList) {
@@ -126,14 +132,14 @@ public class DEF_WO_SirSender_Helper {
             
             if (this.emailSet == null) {
                 
-                this.emailSet = new Set<String> (tempEmailSet);
+                this.emailSet = tempEmailSet.clone();
                 
             } else {
                 
                 this.emailSet.addAll(tempEmailSet);
                 
             }
-            
+			//this.emailSet.addAll(tempEmailSet);            
             return this.emailSet;
         }
         
@@ -143,14 +149,9 @@ public class DEF_WO_SirSender_Helper {
         }
         
         public void setTechEmail(Set<String> techEmail) {
-            if(this.techEmail==null){
-                this.techEmail=new Set<String>(techEmail);
-                
-            }
-            else{
-                
+            
                 this.techEmail.addAll(techEmail);
-            }
+            
             System.debug('@this.techEmail '+this.techEmail);
         }
         

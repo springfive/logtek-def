@@ -1711,6 +1711,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Quote__c.DEF_Company__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Quote__c.Description__c</field>
         <readable>true</readable>
@@ -5763,6 +5768,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>ServiceProject__c.Location__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceProject__c.NoteToEngineer__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceProject__c.NoteToPlanner__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

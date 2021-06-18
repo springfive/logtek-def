@@ -40,14 +40,40 @@ private class DEF_WO_SirSenderTest {
         entCt.SVMXC__Service_Contract__c = contractLine.Id;
         entCt.Must_Receive_Report__c = true;
         insert entCt;
-
-        //Work Order
+        
+        //Service Team Record
+        Id ST_RecordTypeId = Schema.SObjectType.SVMXC__Service_Group__c.getRecordTypeInfosByName().get('Technician').getRecordTypeId();
+        SVMXC__Service_Group__c serviceTeam=DEF_TestDataFactory.CreateServiceTeam('Test Service Team',ST_RecordTypeId);
+        insert serviceTeam;
+        //Technician Record
+        List<SVMXC__Service_Group_Members__c> techList=new List<SVMXC__Service_Group_Members__c>();
+        Id Technician_RecordTypeId = Schema.SObjectType.SVMXC__Service_Group_Members__c.getRecordTypeInfosByName().get('Technician').getRecordTypeId();
+        SVMXC__Service_Group_Members__c technician1=DEF_TestDataFactory.CreateTechnicianOrEquipment('Test Technician1',serviceTeam,Technician_RecordTypeId);
+        technician1.SVMXC__Email__c='test.technician1@gmail.com';
+        techList.add(technician1);
+        SVMXC__Service_Group_Members__c technician2=DEF_TestDataFactory.CreateTechnicianOrEquipment('Test Technician2',serviceTeam,Technician_RecordTypeId);
+        technician2.SVMXC__Email__c='test.technician2@gmail.com';
+        techList.add(technician2);
+        insert techList;
+        
+	    //Work Order
         SVMXC__Service_Order__c workOrderInstance = DEF_TestDataFactory.CreateWorkOrder(acc, con, 'Navision', 'GB');
         workOrderInstance.SVMXC__Order_Status__c = 'New';
         workOrderInstance.DEF_Company__c = 'IT_DEF';
         workOrderInstance.SVMXC__Service_Contract__c = contractLine.Id;
         insert workOrderInstance;
-
+        
+        //Assigned Tools and technician
+        List<Assigned_Tools_Technician__c> attList=new List<Assigned_Tools_Technician__c>();
+        Assigned_Tools_Technician__c att1=DEF_TestDataFactory.CreateAssignedToolsAndTechnician(workOrderInstance,technician1);
+        attList.add(att1);
+        Assigned_Tools_Technician__c att2=DEF_TestDataFactory.CreateAssignedToolsAndTechnician(workOrderInstance,technician2);
+        attList.add(att2);
+        insert attList;
+        
+        
+        
+		
         ContentVersion contentVersion = new ContentVersion(
                                                            Title = 'DEF_SIR_1234',
                                                            PathOnClient = 'DEF_SIR_1234.pdf',

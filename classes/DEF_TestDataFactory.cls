@@ -233,6 +233,12 @@ public class DEF_TestDataFactory {
         SVMXC__PM_Schedule__c pmScheduleInstance=new SVMXC__PM_Schedule__c(SVMXC__Scheduled_On__c=scheduledOn,SVMXC__PM_Plan__c=pmPlan.Id,SVMXC__PM_Schedule_Definition__c=pmScheduleDefinitionInstance.Id);
         return pmScheduleInstance;
     }
+    //Create Assigned Tools and technician
+    public static Assigned_Tools_Technician__c CreateAssignedToolsAndTechnician(SVMXC__Service_Order__c wo,SVMXC__Service_Group_Members__c tech){
+        Assigned_Tools_Technician__c ATT=new Assigned_Tools_Technician__c(Work_Order__c=wo.Id,Technician_Equipment__c=tech.Id);
+        return ATT;
+        
+    }
 
 
 }

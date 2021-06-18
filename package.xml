@@ -7,6 +7,7 @@
         <members>DEF_SC_TriggerHelper</members>
         <members>DEF_SlaClockHelper</members>
         <members>DEF_StringHelper</members>
+        <members>DEF_TestDataFactory</members>
         <members>DEF_WD_TriggerHandler</members>
         <members>DEF_WD_TriggerHandlerTest</members>
         <members>DEF_WO_DailySIREmailBatch</members>
@@ -79,6 +80,7 @@
         <members>SVMXC__PM_Plan__c.Note_to_Planner__c</members>
         <members>SVMXC__Product_Stock__c.External_ID__c</members>
         <members>SVMXC__Quote__c.Back_Office_Ref_Number__c</members>
+        <members>SVMXC__Quote__c.DEF_Company__c</members>
         <members>SVMXC__Quote__c.Description__c</members>
         <members>SVMXC__Quote__c.FieldFeedback__c</members>
         <members>SVMXC__Quote__c.Location__c</members>
@@ -169,6 +171,8 @@
         <members>ServiceProject__c.End_Date__c</members>
         <members>ServiceProject__c.Is_My_Project__c</members>
         <members>ServiceProject__c.Location__c</members>
+        <members>ServiceProject__c.NoteToEngineer__c</members>
+        <members>ServiceProject__c.NoteToPlanner__c</members>
         <members>ServiceProject__c.PreferredTechnician__c</members>
         <members>ServiceProject__c.Project_Manager__c</members>
         <members>ServiceProject__c.Start_Date__c</members>
@@ -256,6 +260,7 @@
         <members>unfiled$public/DEF_IT_Customer_Confirmed_Template_Multi_Day</members>
         <members>unfiled$public/DEF_IT_Field_Feedback_with_quote</members>
         <members>unfiled$public/DEF_IT_Reminder_Email_to_Customer</members>
+        <members>unfiled$public/DEF_IT_Reminder_Email_to_Customer_Multi_Day</members>
         <members>unfiled$public/DEF_IT_Rescheduling_WO_Template</members>
         <name>EmailTemplate</name>
     </types>
@@ -384,6 +389,8 @@
         <members>Field_Feedback__c.DEF_BE_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</members>
         <members>Field_Feedback__c.DEF_GB_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</members>
         <members>Field_Feedback__c.DEF_IT_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Reminder_to_Customer_about_Appointment</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Reminder_to_Customer_about_Appointment_Multi_Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_to_customer_when_Assigned_Technician_Multi_Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Send_email_when_Appointment_confirmed_with_the_Customer_Multi_Day</members>
         <name>WorkflowAlert</name>
@@ -396,6 +403,8 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer Of Appointment Confirmation Multi-Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Reminder Email to Customer</members>
+        <members>SVMXC__Service_Order__c.DEF_IT_Reminder Email to Customer Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
     <version>51.0</version>

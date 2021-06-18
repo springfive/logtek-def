@@ -1,6 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>BE_DEF_Notify_Account_Owner_of_New_Field_Feedback_requiring_a_Quote</name>
+        <label>BE_DEF Notify Account Owner of New Field Feedback requiring a Quote</label>
+        <locationX>50</locationX>
+        <locationY>551</locationY>
+        <actionName>Field_Feedback__c.DEF_BE_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>GB_Clarkson_Notify_Account_Owner_of_New_Field_Feedback_requiring_a_Quote</name>
+        <label>GB_Clarkson Notify Account Owner of New Field Feedback requiring a Quote</label>
+        <locationX>578</locationX>
+        <locationY>551</locationY>
+        <actionName>Field_Feedback__c.DEF_GB_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>IT_DEF_Notify_Account_Owner_of_New_Field_Feedback_requiring_a_Quote</name>
+        <label>IT_DEF Notify Account Owner of New Field Feedback requiring a Quote</label>
+        <locationX>314</locationX>
+        <locationY>551</locationY>
+        <actionName>Field_Feedback__c.DEF_IT_Notify_Account_owner_of_new_field_feedback_requiring_a_quote</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
     <apiVersion>51.0</apiVersion>
+    <decisions>
+        <name>DEF_Company</name>
+        <label>DEF Company ?</label>
+        <locationX>446</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BE_DEF</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.DEF_Company__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BE_DEF</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>BE_DEF_Notify_Account_Owner_of_New_Field_Feedback_requiring_a_Quote</targetReference>
+            </connector>
+            <label>BE_DEF</label>
+        </rules>
+        <rules>
+            <name>IT_DEF</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.DEF_Company__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>IT_DEF</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>IT_DEF_Notify_Account_Owner_of_New_Field_Feedback_requiring_a_Quote</targetReference>
+            </connector>
+            <label>IT_DEF</label>
+        </rules>
+        <rules>
+            <name>GB_Clarkson</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.DEF_Company__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>GB_Clarkson</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GB_Clarkson_Notify_Account_Owner_of_New_Field_Feedback_requiring_a_Quote</targetReference>
+            </connector>
+            <label>GB_Clarkson</label>
+        </rules>
+    </decisions>
     <interviewLabel>DEF_WW_Field Feedback to Service Quote {!$Flow.CurrentDateTime}</interviewLabel>
     <label>DEF_WW_Field Feedback to Service Quote</label>
     <processMetadataValues>
@@ -12,7 +106,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -25,8 +119,17 @@
     <recordCreates>
         <name>Generate_Service_Quote</name>
         <label>Generate Service Quote</label>
-        <locationX>297</locationX>
-        <locationY>359</locationY>
+        <locationX>446</locationX>
+        <locationY>311</locationY>
+        <connector>
+            <targetReference>DEF_Company</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>DEF_Company__c</field>
+            <value>
+                <elementReference>$Record.DEF_Company__c</elementReference>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <field>Description__c</field>
             <value>
@@ -73,18 +176,25 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <start>
-        <locationX>50</locationX>
-        <locationY>50</locationY>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Generate_Service_Quote</targetReference>
         </connector>
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
-        <filterLogic>and</filterLogic>
+        <filterLogic>(1 OR 2) AND 3</filterLogic>
         <filters>
             <field>Type__c</field>
             <operator>EqualTo</operator>
             <value>
                 <stringValue>Technical Opportunity</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>New Service Opportunity</stringValue>
             </value>
         </filters>
         <filters>
