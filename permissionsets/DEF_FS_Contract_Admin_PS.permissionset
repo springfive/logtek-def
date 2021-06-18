@@ -6108,7 +6108,7 @@
     </tabSettings>
     <tabSettings>
         <tab>SVMXC__Service_Contract__c</tab>
-        <visibility>Visible</visibility>
+        <visibility>Available</visibility>
     </tabSettings>
     <tabSettings>
         <tab>SVMXC__Service_Order__c</tab>
