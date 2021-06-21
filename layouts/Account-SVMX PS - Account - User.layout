@@ -2,6 +2,8 @@
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
     <excludeButtons>DataDotComAccountInsights</excludeButtons>
     <excludeButtons>DataDotComClean</excludeButtons>
+    <excludeButtons>Delete</excludeButtons>
+    <excludeButtons>Edit</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
     <excludeButtons>Share</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
@@ -23,30 +25,6 @@
                 <behavior>Edit</behavior>
                 <field>SVMX_PS_Active__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Status__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Alert__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Italy_Navision_Ref_Number__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>BE_DEF_Navision_Ref_Num__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>UK_Navision_Ref_Num__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Update_Suggestion__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -64,10 +42,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SVMX_PS_Contact__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SVMX_PS_Location__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -155,14 +129,13 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
-    <platformActionList>
-        <actionListContext>Record</actionListContext>
-        <platformActionListItems>
-            <actionName>Edit</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
-    </platformActionList>
+    <miniLayout>
+        <fields>Name</fields>
+        <fields>ParentId</fields>
+        <fields>Type</fields>
+        <fields>Phone</fields>
+        <fields>BillingAddress</fields>
+    </miniLayout>
     <relatedContent>
         <relatedContentItems>
             <layoutItem>
@@ -171,7 +144,15 @@
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
+        <excludeButtons>Merge</excludeButtons>
+        <excludeButtons>NewContact</excludeButtons>
+        <fields>FULL_NAME</fields>
+        <fields>CONTACT.TITLE</fields>
+        <fields>CONTACT.EMAIL</fields>
+        <fields>CONTACT.PHONE1</fields>
+        <relatedList>RelatedContactList</relatedList>
+    </relatedLists>
+    <relatedLists>
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>SVMXC__City__c</fields>
@@ -181,30 +162,6 @@
         <relatedList>SVMXC__Site__c.SVMXC__Account__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>MassAddToCampaign</excludeButtons>
-        <excludeButtons>Merge</excludeButtons>
-        <fields>CONTACT.FULL_NAME</fields>
-        <fields>CONTACT.ACCOUNT_NAME</fields>
-        <fields>CONTACT.TITLE</fields>
-        <fields>CONTACT.EMAIL</fields>
-        <fields>CONTACT.PHONE1</fields>
-        <fields>ACCCONRELATION.ROLES</fields>
-        <relatedList>RelatedAccountContactRelationList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
-        <excludeButtons>New</excludeButtons>
-        <fields>NAME</fields>
-        <fields>SVMXC__Subject__c</fields>
-        <fields>SVMXC__Priority__c</fields>
-        <fields>SVMXC__Status__c</fields>
-        <fields>Installation__c</fields>
-        <fields>SVMXC__Problem_Description__c</fields>
-        <fields>CREATED_DATE</fields>
-        <relatedList>SVMXC__Service_Request__c.SVMXC__Account__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>SVMXC__Product__c</fields>
@@ -216,7 +173,6 @@
         <relatedList>SVMXC__Installed_Product__c.SVMXC__Company__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>SVMXC__Case__c</fields>
@@ -231,37 +187,27 @@
         <relatedList>SVMXC__Service_Order__c.SVMXC__Company__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>SVMXC__Contact__c</fields>
         <fields>SVMXC__Active__c</fields>
-        <fields>SVMXC__Start_Date__c</fields>
-        <fields>SVMXC__End_Date__c</fields>
         <fields>SVMXC__Renewal_Date__c</fields>
         <fields>SVMXC__Renewal_Number__c</fields>
+        <fields>SVMXC__Start_Date__c</fields>
+        <fields>SVMXC__End_Date__c</fields>
         <relatedList>SVMXC__Service_Contract__c.SVMXC__Company__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <relatedList>SVMXC__PM_Plan__c.SVMXC__Account__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
-        <excludeButtons>New</excludeButtons>
-        <fields>NAME</fields>
-        <fields>Name__c</fields>
-        <fields>Status__c</fields>
-        <fields>Client_Decision__c</fields>
-        <fields>Type__c</fields>
-        <fields>Follow_up_Action__c</fields>
-        <fields>Needs_Quote__c</fields>
-        <relatedList>Field_Feedback__c.Account__c</relatedList>
+        <relatedList>RelatedNoteList</relatedList>
     </relatedLists>
     <relatedLists>
-        <relatedList>RelatedNoteList</relatedList>
+        <fields>NAME</fields>
+        <relatedList>ServiceProject__c.Account__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
@@ -270,19 +216,9 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h7R00000iGaI7</masterLabel>
-        <sizeX>3</sizeX>
-        <sizeY>1</sizeY>
-        <summaryLayoutItems>
-            <field>Name</field>
-            <posX>0</posX>
-            <posY>0</posY>
-        </summaryLayoutItems>
-        <summaryLayoutItems>
-            <field>Type</field>
-            <posX>1</posX>
-            <posY>0</posY>
-        </summaryLayoutItems>
+        <masterLabel>00h2X00000j0AB6</masterLabel>
+        <sizeX>4</sizeX>
+        <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
     </summaryLayout>
 </Layout>

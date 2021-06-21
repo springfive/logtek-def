@@ -215,6 +215,7 @@
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_PerformedWork_Performed_Type</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_CreatedDate</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_Notes</members>
+        <members>CMTD__EnhancedRelatedList.Part</members>
         <members>DEF_RunTrigger.DEF_SC_AI</members>
         <members>SIR_Config.IT_DEF_Intervention_Report</members>
         <name>CustomMetadata</name>
@@ -308,6 +309,12 @@
     </types>
     <types>
         <members>Account-DEF_WW_Account Layout</members>
+        <members>Account-SVMX Account - Admin</members>
+        <members>Account-SVMX Account - Dispatcher</members>
+        <members>Account-SVMX Account - Svc Manager</members>
+        <members>Account-SVMX Account - Svc User</members>
+        <members>Account-SVMX PS - Account - Admin</members>
+        <members>Account-SVMX PS - Account - User</members>
         <members>Contact-DEF_WW_Contact Layout</members>
         <members>Field_Feedback__c-DEF_WW_Field Feedback Layout</members>
         <members>Issue__c-DEF_WW_Issue Layout</members>
