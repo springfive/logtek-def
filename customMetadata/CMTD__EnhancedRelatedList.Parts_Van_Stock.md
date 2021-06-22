@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <label>Part</label>
+    <label>Van Stock</label>
     <protected>false</protected>
     <values>
         <field>CMTD__Colour__c</field>
@@ -8,7 +8,7 @@
     </values>
     <values>
         <field>CMTD__Field_API_Name__c</field>
-        <value xsi:type="xsd:string">SVMXC__Product__c.Name</value>
+        <value xsi:type="xsd:string">Technician_Van_Stock__c.Name</value>
     </values>
     <values>
         <field>CMTD__Header__c</field>
@@ -20,7 +20,7 @@
     </values>
     <values>
         <field>CMTD__Order__c</field>
-        <value xsi:type="xsd:double">20.0</value>
+        <value xsi:type="xsd:double">60.0</value>
     </values>
     <values>
         <field>CMTD__Related_List_Name__c</field>
