@@ -216,6 +216,8 @@
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_CreatedDate</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_Notes</members>
         <members>CMTD__EnhancedRelatedList.Part</members>
+        <members>CMTD__EnhancedRelatedList.Parts_Van_Stock</members>
+        <members>CMTD__EnhancedRelatedList.ProductCode</members>
         <members>DEF_RunTrigger.DEF_SC_AI</members>
         <members>SIR_Config.IT_DEF_Intervention_Report</members>
         <name>CustomMetadata</name>
@@ -414,5 +416,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Reminder Email to Customer Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>50.0</version>
 </Package>
