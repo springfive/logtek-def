@@ -311,12 +311,6 @@
     </types>
     <types>
         <members>Account-DEF_WW_Account Layout</members>
-        <members>Account-SVMX Account - Admin</members>
-        <members>Account-SVMX Account - Dispatcher</members>
-        <members>Account-SVMX Account - Svc Manager</members>
-        <members>Account-SVMX Account - Svc User</members>
-        <members>Account-SVMX PS - Account - Admin</members>
-        <members>Account-SVMX PS - Account - User</members>
         <members>Contact-DEF_WW_Contact Layout</members>
         <members>Field_Feedback__c-DEF_WW_Field Feedback Layout</members>
         <members>Issue__c-DEF_WW_Issue Layout</members>
