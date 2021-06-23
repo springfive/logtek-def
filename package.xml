@@ -95,6 +95,7 @@
         <members>SVMXC__Service_Order_Line__c.SVMXC__Line_Type__c</members>
         <members>SVMXC__Service_Order_Line__c.ShowMilesDriven__c</members>
         <members>SVMXC__Service_Order_Line__c.Technician_Van_Stock__c</members>
+        <members>SVMXC__Service_Order_Line__c.Used_Qty__c</members>
         <members>SVMXC__Service_Order__c.BE_DEF_Navision_Ref_Num__c</members>
         <members>SVMXC__Service_Order__c.Certificate_Number__c</members>
         <members>SVMXC__Service_Order__c.Client_Request_Closed__c</members>
@@ -215,9 +216,12 @@
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_PerformedWork_Performed_Type</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_CreatedDate</members>
         <members>CMTD__EnhancedRelatedList.DEF_WW_Work_Performed_Notes</members>
+        <members>CMTD__EnhancedRelatedList.Environmental_Footprint</members>
+        <members>CMTD__EnhancedRelatedList.Name</members>
         <members>CMTD__EnhancedRelatedList.Part</members>
         <members>CMTD__EnhancedRelatedList.Parts_Van_Stock</members>
         <members>CMTD__EnhancedRelatedList.ProductCode</members>
+        <members>CMTD__EnhancedRelatedList.Required_Qty</members>
         <members>DEF_RunTrigger.DEF_SC_AI</members>
         <members>SIR_Config.IT_DEF_Intervention_Report</members>
         <name>CustomMetadata</name>
