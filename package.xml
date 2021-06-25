@@ -84,6 +84,7 @@
         <members>SVMXC__Quote__c.Description__c</members>
         <members>SVMXC__Quote__c.FieldFeedback__c</members>
         <members>SVMXC__Quote__c.Location__c</members>
+        <members>SVMXC__Quote__c.QuoteReference__c</members>
         <members>SVMXC__Quote__c.ServiceContract__c</members>
         <members>SVMXC__Quote__c.ServiceRequest__c</members>
         <members>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</members>
@@ -326,6 +327,7 @@
         <members>SVMXC__PM_Plan_Template__c-DEF_PM_Plan_Template_Layout</members>
         <members>SVMXC__PM_Schedule_Definition__c-DEF_WW_PM Schedule Definition Layout</members>
         <members>SVMXC__Quote__c-DEF_WW_Service Quote Layout</members>
+        <members>SVMXC__Quote__c-Quote Layout</members>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Header Layout</members>
         <members>SVMXC__Service_Contract__c-DEF_WW_Service Contract Line Layout</members>
         <members>SVMXC__Service_Group_Members__c-SVMX PS - Technician - Admin</members>
@@ -414,5 +416,5 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Reminder Email to Customer Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>52.0</version>
 </Package>

@@ -84,6 +84,19 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>QuoteReference__c</fullName>
+        <description>Unqiue identification number of the Quote related to this Work Order</description>
+        <externalId>true</externalId>
+        <label>Quote Reference</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>ServiceContract__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>

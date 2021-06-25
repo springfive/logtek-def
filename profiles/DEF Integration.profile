@@ -996,6 +996,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Quote__c.DEF_Company__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Quote__c.Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1007,6 +1012,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Quote__c.Location__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Quote__c.QuoteReference__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2169,7 +2179,7 @@
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
