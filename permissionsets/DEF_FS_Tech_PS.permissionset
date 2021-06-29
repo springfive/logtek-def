@@ -1716,6 +1716,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Issue__c.RegistrationDateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Issue__c.Root_Cause__c</field>
         <readable>true</readable>
@@ -1768,6 +1773,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Issue__c.Type_of_Concerned_device__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Issue__c.TypeofConcernedDevice__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

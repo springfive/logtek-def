@@ -56,12 +56,14 @@
         <members>Field_Feedback__c.Type__c</members>
         <members>Issue__c.Associated_Work_Order__c</members>
         <members>Issue__c.NeedsToBeReviewedByManager__c</members>
+        <members>Issue__c.RegistrationDateTime__c</members>
         <members>Issue__c.ServiceProject__c</members>
         <members>Issue__c.Status__c</members>
         <members>Issue__c.Symptom__c</members>
         <members>Issue__c.Symptoms__c</members>
         <members>Issue__c.Symptoms_rootCause__c</members>
         <members>Issue__c.Type__c</members>
+        <members>Issue__c.TypeofConcernedDevice__c</members>
         <members>Issue__c.WorkPerformed__c</members>
         <members>Issue__c.Work_Performed__c</members>
         <members>Issue__c.Work_Performed_by_Installer__c</members>
