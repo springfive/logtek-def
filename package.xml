@@ -86,6 +86,7 @@
         <members>SVMXC__Quote__c.Description__c</members>
         <members>SVMXC__Quote__c.FieldFeedback__c</members>
         <members>SVMXC__Quote__c.Location__c</members>
+        <members>SVMXC__Quote__c.NavisionQuoteNumber__c</members>
         <members>SVMXC__Quote__c.QuoteReference__c</members>
         <members>SVMXC__Quote__c.ServiceContract__c</members>
         <members>SVMXC__Quote__c.ServiceRequest__c</members>
