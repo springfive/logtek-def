@@ -56,12 +56,14 @@
         <members>Field_Feedback__c.Type__c</members>
         <members>Issue__c.Associated_Work_Order__c</members>
         <members>Issue__c.NeedsToBeReviewedByManager__c</members>
+        <members>Issue__c.RegistrationDateTime__c</members>
         <members>Issue__c.ServiceProject__c</members>
         <members>Issue__c.Status__c</members>
         <members>Issue__c.Symptom__c</members>
         <members>Issue__c.Symptoms__c</members>
         <members>Issue__c.Symptoms_rootCause__c</members>
         <members>Issue__c.Type__c</members>
+        <members>Issue__c.TypeofConcernedDevice__c</members>
         <members>Issue__c.WorkPerformed__c</members>
         <members>Issue__c.Work_Performed__c</members>
         <members>Issue__c.Work_Performed_by_Installer__c</members>
@@ -84,6 +86,8 @@
         <members>SVMXC__Quote__c.Description__c</members>
         <members>SVMXC__Quote__c.FieldFeedback__c</members>
         <members>SVMXC__Quote__c.Location__c</members>
+        <members>SVMXC__Quote__c.NavisionQuoteNumber__c</members>
+        <members>SVMXC__Quote__c.QuoteReference__c</members>
         <members>SVMXC__Quote__c.ServiceContract__c</members>
         <members>SVMXC__Quote__c.ServiceRequest__c</members>
         <members>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</members>
@@ -410,9 +414,8 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer Of Appointment Confirmation Multi-Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Reminder Email to Customer</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Reminder Email to Customer Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
-    <version>51.0</version>
+    <version>52.0</version>
 </Package>

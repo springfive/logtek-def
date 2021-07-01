@@ -169,36 +169,6 @@
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
-        <fullName>DEF_IT_Reminder Email to Customer</fullName>
-        <active>true</active>
-        <criteriaItems>
-            <field>SVMXC__Service_Order__c.SVMXC__Order_Status__c</field>
-            <operation>equals</operation>
-            <value>Customer Confirmed</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>SVMXC__Service_Order__c.SVMXC__Country__c</field>
-            <operation>equals</operation>
-            <value>IT</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>SVMXC__Service_Order__c.Multiple_day_intervention__c</field>
-            <operation>equals</operation>
-            <value>False</value>
-        </criteriaItems>
-        <description>Send reminder email to customer 1 week before intervention</description>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
-        <workflowTimeTriggers>
-            <actions>
-                <name>DEF_IT_Reminder_to_Customer_about_Appointment</name>
-                <type>Alert</type>
-            </actions>
-            <offsetFromField>SVMXC__Service_Order__c.Initial_Scheduled_Start_Date_and_Time__c</offsetFromField>
-            <timeLength>-7</timeLength>
-            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
-        </workflowTimeTriggers>
-    </rules>
-    <rules>
         <fullName>DEF_IT_Reminder Email to Customer Multi-Day</fullName>
         <active>true</active>
         <criteriaItems>
