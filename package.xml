@@ -414,7 +414,6 @@
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer Of Appointment Confirmation Multi-Day</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Notify Customer of Assigned Technician Multi-Day</members>
-        <members>SVMXC__Service_Order__c.DEF_IT_Reminder Email to Customer</members>
         <members>SVMXC__Service_Order__c.DEF_IT_Reminder Email to Customer Multi-Day</members>
         <name>WorkflowRule</name>
     </types>
