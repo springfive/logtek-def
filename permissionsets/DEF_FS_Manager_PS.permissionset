@@ -1437,6 +1437,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__PM_Schedule_Definition__c.WO_Duration_hours__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__PM_Schedule_Template__c.Number_of_Technicians_Needed__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1543,6 +1548,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__PM_Schedule_Template__c.SVMXC__Work_Order_Purpose__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__PM_Schedule_Template__c.WO_Default_Estimated_Duration_hours__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1826,6 +1836,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Quote__c.Tech_Trigger_Back_Office__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Contract_Contacts__c.Full_Name__c</field>
         <readable>true</readable>
@@ -2047,6 +2062,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.AllowCustAllowCustomerNoomerNotification__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Num__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -2063,6 +2083,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Contract__c.Bill_to__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Contract_Amendement_Reason__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2434,6 +2459,11 @@
         <editable>true</editable>
         <field>SVMXC__Service_Contract__c.Status__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.Tech_TriggerPMRenewal__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>

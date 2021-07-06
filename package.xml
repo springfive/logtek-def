@@ -93,6 +93,7 @@
         <members>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</members>
         <members>SVMXC__Service_Contract_Contacts__c.Must_Receive_Report__c</members>
         <members>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Num__c</members>
+        <members>SVMXC__Service_Contract__c.Contract_Amendement_Reason__c</members>
         <members>SVMXC__Service_Contract__c.DEF_Company__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Type__c</members>
