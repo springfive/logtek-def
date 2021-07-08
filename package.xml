@@ -184,6 +184,7 @@
         <members>ServiceProject__c.NoteToEngineer__c</members>
         <members>ServiceProject__c.NoteToPlanner__c</members>
         <members>ServiceProject__c.PreferredTechnician__c</members>
+        <members>ServiceProject__c.Project_Code__c</members>
         <members>ServiceProject__c.Project_Manager__c</members>
         <members>ServiceProject__c.Start_Date__c</members>
         <members>ServiceProject__c.Status__c</members>
