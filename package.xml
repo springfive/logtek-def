@@ -32,6 +32,7 @@
     </types>
     <types>
         <members>Account.BE_DEF_Navision_Ref_Num__c</members>
+        <members>Assigned_Tools_Technician__c.SignatureRequired__c</members>
         <members>Contact.BE_DEF_Navision_Ref_Num__c</members>
         <members>DEF_QuoteCreateSMAX2NAV__e.Back_Office_Ref_Number__c</members>
         <members>DEF_QuoteCreateSMAX2NAV__e.Description__c</members>
