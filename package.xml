@@ -91,6 +91,7 @@
         <members>SVMXC__Quote__c.QuoteReference__c</members>
         <members>SVMXC__Quote__c.ServiceContract__c</members>
         <members>SVMXC__Quote__c.ServiceRequest__c</members>
+        <members>SVMXC__Quote__c.Tech_Trigger_Back_Office__c</members>
         <members>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</members>
         <members>SVMXC__Service_Contract_Contacts__c.Must_Receive_Report__c</members>
         <members>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Num__c</members>
