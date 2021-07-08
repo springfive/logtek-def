@@ -475,6 +475,26 @@ Owner:Queue.QueueName)</formula>
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Pending_Quote__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   AND(Quote_Received__c=false, Quote_Required__c=true),
+   &quot;🚩📃&quot;,
+   IF(
+      AND(Quote_Received__c=true, Quote_Required__c=true),
+      &quot;✅📃&quot;,
+      &quot;∅&quot;
+   )
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pending Quote</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Purchase_Order__c</fullName>
         <externalId>false</externalId>
         <label>Purchase Order</label>
@@ -505,6 +525,15 @@ Owner:Queue.QueueName)</formula>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Quote Required ?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Return_Visit_Required__c</fullName>
