@@ -1065,6 +1065,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Contract__c.AllowCustAllowCustomerNoomerNotification__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Num__c</field>
         <readable>true</readable>
@@ -1082,6 +1087,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Contract__c.Bill_to__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Contract__c.Contract_Amendement_Reason__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1452,6 +1462,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Contract__c.Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Contract__c.Tech_TriggerPMRenewal__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
