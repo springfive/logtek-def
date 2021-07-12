@@ -1437,11 +1437,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>SVMXC__PM_Schedule_Definition__c.WO_Duration_hours__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>SVMXC__PM_Schedule_Template__c.Number_of_Technicians_Needed__c</field>
         <readable>true</readable>
     </fieldPermissions>
