@@ -1017,6 +1017,19 @@ Owner:Queue.QueueName)</formula>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Service_Quote__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Service Quote</label>
+        <referenceTo>SVMXC__Quote__c</referenceTo>
+        <relationshipLabel>Work Orders</relationshipLabel>
+        <relationshipName>Work_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Symptoms__c</fullName>
         <description>Symptom noticed on the Installation.</description>
         <externalId>false</externalId>
