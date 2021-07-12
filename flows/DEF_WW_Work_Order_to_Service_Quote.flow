@@ -75,6 +75,12 @@
                 <elementReference>$Record.SVMXC__SM_Service_Request__c</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>Tech_Trigger_Back_Office__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
         <object>SVMXC__Quote__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
@@ -90,7 +96,7 @@
             <field>Quote_Required__c</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>Yes</stringValue>
+                <booleanValue>true</booleanValue>
             </value>
         </filters>
         <object>SVMXC__Service_Order__c</object>

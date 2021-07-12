@@ -150,7 +150,6 @@ IF(ISPICKVAL (Confirmation_Request_Status__c, &apos;CRS0002&apos;)&amp;&amp; NOT
 &amp;
 IF( ISPICKVAL (SVMXC__Order_Status__c, &quot;Customer Confirmed&quot;), 
 &quot;✅&quot;&amp;&quot; | &quot;,&quot;&quot;)
-
 /*Order Type*/
 &amp;
 IF(ISPICKVAL( SVMXC__Order_Type__c, &quot;Maintenance&quot;),
@@ -173,8 +172,15 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0040&quot;),&quot;| &quot;&amp
 IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp;&quot;🧯💦&quot;,&quot;&quot;)))))))))
 
 	/*Location*/
-	&amp;&quot;| &quot;&amp;
-	SVMXC__Site__r.Name</formula>
+	&amp;
+	IF(SVMXC__Site__c!=null, &quot; | &quot; &amp;SVMXC__Site__r.Name&amp;&quot; &quot;, &quot; &quot;) 
+	&amp;
+
+/*Work Order Name*/
+ &quot; | &quot;&amp;Name&amp;&quot; &quot;
+	&amp;
+	/*Back Office reference number*/
+	 IF(Back_Office_Ref_Number__c!=null, &quot;| Ref No. &quot; &amp;Back_Office_Ref_Number__c, &quot;&quot;)</formula>
         <label>Designation</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -475,6 +481,26 @@ Owner:Queue.QueueName)</formula>
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Pending_Quote__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+   AND(Quote_Received__c=false, QuoteRequired__c=true),
+   &quot;🚩📃&quot;,
+   IF(
+      AND(Quote_Received__c=true, QuoteRequired__c=true),
+      &quot;✅📃&quot;,
+      &quot;∅&quot;
+   )
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pending Quote</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Purchase_Order__c</fullName>
         <externalId>false</externalId>
         <label>Purchase Order</label>
@@ -498,6 +524,15 @@ Owner:Queue.QueueName)</formula>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>QuoteRequired__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Quote Required ?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Quote_Description__c</fullName>
         <externalId>false</externalId>
         <label>Quote Description</label>
@@ -505,6 +540,31 @@ Owner:Queue.QueueName)</formula>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Required__c</fullName>
+        <externalId>false</externalId>
+        <label>OLD Quote Required ?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Return_Visit_Required__c</fullName>
@@ -955,6 +1015,19 @@ Owner:Queue.QueueName)</formula>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Quote__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Service Quote</label>
+        <referenceTo>SVMXC__Quote__c</referenceTo>
+        <relationshipLabel>Work Orders</relationshipLabel>
+        <relationshipName>Work_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Symptoms__c</fullName>

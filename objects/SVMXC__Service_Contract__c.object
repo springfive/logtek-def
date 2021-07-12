@@ -283,6 +283,37 @@ ISPICKVAL( SVMXC__Company__r.Status__c , &apos;blocked&apos;),
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Contract_Amendement_Reason__c</fullName>
+        <description>Those are the reasons for the change in the contract, whether it is the addition of a line, change of dates, or other</description>
+        <externalId>false</externalId>
+        <label>Contract Amendement Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CAR0001</fullName>
+                    <default>false</default>
+                    <label>Modification of dates</label>
+                </value>
+                <value>
+                    <fullName>CAR0010</fullName>
+                    <default>false</default>
+                    <label>Addition / amendment of a contract line</label>
+                </value>
+                <value>
+                    <fullName>CAR9999</fullName>
+                    <default>false</default>
+                    <label>Other modification</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Contract_Header_Contract_Line__c</fullName>
         <externalId>false</externalId>
         <formula>SVMX_PS_Parent_Contract__r.Name+&quot; - &quot;+ Name</formula>
@@ -1450,6 +1481,18 @@ if( SVMXC__End_Date__c &gt; TODAY()+90, &quot;/resource/ServiceMaxIcons/NoUpsell
         </valueSet>
     </fields>
     <fields>
+        <fullName>Tech_TriggerPMRenewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field used as a trigger point for contract renewal process
+True - Renewal process started (Or) In progress
+False - Renewal Process Completed or Renewal process never started</description>
+        <externalId>false</externalId>
+        <label>Tech TriggerPMRenewal</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Top_Level__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -1574,6 +1617,21 @@ if( SVMXC__End_Date__c &gt; TODAY()+90, &quot;/resource/ServiceMaxIcons/NoUpsell
             </values>
             <values>
                 <fullName>Special Access 001</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Amendement_Reason__c</picklist>
+            <values>
+                <fullName>CAR0001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAR0010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAR9999</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1904,6 +1962,21 @@ if( SVMXC__End_Date__c &gt; TODAY()+90, &quot;/resource/ServiceMaxIcons/NoUpsell
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Contract_Amendement_Reason__c</picklist>
+            <values>
+                <fullName>CAR0001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAR0010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAR9999</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>DEF_Company__c</picklist>
             <values>
                 <fullName>BE_DEF</fullName>
@@ -1933,7 +2006,23 @@ if( SVMXC__End_Date__c &gt; TODAY()+90, &quot;/resource/ServiceMaxIcons/NoUpsell
                 <default>false</default>
             </values>
             <values>
+                <fullName>ID0020</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>ID0030</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0040</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0050</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0060</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1965,6 +2054,10 @@ if( SVMXC__End_Date__c &gt; TODAY()+90, &quot;/resource/ServiceMaxIcons/NoUpsell
                 <default>false</default>
             </values>
             <values>
+                <fullName>ID0140</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>ID0150</fullName>
                 <default>false</default>
             </values>
@@ -1982,6 +2075,10 @@ if( SVMXC__End_Date__c &gt; TODAY()+90, &quot;/resource/ServiceMaxIcons/NoUpsell
             </values>
             <values>
                 <fullName>ID0190</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ID0200</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2248,7 +2345,7 @@ if( SVMXC__End_Date__c &gt; TODAY()+90, &quot;/resource/ServiceMaxIcons/NoUpsell
         <searchResultsAdditionalFields>SVMXC__Start_Date__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>SVMXC__End_Date__c</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>Private</sharingModel>
     <validationRules>
         <fullName>DEF_WW_Make_Contract_As_ReadOnly</fullName>
         <active>true</active>

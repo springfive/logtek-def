@@ -32,6 +32,7 @@
     </types>
     <types>
         <members>Account.BE_DEF_Navision_Ref_Num__c</members>
+        <members>Assigned_Tools_Technician__c.SignatureRequired__c</members>
         <members>Contact.BE_DEF_Navision_Ref_Num__c</members>
         <members>DEF_QuoteCreateSMAX2NAV__e.Back_Office_Ref_Number__c</members>
         <members>DEF_QuoteCreateSMAX2NAV__e.Description__c</members>
@@ -90,9 +91,11 @@
         <members>SVMXC__Quote__c.QuoteReference__c</members>
         <members>SVMXC__Quote__c.ServiceContract__c</members>
         <members>SVMXC__Quote__c.ServiceRequest__c</members>
+        <members>SVMXC__Quote__c.Tech_Trigger_Back_Office__c</members>
         <members>SVMXC__Service_Contract_Contacts__c.MustReceiveSchedulingEmail__c</members>
         <members>SVMXC__Service_Contract_Contacts__c.Must_Receive_Report__c</members>
         <members>SVMXC__Service_Contract__c.BE_DEF_Navision_Ref_Num__c</members>
+        <members>SVMXC__Service_Contract__c.Contract_Amendement_Reason__c</members>
         <members>SVMXC__Service_Contract__c.DEF_Company__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Stock__c</members>
         <members>SVMXC__Service_Order_Line__c.Product_Type__c</members>
@@ -129,9 +132,12 @@
         <members>SVMXC__Service_Order__c.Note_to_Planner__c</members>
         <members>SVMXC__Service_Order__c.Owner_Full_Name__c</members>
         <members>SVMXC__Service_Order__c.PM_Schedule_Definition__c</members>
+        <members>SVMXC__Service_Order__c.Pending_Quote__c</members>
         <members>SVMXC__Service_Order__c.Purchase_Order__c</members>
         <members>SVMXC__Service_Order__c.QuoteReference__c</members>
+        <members>SVMXC__Service_Order__c.QuoteRequired__c</members>
         <members>SVMXC__Service_Order__c.Quote_Description__c</members>
+        <members>SVMXC__Service_Order__c.Quote_Required__c</members>
         <members>SVMXC__Service_Order__c.Return_Visit_Required__c</members>
         <members>SVMXC__Service_Order__c.Return_of_Order_Date_Time__c</members>
         <members>SVMXC__Service_Order__c.Revisit_Comment__c</members>
@@ -144,6 +150,7 @@
         <members>SVMXC__Service_Order__c.Scheduled_End_Date_Time__c</members>
         <members>SVMXC__Service_Order__c.ServiceProject__c</members>
         <members>SVMXC__Service_Order__c.Service_Project_Name__c</members>
+        <members>SVMXC__Service_Order__c.Service_Quote__c</members>
         <members>SVMXC__Service_Order__c.Symptoms__c</members>
         <members>SVMXC__Service_Order__c.Tech_Enable_SIR__c</members>
         <members>SVMXC__Service_Order__c.Tech_MainFsrInitials__c</members>
@@ -179,6 +186,7 @@
         <members>ServiceProject__c.NoteToEngineer__c</members>
         <members>ServiceProject__c.NoteToPlanner__c</members>
         <members>ServiceProject__c.PreferredTechnician__c</members>
+        <members>ServiceProject__c.Project_Code__c</members>
         <members>ServiceProject__c.Project_Manager__c</members>
         <members>ServiceProject__c.Start_Date__c</members>
         <members>ServiceProject__c.Status__c</members>
