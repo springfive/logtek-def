@@ -1692,11 +1692,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>SVMXC__PM_Schedule_Template__c.WO_Default_Estimated_Duration_hours__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>SVMXC__PM_Schedule_Template__c.WoDefaultEstimatedDuration__c</field>
         <readable>true</readable>
     </fieldPermissions>
