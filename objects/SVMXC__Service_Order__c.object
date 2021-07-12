@@ -524,6 +524,15 @@ Owner:Queue.QueueName)</formula>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>QuoteRequired__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Quote Required ?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Quote_Description__c</fullName>
         <externalId>false</externalId>
         <label>Quote Description</label>
@@ -534,12 +543,28 @@ Owner:Queue.QueueName)</formula>
     </fields>
     <fields>
         <fullName>Quote_Required__c</fullName>
-        <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>OLD Quote Required ?</label>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Return_Visit_Required__c</fullName>

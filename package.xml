@@ -135,6 +135,7 @@
         <members>SVMXC__Service_Order__c.Pending_Quote__c</members>
         <members>SVMXC__Service_Order__c.Purchase_Order__c</members>
         <members>SVMXC__Service_Order__c.QuoteReference__c</members>
+        <members>SVMXC__Service_Order__c.QuoteRequired__c</members>
         <members>SVMXC__Service_Order__c.Quote_Description__c</members>
         <members>SVMXC__Service_Order__c.Quote_Required__c</members>
         <members>SVMXC__Service_Order__c.Return_Visit_Required__c</members>
