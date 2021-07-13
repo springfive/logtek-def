@@ -189,6 +189,18 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Estimated_Duration_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Duration (Hours)​</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>External_Cause_Type__c</fullName>
         <externalId>false</externalId>
         <label>External Cause Type</label>

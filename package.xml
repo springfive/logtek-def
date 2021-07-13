@@ -114,6 +114,7 @@
         <members>SVMXC__Service_Order__c.Copy_Of_Permit_To_Work_Attached__c</members>
         <members>SVMXC__Service_Order__c.CustomerReference__c</members>
         <members>SVMXC__Service_Order__c.Designation__c</members>
+        <members>SVMXC__Service_Order__c.Estimated_Duration_Hours__c</members>
         <members>SVMXC__Service_Order__c.External_Cause_Type__c</members>
         <members>SVMXC__Service_Order__c.Field_Comments__c</members>
         <members>SVMXC__Service_Order__c.Final_Scheduled_End_Date_and_Time__c</members>
