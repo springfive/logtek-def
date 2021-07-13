@@ -797,6 +797,20 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>Symptoms__c</fullName>
+        <externalId>false</externalId>
+        <label>Symptoms</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Symptoms</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>SynchLog__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -873,6 +887,7 @@ IF(ISPICKVAL(SVMXC__Status__c, &apos;Closed&apos;)||ISPICKVAL(SVMXC__Status__c, 
         <columns>SVMXC__Account__c</columns>
         <columns>Contract__c</columns>
         <columns>SVMXC__Status__c</columns>
+        <columns>DEF_Company__c</columns>
         <columns>SVMXC__Subject__c</columns>
         <columns>SLA_Terms__c</columns>
         <columns>CREATED_DATE</columns>
@@ -923,11 +938,14 @@ IF(ISPICKVAL(SVMXC__Status__c, &apos;Closed&apos;)||ISPICKVAL(SVMXC__Status__c, 
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Service Requests</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <searchResultsAdditionalFields>SVMXC__Account__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
     <validationRules>
         <fullName>DEF_WW_Required_Installed_Product</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>The Service Request can&apos;t be converted to a WO because it doesn&apos;t have an Installed Product</description>
         <errorConditionFormula>AND (
 				 ISPICKVAL( SVMXC__Status__c,&quot;Open_Converted&quot; ),

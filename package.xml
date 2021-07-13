@@ -170,6 +170,7 @@
         <members>SVMXC__Service_Request__c.QuoteReference__c</members>
         <members>SVMXC__Service_Request__c.Quote_Description__c</members>
         <members>SVMXC__Service_Request__c.Quote_required__c</members>
+        <members>SVMXC__Service_Request__c.Symptoms__c</members>
         <members>SVMXC__Service_Request__c.SynchLog__c</members>
         <members>SVMXC__Service_Request__c.Tech_BusinessHours__c</members>
         <members>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</members>
