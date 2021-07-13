@@ -47,6 +47,7 @@
         <members>DEF_QuoteCreateSMAX2NAV__e.ServiceContract__c</members>
         <members>DEF_QuoteCreateSMAX2NAV__e.ServiceRequest__c</members>
         <members>DEF_ServiceContract_Integration__e.RecordId__c</members>
+        <members>DEF_WO_Interface__e.WorkOrderId__c</members>
         <members>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</members>
         <members>Field_Feedback__c.Contract_HeaderLink__c</members>
         <members>Field_Feedback__c.DEF_Company__c</members>
@@ -248,6 +249,7 @@
     <types>
         <members>DEF_QuoteCreateSMAX2NAV__e</members>
         <members>DEF_ServiceContract_Integration__e</members>
+        <members>DEF_WO_Interface__e</members>
         <members>DEF_WorkOrderPlatformEvent__e</members>
         <members>Planned_Parts__c</members>
         <members>Project_Location_Relationship__c</members>
