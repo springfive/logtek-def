@@ -1,7 +1,7 @@
 /**
  * @author: Sofiane Bazizen (SpringFive)
  * @description: Send emails to the relevant entitled Contacts for "Completed" Work Order 
- * @last modified on  : 06-01-2021
+ * @last modified on  : 07-13-2021
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  * Modifications Log 
  * Ver   Date         Author                               Modification
@@ -100,6 +100,24 @@ public class DEF_WO_SirSender {
 			//Sending emails
 			DEF_WO_SirSender_Helper.sendSirEmails(woWrapperMap);
 
+			List<SVMXC__Service_Order__c> woToUpdate=new List<SVMXC__Service_Order__c>();
+			for (DEF_WO_SirSender_Helper.woWrapper wrp : woWrapperMap.values()) {
+				//Filter the BE Work orders those are successfully processed and SIR email sent 
+				if(wrp.getIsSuccess() && wrp.getWo().DEF_Company__c=='BE_DEF'){
+					SVMXC__Service_Order__c woInstance=new SVMXC__Service_Order__c();
+					woInstance.Id=wrp.getWo().Id;
+					woInstance.Send_Intervention_Report__c=false;
+					woToUpdate.add(woInstance);
+
+				}
+
+			}
+			//Set Send_Intervention_Report__c to false after sending the SIR for BE work Orders
+			if(woToUpdate.size()>0){
+				Database.update(woToUpdate, false);
+
+			}
+
 
 			/*****************************************************************/
 			/*                        LOG DISPLAY                            */
@@ -127,6 +145,7 @@ public class DEF_WO_SirSender {
 				System.debug('@Technician email: ' + wrp.getTechEmail());
 				System.debug('@Attachments: ' + wrp.getAttachmentList());
 				System.debug('@===============');
+				
 
 			}
 

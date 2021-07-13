@@ -189,6 +189,18 @@ IF( ISPICKVAL(Installation_Discipline__c, &quot;ID0050&quot;),&quot;| &quot;&amp
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Estimated_Duration_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Duration (Hours)​</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>External_Cause_Type__c</fullName>
         <externalId>false</externalId>
         <label>External Cause Type</label>
@@ -991,6 +1003,18 @@ Owner:Queue.QueueName)</formula>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Send_Intervention_Report__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field acts as a triggering point for sending SIR to contacts and technicians
+True - Sending SIR is in Progress
+False - SIR was sent or SIR never sent previously</description>
+        <externalId>false</externalId>
+        <label>Send Intervention Report</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>ServiceProject__c</fullName>

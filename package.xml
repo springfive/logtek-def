@@ -47,6 +47,7 @@
         <members>DEF_QuoteCreateSMAX2NAV__e.ServiceContract__c</members>
         <members>DEF_QuoteCreateSMAX2NAV__e.ServiceRequest__c</members>
         <members>DEF_ServiceContract_Integration__e.RecordId__c</members>
+        <members>DEF_WO_Interface__e.WorkOrderId__c</members>
         <members>DEF_WorkOrderPlatformEvent__e.WorkOrderId__c</members>
         <members>Field_Feedback__c.Contract_HeaderLink__c</members>
         <members>Field_Feedback__c.DEF_Company__c</members>
@@ -114,6 +115,7 @@
         <members>SVMXC__Service_Order__c.Copy_Of_Permit_To_Work_Attached__c</members>
         <members>SVMXC__Service_Order__c.CustomerReference__c</members>
         <members>SVMXC__Service_Order__c.Designation__c</members>
+        <members>SVMXC__Service_Order__c.Estimated_Duration_Hours__c</members>
         <members>SVMXC__Service_Order__c.External_Cause_Type__c</members>
         <members>SVMXC__Service_Order__c.Field_Comments__c</members>
         <members>SVMXC__Service_Order__c.Final_Scheduled_End_Date_and_Time__c</members>
@@ -148,6 +150,7 @@
         <members>SVMXC__Service_Order__c.SVMX_PS_Revisit_Reason__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_End_Date_Time__c</members>
+        <members>SVMXC__Service_Order__c.Send_Intervention_Report__c</members>
         <members>SVMXC__Service_Order__c.ServiceProject__c</members>
         <members>SVMXC__Service_Order__c.Service_Project_Name__c</members>
         <members>SVMXC__Service_Order__c.Service_Quote__c</members>
@@ -170,6 +173,7 @@
         <members>SVMXC__Service_Request__c.QuoteReference__c</members>
         <members>SVMXC__Service_Request__c.Quote_Description__c</members>
         <members>SVMXC__Service_Request__c.Quote_required__c</members>
+        <members>SVMXC__Service_Request__c.Symptoms__c</members>
         <members>SVMXC__Service_Request__c.SynchLog__c</members>
         <members>SVMXC__Service_Request__c.Tech_BusinessHours__c</members>
         <members>SVMXC__Service_Request__c.Technician_Preferred_Territory_SR__c</members>
@@ -245,6 +249,7 @@
     <types>
         <members>DEF_QuoteCreateSMAX2NAV__e</members>
         <members>DEF_ServiceContract_Integration__e</members>
+        <members>DEF_WO_Interface__e</members>
         <members>DEF_WorkOrderPlatformEvent__e</members>
         <members>Planned_Parts__c</members>
         <members>Project_Location_Relationship__c</members>
@@ -355,6 +360,7 @@
     </types>
     <types>
         <members>DEF_WW_New_Works_Path</members>
+        <members>DEF_WW_Service_Project_Path</members>
         <members>DEF_WW_Small_Works_WO_Path</members>
         <name>PathAssistant</name>
     </types>

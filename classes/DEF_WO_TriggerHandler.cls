@@ -2,7 +2,7 @@
 * @description       : Handler for the Work Order berfore insert trigger.
 * @author            : Jawahar Moorthy (SpringFive)
 * @group             : 
-* @last modified on  : 05-12-2021
+* @last modified on  : 07-13-2021
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 * Modifications Log 
 * Ver   Date         Author                               Modification
@@ -208,6 +208,11 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                     woInstance.Note_to_Planner__c=noteToPlanner;
 
                 }
+
+                //Convert Work Order Estimated Duration(Hours) To Minutes For Service Board Operations  
+                if(woInstance.Estimated_Duration_Hours__c != null ){
+                    woInstance.SVMXC__SM_Estimated_Duration__c=woInstance.Estimated_Duration_Hours__c*60;
+                }
                 
                 
             }
@@ -299,6 +304,27 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                     woInstance.Tech_Trigger_Back_Office__c=true;
                 }
                 
+                //Update Work Order Estimated Duration(hours) To Minutes if any changes made in Salesforce Operations  
+                if(this.triggerMapOld.get(woInstance.Id).Estimated_Duration_Hours__c!=woInstance.Estimated_Duration_Hours__c){
+                    if(woInstance.Estimated_Duration_Hours__c!=null)
+                    {
+                    woInstance.SVMXC__SM_Estimated_Duration__c=woInstance.Estimated_Duration_Hours__c*60;
+                    }
+                    else{
+                        woInstance.SVMXC__SM_Estimated_Duration__c=null;
+                    }
+                }
+
+                //Update Work Order Estimated Duration(minutes) To Hours if any changes made in Service Board Operations  
+                if(this.triggerMapOld.get(woInstance.Id).SVMXC__SM_Estimated_Duration__c!=woInstance.SVMXC__SM_Estimated_Duration__c ){
+                    if(woInstance.SVMXC__SM_Estimated_Duration__c!=null)
+                    {
+                    woInstance.Estimated_Duration_Hours__c=woInstance.SVMXC__SM_Estimated_Duration__c/60;
+                    }
+                    else{
+                        woInstance.Estimated_Duration_Hours__c=null;
+                    }
+                }
 
             }
         }
@@ -315,6 +341,7 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             set<id> PrimaryTerritorySet = new set<id> ();
             set<id> WOSetForOwnerUpdate = new set<id> ();
             List<DEF_WorkOrderPlatformEvent__e> WOPEList = new List<DEF_WorkOrderPlatformEvent__e>();
+            List<DEF_WO_Interface__e> publishEvents = new List<DEF_WO_Interface__e>();
             Set<Id> pmScheduleDefSet = new Set<Id>();
             map<Id,Id> workOrderSdMap = new map<Id,Id>();
 
@@ -324,6 +351,11 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                     //Apex Code is for sending work order id to the back office whenever the callout work order is created
                     //DEF_WO_SendWOToBackOffice.SendWODetails(workorderInstance);
                     woToSendToBO.add(workorderInstance);
+                    
+                    //triger platform event so that Boomi can listen it:
+                    DEF_WO_Interface__e woEvent = new DEF_WO_Interface__e();
+                    woEvent.WorkOrderId__c = String.valueOf(workorderInstance.Id);
+                    publishEvents.add(woEvent);
                 }
                 //Apex code to set the Owner of WO from Owner of Territory
                 if(String.valueOf(workorderInstance.OwnerId).startsWith('005') && workorderInstance.SVMXC__Primary_Territory__c != null) {
@@ -341,6 +373,10 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
 
                     
                 }
+            }
+            //publish the platform event:
+            if(publishEvents.size()>0){
+                EventBus.publish(publishEvents);
             }
             if(workOrderSdMap.size()>0){
                 DEF_WO_TriggerHelper.workDetailFromPlannedParts(workOrderSdMap,pmScheduleDefSet);
@@ -464,6 +500,7 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             List<SVMXC__Service_Order__c> woToSendEmail=new List<SVMXC__Service_Order__c>();
             List<SVMXC__Service_Order__c> woToSendToBO=new List<SVMXC__Service_Order__c>();
             List<DEF_WorkOrderPlatformEvent__e> WOPEList = new List<DEF_WorkOrderPlatformEvent__e>();
+            List<DEF_WO_Interface__e> publishEvents = new List<DEF_WO_Interface__e>();
             //List<SVMXC__Service_Order__c> woToUpdateEvent=new List<SVMXC__Service_Order__c>();
             //Map<Id,SVMXC__Service_Order__c> woToUpdateEventMap=new Map<Id,SVMXC__Service_Order__c>();
             for(SVMXC__Service_Order__c workorderInstance:this.triggerNew)
@@ -488,14 +525,17 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
                 if(this.triggerMapOld.get(workorderInstance.Id).Tech_Trigger_Back_Office__c!=workorderInstance.Tech_Trigger_Back_Office__c){
                     if (workorderInstance.Tech_Trigger_Back_Office__c==true) {
                         //**Start-->Apex Code is for sending work order id to the back office whenever the callout work order is created**//
-                        //DEF_WO_SendWOToBackOffice.SendWODetails(workorderInstance);
                         woToSendToBO.add(workorderInstance);
                         //**End--> Apex Code is for sending work order id to the back office whenever the callout work order is created**//
                         
+                        //triger platform event so that Boomi can listen it(sending work order id to the back office):
+                        DEF_WO_Interface__e woEvent = new DEF_WO_Interface__e();
+                        woEvent.WorkOrderId__c = String.valueOf(workorderInstance.Id);
+                        publishEvents.add(woEvent);
                     }
                 }
                 
-                if((this.triggerMapOld.get(workorderInstance.Id).SVMXC__Order_Status__c!=workorderInstance.SVMXC__Order_Status__c) && workorderInstance.SVMXC__Order_Status__c=='Job Complete'){
+                if((workorderInstance.DEF_Company__c=='BE_DEF' && this.triggerMapOld.get(workorderInstance.Id).Send_Intervention_Report__c !=workorderInstance.Send_Intervention_Report__c && workorderInstance.Send_Intervention_Report__c==true) || ((this.triggerMapOld.get(workorderInstance.Id).SVMXC__Order_Status__c!=workorderInstance.SVMXC__Order_Status__c) && workorderInstance.SVMXC__Order_Status__c=='Job Complete')){
                     woToSendEmail.add(workorderInstance);
                 }
                 //Apex code to set the Owner of WO from Owner of Territory
@@ -547,6 +587,12 @@ public without sharing class DEF_WO_TriggerHandler extends TriggerHandler {
             //**End--> Apex Code to Send Email with attachement (SIR) when the work Order status is Job Complete and has Email field**//
             
             //**Start-->Apex Code is for sending work order id to the back office whenever the callout work order is created**//
+            
+            //publish the platform event:
+            if(publishEvents.size()>0){
+                EventBus.publish(publishEvents);
+            }
+            
             if(woToSendToBO.size()>0){
                 System.enqueueJob(new DEF_API_WO_RequestCallBack(woToSendToBO));
                 

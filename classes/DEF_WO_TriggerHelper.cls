@@ -125,22 +125,19 @@ public without sharing class DEF_WO_TriggerHelper {
 
     //** This Method will Create Event for a Workorder Whenever CreateEventFromMobile Field Is set to True **//
     public static void CreateEventFromMobile(List<SVMXC__Service_Order__c> woList,Set<Id> technicianSet,Set<Id> accountSet){
-
+		
+        //Create a MAP where Key--> WOID and Value--> EVentId
+        Map<Id,Id> woEventMap = new Map<Id,Id>();
+        for(Event e : [SELECT Id, WHatId FROM EVENT 
+                       WHERE WhatId IN : woList
+                       ORDER BY LastModifiedDate DESC]){
+                           if(!woEventMap.containsKey(e.WhatId)){
+                               woEventMap.put(e.WhatId,e.Id);
+                           }
+            
+        }
         List<Event> eventToCreate=new List<Event>();
         List<SVMXC__Service_Order__c> woToUpdate=new List<SVMXC__Service_Order__c>();
-        //Set<Id> technicianSet=new Set<Id>();
-        //Set<Id> accountSet=new Set<Id>();
-        /*
-        for(SVMXC__Service_Order__c woInstance:woList){
-            if(woInstance.SVMXC__Group_Member__c!=null){
-                technicianSet.add(woInstance.SVMXC__Group_Member__c);
-            }
-            if(woInstance.SVMXC__Company__c!=null){
-                accountSet.add(woInstance.SVMXC__Company__c);
-            }
-        }
-        */
-        //List<SVMXC__Service_Group_Members__c> technicianRecords=new List<SVMXC__Service_Group_Members__c>();
         Map<Id,SVMXC__Service_Group_Members__c> technicianMap;
         if(technicianSet.size()>0){
             List<SVMXC__Service_Group_Members__c> technicianRecords=[SELECT Id,SVMXC__Salesforce_User__c FROM SVMXC__Service_Group_Members__c WHERE Id IN: technicianSet];
@@ -156,8 +153,9 @@ public without sharing class DEF_WO_TriggerHelper {
         for(SVMXC__Service_Order__c woInstance:woList)
         {
             
-            //Create Event for Work Order
+            //Update Event for Work Order
             Event eventInstance=new Event();
+            eventInstance.Id = woEventMap.get(woInstance.id);
             if(woInstance.SVMXC__Preferred_End_Time__c!=null){
                 eventInstance.EndDateTime=woInstance.SVMXC__Preferred_End_Time__c;
             }
@@ -175,7 +173,8 @@ public without sharing class DEF_WO_TriggerHelper {
 
             }
             if(woInstance.SVMXC__Company__c!=null && accountMap.containsKey(woInstance.SVMXC__Company__c)){
-                eventInstance.Subject=woInstance.Name+' '+accountMap.get(woInstance.SVMXC__Company__c).Name;
+                //eventInstance.Subject=woInstance.Name+' '+accountMap.get(woInstance.SVMXC__Company__c).Name;
+                eventInstance.Subject=woInstance.Designation__c;
             }
             else{
                 eventInstance.Subject=woInstance.Name;
@@ -198,7 +197,7 @@ public without sharing class DEF_WO_TriggerHelper {
 
         //Create Events for Work Order
         if(eventToCreate.size()>0){
-            Database.SaveResult[] eventCreateList = Database.insert(eventToCreate,false);
+            Database.SaveResult[] eventCreateList = Database.update(eventToCreate,false);
 
         }
 

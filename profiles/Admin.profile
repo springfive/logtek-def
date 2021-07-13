@@ -30,6 +30,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>DEF_WO_SirSender</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>DEF_WO_SirSender_Helper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>DEF_WO_TriggerHandler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -37,6 +45,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.BE_DEF_Navision_Ref_Num__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Assigned_Tools_Technician__c.SignatureRequired__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1630,6 +1643,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Pending_Quote__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Purchase_Order__c</field>
         <readable>true</readable>
@@ -1641,7 +1659,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Order__c.QuoteRequired__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Order__c.Quote_Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Quote_Required__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1696,12 +1724,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Send_Intervention_Report__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Order__c.ServiceProject__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Service_Project_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Service_Quote__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2202,7 +2240,7 @@
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>ServiceProject__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visible>DefaultOn</visible>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
