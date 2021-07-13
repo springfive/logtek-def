@@ -4,7 +4,7 @@
 *		- Wrapper Class and query structure
 *		- retrieval of SIR and creation of attachments for the SIR emails
 *		- Sending of SIR emails
-* @last modified on  : 06-04-2021
+* @last modified on  : 07-12-2021
 * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 * Modifications Log 
 * Ver   Date         Author                               Modification
@@ -13,7 +13,7 @@
 */
 public class DEF_WO_SirSender_Helper {
     
-    public static string woQuery = 'SELECT Id, OwnerId, DEF_Company__c, SVMXC__Service_Contract__c, SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c, SVMXC__Group_Member__r.SVMXC__Email__c, SVMXC__Contact__c'
+    public static string woQuery = 'SELECT Id,Contact_Email_SF__c,OwnerId, DEF_Company__c, SVMXC__Service_Contract__c, SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c, SVMXC__Group_Member__r.SVMXC__Email__c, SVMXC__Contact__c'
         + ' FROM SVMXC__Service_Order__c'
         + ' WHERE Id In :workOrderSet'
         + ' AND DEF_Company__c != null'
@@ -49,7 +49,11 @@ public class DEF_WO_SirSender_Helper {
             this.contractIdSet = new Set<Id> { wo.SVMXC__Service_Contract__c };
                 this.contractIdSet.add(wo.SVMXC__Service_Contract__r.SVMX_PS_Parent_Contract__c);
             this.techEmail = new Set<String>();
+            
             this.emailSet = new Set<String>();
+            if(wo.Contact_Email_SF__c!=null){
+                this.emailSet.add(wo.Contact_Email_SF__c);
+            }
             
         }
         
@@ -347,8 +351,12 @@ public class DEF_WO_SirSender_Helper {
                         mail.setSaveAsActivity(true);
 
                          //Add the List of Mail to be sended based on work orders to the List
-                        if(templateId!=null && woWrapperMap.get(workOrderId).getEmailSet().size()>0){
+                        if(templateId!=null && (woWrapperMap.get(workOrderId).getEmailSet().size()>0 || woWrapperMap.get(workOrderId).getTechEmail().size()>0)){
                             mailToSend.add(mail);
+                        }
+                        else{
+                            woWrapperMap.get(workOrderId).setIsSuccess(false);
+                            woWrapperMap.get(workOrderId).setErrorLog('No Receipient technician or contact found.');
                         }
                     }
                     

@@ -993,6 +993,18 @@ Owner:Queue.QueueName)</formula>
         <type>DateTime</type>
     </fields>
     <fields>
+        <fullName>Send_Intervention_Report__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field acts as a triggering point for sending SIR to contacts and technicians
+True - Sending SIR is in Progress
+False - SIR was sent or SIR never sent previously</description>
+        <externalId>false</externalId>
+        <label>Send Intervention Report</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>ServiceProject__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>

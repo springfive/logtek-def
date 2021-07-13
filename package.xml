@@ -148,6 +148,7 @@
         <members>SVMXC__Service_Order__c.SVMX_PS_Revisit_Reason__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_Duration_in_hours__c</members>
         <members>SVMXC__Service_Order__c.Scheduled_End_Date_Time__c</members>
+        <members>SVMXC__Service_Order__c.Send_Intervention_Report__c</members>
         <members>SVMXC__Service_Order__c.ServiceProject__c</members>
         <members>SVMXC__Service_Order__c.Service_Project_Name__c</members>
         <members>SVMXC__Service_Order__c.Service_Quote__c</members>

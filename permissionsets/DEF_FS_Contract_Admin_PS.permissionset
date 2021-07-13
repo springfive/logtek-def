@@ -2226,6 +2226,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>SVMXC__Service_Contract__c.Contract_Amendment_Reason__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Contract__c.Contract_Header_Contract_Line__c</field>
         <readable>true</readable>
@@ -3266,6 +3271,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Certificate_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Checklist_Performed__c</field>
         <readable>true</readable>
@@ -3289,6 +3299,11 @@
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.Client_Request_Closure_Comment__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Client_Scheduled_Duration_in_hours__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -3401,9 +3416,19 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Final_Scheduled_End_Date_and_Time__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.How_was_the_service__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Initial_Scheduled_Start_Date_and_Time__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -3506,6 +3531,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.Multiple_day_intervention__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SVMXC__Service_Order__c.Non_Compliance_Reported__c</field>
         <readable>true</readable>
@@ -3563,6 +3593,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>SVMXC__Service_Order__c.QuoteReference__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SVMXC__Service_Order__c.QuoteRequired__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4822,6 +4857,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Order__c.Send_Intervention_Report__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Order__c.ServiceProject__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5257,6 +5297,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>SVMXC__Service_Request__c.Symptoms__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>SVMXC__Service_Request__c.SynchLog__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5653,6 +5698,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>ServiceProject__c.PreferredTechnician__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ServiceProject__c.Project_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
