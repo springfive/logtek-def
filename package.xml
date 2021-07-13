@@ -360,6 +360,7 @@
     </types>
     <types>
         <members>DEF_WW_New_Works_Path</members>
+        <members>DEF_WW_Service_Project_Path</members>
         <members>DEF_WW_Small_Works_WO_Path</members>
         <name>PathAssistant</name>
     </types>
